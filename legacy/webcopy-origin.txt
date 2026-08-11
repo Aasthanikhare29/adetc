@@ -1,0 +1,368 @@
+Uri: https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3K8-C8QSw.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\anton\v27\1Ptgg87LROyAm3K8-C8QSw.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3K9-C8QSw.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\anton\v27\1Ptgg87LROyAm3K9-C8QSw.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/anton/v27/1Ptgg87LROyAm3Kz-C8.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\anton\v27\1Ptgg87LROyAm3Kz-C8.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwAT9nA2.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwAT9nA2.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwcT9nA2.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwcT9nA2.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwgT9nA2.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwgT9nA2.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwkT9nA2.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwkT9nA2.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwoT9nA2.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwoT9nA2.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwQT9g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwQT9g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCm3FwrK3iLTcvnUwsT9nA2.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCm3FwrK3iLTcvnUwsT9nA2.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvhYwYL8g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcvhYwYL8g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcviYwY.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcviYwY.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvmYwYL8g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcvmYwYL8g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvsYwYL8g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcvsYwYL8g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvtYwYL8g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcvtYwYL8g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvuYwYL8g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcvuYwYL8g.woff2
+Content Type: font/woff2
+
+Uri: https://fonts.gstatic.com/s/inter/v20/UcCo3FwrK3iLTcvvYwYL8g.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\s\inter\v20\UcCo3FwrK3iLTcvvYwYL8g.woff2
+Content Type: font/woff2
+
+Uri: https://adetc2.foxcreation.net/
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\index.htm
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/404_page.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\404_page.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/about.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\about.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/assets/css/main.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\main.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/responsive.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\responsive.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/vendor/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\vendor\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/vendor/brands.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\vendor\brands.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/vendor/fontawesome.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\vendor\fontawesome.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/vendor/regular.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\vendor\regular.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/vendor/solid.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\vendor\solid.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/css/vendor/swiper-bundle.min.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\css\vendor\swiper-bundle.min.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/images/cameraman-filming-music-video-CD7JKUM.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\cameraman-filming-music-video-CD7JKUM.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\cameraman-operating-equipment-in-studio-T3LZ2B2.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Client-1.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Client-1.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/Client-2.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Client-2.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/Client-5.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Client-5.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/Client-6.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Client-6.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/Client-7.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Client-7.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/envato-labs-image-edit-1-e1752829112223.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\envato-labs-image-edit-1-e1752829112223.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/Envatolabs-10.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Envatolabs-10.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Envatolabs-11.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Envatolabs-11.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Envatolabs-12.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Envatolabs-12.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Envatolabs-7.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Envatolabs-7.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Envatolabs-8.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Envatolabs-8.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Envatolabs-9.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Envatolabs-9.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/favicon.ico
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\favicon.ico
+Content Type: image/x-icon
+
+Uri: https://adetc2.foxcreation.net/assets/images/film-industry-7ZLFY7L.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\film-industry-7ZLFY7L.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Gp-1.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Gp-1.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon1.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon1.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/Icon-3-1.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Icon-3-1.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon2.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon2.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon3.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon3.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon4.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon4.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon5.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon5.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon6.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon6.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/icon7.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\icon7.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/male-video-editor-working-on-his-personal-computer-HQHD8ZL.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\male-video-editor-working-on-his-personal-computer-HQHD8ZL.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/adetc-logo.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\adetc-logo.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\operator-setting-his-camera-before-shooting-PURRF9Y.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Photo-1.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Photo-1.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Photo-12.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Photo-12.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Photo-13.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Photo-13.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Photo-5.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Photo-5.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/Photo-6.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\Photo-6.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/photographer-capture-the-essence-of-the-opening-ce-TU8TLN7.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\photographer-capture-the-essence-of-the-opening-ce-TU8TLN7.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/photographers-setting-cameras-before-shooting-65ME2DS.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\photographers-setting-cameras-before-shooting-65ME2DS.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/young-black-woman-singing-while-being-with-her-fri-BTKH8T6.jpg
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\young-black-woman-singing-while-being-with-her-fri-BTKH8T6.jpg
+Content Type: image/jpeg
+
+Uri: https://adetc2.foxcreation.net/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\images\young-guy-enjoying-taking-photos-3UJ8HB8.png
+Content Type: image/png
+
+Uri: https://adetc2.foxcreation.net/assets/js/script.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\script.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/js/submit-form.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\submit-form.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/js/swiper-script.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\swiper-script.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/js/vendor/bootstrap.bundle.min.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\vendor\bootstrap.bundle.min.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/js/vendor/jquery.min.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\vendor\jquery.min.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/js/vendor/swiper-bundle.min.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\vendor\swiper-bundle.min.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/js/video_embedded.js
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\js\video_embedded.js
+Content Type: application/x-javascript
+
+Uri: https://adetc2.foxcreation.net/assets/webfonts/fa-brands-400.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\webfonts\fa-brands-400.woff2
+Content Type: font/woff2
+
+Uri: https://adetc2.foxcreation.net/assets/webfonts/fa-regular-400.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\webfonts\fa-regular-400.woff2
+Content Type: font/woff2
+
+Uri: https://adetc2.foxcreation.net/assets/webfonts/fa-solid-900.woff2
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\webfonts\fa-solid-900.woff2
+Content Type: font/woff2
+
+Uri: https://adetc2.foxcreation.net/assets/webfonts/font-family-anton.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\webfonts\font-family-anton.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/assets/webfonts/font-family-inter.css
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\assets\webfonts\font-family-inter.css
+Content Type: text/css
+
+Uri: https://adetc2.foxcreation.net/blog.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\blog.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/contact.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\contact.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/index.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\index.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/pricing.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\pricing.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/project-detail.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\project-detail.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/project.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\project.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/service-detail.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\service-detail.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/services.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\services.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/single-post.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\single-post.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/team.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\team.html
+Content Type: text/html
+
+Uri: https://adetc2.foxcreation.net/testimonial.html
+File Name: C:\Downloaded Web Sites\adetc2.foxcreation.net\testimonial.html
+Content Type: text/html
+
