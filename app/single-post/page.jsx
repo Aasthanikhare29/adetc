@@ -95,6 +95,20 @@ export default function Page() {
         <div className="col col-lg-8 order-1 order-lg-2">
           <div className="d-flex flex-column gspace-2">
                       <div className="image-container post-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Single Post" className="img-fluid" /></div>
+            <div className="d-flex flex-row flex-wrap align-items-center gspace-3 post-meta">
+              <div className="d-flex flex-row gspace-1 align-items-center">
+                <i className="fa-solid fa-user accent-color"></i>
+                <span className="meta-data">adetc Studio</span>
+              </div>
+              <div className="d-flex flex-row gspace-1 align-items-center">
+                <i className="fa-solid fa-calendar accent-color"></i>
+                <span className="meta-data">Published on July 19, 2025</span>
+              </div>
+              <div className="d-flex flex-row gspace-1 align-items-center">
+                <i className="fa-solid fa-folder accent-color"></i>
+                <span className="meta-data">Creative Direction</span>
+              </div>
+            </div>
             <p>Think about the last advertisement that truly caught your attention. Chances are it wasn't just promoting a product — it made you laugh, sparked an emotion, or told a story you could relate to. The most memorable commercials rarely rely on flashy visuals alone. They succeed because they connect with people.</p>
             <p>Behind every successful campaign is a team of creative professionals who know how to turn an ordinary idea into a powerful visual experience. These are the people responsible for developing concepts, shaping narratives, directing performances, and delivering commercials that leave a lasting impression. Their work goes far beyond filming a video; they help businesses communicate their identity, values, and purpose through meaningful storytelling.</p>
             <p>In today's fast-moving digital world, attention spans are shorter than ever. Consumers scroll through hundreds of pieces of content every day, making it increasingly difficult for businesses to stand out. This is why professionally crafted advertising has become more important than ever. Whether it's a television commercial, a digital campaign, or a launch film for social media, every second matters.</p>
@@ -139,6 +153,9 @@ export default function Page() {
 
             <h3>The Journey From Idea to Screen</h3>
             <p>Every successful campaign begins long before filming. The first stage usually involves understanding the business, its products, competitors, audience, and marketing objectives. Creative discussions then help identify the strongest concept capable of communicating those goals.</p>
+            <div className="image-container post-inner-image">
+              <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Behind the scenes during production" className="img-fluid" />
+            </div>
             <p>Once the direction is approved, scriptwriting begins. A good script isn't just dialogue. It establishes emotion, pacing, visuals, transitions, and storytelling structure. Every scene is carefully planned before production starts.</p>
             <p>Storyboards often follow, allowing the entire crew to visualise each frame before arriving on set. This preparation reduces uncertainty during filming while ensuring everyone shares the same creative vision.</p>
 
@@ -157,6 +174,9 @@ export default function Page() {
             </ul>
             <p>Every professional contributes a specific skill that ultimately strengthens the final campaign.</p>
             <p>Rather than working independently, these specialists function as one creative ecosystem. That collaboration often determines whether a campaign becomes forgettable or unforgettable.</p>
+            <div className="image-container post-inner-image">
+              <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Creative team working in studio" className="img-fluid" />
+            </div>
 
             <h3>Why Preparation Is the Secret Behind Great Commercials</h3>
             <p>Many people believe filming is the most important part of production. In reality, experienced filmmakers often say the opposite. Preparation determines success.</p>

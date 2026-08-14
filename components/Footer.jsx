@@ -21,7 +21,8 @@ export default function Footer() {
                     </div>
                     <div className="footer-info-container">
                       <h5>Contact Us</h5>
-                      <span className="footer-info">+1 (800) 234-5678</span>
+                      <span className="footer-info"> +91 9727000197</span>
+                      <span className="footer-info"> +91 9909901116</span>
                     </div>
                   </div>
                 </div>

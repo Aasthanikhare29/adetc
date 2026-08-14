@@ -742,65 +742,85 @@ export default function Page() {
   </section>
   {/* Team Section */}
   <section className="section">
-    <div className="hero-container overflow-visible">
-      <div className="row row-cols-lg-2 row-cols-1 grid-spacer-y-5 grid-spacer-x-3">
-        <div className="col col-lg-4">
-          <div className="team-title-container">
-                      <h2>Meet The Founders</h2>
-                      <p>The visionaries behind every frame at AdEtc Studios.</p>
-            <div>
-                          <a href="/team" className="btn btn-accent">View All Team</a>
-            </div>
-          </div>
-        </div>
-        <div className="col col-lg-8">
-          <div className="row row-cols-md-2 row-cols-1 grid-spacer-3">
+    <div className="d-flex flex-column gspace-2 text-start text-lg-center align-items-start align-items-lg-center">
+          <h2>Meet The Founders</h2>
+      <div style={{ marginBottom: '50px' }}>
+      </div>
+    </div>
+    <div className="hero-container">
+      <div className="row row-cols-md-3 row-cols-1 grid-spacer-3">
             <div className="col">
               <div className="team-container">
-                              <div className="image-container team-image"><img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chirag.JPEG-e1755281502673.jpg" alt="Chirag Sharma" className="img-fluid" /></div>
-                <div className="d-flex flex-row align-items-center justify-content-between gspace-2">
-                  <div className="d-flex flex-column">
-                                      <h4>Chirag Sharma</h4>
-                                      <p className="team-designation">Co-Founder & Creative Producer</p>
+                <div className="image-container team-image">
+                  <img src="/assets/images/chirag.jpeg" alt="Chirag Sharma" className="img-fluid" />
+                  <div className="team-social-overlay">
+                    <div className="d-flex flex-row align-items-center gspace-1">
+                      <a href="https://www.instagram.com/" className="social-icon">
+                        <i className="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.facebook.com/" className="social-icon">
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.x.com/" className="social-icon">
+                        <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div className="d-flex flex-row align-items-center gspace-1">
-                    <a href="https://www.instagram.com/" className="social-icon">
-                                          <i className="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/" className="social-icon">
-                                          <i className="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://www.x.com/" className="social-icon">
-                                          <i className="fa-brands fa-x-twitter"></i>
-                    </a>
-                  </div>
+                </div>
+                <div className="d-flex flex-column w-100">
+                  <h4>Chirag Sharma</h4>
+                  <p className="team-designation">Co-Founder & Creative Producer</p>
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="team-container">
-                              <div className="image-container team-image"><img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chinmay.jpeg-e1755281301146.jpg" alt="Chinmay Parmar" className="img-fluid" /></div>
-                <div className="d-flex flex-row align-items-center justify-content-between gspace-2">
-                  <div className="d-flex flex-column">
-                                      <h4>Chinmay Parmar</h4>
-                                      <p className="team-designation">Co-Founder & Creative Director</p>
+                <div className="image-container team-image">
+                  <img src="/assets/images/chinmay.jpeg" alt="Chinmay Parmar" className="img-fluid" />
+                  <div className="team-social-overlay">
+                    <div className="d-flex flex-row align-items-center gspace-1">
+                      <a href="https://www.instagram.com/" className="social-icon">
+                        <i className="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.facebook.com/" className="social-icon">
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.x.com/" className="social-icon">
+                        <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </div>
                   </div>
-                  <div className="d-flex flex-row align-items-center gspace-1">
-                    <a href="https://www.instagram.com/" className="social-icon">
-                                          <i className="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://www.facebook.com/" className="social-icon">
-                                          <i className="fa-brands fa-facebook"></i>
-                    </a>
-                    <a href="https://www.x.com/" className="social-icon">
-                                          <i className="fa-brands fa-x-twitter"></i>
-                    </a>
-                  </div>
+                </div>
+                <div className="d-flex flex-column w-100">
+                  <h4>Chinmay Parmar</h4>
+                  <p className="team-designation">Co-Founder & Creative Director</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            <div className="col">
+              <div className="team-container">
+                <div className="image-container team-image">
+                  <img src="/assets/images/krutika.jpeg" alt="Krutika Sharma" className="img-fluid" />
+                  <div className="team-social-overlay">
+                    <div className="d-flex flex-row align-items-center gspace-1">
+                      <a href="https://www.instagram.com/" className="social-icon">
+                        <i className="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.facebook.com/" className="social-icon">
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.x.com/" className="social-icon">
+                        <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="d-flex flex-column w-100">
+                  <h4>Krutika Sharma</h4>
+                  <p className="team-designation">Co-Founder & Head of Marketing</p>
+                </div>
+              </div>
+            </div>
       </div>
     </div>
   </section>
@@ -844,11 +864,11 @@ export default function Page() {
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-calendar accent-color"></i>
-                                      <span className="meta-data">July 19, 2025</span>
+                                      <span className="meta-data">June 15, 2026</span>
                   </div>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-folder accent-color"></i>
-                                      <span className="meta-data">Creative Direction</span>
+                                      <span className="meta-data">Video Production</span>
                   </div>
                 </div>
                               <a href="/single-post" className="blog-title">Ad Film Makers: How Creative Advertising Films Bring Brands to Life</a>
@@ -863,11 +883,11 @@ export default function Page() {
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-calendar accent-color"></i>
-                                      <span className="meta-data">July 19, 2025</span>
+                                      <span className="meta-data">June 15, 2026</span>
                   </div>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-folder accent-color"></i>
-                                      <span className="meta-data">Creative Direction</span>
+                                      <span className="meta-data">Brand Strategy</span>
                   </div>
                 </div>
                               <a href="/brand-video" className="blog-title">Brand Video: How Powerful Visual Storytelling Builds Lasting Brands</a>
@@ -882,11 +902,11 @@ export default function Page() {
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-calendar accent-color"></i>
-                                      <span className="meta-data">July 19, 2025</span>
+                                      <span className="meta-data">June 15, 2026</span>
                   </div>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-folder accent-color"></i>
-                                      <span className="meta-data">Production Insights</span>
+                                      <span className="meta-data">Cinematography</span>
                   </div>
                 </div>
                               <a href="/single-post" className="blog-title">Choosing the Right Lenses for Storytelling</a>

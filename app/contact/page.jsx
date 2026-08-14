@@ -42,11 +42,12 @@ export default function Page() {
             <div className="d-flex flex-column gspace-5">
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Phone Number</span>
-                              <h4>+1 (234) 567-8901</h4>
+                              <h4>+91 9909901116</h4>
+                              <h4>+91 9727000197</h4>
               </div>
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Email Address</span>
-                              <h4>hello@adetcstudio.com</h4>
+                              <h4>hello@adetcstudios.com</h4>
               </div>
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Bussiness Hours</span>

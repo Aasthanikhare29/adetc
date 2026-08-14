@@ -244,6 +244,22 @@
 /* 02. Mobile Responsive */
 
 @media screen and (max-width: 767.98px) {
+    .post-meta{
+        flex-wrap: wrap;
+        gap: 10px 20px;
+    }
+    .post-inner-image img{
+        max-height: 280px;
+    }
+    .blog-pagination{
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .blog-pagination .page-btn{
+        min-width: 42px;
+        height: 42px;
+        padding: 0 14px;
+    }
     h1{
         font-size: 60px;
     }

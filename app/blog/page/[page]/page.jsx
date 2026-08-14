@@ -1,13 +1,32 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
-import { getPaginatedPosts } from '@/lib/blog-posts';
+import { getPaginatedPosts, TOTAL_PAGES } from '@/lib/blog-posts';
+import { notFound } from 'next/navigation';
 
-export const metadata = {
-  title: 'Blog/Journal - adetc',
-};
+export function generateStaticParams() {
+  const params = [];
+  for (let page = 2; page <= TOTAL_PAGES; page += 1) {
+    params.push({ page: String(page) });
+  }
+  return params;
+}
 
-export default function Page() {
-  const posts = getPaginatedPosts(1);
+export async function generateMetadata({ params }) {
+  const { page } = await params;
+  return {
+    title: `Blog/Journal - Page ${page} | adetc`,
+  };
+}
+
+export default async function Page({ params }) {
+  const { page } = await params;
+  const pageNum = Number(page);
+
+  if (!Number.isInteger(pageNum) || pageNum < 2 || pageNum > TOTAL_PAGES) {
+    notFound();
+  }
+
+  const posts = getPaginatedPosts(pageNum);
 
   return (
     <>
@@ -34,7 +53,7 @@ export default function Page() {
                 <BlogCard key={index} post={post} />
               ))}
             </div>
-            <BlogPagination currentPage={1} />
+            <BlogPagination currentPage={pageNum} />
           </div>
         </div>
       </section>
