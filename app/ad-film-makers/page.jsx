@@ -1,11 +1,49 @@
-export const metadata = {
-  title: 'Ad Film Makers in Ahmedabad | AdEtc Studios',
-  description: 'AdEtc Studios creates impactful ad films in Ahmedabad, from concept and scripting to filming, direction, editing, and post-production.',
-};
+import { pageMetadata, articleLd, breadcrumbLd, faqLd } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+
+const IMAGE = '/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg';
+const DESCRIPTION =
+  'AdEtc Studios creates impactful ad films in Ahmedabad, from concept and scripting to filming, direction, editing, and post-production.';
+
+const FAQ = [
+  { q: 'What types of ad films does AdEtc Studios produce?', a: 'We create television commercials, digital advertising films, brand films, promotional videos, product films, corporate films, documentary-style advertising, and campaign content.' },
+  { q: 'How does your ad film production process work?', a: 'Our process generally includes discovery, concept development, scriptwriting, pre-production, filming, editing, post-production, and final delivery.' },
+  { q: 'Do you provide scriptwriting and creative direction?', a: 'Yes. Our team can support concept development, scriptwriting, visual treatment, direction, and complete creative execution.' },
+  { q: 'Do you produce TV commercials?', a: 'Yes. We develop and produce TVCs from the initial concept through filming, post-production, and final delivery.' },
+  { q: 'Can you create digital ads for social media?', a: 'Yes. We create platform-ready advertising content for YouTube, Instagram, OTT, websites, and other digital channels.' },
+  { q: 'How much does an ad film cost?', a: 'The cost depends on the concept, production scale, cast, locations, crew, shoot duration, equipment, production design, and post-production requirements.' },
+  { q: 'Do you work with advertising agencies?', a: 'Yes. We collaborate with advertising agencies, creative agencies, and brands to execute commercial and campaign productions.' },
+  { q: 'Do you only work with clients in Ahmedabad?', a: "AdEtc Studios is based in Ahmedabad and works with clients across Gujarat, India, and other markets depending on the project's production requirements." },
+  { q: 'How do I start an ad film project?', a: 'Share your campaign objective, product or service, target audience, preferred platform, timeline, budget range, and any initial creative references. Our team can then recommend the right production approach.' },
+];
+
+export const metadata = pageMetadata({
+  title: 'Ad Film Makers in Ahmedabad',
+  description: DESCRIPTION,
+  path: '/ad-film-makers',
+  image: IMAGE,
+});
 
 export default function Page() {
   return (
     <>
+      <JsonLd
+        data={[
+          articleLd({
+            headline: 'Ad Film Makers in Ahmedabad',
+            description: DESCRIPTION,
+            image: IMAGE,
+            datePublished: '2025-07-19',
+            path: '/ad-film-makers',
+          }),
+          breadcrumbLd([
+            { name: 'Home', path: '/' },
+            { name: 'Blog', path: '/blog' },
+            { name: 'Ad Film Makers', path: '/ad-film-makers' },
+          ]),
+          faqLd(FAQ),
+        ]}
+      />
       {/* Banner Inner Section */}
       <section className="section banner-inner service-detail-banner">
         <div className="banner-overlay"></div>
@@ -46,7 +84,7 @@ export default function Page() {
               </div>
               <div className="col">
                 <div className="image-container service-detail-image">
-                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Ad Film Production at AdEtc Studios" className="img-fluid" />
+                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Ad Film Production at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -431,7 +469,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="image-container post-inner-image">
-                      <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Ad film shoot behind the scenes" className="img-fluid" />
+                      <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Ad film shoot behind the scenes" className="img-fluid" loading="lazy" decoding="async" />
                     </div>
                   </div>
                 </div>
@@ -549,7 +587,7 @@ export default function Page() {
               <div className="service-detail-sidebar">
                 <div className="service-sidebar-card">
                   <div className="image-container service-sidebar-image">
-                    <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="AdEtc Studios Team" className="img-fluid" />
+                    <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="AdEtc Studios Team" className="img-fluid" loading="lazy" decoding="async" />
                   </div>
                   <ul className="service-facts">
                     <li>
@@ -606,7 +644,7 @@ export default function Page() {
                 <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
               </div>
             </div>
-            <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
+            <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
           </div>
         </div>
       </section>

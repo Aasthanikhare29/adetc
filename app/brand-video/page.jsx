@@ -1,11 +1,36 @@
-export const metadata = {
+import { pageMetadata, articleLd, breadcrumbLd } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+
+const IMAGE = '/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg';
+const DESCRIPTION =
+  'Discover how a compelling brand video helps businesses build trust, connect with audiences, and tell memorable stories that inspire action.';
+
+export const metadata = pageMetadata({
   title: 'Brand Video: How Visual Storytelling Builds Brands',
-  description: 'Discover how a compelling brand video helps businesses build trust, connect with audiences, and tell memorable stories that inspire action.',
-};
+  description: DESCRIPTION,
+  path: '/brand-video',
+  image: IMAGE,
+});
 
 export default function Page() {
   return (
     <>
+  <JsonLd
+    data={[
+      articleLd({
+        headline: 'Brand Video: How Visual Storytelling Builds Brands',
+        description: DESCRIPTION,
+        image: IMAGE,
+        datePublished: '2025-07-19',
+        path: '/brand-video',
+      }),
+      breadcrumbLd([
+        { name: 'Home', path: '/' },
+        { name: 'Blog', path: '/blog' },
+        { name: 'Brand Video', path: '/brand-video' },
+      ]),
+    ]}
+  />
   {/* Banner Inner Section */}
   <section className="section banner-inner single-post-banner">
       <div className="banner-overlay"></div>
@@ -30,35 +55,35 @@ export default function Page() {
                           <h4>Recent Blog</h4>
               <div className="recent-blog-list">
                 <a href="/single-post" className="recent-blog-item">
-                                  <img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" />
+                                  <img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" loading="lazy" decoding="async" />
                   <div className="recent-blog-content">
                                       <span className="recent-blog-date">19 Jul 2025</span>
                                       <h5 className="recent-blog-heading">Ad Film Makers: How Creative Advertising Films Bring Brands to Life</h5>
                   </div>
                 </a>
                 <a href="/brand-video" className="recent-blog-item">
-                                  <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" />
+                                  <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" loading="lazy" decoding="async" />
                   <div className="recent-blog-content">
                                       <span className="recent-blog-date">19 Jul 2025</span>
                                       <h5 className="recent-blog-heading">Brand Video: How Powerful Visual Storytelling Builds Lasting Brands</h5>
                   </div>
                 </a>
                 <a href="/single-post" className="recent-blog-item">
-                                  <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" />
+                                  <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" loading="lazy" decoding="async" />
                   <div className="recent-blog-content">
                                       <span className="recent-blog-date">19 Jul 2025</span>
                                       <h5 className="recent-blog-heading">Choosing the Right Lenses for Storytelling</h5>
                   </div>
                 </a>
                 <a href="/single-post" className="recent-blog-item">
-                                  <img src="/assets/images/photographers-setting-cameras-before-shooting-65ME2DS.jpg" alt="Blog Image" />
+                                  <img src="/assets/images/photographers-setting-cameras-before-shooting-65ME2DS.jpg" alt="Blog Image" loading="lazy" decoding="async" />
                   <div className="recent-blog-content">
                                       <span className="recent-blog-date">19 Jul 2025</span>
                                       <h5 className="recent-blog-heading">Beginner's Guide to Filmmaking with Minimal Budget</h5>
                   </div>
                 </a>
                 <a href="/single-post" className="recent-blog-item">
-                                  <img src="/assets/images/photographer-capture-the-essence-of-the-opening-ce-TU8TLN7.jpg" alt="Blog Image" />
+                                  <img src="/assets/images/photographer-capture-the-essence-of-the-opening-ce-TU8TLN7.jpg" alt="Blog Image" loading="lazy" decoding="async" />
                   <div className="recent-blog-content">
                                       <span className="recent-blog-date">19 Jul 2025</span>
                                       <h5 className="recent-blog-heading">Post-Production Workflow: From Rough Cut to Final Render</h5>
@@ -95,7 +120,7 @@ export default function Page() {
         </div>
         <div className="col col-lg-8 order-1 order-lg-2">
           <div className="d-flex flex-column gspace-2">
-                      <div className="image-container post-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Single Post" className="img-fluid" /></div>
+                      <div className="image-container post-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Single Post" className="img-fluid" loading="lazy" decoding="async" /></div>
             <p>Imagine discovering a company for the first time. Before reading a brochure or speaking with a sales representative, you watch a two-minute video that introduces its mission, values, products, and the people behind the business. Within moments, you understand what the company stands for and why it matters. That's the power of a brand video.</p>
             <p>Modern consumers are surrounded by advertisements, social media posts, and promotional content every day. With so much competing for attention, businesses need more than attractive visuals or clever taglines. They need authentic stories that communicate purpose, build credibility, and create meaningful connections.</p>
             <p>A well-crafted visual story does exactly that. It introduces a business in a memorable way, highlights its personality, and helps audiences understand what makes it different from competitors. Whether it's featured on a website, shared across social media, presented during a sales meeting, or used as part of a larger marketing campaign, this type of content has become one of the most effective ways to engage potential customers.</p>
@@ -307,7 +332,7 @@ export default function Page() {
                       <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
-              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
+              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -319,7 +344,7 @@ export default function Page() {
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -338,7 +363,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -357,7 +382,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">

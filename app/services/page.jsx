@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'This is what we do - adetc',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Our Services',
+  description:
+    'Video production services from AdEtc Studios in Ahmedabad — ad films, brand videos, TVCs, corporate films, and full post-production from concept to final delivery.',
+  path: '/services',
+});
 
 export default function Page() {
   return (
@@ -431,7 +436,7 @@ export default function Page() {
                       <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
-              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
+              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>

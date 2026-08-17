@@ -14,7 +14,11 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { page } = await params;
   return {
-    title: `Blog/Journal - Page ${page} | adetc`,
+    title: `Blog — Page ${page}`,
+    description:
+      'More insights on video production, ad films, brand video and filmmaking from the AdEtc Studios blog.',
+    alternates: { canonical: `/blog/page/${page}` },
+    robots: { index: true, follow: true },
   };
 }
 
