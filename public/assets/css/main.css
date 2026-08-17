@@ -59,14 +59,8 @@ Version: 1.0.0
 --------------------------------------------------------------*/
 
 /* 01. Import Vendor */
-@import url('../webfonts/font-family-anton.css');
-@import url('../webfonts/font-family-poppins.css');
-@import url('vendor/bootstrap.min.css');
-@import url('vendor/fontawesome.css');
-@import url('vendor/solid.css');
-@import url('vendor/regular.css');
-@import url('vendor/brands.css');
-@import url('vendor/swiper-bundle.min.css');
+/* Vendor + font stylesheets are loaded as parallel <link>s in app/layout.jsx
+   (was a render-blocking serial @import chain here). Keep them in sync. */
 
 /* 02. Global Settings */
 
@@ -707,6 +701,7 @@ ul{
 .post-image img{
     width: 100%;
     height: 420px;
+    object-fit: cover;
 }
 
 .partner-image:hover{
@@ -2822,6 +2817,15 @@ ul{
     right: -60px;
 }
 
+@media screen and (max-width: 1400px){
+    .testimonial-scroll-prev{
+        left: 10px;
+    }
+    .testimonial-scroll-next{
+        right: 10px;
+    }
+}
+
 .testimonial-scroll-row{
     display: flex;
     flex-direction: row;
@@ -3133,6 +3137,14 @@ ul{
 .team-social-overlay .social-icon:last-child:hover{
     background-color: #fff;
     color: #000;
+}
+
+@media (hover: none), (max-width: 991.98px){
+    .team-container .team-social-overlay .social-icon{
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 }
 
 /* 32. Partners Styles */
