@@ -89,6 +89,40 @@ All native Next 15, zero dependencies. Central config: **`lib/seo.js`**.
 
 Not yet done — **owner data / off-repo:** `SITE.sameAs` real social URLs (Footer placeholders must NOT be used), `VideoObject` schema (needs real YouTube upload dates), `Offer`/pricing schema (current plan cards are `$299`/lorem placeholders — needs real plans+prices). **Code/content:** `next/image`, the jQuery/`bundle.js` weight (CWV — [PERFORMANCE-PLAN.md](PERFORMANCE-PLAN.md); Phases 0–2 done), and writing the 8 draft articles.
 
+### Owner input needed
+
+Items only the owner can supply/approve. Paste into the noted location, then the schema picks them up automatically.
+
+**`SITE.sameAs`** (`lib/seo.js`) — real profile URLs; feeds the `Organization`/`LocalBusiness` JSON-LD. Do NOT use the Footer's placeholder homepages.
+```
+instagram: https://www.instagram.com/<handle>
+youtube:   https://www.youtube.com/@<handle>
+linkedin:  https://www.linkedin.com/company/<slug>
+facebook:  https://www.facebook.com/<page>
+google:    https://www.google.com/maps?cid=<google-business-cid>
+```
+
+**FAQ answers** — already live in `FAQPage` JSON-LD; listed here for the owner to verify/expand. Source: `app/ad-film-makers/page.jsx` (`FAQ`) + `app/pricing/page.jsx` (`FAQ`).
+
+_Ad films (`/ad-film-makers`):_
+- What types of ad films does AdEtc Studios produce? — Television commercials, digital advertising films, brand films, promotional videos, product films, corporate films, documentary-style advertising, and campaign content.
+- How does your ad film production process work? — Discovery, concept development, scriptwriting, pre-production, filming, editing, post-production, and final delivery.
+- Do you provide scriptwriting and creative direction? — Yes: concept development, scriptwriting, visual treatment, direction, and full creative execution.
+- Do you produce TV commercials? — Yes: concept through filming, post-production, and delivery.
+- Can you create digital ads for social media? — Yes: platform-ready content for YouTube, Instagram, OTT, websites, and other digital channels.
+- How much does an ad film cost? — Depends on concept, production scale, cast, locations, crew, shoot duration, equipment, production design, and post-production.
+- Do you work with advertising agencies? — Yes: collaborates with agencies and brands on commercial and campaign productions.
+- Do you only work with clients in Ahmedabad? — Based in Ahmedabad; works across Gujarat, India, and other markets by project.
+- How do I start an ad film project? — Share campaign objective, product/service, target audience, platform, timeline, budget range, and creative references; the team recommends an approach.
+
+_Pricing (`/pricing`):_
+- What's included in each pricing plan? — Pre-production consultation, professional filming, editing, color grading, and final delivery; higher tiers add drone footage, scriptwriting, and multiple shoot days.
+- Can I customize a plan based on my project needs? — Yes; custom packages tailored to goals and budget.
+- Do you offer revisions after the final delivery? — Up to 2 rounds per plan; more on premium.
+- How long does it take to complete a video project? — Most in 2–4 weeks; detailed schedule at onboarding.
+- Are there any hidden fees? — No; costs outlined in the package, add-ons communicated upfront.
+- Do you provide voiceovers, music licensing, and subtitles? — Yes; available per plan or as add-ons.
+
 ## Mental model, in one line
 
 > Next.js routes and lays out static, mostly-generated pages; a committed jQuery bundle does everything interactive; only the blog has real data and logic.
