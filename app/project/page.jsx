@@ -1,11 +1,8 @@
-import { pageMetadata } from '@/lib/seo';
+import VideoModal from '@/components/VideoModal';
 
-export const metadata = pageMetadata({
-  title: 'Portfolio',
-  description:
-    'View the AdEtc Studios portfolio — ad films, brand videos, TVCs and cinematic branded content produced for clients across industries in Ahmedabad and beyond.',
-  path: '/project',
-});
+export const metadata = {
+  title: 'Portfolio - AdEtc Studios',
+};
 
 export default function Page() {
   return (
@@ -36,16 +33,16 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" data-video-id="Go8gUX_HZAY" id="video-bg-1"></div>
+                                  <video className="project-video-bg" id="video-bg-1" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/1.mp4"></video>
                   <div>
-                    <button className="request-loader" data-video="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1">
+                    <button className="request-loader" data-video="/assets/videos/1.mp4">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Urban Soul</a>
+                                      <a href="/project-detail">KD Hospital</a>
                   </h3>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
@@ -57,16 +54,16 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" data-video-id="LqTk5IbBxgs" id="video-bg-2"></div>
+                                  <video className="project-video-bg" id="video-bg-2" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/2.mp4"></video>
                   <div>
-                    <button className="request-loader" data-video="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1">
+                    <button className="request-loader" data-video="/assets/videos/2.mp4">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Echoes of Fashion</a>
+                                      <a href="/project-detail">Adhav Aishvaryam</a>
                   </h3>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
@@ -78,16 +75,16 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" data-video-id="Np4EN8ZPMFU" id="video-bg-3"></div>
+                                  <video className="project-video-bg" id="video-bg-3" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/3.mp4"></video>
                   <div className="w-100 d-flex justify-content-center">
-                    <button className="request-loader" data-video="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1">
+                    <button className="request-loader" data-video="/assets/videos/3.mp4">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">The Journey</a>
+                                      <a href="/project-detail">Cure Site Laser Center</a>
                   </h3>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
@@ -99,16 +96,16 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" data-video-id="DOeuljcKkTI" id="video-bg-4"></div>
+                                  <video className="project-video-bg" id="video-bg-4" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/4.mp4"></video>
                   <div>
-                    <button className="request-loader" data-video="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1">
+                    <button className="request-loader" data-video="/assets/videos/4.mp4">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Legacy</a>
+                                      <a href="/project-detail">Pollie</a>
                   </h3>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
@@ -120,16 +117,16 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" data-video-id="BCKMzk2rRKo" id="video-bg-5"></div>
+                                  <video className="project-video-bg" id="video-bg-5" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/5.mp4"></video>
                   <div>
-                    <button className="request-loader" data-video="https://www.youtube.com/embed/VhBl3dHT5SY?autoplay=1">
+                    <button className="request-loader" data-video="/assets/videos/5.mp4">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Launch Bold</a>
+                                      <a href="/project-detail">Kadam Pakka Rang</a>
                   </h3>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
@@ -143,6 +140,10 @@ export default function Page() {
       </div>
     </div>
   </section>
+  {/* Modal Video Section */}
+  <div className="section p-0">
+    <VideoModal />
+  </div>
   {/* Contact CTA Section */}
   <section className="section">
     <div className="hero-container">
@@ -157,7 +158,7 @@ export default function Page() {
                       <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
-              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
+              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
       </div>
     </div>
   </section>

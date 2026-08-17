@@ -1,36 +1,11 @@
-import { pageMetadata, articleLd, breadcrumbLd } from '@/lib/seo';
-import JsonLd from '@/components/JsonLd';
-
-const IMAGE = '/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg';
-const DESCRIPTION =
-  'Learn what a video production company in Ahmedabad does, from concept and scripting to filming, editing, and delivering videos for brands.';
-
-export const metadata = pageMetadata({
-  title: 'Video Production Company in Ahmedabad: What They Do',
-  description: DESCRIPTION,
-  path: '/video-production-company',
-  image: IMAGE,
-});
+export const metadata = {
+  title: 'Video Production Company in Ahmedabad: What They Do - AdEtc Studios',
+  description: 'Learn what a video production company in Ahmedabad does, from concept and scripting to filming, editing, and delivering videos for brands.',
+};
 
 export default function Page() {
   return (
     <>
-      <JsonLd
-        data={[
-          articleLd({
-            headline: 'Video Production Company in Ahmedabad: What They Do',
-            description: DESCRIPTION,
-            image: IMAGE,
-            datePublished: '2025-07-19',
-            path: '/video-production-company',
-          }),
-          breadcrumbLd([
-            { name: 'Home', path: '/' },
-            { name: 'Blog', path: '/blog' },
-            { name: 'Video Production Company', path: '/video-production-company' },
-          ]),
-        ]}
-      />
       {/* Banner Inner Section */}
       <section className="section banner-inner single-post-banner">
         <div className="banner-overlay"></div>
@@ -55,35 +30,35 @@ export default function Page() {
                   <h4>Recent Blog</h4>
                   <div className="recent-blog-list">
                     <a href="/single-post" className="recent-blog-item">
-                      <img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" loading="lazy" decoding="async" />
+                      <img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" />
                       <div className="recent-blog-content">
                         <span className="recent-blog-date">19 Jul 2025</span>
                         <h5 className="recent-blog-heading">Ad Film Makers: How Creative Advertising Films Bring Brands to Life</h5>
                       </div>
                     </a>
                     <a href="/brand-video" className="recent-blog-item">
-                      <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" loading="lazy" decoding="async" />
+                      <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" />
                       <div className="recent-blog-content">
                         <span className="recent-blog-date">19 Jul 2025</span>
                         <h5 className="recent-blog-heading">Brand Video: How Powerful Visual Storytelling Builds Lasting Brands</h5>
                       </div>
                     </a>
                     <a href="/tvc-format" className="recent-blog-item">
-                      <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Blog Image" loading="lazy" decoding="async" />
+                      <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Blog Image" />
                       <div className="recent-blog-content">
                         <span className="recent-blog-date">19 Jul 2025</span>
                         <h5 className="recent-blog-heading">TVC Format: Understanding Commercial Duration, Script Structure and Production</h5>
                       </div>
                     </a>
                     <a href="/video-production-company" className="recent-blog-item">
-                      <img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Blog Image" loading="lazy" decoding="async" />
+                      <img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Blog Image" />
                       <div className="recent-blog-content">
                         <span className="recent-blog-date">19 Jul 2025</span>
                         <h5 className="recent-blog-heading">Video Production Company in Ahmedabad: What to Look for Before You Hire One</h5>
                       </div>
                     </a>
                     <a href="/single-post" className="recent-blog-item">
-                      <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" loading="lazy" decoding="async" />
+                      <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" />
                       <div className="recent-blog-content">
                         <span className="recent-blog-date">19 Jul 2025</span>
                         <h5 className="recent-blog-heading">Choosing the Right Lenses for Storytelling</h5>
@@ -120,11 +95,11 @@ export default function Page() {
             </div>
             <div className="col col-lg-8 order-1 order-lg-2">
               <div className="d-flex flex-column gspace-2">
-                <div className="image-container post-image"><img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Single Post" className="img-fluid" loading="lazy" decoding="async" /></div>
+                <div className="image-container post-image"><img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Single Post" className="img-fluid" /></div>
                 <div className="d-flex flex-row flex-wrap align-items-center gspace-3 post-meta">
                   <div className="d-flex flex-row gspace-1 align-items-center">
                     <i className="fa-solid fa-user accent-color"></i>
-                    <span className="meta-data">adetc Studio</span>
+                    <span className="meta-data">AdEtc Studios</span>
                   </div>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                     <i className="fa-solid fa-calendar accent-color"></i>
@@ -136,7 +111,7 @@ export default function Page() {
                   </div>
                 </div>
                 <p>When businesses think about professional video, they often picture cameras, locations, actors, and a shoot. But production starts much earlier.</p>
-                <p>A video production company in Ahmedabad can help shape the concept, develop the script, plan the shoot, manage the crew, and handle post-production. Depending on the project, this could mean a corporate film, product video, commercial, brand story, or social media campaign.</p>
+                <p>A video production company in Ahmedabad can help shape the concept, develop the script, plan the shoot, manage the crew, and handle post-production. Depending on the project, this could mean a TVC's, product video, commercial, brand story, or social media campaign.</p>
                 <p>So, what really happens behind the scenes? Let's take a look.</p>
 
                 <h3>What Does a Video Production Company Do?</h3>
@@ -153,7 +128,7 @@ export default function Page() {
                   <li><p>Editing and post-production</p></li>
                   <li><p>Preparing the final content for its intended platforms</p></li>
                 </ul>
-                <p>The exact scope depends on the project. A two-minute corporate film may require interviews, multiple locations, and extensive post-production, while a product launch video may need detailed art direction, product cinematography.</p>
+                <p>The exact scope depends on the project. A two-minute TVC's may require interviews, multiple locations, and extensive post-production, while a product launch video may need detailed art direction, product cinematography.</p>
                 <p>The important distinction is that professional production is purpose-driven. The final video isn't created simply to look good. It needs to communicate something clearly.</p>
 
                 <h3>Why Businesses Hire a Production Company Instead of Simply Shooting a Video</h3>
@@ -170,13 +145,13 @@ export default function Page() {
                 </ul>
                 <p>The answers influence everything from the opening frame to the final call to action.</p>
                 <div className="image-container post-inner-image">
-                  <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Video production backstage" className="img-fluid" loading="lazy" decoding="async" />
+                  <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Video production backstage" className="img-fluid" />
                 </div>
 
                 <h3>What Types of Videos Can a Production Company Create?</h3>
                 <p>There isn't one standard format for every business. Different objectives call for different approaches.</p>
                 <h4>Corporate Videos</h4>
-                <p>Corporate films can introduce a company, explain its capabilities, showcase its workplace, communicate leadership vision, or support internal communication.</p>
+                <p>TVC's can introduce a company, explain its capabilities, showcase its workplace, communicate leadership vision, or support internal communication.</p>
                 <p>They're often used on websites, during presentations, at events, and as part of B2B communication.</p>
                 <h4>Brand Films</h4>
                 <p>A brand film focuses less on selling a particular product and more on communicating identity, values, personality, or purpose.</p>
@@ -213,7 +188,7 @@ export default function Page() {
                 <p>Casting, locations, schedules, crew, props, costumes, equipment, permissions, production design, and logistics are coordinated before the shoot.</p>
                 <p>Good preparation can prevent expensive problems later.</p>
                 <div className="image-container post-inner-image">
-                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Director during the shoot" className="img-fluid" loading="lazy" decoding="async" />
+                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Director during the shoot" className="img-fluid" />
                 </div>
                 <h4>5. Production</h4>
                 <p>Now comes the shoot.</p>
@@ -287,14 +262,14 @@ export default function Page() {
 
                 <h3>Final Thoughts</h3>
                 <p>A video production company in Ahmedabad does more than manage a shoot. It brings together strategy, storytelling, production, and post-production to turn an idea into meaningful visual content.</p>
-                <p>Whether it's a corporate film, product video, commercial, or social campaign, the goal remains the same: create content with a clear purpose that audiences remember.</p>
+                <p>Whether it's a TVC's, product video, commercial, or social campaign, the goal remains the same: create content with a clear purpose that audiences remember.</p>
                 <p>Choosing the right partner means looking beyond cameras and showreels and considering their creative approach, collaboration, and ability to bring your vision to life.</p>
 
                 <h3>Frequently Asked Questions</h3>
                 <h4>What does a video production company in Ahmedabad do?</h4>
                 <p>A video production company handles the process of turning an idea into finished visual content, including concept development, scripting, filming, editing, post-production, and delivery.</p>
                 <h4>What types of videos can a production company create?</h4>
-                <p>Depending on its capabilities, a production team may create corporate films, brand stories, commercials, product videos, explainers, documentaries, promotional videos, and social media content.</p>
+                <p>Depending on its capabilities, a production team may create TVC's, brand stories, commercials, product videos, explainers, documentaries, promotional videos, and social media content.</p>
                 <h4>How much does video production cost in Ahmedabad?</h4>
                 <p>Pricing varies according to the concept, crew, locations, equipment, shooting days, post-production, and final deliverables. There is no single standard cost.</p>
                 <h4>How long does video production take?</h4>
@@ -312,7 +287,7 @@ export default function Page() {
                     <h5>Tags:</h5>
                     <div className="post-tag-container">
                       <span className="post-tag">video production</span>
-                      <span className="post-tag">corporate films</span>
+                      <span className="post-tag">TVC's</span>
                       <span className="post-tag">brand films</span>
                     </div>
                   </div>
@@ -351,7 +326,7 @@ export default function Page() {
                 <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
               </div>
             </div>
-            <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
+            <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
           </div>
         </div>
       </section>
@@ -363,7 +338,7 @@ export default function Page() {
             <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
               <div className="col">
                 <div className="card card-blog">
-                  <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
+                  <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" /></div>
                   <div className="card-blog-content">
                     <div className="d-flex flex-row align-items-center justify-content-between">
                       <div className="d-flex flex-row gspace-1 align-items-center">
@@ -382,7 +357,7 @@ export default function Page() {
               </div>
               <div className="col">
                 <div className="card card-blog">
-                  <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
+                  <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" /></div>
                   <div className="card-blog-content">
                     <div className="d-flex flex-row align-items-center justify-content-between">
                       <div className="d-flex flex-row gspace-1 align-items-center">
@@ -401,7 +376,7 @@ export default function Page() {
               </div>
               <div className="col">
                 <div className="card card-blog">
-                  <div className="image-container blog-image"><img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
+                  <div className="image-container blog-image"><img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Blog Image" className="img-fluid" /></div>
                   <div className="card-blog-content">
                     <div className="d-flex flex-row align-items-center justify-content-between">
                       <div className="d-flex flex-row gspace-1 align-items-center">

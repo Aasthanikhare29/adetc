@@ -1,11 +1,6 @@
-import { pageMetadata } from '@/lib/seo';
-
-export const metadata = pageMetadata({
-  title: 'Project Detail',
-  description:
-    'A closer look at an AdEtc Studios production — the concept, creative direction, shoot and post-production behind the final film.',
-  path: '/project-detail',
-});
+export const metadata = {
+  title: 'Project Detail - AdEtc Studios',
+};
 
 export default function Page() {
   return (
@@ -15,7 +10,7 @@ export default function Page() {
       <div className="banner-overlay"></div>
     <div className="hero-container">
       <div className="banner-inner-container">
-              <h2>Urban Soul</h2>
+              <h2>KD Hospital</h2>
         <nav className="breadcrumb">
                   <a href="/" className="breadcrumb-item">Home</a>
                   <span className="separator">/</span>
@@ -42,7 +37,7 @@ export default function Page() {
           <div className="col col-lg-7">
             <div className="d-flex flex-column gspace-2 justify-content-end h-100">
                           <h3>About the Project</h3>
-                          <p>Urban Soul” is a high-energy music video collaboration with independent artist Jayverra, blending gritty city aesthetics with smooth R&B vibes. Set in the heart of downtown L.A., this project captures the raw essence of street life and transforms it into an emotionally driven visual narrative.</p>
+                          <p>KD Hospital” is a high-energy music video collaboration with independent artist Jayverra, blending gritty city aesthetics with smooth R&B vibes. Set in the heart of downtown L.A., this project captures the raw essence of street life and transforms it into an emotionally driven visual narrative.</p>
                           <p>We worked closely with the artist to develop a video concept that reflects the emotions of the lyrics, the tempo of the beat, and the visual identity of the track — resulting in a production that feels both cinematic and personal.</p>
             </div>
           </div>
@@ -51,7 +46,7 @@ export default function Page() {
           <div className="col col-lg-4">
             <div className="card card-project-detail">
                           <h5>Client: Jayverra (Independent Music Artist)</h5>
-                          <h5>Project Title: Urban Soul</h5>
+                          <h5>Project Title: KD Hospital</h5>
                           <h5>Category: Music Video</h5>
                           <h5>Location: Downtown Los Angeles, USA</h5>
                           <h5>Duration: 3 minutes 45 seconds</h5>
@@ -113,7 +108,7 @@ export default function Page() {
             </div>
           </div>
           <div className="col col-lg-8">
-                      <p>The visual tone of Urban Soul was inspired by neo-soul aesthetics, mixing deep contrast lighting and urban textures to evoke emotion. We applied a cool-toned color grade to balance warmth from the performance scenes, bringing contrast and emotional weight to the final cut.</p>
+                      <p>The visual tone of KD Hospital was inspired by neo-soul aesthetics, mixing deep contrast lighting and urban textures to evoke emotion. We applied a cool-toned color grade to balance warmth from the performance scenes, bringing contrast and emotional weight to the final cut.</p>
           </div>
         </div>
         <div className="row row-cols-lg-2 row-cols-1 grid-spacer-80">
@@ -169,16 +164,16 @@ export default function Page() {
           <div className="col col-lg-8">
             <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
               <div className="col">
-                              <div className="image-container"><img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Project Detail" className="img-fluid" loading="lazy" decoding="async" /></div>
+                              <div className="image-container"><img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Project Detail" className="img-fluid" /></div>
               </div>
               <div className="col">
-                              <div className="image-container"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Project Detail" className="img-fluid" loading="lazy" decoding="async" /></div>
+                              <div className="image-container"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Project Detail" className="img-fluid" /></div>
               </div>
               <div className="col">
-                              <div className="image-container"><img src="/assets/images/photographers-setting-cameras-before-shooting-65ME2DS.jpg" alt="Project Detail" className="img-fluid" loading="lazy" decoding="async" /></div>
+                              <div className="image-container"><img src="/assets/images/photographers-setting-cameras-before-shooting-65ME2DS.jpg" alt="Project Detail" className="img-fluid" /></div>
               </div>
               <div className="col">
-                              <div className="image-container"><img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Project Detail" className="img-fluid" loading="lazy" decoding="async" /></div>
+                              <div className="image-container"><img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="Project Detail" className="img-fluid" /></div>
               </div>
             </div>
           </div>
@@ -200,7 +195,7 @@ export default function Page() {
                       <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
-              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
+              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
       </div>
     </div>
   </section>

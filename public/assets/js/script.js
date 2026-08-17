@@ -76,9 +76,13 @@ window.onYouTubeIframeAPIReady = function() {
 // 🔹 3. Banner Video
 // ===============================================
 
+function isNativeVideo($el) {
+    return $el.length && $el[0].tagName === "VIDEO";
+}
+
 function initBannerVideo() {
     const $el = $("#banner-video-background");
-    if (!$el.length) return;
+    if (!$el.length || isNativeVideo($el)) return;
 
     new YT.Player($el.attr("id"), {
         videoId: "pVA0G01aDfk",
@@ -108,7 +112,7 @@ function initBannerVideo() {
 
 function initTestimonialBannerVideo() {
     const $el = $("#testimonial-video-background");
-    if (!$el.length) return;
+    if (!$el.length || isNativeVideo($el)) return;
 
     new YT.Player($el.attr("id"), {
         videoId: "6J1XlyCxtPw",
@@ -142,6 +146,7 @@ function initProjectVideoBackgrounds() {
 
     $videos.each(function() {
         const $el = $(this);
+        if (isNativeVideo($el)) return;
         const id = $el.attr("id");
         const videoId = $el.data("video-id");
 
@@ -179,6 +184,7 @@ function initServiceVideoBackground() {
 
     $videos.each(function(i) {
         const $el = $(this);
+        if (isNativeVideo($el)) return;
         if (!$el.attr("id")) $el.attr("id", "service-video-" + i);
 
         const videoId = $el.data("video-id");
@@ -232,12 +238,24 @@ function ytControl(iframe, command) {
 
 $(document).on("shown.bs.collapse", function(e) {
     const vid = $(e.target).find(".service-video-bg")[0];
-    if (vid) ytControl(vid, "playVideo");
+    if (vid) {
+        if (vid.tagName === "VIDEO") {
+            vid.play().catch(function() {});
+        } else {
+            ytControl(vid, "playVideo");
+        }
+    }
 });
 
 $(document).on("hidden.bs.collapse", function(e) {
     const vid = $(e.target).find(".service-video-bg")[0];
-    if (vid) ytControl(vid, "pauseVideo");
+    if (vid) {
+        if (vid.tagName === "VIDEO") {
+            vid.pause();
+        } else {
+            ytControl(vid, "pauseVideo");
+        }
+    }
 });
 
 // ===============================================
@@ -276,6 +294,7 @@ function initCtaHighlightVideo() {
 
     $videos.each(function(i) {
         const $el = $(this);
+        if (isNativeVideo($el)) return;
 
         if (!$el.attr("id")) $el.attr("id", "cta-highlight-video-" + i);
 

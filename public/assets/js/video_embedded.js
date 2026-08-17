@@ -4,24 +4,43 @@ $(function() {
   const $closeModal = $('.my-close');
   const $videoFrame = $('#my-video-frame');
 
-  $openModalButtons.on('click', function() {
+  function lockScroll() {
+    $('body').css('overflow', 'hidden');
+  }
+
+  function unlockScroll() {
+    $('body').css('overflow', '');
+  }
+
+  function closeModal() {
+    $overlay.hide();
+    $videoFrame[0].pause();
+    $videoFrame.attr('src', '');
+    unlockScroll();
+  }
+
+  $openModalButtons.on('click', function(e) {
+      e.preventDefault();
       const videoUrl = $(this).attr('data-video');
-      $videoFrame.attr('src', videoUrl + "?autoplay=1");
+      $videoFrame.attr('src', videoUrl);
       $overlay.css('display', 'flex');
+      const video = $videoFrame[0];
+      video.load();
+      video.play().catch(function() {});
+      lockScroll();
   });
 
-  $closeModal.on('click', function() {
-    $overlay.hide();
-
-    $videoFrame.attr('src', '');
-    $videoFrame[0].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*');
-});
-
+  $closeModal.on('click', closeModal);
 
   $overlay.on('click', function(e) {
       if (e.target === this) {
-          $overlay.hide();
-          $videoFrame.attr('src', "");
+          closeModal();
+      }
+  });
+
+  $(document).on('keydown', function(e) {
+      if (e.key === 'Escape') {
+          closeModal();
       }
   });
 });

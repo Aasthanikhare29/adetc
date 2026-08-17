@@ -31,10 +31,36 @@ function initSubmitNewsletter() {
 
 function initSubmitContact() {
     const $form = $('#contact-form');
-    const $success = $('#success-message');
-    const $error = $('#error-message');
+    const $overlay = $('#contact-dialog-overlay');
+    const $dialogTitle = $('#contact-dialog-title');
+    const $dialogMessage = $('#contact-dialog-message');
+    const $dialogIconSuccess = $('#contact-dialog-icon-success');
+    const $dialogIconError = $('#contact-dialog-icon-error');
 
     if (!$form.length) return;
+
+    function showDialog(title, message, isSuccess) {
+        $dialogTitle.text(title);
+        $dialogMessage.text(message);
+        if (isSuccess) {
+            $dialogIconSuccess.removeClass('hidden');
+            $dialogIconError.addClass('hidden');
+        } else {
+            $dialogIconError.removeClass('hidden');
+            $dialogIconSuccess.addClass('hidden');
+        }
+        $overlay.addClass('show');
+    }
+
+    function hideDialog() {
+        $overlay.removeClass('show');
+    }
+
+    $('#contact-dialog-ok').on('click', hideDialog);
+    $('#contact-dialog-close').on('click', hideDialog);
+    $overlay.on('click', function (event) {
+        if (event.target === this) hideDialog();
+    });
 
     $form.on('submit', function (event) {
         event.preventDefault();
@@ -63,20 +89,33 @@ function initSubmitContact() {
             isValid = false;
         }
 
-        if (isValid) {
-            $success.removeClass('hidden');
-            $form[0].reset();
-            $('.selected-text').text("Project Type");
-
-            setTimeout(() => {
-                $success.addClass('hidden');
-            }, 3000);
-        } else {
-            $error.removeClass('hidden');
-
-            setTimeout(() => {
-                $error.addClass('hidden');
-            }, 3000);
+        if (!isValid) {
+            alert("Please fill in all required fields with a valid email and project type.");
+            return;
         }
+
+        $.ajax({
+            url: '/api/contact',
+            method: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({
+                name: name,
+                email: email,
+                phone: phone,
+                subject: subject,
+                projectType: projectType,
+                message: message
+            })
+        })
+            .done(function (response) {
+                const msg = response && response.message ? response.message : "Thank you! Your message has been sent successfully.";
+                alert(msg);
+                $form[0].reset();
+                $('.selected-text').text("Project Type");
+            })
+            .fail(function (xhr) {
+                const msg = xhr && xhr.responseJSON && xhr.responseJSON.error ? xhr.responseJSON.error : "Oops! Form submission failed. Please try again.";
+                showDialog("Submission Failed", msg, false);
+            });
     });
 }

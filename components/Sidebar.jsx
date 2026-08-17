@@ -16,7 +16,7 @@ export default function Sidebar() {
         <li>
                   <a href="/about">About Us</a>
         </li>
-        <li className="sidebar-dropdown">
+        {/* <li className="sidebar-dropdown">
           <div className="dropdown-header">
                       <a href="#">Services</a>
             <button className="sidebar-dropdown-btn">
@@ -34,8 +34,11 @@ export default function Sidebar() {
                           <a href="/pricing">Pricing</a>
             </li>
           </ul>
+        </li> */}
+        <li>
+                  <a href="/services">Services</a>
         </li>
-        <li className="sidebar-dropdown">
+        {/* <li className="sidebar-dropdown">
           <div className="dropdown-header">
                       <a href="#">Portfolio</a>
             <button className="sidebar-dropdown-btn">
@@ -50,8 +53,11 @@ export default function Sidebar() {
                           <a href="/project-detail">Project Detail</a>
             </li>
           </ul>
+        </li> */}
+        <li>
+                  <a href="/project">Portfolio</a>
         </li>
-        <li className="sidebar-dropdown">
+        {/* <li className="sidebar-dropdown">
           <div className="dropdown-header">
                       <a href="#">Pages</a>
             <button className="sidebar-dropdown-btn">
@@ -75,6 +81,9 @@ export default function Sidebar() {
                           <a href="/#">404</a>
             </li>
           </ul>
+        </li> */}
+        <li>
+                  <a href="/blog">Blog</a>
         </li>
         <li className="below-dropdown">
                   <a href="/contact">Contact Us</a>

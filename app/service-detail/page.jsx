@@ -181,9 +181,9 @@ export default function Page() {
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Corporate Films</h5>
+                                  <h5>TVC's</h5>
                       </div>
-                                <p>Build trust with professionally produced corporate films that communicate your company's vision, values, culture, and achievements. Whether you need an investor presentation, company profile, recruitment film, or internal communication video, our corporate video production team creates authentic stories that resonate with your audience.</p>
+                                <p>Build trust with professionally produced TVC's that communicate your company's vision, values, culture, and achievements. Whether you need an investor presentation, company profile, recruitment film, or internal communication video, our corporate video production team creates authentic stories that resonate with your audience.</p>
                     </div>
                   </div>
                   <div className="col">
@@ -217,7 +217,7 @@ export default function Page() {
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Documentary Films</h5>
+                                  <h5>Documentary Film</h5>
                       </div>
                                 <p>Some stories deserve authenticity above everything else. Our documentary production combines research, storytelling, and cinematic filmmaking to create meaningful narratives that inspire audiences and build credibility.</p>
                     </div>
@@ -344,7 +344,7 @@ export default function Page() {
                     </h2>
                     <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>We produce corporate films, brand videos, commercial advertisements, promotional videos, documentaries, product videos, music videos, and customised video content for businesses across industries.</p>
+                                <p>We produce TVC's, brand videos, commercial advertisements, promotional videos, documentaries, product videos, music videos, and customised video content for businesses across industries.</p>
                       </div>
                     </div>
                   </div>

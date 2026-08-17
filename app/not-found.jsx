@@ -1,6 +1,5 @@
 export const metadata = {
-  title: 'Page Not Found',
-  robots: { index: false, follow: true },
+  title: 'Not Found - AdEtc Studios',
 };
 
 export default function Page() {

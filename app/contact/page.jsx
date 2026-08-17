@@ -1,11 +1,6 @@
-import { pageMetadata } from '@/lib/seo';
-
-export const metadata = pageMetadata({
-  title: 'Contact Us',
-  description:
-    'Get in touch with AdEtc Studios in Ahmedabad to plan your next ad film, brand video or TVC. Call +91 9727000197 or send us your project brief.',
-  path: '/contact',
-});
+export const metadata = {
+  title: 'Contact Us - AdEtc Studios',
+};
 
 export default function Page() {
   return (
@@ -47,9 +42,9 @@ export default function Page() {
             <div className="d-flex flex-column gspace-5">
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Phone Number</span>
-                              <h4>+91 9909901116</h4>
                               <h4>+91 9727000197</h4>
-              </div>
+                              <h4>+91 9909901116</h4>
+               </div>
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Email Address</span>
                               <h4>hello@adetcstudios.com</h4>
@@ -60,7 +55,7 @@ export default function Page() {
               </div>
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Studio Location</span>
-                              <h4>314, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015</h4>
+                              <h4>314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015</h4>
               </div>
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Social Media</span>
@@ -83,18 +78,6 @@ export default function Page() {
           </div>
           <div className="col col-lg-8 col-md-6">
             <div className="d-flex flex-column gspace-2">
-              <div id="success-message" className="alert success hidden">
-                <span className="check-icon">
-                                  <i className="fa-solid fa-2xl fa-check"></i>
-                </span>
-                              <p>Thank you! Form submitted successfully.</p>
-              </div>
-              <div id="error-message" className="alert error hidden">
-                <span className="cross-icon">
-                                  <i className="fa-solid fa-2xl fa-xmark"></i>
-                </span>
-                              <p>Oops! Form submission failed. Please try again.</p>
-              </div>
               <div className="card card-contact-form">
                               <h3>Send us a Message</h3>
                 <form id="contact-form" action="/assets/php/submit-contact.php" className="form">
@@ -141,7 +124,7 @@ export default function Page() {
   </section>
   {/* Maps Section */}
   <section className="section p-0">
-      <iframe loading="lazy" className="maps" src="https://maps.google.com/maps?q=314%2C%20Judges%20Bunglow%20Rd%2C%20Suryapooja%20Block%20B%2C%20Vastrapur%2C%20Ahmedabad%2C%20Gujarat%20380015&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="314, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015" aria-label="314, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015"></iframe>
+      <iframe loading="lazy" className="maps" src="https://maps.google.com/maps?q=AdEtc+Studios%2C+314%2C+Shivalik+Shilp+2%2C+Judges+Bunglow+Rd%2C+Suryapooja+Block+B%2C+Vastrapur%2C+Ahmedabad%2C+Gujarat+380015&amp;ll=23.0288856%2C72.5295082&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="AdEtc Studios, 314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015" aria-label="AdEtc Studios, 314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015"></iframe>
   </section>
   {/* Faq Section */}
   <div className="section">
@@ -221,6 +204,23 @@ export default function Page() {
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  {/* Contact Dialogue Box */}
+  <div id="contact-dialog-overlay" className="contact-dialog-overlay">
+    <div className="contact-dialog">
+      <span className="contact-dialog-close" id="contact-dialog-close">
+        <i className="fa-solid fa-xmark"></i>
+      </span>
+      <div className="contact-dialog-icon success hidden" id="contact-dialog-icon-success">
+        <i className="fa-solid fa-circle-check"></i>
+      </div>
+      <div className="contact-dialog-icon error hidden" id="contact-dialog-icon-error">
+        <i className="fa-solid fa-circle-xmark"></i>
+      </div>
+      <h3 className="contact-dialog-title" id="contact-dialog-title">Message Sent</h3>
+      <p className="contact-dialog-message" id="contact-dialog-message"></p>
+      <button type="button" className="btn btn-accent" id="contact-dialog-ok">OK</button>
     </div>
   </div>
     </>

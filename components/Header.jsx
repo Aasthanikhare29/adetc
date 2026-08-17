@@ -60,7 +60,7 @@ export default function Header() {
                 </ul>
               </div>
             </div>
-            <button className="nav-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button className="nav-btn" type="button" aria-label="Toggle navigation">
                           <i className="fa-solid fa-bars"></i>
             </button>
             {/* Navbar Social Container */}

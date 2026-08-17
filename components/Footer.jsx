@@ -13,11 +13,11 @@ export default function Footer() {
             <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
               <div className="col col-lg-3 col-md-6">
                 <div className="d-flex flex-column gspace-2">
-                  <h3>adetc - Film & Video Production</h3>
+                  <h3>AdEtc Studios - Film & Video Production</h3>
                   <div className="d-flex flex-column gspace-1">
                     <h5>Our Office</h5>
                     <div className="footer-info-container">
-                      <span className="footer-info">314, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015</span>
+                      <span className="footer-info">314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015</span>
                     </div>
                     <div className="footer-info-container">
                       <h5>Contact Us</h5>
@@ -89,12 +89,12 @@ export default function Footer() {
             </div>
 
             <div className="footer-title-container">
-              <span className="footer-title">adetc Studio</span>
+              <span className="footer-title">AdEtc Studios</span>
             </div>
 
             <div className="footer-copyright-container">
               <a href="#" className="legallink">Privacy Policy</a>
-              <span className="copyright">© 2025 adetc Studio. All rights reserved.</span>
+              <span className="copyright">© 2025 AdEtc Studios. All rights reserved.</span>
               <a href="#" className="legallink">Terms & Conditions</a>
             </div>
           </div>

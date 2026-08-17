@@ -1,11 +1,6 @@
-import { pageMetadata } from '@/lib/seo';
-
-export const metadata = pageMetadata({
-  title: 'Our Services',
-  description:
-    'Video production services from AdEtc Studios in Ahmedabad — ad films, brand videos, TVCs, corporate films, and full post-production from concept to final delivery.',
-  path: '/services',
-});
+export const metadata = {
+  title: 'This is what we do - AdEtc Studios',
+};
 
 export default function Page() {
   return (
@@ -72,7 +67,7 @@ export default function Page() {
           </div>
           <div className="accordion-item service-acc-2">
             <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service2">Campaign Film</button>
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service2">DVC's</button>
             </h2>
             <div id="service2" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
               <div className="accordion-body">
@@ -86,7 +81,7 @@ export default function Page() {
                                                       <p className="mb-0">Our social media campaigns connect with your audience. We create engaging content and strategies that drive brand awareness, increase website traffic, and generate leads. From content creation to community management, we help you maximize your social media presence.</p>
                           </div>
                           <div className="service-tag-container">
-                                                      <span className="service-tag">campaign films</span>
+                                                      <span className="service-tag">DVC'ss</span>
                                                       <span className="service-tag">social media</span>
                                                       <span className="service-tag">brand awareness</span>
                           </div>
@@ -105,7 +100,7 @@ export default function Page() {
           </div>
           <div className="accordion-item service-acc-3">
             <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service3">Corporate Films</button>
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service3">TVC's</button>
             </h2>
             <div id="service3" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
               <div className="accordion-body">
@@ -116,10 +111,10 @@ export default function Page() {
                       <div className="col col-md-9">
                         <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
                           <div className="service-description-content">
-                                                      <p className="mb-0">Our corporate films showcase your brand's story. We produce professional videos that enhance your company's image, engage stakeholders, and drive business growth. From brand films to explainer videos, we deliver clear and impactful communication.</p>
+                                                      <p className="mb-0">Our TVC's showcase your brand's story. We produce professional videos that enhance your company's image, engage stakeholders, and drive business growth. From brand films to explainer videos, we deliver clear and impactful communication.</p>
                           </div>
                           <div className="service-tag-container">
-                                                      <span className="service-tag">corporate films</span>
+                                                      <span className="service-tag">TVC's</span>
                                                       <span className="service-tag">brand films</span>
                                                       <span className="service-tag">explainer videos</span>
                           </div>
@@ -138,7 +133,7 @@ export default function Page() {
           </div>
           <div className="accordion-item service-acc-4">
             <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service4">Documentary Films</button>
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service4">Brand Films</button>
             </h2>
             <div id="service4" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
               <div className="accordion-body">
@@ -155,72 +150,6 @@ export default function Page() {
                                                       <span className="service-tag">documentary films</span>
                                                       <span className="service-tag">real-life stories</span>
                                                       <span className="service-tag">narratives</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col col-md-3">
-                        <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item service-acc-5">
-            <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service5">Music Videos</button>
-            </h2>
-            <div id="service5" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
-              <div className="accordion-body">
-                <div className="service-content-container">
-                                  <div className="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-5" data-start="80" data-end="100"></div>
-                  <div className="service-video-content">
-                    <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                      <div className="col col-md-9">
-                        <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
-                          <div className="service-description-content">
-                                                      <p className="mb-0">Our music videos bring your music to life. We create visually stunning and creatively groundbreaking music videos that enhance your artist's brand and engage your audience. From concept to completion, we deliver high-quality music videos that leave a lasting impression.</p>
-                          </div>
-                          <div className="service-tag-container">
-                                                      <span className="service-tag">music videos</span>
-                                                      <span className="service-tag">artist branding</span>
-                                                      <span className="service-tag">creative direction</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col col-md-3">
-                        <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item service-acc-6">
-            <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service6">Product Shoot</button>
-            </h2>
-            <div id="service6" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
-              <div className="accordion-body">
-                <div className="service-content-container">
-                                  <div className="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-6" data-start="100" data-end="120"></div>
-                  <div className="service-video-content">
-                    <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                      <div className="col col-md-9">
-                        <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
-                          <div className="service-description-content">
-                                                      <p className="mb-0">Our product shoots highlight your products in the best light. We capture stunning visuals that showcase your products' unique features and benefits. From simple product shots to complex lifestyle photography, we deliver high-quality images that drive sales.</p>
-                          </div>
-                          <div className="service-tag-container">
-                                                      <span className="service-tag">product shoots</span>
-                                                      <span className="service-tag">lifestyle photography</span>
-                                                      <span className="service-tag">commercial imagery</span>
                           </div>
                         </div>
                       </div>
@@ -268,74 +197,8 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="accordion-item service-acc-8">
-            <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service8">Feature Film</button>
-            </h2>
-            <div id="service8" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
-              <div className="accordion-body">
-                <div className="service-content-container">
-                                  <div className="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-8" data-start="140" data-end="160"></div>
-                  <div className="service-video-content">
-                    <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                      <div className="col col-md-9">
-                        <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
-                          <div className="service-description-content">
-                                                      <p className="mb-0">We create films rooted in emotion and authenticity. Every frame is thoughtfully designed to move, inspire, and stay with the audience.</p>
-                          </div>
-                          <div className="service-tag-container">
-                                                      <span className="service-tag">feature films</span>
-                                                      <span className="service-tag">cinematic storytelling</span>
-                                                      <span className="service-tag">emotional narratives</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col col-md-3">
-                        <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="accordion-item service-acc-9">
-            <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service9">Creative Consulting</button>
-            </h2>
-            <div id="service9" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
-              <div className="accordion-body">
-                <div className="service-content-container">
-                                  <div className="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-9" data-start="160" data-end="180"></div>
-                  <div className="service-video-content">
-                    <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                      <div className="col col-md-9">
-                        <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
-                          <div className="service-description-content">
-                                                      <p className="mb-0">AdEtc Studios offers expert Creative Consulting to help you refine and execute your vision. We provide strategic insights, from brainstorming to brand positioning, ensuring your creative projects stand out and connect with your audience effectively.</p>
-                          </div>
-                          <div className="service-tag-container">
-                                                      <span className="service-tag">creative consulting</span>
-                                                      <span className="service-tag">brand positioning</span>
-                                                      <span className="service-tag">strategic insights</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col col-md-3">
-                        <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
-      </div>
     </div>
   </section>
   {/* Experience Section */}
@@ -347,7 +210,11 @@ export default function Page() {
                       <h2>Our Experience</h2>
           </div>
           <div className="service-title-description">
-                      <p>AdEtc Studios, 2 years young with 15 years of filmmaking expertise behind every creation.</p>
+              <p>AdEtc Studios may be two years young, but the expertise behind every frame comes from 15 years of filmmaking experience. Over the years, our team has worked across creative direction, production, cinematography, and post-production, developing a deep understanding of what it takes to turn an idea into a compelling visual story.</p>
+              <p>As a video production company in Ahmedabad, we bring together fresh creative thinking and years of hands-on production expertise to create films that are visually engaging and strategically purposeful. From corporate films and brand films to DVCs, TVCs, ad films, and promotional videos, we approach every project with the same attention to detail and commitment to quality.</p>
+              <p>Our experience extends beyond simply creating beautiful visuals. We understand how to translate a brand's message into a story that connects with its audience, whether the goal is brand building, communication, marketing, or lead generation.</p>
+              <p>From the first creative concept to the final edit, our team works collaboratively to ensure every production is thoughtfully planned, professionally executed, and true to the brand.</p>
+              <p>15 years of filmmaking expertise. One young studio. Endless stories to tell.</p>
           </div>
         </div>
       </div>
@@ -436,7 +303,7 @@ export default function Page() {
                       <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
-              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
+              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
       </div>
     </div>
   </section>

@@ -152,7 +152,7 @@ export default function Page() {
               <div className="d-flex flex-column gspace-2">
                               <span className="post-quote-text">The strongest campaigns don't feel like advertisements. They feel authentic.</span>
                 <p className="post-quote-author">
-                                  <span>adetc Studio</span>
+                                  <span>AdEtc Studios</span>
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Page() {
             <h4>Company Introduction Videos</h4>
             <p>Perfect for websites and presentations, these videos introduce the organisation, its culture, expertise, and mission.</p>
             <h4>Corporate Video</h4>
-            <p>Corporate films focus on showcasing business capabilities, facilities, leadership, achievements, and long-term vision. They're commonly used for investor meetings, recruitment, corporate events, and B2B communication.</p>
+            <p>TVC's focus on showcasing business capabilities, facilities, leadership, achievements, and long-term vision. They're commonly used for investor meetings, recruitment, corporate events, and B2B communication.</p>
             <h4>Explainer Video</h4>
             <p>An explainer video simplifies products, services, or processes that may otherwise be difficult to understand. Instead of lengthy presentations, businesses can communicate complex information using engaging visuals and concise storytelling.</p>
             <h4>Product Demonstration Videos</h4>
@@ -293,7 +293,7 @@ export default function Page() {
                               <h5>Tags:</h5>
                 <div className="post-tag-container">
                                   <span className="post-tag">Brand Storytelling</span>
-                                  <span className="post-tag">Corporate Film</span>
+                                  <span className="post-tag">TVC's</span>
                                   <span className="post-tag">Visual Communication</span>
                 </div>
               </div>

@@ -331,9 +331,9 @@ export default function Page() {
                         <div className="card card-service-detail-include">
                           <div className="d-flex flex-row align-items-center gspace-1">
                             <i className="fa-solid fa-circle accent-color"></i>
-                            <h5>Corporate Films</h5>
+                            <h5>TVC's</h5>
                           </div>
-                          <p className="mb-0">Corporate advertising can communicate company capabilities, expertise, culture, achievements, and vision in a more engaging format. Our corporate film productions are designed for businesses looking to strengthen credibility with customers, partners, employees, or investors.</p>
+                          <p className="mb-0">Corporate advertising can communicate company capabilities, expertise, culture, achievements, and vision in a more engaging format. Our TVC's productions are designed for businesses looking to strengthen credibility with customers, partners, employees, or investors.</p>
                         </div>
                       </div>
                       <div className="col">
@@ -491,7 +491,7 @@ export default function Page() {
                         </h2>
                         <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                           <div className="accordion-body">
-                            <p>We create television commercials, digital advertising films, brand films, promotional videos, product films, corporate films, documentary-style advertising, and campaign content.</p>
+                            <p>We create television commercials, digital advertising films, brand films, promotional videos, product films, TVC's, documentary-style advertising, and campaign content.</p>
                           </div>
                         </div>
                       </div>
