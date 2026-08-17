@@ -33,9 +33,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <video className="project-video-bg" id="video-bg-1" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/1.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-1" autoPlay muted loop playsInline preload="metadata" src="https://drive.google.com/uc?export=download&id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/1.mp4">
+                    <button className="request-loader" data-video="https://drive.google.com/uc?export=download&id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -54,9 +54,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <video className="project-video-bg" id="video-bg-2" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/2.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-2" autoPlay muted loop playsInline preload="metadata" src="https://drive.google.com/uc?export=download&id=1vxD4OOK1lF9Z7W2TwRwbLvl50pD7-DFc"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/2.mp4">
+                    <button className="request-loader" data-video="https://drive.google.com/uc?export=download&id=1vxD4OOK1lF9Z7W2TwRwbLvl50pD7-DFc">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -75,9 +75,9 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <video className="project-video-bg" id="video-bg-3" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/3.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-3" autoPlay muted loop playsInline preload="metadata" src="https://drive.google.com/uc?export=download&id=1K9oW3lk2aGU15R3gd0ChjnYDIwaCzWaT"></video>
                   <div className="w-100 d-flex justify-content-center">
-                    <button className="request-loader" data-video="/assets/videos/3.mp4">
+                    <button className="request-loader" data-video="https://drive.google.com/uc?export=download&id=1K9oW3lk2aGU15R3gd0ChjnYDIwaCzWaT">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -96,9 +96,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <video className="project-video-bg" id="video-bg-4" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/4.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-4" autoPlay muted loop playsInline preload="metadata" src="https://drive.google.com/uc?export=download&id=1jYmjUzayXrOkaSEOEtLTROKYAMI4yZaK"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/4.mp4">
+                    <button className="request-loader" data-video="https://drive.google.com/uc?export=download&id=1jYmjUzayXrOkaSEOEtLTROKYAMI4yZaK">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -117,9 +117,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <video className="project-video-bg" id="video-bg-5" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/5.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-5" autoPlay muted loop playsInline preload="metadata" src="https://drive.google.com/uc?export=download&id=10-cnWTQirgj6LdhWR8EUJRA5K_UdOttn"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/5.mp4">
+                    <button className="request-loader" data-video="https://drive.google.com/uc?export=download&id=10-cnWTQirgj6LdhWR8EUJRA5K_UdOttn">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
