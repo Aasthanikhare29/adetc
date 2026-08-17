@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'Our Team/Crew - adetc',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Our Crew',
+  description:
+    'Meet the founders and crew behind AdEtc Studios — the directors, cinematographers and editors crafting every frame of our Ahmedabad film productions.',
+  path: '/team',
+});
 
 export default function Page() {
   return (
@@ -34,7 +39,7 @@ export default function Page() {
             <div className="col">
               <div className="team-container">
                 <div className="image-container team-image">
-                  <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chirag.JPEG-e1755281502673.jpg" alt="Chirag Sharma" className="img-fluid" />
+                  <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chirag.JPEG-e1755281502673.jpg" alt="Chirag Sharma" className="img-fluid" loading="lazy" decoding="async" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
                       <a href="https://www.instagram.com/" className="social-icon">
@@ -58,7 +63,7 @@ export default function Page() {
             <div className="col">
               <div className="team-container">
                 <div className="image-container team-image">
-                  <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chinmay.jpeg-e1755281301146.jpg" alt="Chinmay Parmar" className="img-fluid" />
+                  <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chinmay.jpeg-e1755281301146.jpg" alt="Chinmay Parmar" className="img-fluid" loading="lazy" decoding="async" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
                       <a href="https://www.instagram.com/" className="social-icon">
@@ -92,18 +97,18 @@ export default function Page() {
         <div className="overflow-hidden">
           <div className="swiper swiperpartner partner-marquee">
             <div className="swiper-wrapper">
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
             </div>
                       <div className="swiper-pagination"></div>
           </div>
@@ -128,7 +133,7 @@ export default function Page() {
               <div className="card-number-wrapper">
                               <div className="card-number">01</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon3.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon3.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Cinematic Excellence</h4>
                               <p>High-end production with film-grade visuals and compelling storytelling. lorem ipsum dolor sit amet.</p>
@@ -144,7 +149,7 @@ export default function Page() {
               <div className="card-number-wrapper">
                               <div className="card-number">02</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon4.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon4.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Creative Teamwork</h4>
                               <p>A passionate team of directors, editors & cinematographers lorem ipsum dolot sit amet consecteur.</p>
@@ -162,7 +167,7 @@ export default function Page() {
               <div className="card-number-wrapper">
                               <div className="card-number">03</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon5.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon5.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>End to End Services</h4>
                               <p>From scripting to post production all in one place lorem ipsum dolor sit amet consectetur adipiscing.</p>
@@ -178,7 +183,7 @@ export default function Page() {
               <div className="card-number-wrapper">
                               <div className="card-number">04</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon7.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon7.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Client Focused Approach</h4>
                               <p>We listen, adapt, and deliver results that exceed expectations lorem ipsum dolor sit amet consectetur.</p>

@@ -1,0 +1,28 @@
+# AdEtc Studios
+
+> AdEtc Studios is a full-service film and video production company based in Ahmedabad, Gujarat, India. We produce ad films, brand videos, TV commercials (TVCs), corporate films and cinematic branded content — handling the full process from concept and scripting to shooting, editing and post-production.
+
+Contact: +91 9727000197 / +91 9909901116
+Location: 314, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015, India
+
+## Pages
+- [Home](https://adetcstudios.com/): Studio overview and showreel.
+- [About Us](https://adetcstudios.com/about): Who we are and how we work.
+- [Services](https://adetcstudios.com/services): Ad films, brand videos, TVCs, corporate films, post-production.
+- [Portfolio](https://adetcstudios.com/project): Selected productions.
+- [Our Crew](https://adetcstudios.com/team): Founders and production team.
+- [Pricing](https://adetcstudios.com/pricing): Production packages.
+- [Testimonials](https://adetcstudios.com/testimonial): Client feedback.
+- [Contact](https://adetcstudios.com/contact): Get a quote or brief a project.
+
+## Articles
+- [Ad Film Makers: How Creative Advertising Films Bring Brands to Life](https://adetcstudios.com/single-post)
+- [Brand Video: How Powerful Visual Storytelling Builds Lasting Brands](https://adetcstudios.com/brand-video)
+- [TVC Format: Commercial Duration, Script Structure and Production](https://adetcstudios.com/tvc-format)
+- [Video Production Company in Ahmedabad: What to Look for Before You Hire One](https://adetcstudios.com/video-production-company)
+
+## More
+- [Full reference (services, FAQ, facts)](https://adetcstudios.com/llms-full.txt)
+- [Blog index](https://adetcstudios.com/blog)
+- [RSS feed](https://adetcstudios.com/feed.xml)
+- [Sitemap](https://adetcstudios.com/sitemap.xml)

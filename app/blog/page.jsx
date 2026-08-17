@@ -1,10 +1,14 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
 import { getPaginatedPosts } from '@/lib/blog-posts';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Blog/Journal - adetc',
-};
+export const metadata = pageMetadata({
+  title: 'Blog',
+  description:
+    'The AdEtc Studios blog — insights on ad film making, brand video, TVC formats, filmmaking tips and behind-the-scenes production notes from our Ahmedabad studio.',
+  path: '/blog',
+});
 
 export default function Page() {
   const posts = getPaginatedPosts(1);

@@ -1,5 +1,5 @@
 $(function() {
-    loadYouTubeAPI();
+    initLazyYouTube();
     initProjectHeading();
     initNavLink();
     initSidebar();
@@ -18,6 +18,46 @@ function loadYouTubeAPI() {
     if (!window.YT && !$("script[src*='youtube.com/iframe_api']").length) {
         $("<script>", { src: "https://www.youtube.com/iframe_api" }).appendTo("head");
     }
+}
+
+// Lazy-load the YouTube API only when a video nears the viewport (CWV Phase 1).
+// Pages with no video container never load any YouTube JS.
+// Robust to zero-area video containers (they have no box until the iframe fills
+// them) by observing a sized ancestor, plus a first-interaction fallback so the
+// API always loads even if the observer never fires.
+function initLazyYouTube() {
+    var els = document.querySelectorAll(
+        "#banner-video-background, #testimonial-video-background, .project-video-bg, .service-video-bg, .cta-highlight-video"
+    );
+    if (!els.length) return;
+
+    var loaded = false;
+    var io = null;
+    var events = ["scroll", "pointerdown", "touchstart", "keydown"];
+
+    function cleanup() {
+        if (io) io.disconnect();
+        events.forEach(function(ev) { window.removeEventListener(ev, load); });
+    }
+    function load() {
+        if (loaded) return;
+        loaded = true;
+        loadYouTubeAPI();
+        cleanup();
+    }
+
+    try {
+        io = new IntersectionObserver(function(entries) {
+            for (var i = 0; i < entries.length; i++) {
+                if (entries[i].isIntersecting) { load(); break; }
+            }
+        }, { rootMargin: "200px" });
+        els.forEach(function(el) { io.observe(el.parentElement || el); });
+    } catch (e) { /* no IO support -> fall back to interaction */ }
+
+    events.forEach(function(ev) {
+        window.addEventListener(ev, load, { once: true, passive: true });
+    });
 }
 
 // ===============================================

@@ -1,10 +1,34 @@
-export const metadata = {
-  title: 'Pricing/Packages - adetc',
-};
+import { pageMetadata, faqLd, breadcrumbLd } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+
+export const metadata = pageMetadata({
+  title: 'Pricing & Packages',
+  description:
+    'Explore AdEtc Studios video production packages — flexible options for ad films, brand videos and TVCs, scoped to your budget, timeline and creative goals.',
+  path: '/pricing',
+});
+
+const FAQ = [
+  { q: "What's included in each pricing plan?", a: 'Each plan includes pre-production consultation, filming with professional equipment, editing, color grading, and final delivery. Higher-tier packages offer advanced features like drone footage, scriptwriting, and multiple shooting days.' },
+  { q: 'Can I customize a plan based on my project needs?', a: "Absolutely! We understand that every story is unique. Reach out to us and we'll tailor a custom package that fits your creative goals and budget." },
+  { q: 'Do you offer revisions after the final delivery?', a: 'Yes. All our plans include up to 2 rounds of revisions. Premium plans offer more flexibility for feedback and fine-tuning.' },
+  { q: 'How long does it take to complete a video project?', a: "Project timelines vary based on complexity, but most videos are completed within 2-4 weeks. We'll give you a detailed schedule during the onboarding process." },
+  { q: 'Are there any hidden fees?', a: "No hidden charges. All costs are clearly outlined in your chosen package. If any additional services are required, we'll communicate them upfront." },
+  { q: 'Do you provide voiceovers, music licensing, and subtitles?', a: 'Yes. Voiceovers, royalty-free music licensing, and subtitle options are available depending on your plan. We also offer these as add-ons if needed.' },
+];
 
 export default function Page() {
   return (
     <>
+  <JsonLd
+    data={[
+      faqLd(FAQ),
+      breadcrumbLd([
+        { name: 'Home', path: '/' },
+        { name: 'Pricing', path: '/pricing' },
+      ]),
+    ]}
+  />
   {/* Banner Inner Section */}
   <section className="section banner-inner pricing-banner">
       <div className="banner-overlay"></div>

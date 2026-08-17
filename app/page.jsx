@@ -1,6 +1,10 @@
-export const metadata = {
-  title: 'adetc',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  description:
+    'AdEtc Studios is a full-service film and video production company in Ahmedabad — ad films, brand videos, TVCs, and post-production with bold visuals and powerful storytelling.',
+  path: '/',
+});
 
 export default function Page() {
   return (
@@ -24,7 +28,7 @@ export default function Page() {
                               <h1>Crafting Visuals</h1>
               </div>
               <div className="home-avatar-container">
-                              <div className="d-flex flex-row align-items-center"><img src="/assets/images/Photo-12.jpg" alt="Banner Avatar" className="banner-avatar" /> <img src="/assets/images/Photo-5.jpg" alt="Banner Avatar" className="banner-avatar" /> <img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Banner Avatar" className="banner-avatar" /> <img src="/assets/images/Gp-1.png" alt="Banner Avatar" className="banner-avatar" /></div>
+                              <div className="d-flex flex-row align-items-center"><img src="/assets/images/Photo-12.jpg" alt="Banner Avatar" className="banner-avatar" loading="lazy" decoding="async" /> <img src="/assets/images/Photo-5.jpg" alt="Banner Avatar" className="banner-avatar" loading="lazy" decoding="async" /> <img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Banner Avatar" className="banner-avatar" loading="lazy" decoding="async" /> <img src="/assets/images/Gp-1.png" alt="Banner Avatar" className="banner-avatar" loading="lazy" decoding="async" /></div>
                               <p>adetc is a full-service film production studio delivering bold visuals and powerful narratives. From commercials to creative films we bring your vision to life.</p>
               </div>
             </div>
@@ -93,7 +97,7 @@ export default function Page() {
           <div className="core-service-card-container">
             {/* Card 1 */}
             <div className="card card-core-service">
-                          <img src="/assets/images/icon6.png" alt="Creative Film Direction Icon" className="core-service-icon" />
+                          <img src="/assets/images/icon6.png" alt="Creative Film Direction Icon" className="core-service-icon" loading="lazy" decoding="async" />
               <div className="d-flex flex-column gspace-2">
                               <h4>Creative Film Direction</h4>
                               <p className="text-center text-md-start">From concept to screen, our directors craft compelling narratives that captivate audiences and bring your vision to life with bold, purposeful storytelling.</p>
@@ -101,7 +105,7 @@ export default function Page() {
             </div>
             {/* Card 2 */}
             <div className="card card-core-service">
-                          <img src="/assets/images/icon8.png" alt="Cinematic Visual Style Icon" className="core-service-icon" />
+                          <img src="/assets/images/icon8.png" alt="Cinematic Visual Style Icon" className="core-service-icon" loading="lazy" decoding="async" />
               <div className="d-flex flex-column gspace-2">
                               <h4>Cinematic Visual Style</h4>
                               <p className="text-center text-md-start" style={{ color: '#ffffff' }}>We use industry-grade cameras, lighting, and techniques to create visually stunning content that stands out and elevates your brand.</p>
@@ -109,7 +113,7 @@ export default function Page() {
             </div>
             {/* Card 3 (highlighted) */}
             <div className="card card-core-service highlight-core">
-                          <img src="/assets/images/Icon-3-1.png" alt="Expert Post Production Icon" className="core-service-icon" />
+                          <img src="/assets/images/Icon-3-1.png" alt="Expert Post Production Icon" className="core-service-icon" loading="lazy" decoding="async" />
               <div className="d-flex flex-column gspace-2">
                               <h4 style={{ color: '#ffffff' }}>Expert Post Production</h4>
                               <p className="text-center text-md-start" style={{ color: '#ffffff' }}>With cutting-edge editing suites, we handle everything from rough cuts to final polish, color grading, audio mixing, VFX, and transitions.</p>
@@ -117,7 +121,7 @@ export default function Page() {
             </div>
             {/* Card 4 */}
             <div className="card card-core-service" style={{ backgroundColor: 'var(--accent-color-3)' }}>
-                          <img src="/assets/images/icon2.png" alt="Global Project Reach Icon" className="core-service-icon" />
+                          <img src="/assets/images/icon2.png" alt="Global Project Reach Icon" className="core-service-icon" loading="lazy" decoding="async" />
               <div className="d-flex flex-column gspace-2">
                               <h4 style={{ color: 'black' }}>Global Project Reach</h4>
                               <p className="text-center text-md-start">From local shoots to international productions, our team delivers high-quality content across locations, languages, and formats worldwide.</p>
@@ -127,7 +131,7 @@ export default function Page() {
         </div>
       </div>
       {/* Right Floating Image */}
-          <div className="core-service-image"><img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="Photographer working with camera" className="img-fluid" /></div>
+          <div className="core-service-image"><img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="Photographer working with camera" className="img-fluid" loading="lazy" decoding="async" /></div>
     </div>
   </section>
   {/* Project Section */}
@@ -465,11 +469,11 @@ export default function Page() {
         <div className="row row-cols-md-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="" className="trust-us-hover-image" loading="lazy" decoding="async" />
               <div className="card-number-wrapper">
                               <div className="card-number">01</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon3.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon3.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Cinematic Excellence</h4>
                               <p>High-end production with film-grade visuals and compelling storytelling. lorem ipsum dolor sit amet.</p>
@@ -482,11 +486,11 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="" className="trust-us-hover-image" loading="lazy" decoding="async" />
               <div className="card-number-wrapper">
                               <div className="card-number">02</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon4.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon4.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Creative Teamwork</h4>
                               <p>A passionate team of directors, editors & cinematographers lorem ipsum dolot sit amet consecteur.</p>
@@ -501,11 +505,11 @@ export default function Page() {
         <div className="row row-cols-md-3 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="" className="trust-us-hover-image" loading="lazy" decoding="async" />
               <div className="card-number-wrapper">
                               <div className="card-number">03</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon5.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon5.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>End to End Services</h4>
                               <p>From scripting to post production all in one place lorem ipsum dolor sit amet consectetur adipiscing.</p>
@@ -518,11 +522,11 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="" className="trust-us-hover-image" />
+                          <img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="" className="trust-us-hover-image" loading="lazy" decoding="async" />
               <div className="card-number-wrapper">
                               <div className="card-number">04</div>
               </div>
-                          <div className="trust-us-icon"><img src="/assets/images/icon7.png" alt="Trust Us Icon" className="img-fluid" /></div>
+                          <div className="trust-us-icon"><img src="/assets/images/icon7.png" alt="Trust Us Icon" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Client Focused Approach</h4>
                               <p>We listen, adapt, and deliver results that exceed expectations lorem ipsum dolor sit amet consectetur.</p>
@@ -535,7 +539,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="" className="trust-us-hover-image" loading="lazy" decoding="async" />
               <div className="d-flex flex-column gspace-2">
                 <span className="trust-us-stat-container">
                                   <span className="trust-us-stat counter" data-target="150">0</span>
@@ -581,7 +585,7 @@ export default function Page() {
               </div>
                           <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Aniq Nurani</h6>
                                   <p className="testimonial-designation">Kadam</p>
@@ -595,7 +599,7 @@ export default function Page() {
               </div>
                           <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Siddiqa Nurani</h6>
                                   <p className="testimonial-designation">Pollie</p>
@@ -609,7 +613,7 @@ export default function Page() {
               </div>
                           <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Yash Shah</h6>
                                   <p className="testimonial-designation">ZerobyZ</p>
@@ -623,7 +627,7 @@ export default function Page() {
               </div>
                           <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Parimal Desai</h6>
                                   <p className="testimonial-designation">Cure Sight Lasik Centre</p>
@@ -637,7 +641,7 @@ export default function Page() {
               </div>
                           <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Sanjana Desai</h6>
                                   <p className="testimonial-designation">Concept Diagnostics</p>
@@ -651,7 +655,7 @@ export default function Page() {
               </div>
                           <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Aniq Nurani</h6>
                                   <p className="testimonial-designation">Kadam</p>
@@ -665,7 +669,7 @@ export default function Page() {
               </div>
                           <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Siddiqa Nurani</h6>
                                   <p className="testimonial-designation">Pollie</p>
@@ -679,7 +683,7 @@ export default function Page() {
               </div>
                           <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Yash Shah</h6>
                                   <p className="testimonial-designation">ZerobyZ</p>
@@ -693,7 +697,7 @@ export default function Page() {
               </div>
                           <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Parimal Desai</h6>
                                   <p className="testimonial-designation">Cure Sight Lasik Centre</p>
@@ -707,7 +711,7 @@ export default function Page() {
               </div>
                           <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
+                              <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" loading="lazy" decoding="async" /></div>
                 <div className="d-flex flex-column">
                                   <h6>Sanjana Desai</h6>
                                   <p className="testimonial-designation">Concept Diagnostics</p>
@@ -736,7 +740,7 @@ export default function Page() {
                       <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
-              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" /></div>
+              <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
       </div>
     </div>
   </section>
@@ -752,7 +756,7 @@ export default function Page() {
             <div className="col">
               <div className="team-container">
                 <div className="image-container team-image">
-                  <img src="/assets/images/chirag.jpeg" alt="Chirag Sharma" className="img-fluid" />
+                  <img src="/assets/images/chirag.jpeg" alt="Chirag Sharma" className="img-fluid" loading="lazy" decoding="async" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
                       <a href="https://www.instagram.com/" className="social-icon">
@@ -776,7 +780,7 @@ export default function Page() {
             <div className="col">
               <div className="team-container">
                 <div className="image-container team-image">
-                  <img src="/assets/images/chinmay.jpeg" alt="Chinmay Parmar" className="img-fluid" />
+                  <img src="/assets/images/chinmay.jpeg" alt="Chinmay Parmar" className="img-fluid" loading="lazy" decoding="async" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
                       <a href="https://www.instagram.com/" className="social-icon">
@@ -800,7 +804,7 @@ export default function Page() {
             <div className="col">
               <div className="team-container">
                 <div className="image-container team-image">
-                  <img src="/assets/images/krutika.jpeg" alt="Krutika Sharma" className="img-fluid" />
+                  <img src="/assets/images/krutika.jpeg" alt="Krutika Sharma" className="img-fluid" loading="lazy" decoding="async" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
                       <a href="https://www.instagram.com/" className="social-icon">
@@ -832,18 +836,18 @@ export default function Page() {
         <div className="overflow-hidden">
           <div className="swiper swiperpartner partner-marquee">
             <div className="swiper-wrapper">
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
+                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" loading="lazy" decoding="async" /></div>
             </div>
                       <div className="swiper-pagination"></div>
           </div>
@@ -859,7 +863,7 @@ export default function Page() {
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -878,7 +882,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -897,7 +901,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" className="img-fluid" loading="lazy" decoding="async" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">

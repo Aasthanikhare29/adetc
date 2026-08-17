@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "convert": "node scripts/convert.js"
+    "convert": "node scripts/convert.js",
+    "build:js": "node scripts/build-js.js"
   },
   "dependencies": {
     "next": "^15.5.23",

@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'Contact Us - adetc',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Contact Us',
+  description:
+    'Get in touch with AdEtc Studios in Ahmedabad to plan your next ad film, brand video or TVC. Call +91 9727000197 or send us your project brief.',
+  path: '/contact',
+});
 
 export default function Page() {
   return (
