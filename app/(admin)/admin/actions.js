@@ -156,6 +156,110 @@ export async function restoreRevision(revisionId) {
   return { ok: true };
 }
 
+// ---- Pages (block builder) ------------------------------------------------
+
+// top-level path segments owned by explicit routes — a DB page here is unreachable
+const RESERVED = new Set([
+  '', 'admin', 'api', 'blog', 'about', 'services', 'service-detail', 'project',
+  'project-detail', 'single-post', 'team', 'testimonial', 'pricing', 'contact',
+  'sitemap.xml', 'robots.txt', 'feed.xml', 'llms.txt', 'llms-full.txt',
+]);
+
+function slugifyPath(s) {
+  return String(s || '')
+    .split('/')
+    .map((seg) => slugify(seg))
+    .filter(Boolean)
+    .join('/');
+}
+
+function sanitizeBlocks(raw) {
+  let arr;
+  try { arr = JSON.parse(raw || '[]'); } catch { return []; }
+  if (!Array.isArray(arr)) return [];
+  return arr.map((b) => (b?.type === 'richtext' ? { ...b, html: cleanHtml(b.html || '') } : b));
+}
+
+function pageSeoFields(formData) {
+  return {
+    meta_title: stripTags(formData.get('meta_title')),
+    meta_description: stripTags(formData.get('meta_description')),
+    og_title: stripTags(formData.get('og_title')),
+    og_description: stripTags(formData.get('og_description')),
+    og_image: String(formData.get('og_image') || '').trim(),
+    og_image_alt: stripTags(formData.get('og_image_alt')),
+    canonical: String(formData.get('canonical') || '').trim(),
+    robots: String(formData.get('robots') || 'index,follow').trim(),
+  };
+}
+
+export async function savePage(_prev, formData) {
+  const supabase = await serverClient();
+  const id = formData.get('id') || null;
+  const title = String(formData.get('title') || '').trim();
+  const slug = slugifyPath(formData.get('slug') || title);
+  const status = formData.get('status') === 'published' ? 'published' : 'draft';
+
+  if (!title) return { error: 'Title is required.' };
+  if (!slug) return { error: 'Slug is required.' };
+  if (RESERVED.has(slug.split('/')[0])) return { error: `"/${slug}" is reserved by an existing route. Pick another slug.` };
+
+  const row = {
+    title,
+    slug,
+    status,
+    blocks: sanitizeBlocks(formData.get('blocks')),
+    ...pageSeoFields(formData),
+  };
+  const pubInput = String(formData.get('published_at') || '').trim();
+  if (pubInput) { const d = new Date(pubInput); if (!Number.isNaN(d.getTime())) row.published_at = d.toISOString(); }
+
+  let saved;
+  if (id) {
+    if (status === 'published' && !row.published_at) {
+      const { data: ex } = await supabase.from('pages').select('published_at').eq('id', id).maybeSingle();
+      if (!ex?.published_at) row.published_at = new Date().toISOString();
+    }
+    const { data, error } = await supabase.from('pages').update(row).eq('id', id).select('id,slug').maybeSingle();
+    if (error) return { error: error.code === '23505' ? 'That slug is already taken.' : error.message };
+    saved = data;
+  } else {
+    if (status === 'published' && !row.published_at) row.published_at = new Date().toISOString();
+    const { data, error } = await supabase.from('pages').insert(row).select('id,slug').maybeSingle();
+    if (error) return { error: error.code === '23505' ? 'That slug is already taken.' : error.message };
+    saved = data;
+  }
+
+  revalidatePath(`/${saved.slug}`);
+  revalidatePath('/sitemap.xml');
+  revalidatePath('/admin/pages');
+  return { ok: true, id: saved?.id, slug: saved?.slug, status };
+}
+
+export async function setPageStatus(id, status) {
+  const supabase = await serverClient();
+  const next = status === 'published' ? 'published' : 'draft';
+  const patch = { status: next };
+  if (next === 'published') {
+    const { data: ex } = await supabase.from('pages').select('published_at').eq('id', id).maybeSingle();
+    if (!ex?.published_at) patch.published_at = new Date().toISOString();
+  }
+  const { data, error } = await supabase.from('pages').update(patch).eq('id', id).select('slug').maybeSingle();
+  if (error) return { error: error.message };
+  revalidatePath(`/${data?.slug}`);
+  revalidatePath('/sitemap.xml');
+  revalidatePath('/admin/pages');
+}
+
+export async function deletePage(id) {
+  const supabase = await serverClient();
+  const { data, error } = await supabase.from('pages').delete().eq('id', id).select('slug').maybeSingle();
+  if (error) return { error: error.message };
+  revalidatePath(`/${data?.slug}`);
+  revalidatePath('/sitemap.xml');
+  revalidatePath('/admin/pages');
+}
+
 export async function saveSettings(_prev, formData) {
   const supabase = await serverClient();
   const patch = {
