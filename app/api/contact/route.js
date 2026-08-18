@@ -7,6 +7,13 @@ const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 export async function POST(request) {
   try {
+    if (!supabase) {
+      return NextResponse.json(
+        { error: 'The contact form is unavailable. Please try again later.' },
+        { status: 500 }
+      );
+    }
+
     const body = await request.json();
 
     const name = String(body.name || '').trim();
