@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { sendMail, esc, OWNER_TO } from '@/lib/mailer';
 
 export const runtime = 'nodejs';
 
@@ -28,5 +29,17 @@ export async function POST(request) {
     console.error('Subscribe insert error:', error);
     return NextResponse.json({ error: 'Could not subscribe. Please try again.' }, { status: 500 });
   }
+
+  // welcome the subscriber + notify the studio (never blocks the response)
+  await sendMail({
+    to: email,
+    subject: 'You’re subscribed to Ad Etc Studios',
+    text: 'Thanks for subscribing! You’ll hear from us when we publish new work and stories.',
+    html: '<p>Thanks for subscribing to <strong>Ad Etc Studios</strong>! You’ll hear from us when we publish new work and stories.</p>',
+  });
+  if (OWNER_TO) {
+    await sendMail({ subject: 'New newsletter subscriber', text: `New subscriber: ${email}`, html: `<p>New subscriber: ${esc(email)}</p>` });
+  }
+
   return NextResponse.json({ success: true, message: 'Thank you for subscribing!' });
 }
