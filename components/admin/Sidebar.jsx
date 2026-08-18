@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { LayoutDashboard, FileText, Layers, Settings, LogOut, PanelLeftClose, PanelLeft } from 'lucide-react';
+import { LayoutDashboard, FileText, Layers, Inbox, Mail, Settings, LogOut, PanelLeftClose, PanelLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { signOut } from '@/app/(admin)/admin/actions';
 
@@ -14,6 +14,13 @@ const GROUPS = [
       { href: '/admin', label: 'Dashboard', icon: LayoutDashboard, exact: true },
       { href: '/admin/posts', label: 'Posts', icon: FileText },
       { href: '/admin/pages', label: 'Pages', icon: Layers },
+    ],
+  },
+  {
+    label: 'Inbox',
+    items: [
+      { href: '/admin/messages', label: 'Messages', icon: Inbox },
+      { href: '/admin/subscribers', label: 'Subscribers', icon: Mail },
     ],
   },
   {
