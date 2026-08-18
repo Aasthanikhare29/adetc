@@ -6,7 +6,12 @@ This project is a **static marketing site wearing a Next.js coat**. Understandin
 
 - **Server Components by default.** Almost every `app/**/page.jsx` is a plain server component that returns static JSX. No data fetching, no client hooks.
 - **Two exceptions use `'use client'`:** `components/Footer.jsx` (a small newsletter-notify `useState`) — and that's essentially it on the React side.
-- **The root layout** (`app/layout.jsx`) is the shell for every page:
+- **Two root layouts via route groups.** `app/(site)/layout.jsx` is the marketing
+  shell (below); `app/(admin)/layout.jsx` is a bare `html/body` for the admin, so
+  none of the site's CSS/jQuery/chrome loads there (and the admin's Tailwind never
+  touches the public pages). There is no `app/layout.jsx`. `robots.js`, `sitemap.js`,
+  and `app/api/*` sit at the app root (route handlers, no layout needed).
+- **The site layout** (`app/(site)/layout.jsx`) is the shell for every public page:
 
   ```
   <Header/> <Sidebar/> <main>{children}</main> <Footer/>
