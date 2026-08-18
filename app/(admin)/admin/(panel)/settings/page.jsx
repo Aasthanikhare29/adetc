@@ -1,5 +1,6 @@
 import { serverClient } from '@/lib/supabase/server';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
+import PageHeader from '@/components/admin/PageHeader';
 
 export const dynamic = 'force-dynamic';
 
@@ -9,10 +10,7 @@ export default async function SettingsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-2xl font-semibold tracking-tight">Settings</h1>
-        <p className="text-sm text-muted-foreground">Account and site configuration.</p>
-      </div>
+      <PageHeader title="Settings" description="Account and site configuration." />
       <Card>
         <CardHeader>
           <CardTitle className="text-base">Account</CardTitle>

@@ -71,7 +71,7 @@ export default function PostForm({ post }) {
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
           <Button asChild variant="ghost" size="icon"><Link href="/admin/posts"><ArrowLeft /></Link></Button>
-          <h1 className="text-xl font-semibold tracking-tight">{post ? 'Edit Post' : 'New Post'}</h1>
+          <h1 className="text-2xl font-bold tracking-tight">{post ? 'Edit Post' : 'New Post'}</h1>
         </div>
         <div className="flex items-center gap-2">
           {canPreview && (
@@ -92,7 +92,7 @@ export default function PostForm({ post }) {
           </div>
           <div className="space-y-2">
             <Label>Content</Label>
-            <div className="rounded-md border border-input bg-background">
+            <div className="rounded-lg border border-input bg-background">
               <Editor value={post?.content_html || ''} onChange={setContent} />
             </div>
           </div>
