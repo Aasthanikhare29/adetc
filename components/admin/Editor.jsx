@@ -29,8 +29,8 @@ function Tb({ onClick, active, disabled, title, children }) {
       disabled={disabled}
       onClick={onClick}
       className={cn(
-        'inline-flex size-8 items-center justify-center rounded-md transition-colors disabled:opacity-40 [&_svg]:size-4',
-        active ? 'bg-primary text-primary-foreground' : 'hover:bg-accent hover:text-accent-foreground'
+        'inline-flex size-8 items-center justify-center rounded-[4px] transition-colors duration-150 disabled:opacity-40 [&_svg]:size-4',
+        active ? 'bg-surface-hover text-brand' : 'text-muted-foreground hover:bg-surface-hover hover:text-foreground'
       )}
     >
       {children}

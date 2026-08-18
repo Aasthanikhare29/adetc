@@ -4,6 +4,7 @@ import { serverClient } from '@/lib/supabase/server';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import PageHeader from '@/components/admin/PageHeader';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,15 +28,11 @@ export default async function Dashboard() {
 
   return (
     <div className="space-y-8">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Dashboard</h1>
-          <p className="text-sm text-muted-foreground">Overview of your blog content.</p>
-        </div>
+      <PageHeader title="Dashboard" description="Overview of your blog content.">
         <Button asChild>
           <Link href="/admin/posts/new"><Plus /> New Post</Link>
         </Button>
-      </div>
+      </PageHeader>
 
       <div className="grid gap-4 sm:grid-cols-3">
         {stats.map(({ label, value, icon: Icon }) => (
@@ -62,11 +59,11 @@ export default async function Dashboard() {
           ) : (
             <ul className="divide-y divide-border">
               {recent.map((p) => (
-                <li key={p.id} className="flex items-center gap-3 px-6 py-3">
+                <li key={p.id} className="flex items-center gap-3 px-4 py-2.5 transition-colors duration-150 hover:bg-surface-hover">
                   <Link href={`/admin/posts/${p.id}`} className="flex-1 truncate font-medium hover:underline">
                     {p.title}
                   </Link>
-                  <Badge variant={p.status === 'published' ? 'success' : 'warning'}>{p.status}</Badge>
+                  <Badge variant={p.status === 'published' ? 'success' : 'neutral'}>{p.status}</Badge>
                   <span className="text-xs text-muted-foreground">
                     {new Date(p.updated_at).toLocaleDateString()}
                   </span>

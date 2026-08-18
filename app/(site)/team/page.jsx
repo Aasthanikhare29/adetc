@@ -58,6 +58,30 @@ export default function Page() {
             <div className="col">
               <div className="team-container">
                 <div className="image-container team-image">
+                  <img src="/assets/images/krutika.jpeg" alt="Krutika Sharma" className="img-fluid" />
+                  <div className="team-social-overlay">
+                    <div className="d-flex flex-row align-items-center gspace-1">
+                      <a href="https://www.instagram.com/" className="social-icon">
+                        <i className="fa-brands fa-instagram"></i>
+                      </a>
+                      <a href="https://www.facebook.com/" className="social-icon">
+                        <i className="fa-brands fa-facebook"></i>
+                      </a>
+                      <a href="https://www.x.com/" className="social-icon">
+                        <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div className="d-flex flex-column w-100">
+                  <h4>Krutika Sharma</h4>
+                  <p className="team-designation">Co-Founder & Head of Marketing</p>
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="team-container">
+                <div className="image-container team-image">
                   <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chinmay.jpeg-e1755281301146.jpg" alt="Chinmay Parmar" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">

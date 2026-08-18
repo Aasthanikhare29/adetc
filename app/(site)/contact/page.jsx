@@ -176,17 +176,17 @@ export default function Page() {
                 </h2>
                 <div id="faq4" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion2">
                   <div className="accordion-body">
-                                      <p>Our studio is based in Los Angeles, CA. In-person meetings are available by appointment only. We also offer virtual meetings for clients worldwide.</p>
+                                      <p>Our studio is based in Vastrapur, Ahmedabad. In-person meetings are available by appointment only. We also offer virtual meetings for clients across India and beyond.</p>
                   </div>
                 </div>
               </div>
               <div className="accordion-item">
                 <h2 className="accordion-header faq-accordion-header">
-                                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you work with clients outside of the US?</button>
+                                  <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you work with clients outside Ahmedabad?</button>
                 </h2>
                 <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
                   <div className="accordion-body">
-                                      <p>Yes, we collaborate with brands, artists, and companies globally. Our team is fully equipped to manage international productions, both remotely and on-location.</p>
+                                      <p>Yes, we collaborate with brands, artists, and companies across Gujarat, India, and beyond. Our team is fully equipped to manage productions both remotely and on-location.</p>
                   </div>
                 </div>
               </div>
@@ -196,7 +196,7 @@ export default function Page() {
                 </h2>
                 <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion2">
                   <div className="accordion-body">
-                                      <p>If you haven't heard from us within 48 hours, please check your spam folder or reach out to us directly via email at hello@adetcstudio.com.</p>
+                                      <p>If you haven't heard from us within 48 hours, please check your spam folder or reach out to us directly via email at hello@adetcstudios.com.</p>
                   </div>
                 </div>
               </div>

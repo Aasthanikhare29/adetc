@@ -119,7 +119,7 @@ export default function Page() {
             </div>
             {/* Card 4 */}
             <div className="card card-core-service" style={{ backgroundColor: 'var(--accent-color-3)' }}>
-                          <img src="/assets/images/icon2.png" alt="Global Project Reach Icon" className="core-service-icon" />
+                          <img src="/assets/images/icon2.png" alt="TVC Production Icon" className="core-service-icon" />
               <div className="d-flex flex-column gspace-2">
                               <h4 style={{ color: 'black' }}>TVC PRODUCTION</h4>
                               <p className="text-center text-md-start">From concept and scripting to production and final delivery, we create compelling television commercials designed to capture attention and make your brand memorable.</p>

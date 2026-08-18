@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { Card } from '@/components/ui/card';
 import PostsFilterBar from '@/components/admin/PostsFilterBar';
 import PostActions from '@/components/admin/PostActions';
+import PageHeader from '@/components/admin/PageHeader';
 
 export const dynamic = 'force-dynamic';
 
@@ -24,13 +25,9 @@ export default async function PostsPage({ searchParams }) {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
-        <div>
-          <h1 className="text-2xl font-semibold tracking-tight">Posts</h1>
-          <p className="text-sm text-muted-foreground">{list.length} post{list.length === 1 ? '' : 's'}</p>
-        </div>
+      <PageHeader title="Posts" description={`${list.length} post${list.length === 1 ? '' : 's'}`}>
         <Button asChild><Link href="/admin/posts/new"><Plus /> New Post</Link></Button>
-      </div>
+      </PageHeader>
 
       <PostsFilterBar />
 
@@ -48,8 +45,8 @@ export default async function PostsPage({ searchParams }) {
         ) : (
           <ul className="divide-y divide-border">
             {list.map((p) => (
-              <li key={p.id} className="flex items-center gap-4 px-4 py-3">
-                <div className="h-11 w-16 shrink-0 overflow-hidden rounded-md bg-muted">
+              <li key={p.id} className="flex items-center gap-4 px-4 py-3 transition-colors duration-150 hover:bg-surface-hover">
+                <div className="h-11 w-16 shrink-0 overflow-hidden rounded-lg bg-muted">
                   {p.image && <img src={p.image} alt="" className="h-full w-full object-cover" />}
                 </div>
                 <div className="min-w-0 flex-1">
@@ -60,7 +57,7 @@ export default async function PostsPage({ searchParams }) {
                     /{p.slug}{p.href ? ' · legacy page' : ''} · {new Date(p.updated_at).toLocaleDateString()}
                   </p>
                 </div>
-                <Badge variant={p.status === 'published' ? 'success' : 'warning'}>{p.status}</Badge>
+                <Badge variant={p.status === 'published' ? 'success' : 'neutral'}>{p.status}</Badge>
                 <div className="flex items-center gap-1">
                   <Button asChild variant="ghost" size="sm"><Link href={`/admin/posts/${p.id}`}>Edit</Link></Button>
                   <PostActions id={p.id} status={p.status} />
