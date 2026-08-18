@@ -78,12 +78,12 @@ export default function Page() {
                       <div className="col col-md-9">
                         <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
                           <div className="service-description-content">
-                                                      <p className="mb-0">Our social media campaigns connect with your audience. We create engaging content and strategies that drive brand awareness, increase website traffic, and generate leads. From content creation to community management, we help you maximize your social media presence.</p>
+                                                      <p className="mb-0">Our DVCs deliver your message across digital platforms. We produce digital video commercials built for YouTube, OTT, and social media, adapted into the formats and durations each channel needs while keeping your brand consistent.</p>
                           </div>
                           <div className="service-tag-container">
-                                                      <span className="service-tag">DVC'ss</span>
+                                                      <span className="service-tag">DVC's</span>
+                                                      <span className="service-tag">digital commercials</span>
                                                       <span className="service-tag">social media</span>
-                                                      <span className="service-tag">brand awareness</span>
                           </div>
                         </div>
                       </div>
@@ -144,12 +144,12 @@ export default function Page() {
                       <div className="col col-md-9">
                         <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
                           <div className="service-description-content">
-                                                      <p className="mb-0">Our documentary films bring stories to life. We craft powerful and immersive documentaries that inform, inspire, and entertain. From historical narratives to social issues, we capture the essence of real-life stories.</p>
+                                                      <p className="mb-0">Our brand films communicate more than a product. We craft cinematic stories that highlight your purpose, values, people, and vision, building a stronger emotional connection with your audience across every platform.</p>
                           </div>
                           <div className="service-tag-container">
-                                                      <span className="service-tag">documentary films</span>
-                                                      <span className="service-tag">real-life stories</span>
-                                                      <span className="service-tag">narratives</span>
+                                                      <span className="service-tag">brand films</span>
+                                                      <span className="service-tag">brand story</span>
+                                                      <span className="service-tag">visual identity</span>
                           </div>
                         </div>
                       </div>
