@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
-import { sendMail, esc } from '@/lib/mailer';
+import { sendMail, OWNER_TO } from '@/lib/mailer';
+import { contactEmail } from '@/lib/emails';
 
 export const runtime = 'nodejs';
 
@@ -67,19 +68,9 @@ export async function POST(request) {
       );
     }
 
-    // notify the studio (never blocks the response)
-    await sendMail({
-      subject: `New enquiry: ${subject || projectType || 'Contact form'}`,
-      replyTo: email,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nProject type: ${projectType}\n\n${message}`,
-      html: `<h2>New contact enquiry</h2>
-        <p><strong>Name:</strong> ${esc(name)}<br>
-        <strong>Email:</strong> ${esc(email)}<br>
-        <strong>Phone:</strong> ${esc(phone) || '—'}<br>
-        <strong>Subject:</strong> ${esc(subject) || '—'}<br>
-        <strong>Project type:</strong> ${esc(projectType) || '—'}</p>
-        <p style="white-space:pre-wrap">${esc(message)}</p>`,
-    });
+    // notify the studio (explicit recipient; never blocks the response)
+    const mail = contactEmail({ name, email, phone, subject, projectType, message });
+    await sendMail({ to: OWNER_TO, replyTo: email, ...mail });
 
     return NextResponse.json(
       { success: true, message: 'Thank you! Your message has been sent successfully.', data: data ? data[0] : null },
