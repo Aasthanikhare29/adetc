@@ -5,6 +5,12 @@ import StarterKit from '@tiptap/starter-kit';
 import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import { useRef } from 'react';
+import { toast } from 'sonner';
+import {
+  Bold, Italic, Strikethrough, Heading1, Heading2, Heading3,
+  List, ListOrdered, Quote, Minus, Code, Link2, ImagePlus, Undo2, Redo2,
+} from 'lucide-react';
+import { cn } from '@/lib/utils';
 
 async function uploadFile(file) {
   const fd = new FormData();
@@ -15,13 +21,17 @@ async function uploadFile(file) {
   return json.url;
 }
 
-function Btn({ editor, cmd, active, children, title }) {
+function Tb({ onClick, active, disabled, title, children }) {
   return (
     <button
       type="button"
       title={title}
-      className={active ? 'active' : ''}
-      onClick={cmd}
+      disabled={disabled}
+      onClick={onClick}
+      className={cn(
+        'inline-flex size-8 items-center justify-center rounded-md transition-colors disabled:opacity-40 [&_svg]:size-4',
+        active ? 'bg-primary text-primary-foreground' : 'hover:bg-accent hover:text-accent-foreground'
+      )}
     >
       {children}
     </button>
@@ -33,17 +43,13 @@ export default function Editor({ value, onChange }) {
 
   const editor = useEditor({
     immediatelyRender: false,
-    extensions: [
-      StarterKit,
-      Link.configure({ openOnClick: false }),
-      Image,
-    ],
+    extensions: [StarterKit, Link.configure({ openOnClick: false }), Image],
     content: value || '',
-    editorProps: { attributes: { 'data-placeholder': 'Write your post…' } },
+    editorProps: { attributes: { class: 'px-4 py-3', 'data-placeholder': 'Write your post…' } },
     onUpdate: ({ editor }) => onChange(editor.getHTML()),
   });
 
-  if (!editor) return <div className="ProseMirror">Loading editor…</div>;
+  if (!editor) return <div className="px-4 py-3 text-sm text-muted-foreground">Loading editor…</div>;
 
   const insertImage = async (e) => {
     const file = e.target.files?.[0];
@@ -53,7 +59,7 @@ export default function Editor({ value, onChange }) {
       const url = await uploadFile(file);
       editor.chain().focus().setImage({ src: url }).run();
     } catch (err) {
-      alert(err.message);
+      toast.error(err.message);
     }
   };
 
@@ -65,28 +71,30 @@ export default function Editor({ value, onChange }) {
     editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   };
 
+  const c = editor.chain().focus();
+
   return (
     <div>
-      <div className="editor-toolbar">
-        <Btn editor={editor} title="Bold" active={editor.isActive('bold')}
-          cmd={() => editor.chain().focus().toggleBold().run()}><b>B</b></Btn>
-        <Btn editor={editor} title="Italic" active={editor.isActive('italic')}
-          cmd={() => editor.chain().focus().toggleItalic().run()}><i>I</i></Btn>
-        <Btn editor={editor} title="Strike" active={editor.isActive('strike')}
-          cmd={() => editor.chain().focus().toggleStrike().run()}><s>S</s></Btn>
-        <Btn editor={editor} title="H2" active={editor.isActive('heading', { level: 2 })}
-          cmd={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}>H2</Btn>
-        <Btn editor={editor} title="H3" active={editor.isActive('heading', { level: 3 })}
-          cmd={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}>H3</Btn>
-        <Btn editor={editor} title="Bullet list" active={editor.isActive('bulletList')}
-          cmd={() => editor.chain().focus().toggleBulletList().run()}>• List</Btn>
-        <Btn editor={editor} title="Numbered list" active={editor.isActive('orderedList')}
-          cmd={() => editor.chain().focus().toggleOrderedList().run()}>1. List</Btn>
-        <Btn editor={editor} title="Quote" active={editor.isActive('blockquote')}
-          cmd={() => editor.chain().focus().toggleBlockquote().run()}>❝</Btn>
-        <Btn editor={editor} title="Link" active={editor.isActive('link')} cmd={setLink}>🔗</Btn>
-        <Btn editor={editor} title="Image" active={false}
-          cmd={() => fileRef.current?.click()}>🖼</Btn>
+      <div className="flex flex-wrap items-center gap-0.5 border-b border-border p-1.5">
+        <Tb title="Bold" active={editor.isActive('bold')} onClick={() => c.toggleBold().run()}><Bold /></Tb>
+        <Tb title="Italic" active={editor.isActive('italic')} onClick={() => c.toggleItalic().run()}><Italic /></Tb>
+        <Tb title="Strikethrough" active={editor.isActive('strike')} onClick={() => c.toggleStrike().run()}><Strikethrough /></Tb>
+        <span className="mx-1 h-5 w-px bg-border" />
+        <Tb title="Heading 1" active={editor.isActive('heading', { level: 1 })} onClick={() => c.toggleHeading({ level: 1 }).run()}><Heading1 /></Tb>
+        <Tb title="Heading 2" active={editor.isActive('heading', { level: 2 })} onClick={() => c.toggleHeading({ level: 2 }).run()}><Heading2 /></Tb>
+        <Tb title="Heading 3" active={editor.isActive('heading', { level: 3 })} onClick={() => c.toggleHeading({ level: 3 }).run()}><Heading3 /></Tb>
+        <span className="mx-1 h-5 w-px bg-border" />
+        <Tb title="Bullet list" active={editor.isActive('bulletList')} onClick={() => c.toggleBulletList().run()}><List /></Tb>
+        <Tb title="Numbered list" active={editor.isActive('orderedList')} onClick={() => c.toggleOrderedList().run()}><ListOrdered /></Tb>
+        <Tb title="Quote" active={editor.isActive('blockquote')} onClick={() => c.toggleBlockquote().run()}><Quote /></Tb>
+        <Tb title="Code block" active={editor.isActive('codeBlock')} onClick={() => c.toggleCodeBlock().run()}><Code /></Tb>
+        <Tb title="Divider" onClick={() => c.setHorizontalRule().run()}><Minus /></Tb>
+        <span className="mx-1 h-5 w-px bg-border" />
+        <Tb title="Link" active={editor.isActive('link')} onClick={setLink}><Link2 /></Tb>
+        <Tb title="Image" onClick={() => fileRef.current?.click()}><ImagePlus /></Tb>
+        <span className="mx-1 h-5 w-px bg-border" />
+        <Tb title="Undo" disabled={!editor.can().undo()} onClick={() => c.undo().run()}><Undo2 /></Tb>
+        <Tb title="Redo" disabled={!editor.can().redo()} onClick={() => c.redo().run()}><Redo2 /></Tb>
       </div>
       <EditorContent editor={editor} />
       <input ref={fileRef} type="file" accept="image/*" hidden onChange={insertImage} />

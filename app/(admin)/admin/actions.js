@@ -66,19 +66,23 @@ export async function savePost(_prev, formData) {
       row.published_at = new Date().toISOString();
     }
     const { data, error } = await supabase
-      .from('posts').update(row).eq('id', id).select('slug').maybeSingle();
+      .from('posts').update(row).eq('id', id).select('id,slug').maybeSingle();
     if (error) return { error: error.message };
     saved = data;
   } else {
     if (status === 'published') row.published_at = new Date().toISOString();
     const { data, error } = await supabase
-      .from('posts').insert(row).select('slug').maybeSingle();
-    if (error) return { error: error.message };
+      .from('posts').insert(row).select('id,slug').maybeSingle();
+    if (error) {
+      if (error.code === '23505') return { error: 'That slug is already taken.' };
+      return { error: error.message };
+    }
     saved = data;
   }
 
   revalidateBlog(saved?.slug);
-  redirect('/admin');
+  revalidatePath('/admin', 'layout');
+  return { ok: true, id: saved?.id, slug: saved?.slug, status };
 }
 
 export async function setStatus(id, status) {

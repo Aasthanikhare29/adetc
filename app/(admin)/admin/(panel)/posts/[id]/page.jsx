@@ -9,7 +9,7 @@ export default async function EditPostPage({ params }) {
   const supabase = await serverClient();
   const { data: post } = await supabase
     .from('posts')
-    .select('id,slug,title,excerpt,category,image,content_html,status')
+    .select('id,slug,title,excerpt,category,image,content_html,status,href')
     .eq('id', id)
     .maybeSingle();
 
