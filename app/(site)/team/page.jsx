@@ -37,14 +37,20 @@ export default function Page() {
                   <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chirag.JPEG-e1755281502673.jpg" alt="Chirag Sharma" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
-                      <a href="https://www.instagram.com/" className="social-icon">
+                      <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a href="https://www.facebook.com/" className="social-icon">
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://www.x.com/" className="social-icon">
+                      <a href="https://x.com/AdEtcstudios" className="social-icon">
                         <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
                       </a>
                     </div>
                   </div>
@@ -85,14 +91,20 @@ export default function Page() {
                   <img src="https://adetcstudios.com/wp-content/uploads/2020/03/Chinmay.jpeg-e1755281301146.jpg" alt="Chinmay Parmar" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
-                      <a href="https://www.instagram.com/" className="social-icon">
+                      <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a href="https://www.facebook.com/" className="social-icon">
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://www.x.com/" className="social-icon">
+                      <a href="https://x.com/AdEtcstudios" className="social-icon">
                         <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
                       </a>
                     </div>
                   </div>

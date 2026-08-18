@@ -80,10 +80,16 @@ export default function Footer() {
                   <div className="d-flex flex-row gspace-1 align-items-center w-100 justify-content-between flex-wrap">
                     <h5>Social Media</h5>
                     <div className="social-footer-container">
-                      <a href="https://www.instagram.com/" className="footer-icon"><i className="fa-brands fa-instagram"></i></a>
-                      <a href="https://www.facebook.com/" className="footer-icon"><i className="fa-brands fa-facebook"></i></a>
-                      <a href="https://www.x.com/" className="footer-icon"><i className="fa-brands fa-x-twitter"></i></a>
-                      <a href="https://www.youtube.com/" className="footer-icon"><i className="fa-brands fa-youtube"></i></a>
+                      <a href="https://www.instagram.com/adetc_studios/" className="footer-icon"><i className="fa-brands fa-instagram"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="footer-icon"><i className="fa-brands fa-facebook"></i></a>
+                      <a href="https://x.com/AdEtcstudios" className="footer-icon"><i className="fa-brands fa-x-twitter"></i></a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="footer-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
+                      </a>
+                      <a href="https://www.youtube.com/@AdEtcStudios" className="footer-icon"><i className="fa-brands fa-youtube"></i></a>
                     </div>
                   </div>
                 </div>

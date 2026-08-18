@@ -60,16 +60,22 @@ export default function Page() {
               <div className="d-flex flex-column gspace-2">
                               <span className="contact-info-heading">Social Media</span>
                 <div className="d-flex flex-row gspace-2 align-items-center">
-                  <a href="https://www.instagram.com/" className="social-icon">
+                  <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                                       <i className="fa-brands fa-instagram"></i>
                   </a>
-                  <a href="https://www.facebook.com/" className="social-icon">
+                  <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                                       <i className="fa-brands fa-facebook"></i>
                   </a>
-                  <a href="https://www.x.com/" className="social-icon">
+                  <a href="https://x.com/AdEtcstudios" className="social-icon">
                                       <i className="fa-brands fa-x-twitter"></i>
                   </a>
-                  <a href="https://www.youtube.com/" className="social-icon">
+
+                  <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                    <i className="fa-brands fa-linkedin"></i>
+
+                  </a>
+                  <a href="https://www.youtube.com/@AdEtcStudios" className="social-icon">
                                       <i className="fa-brands fa-youtube"></i>
                   </a>
                 </div>

@@ -41,16 +41,22 @@ export default function Page() {
                 </a>
               </div>
               <div className="d-flex flex-row gspace-2 align-items-center">
-                <a href="https://www.instagram.com/" className="social-icon">
+                <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                                   <i className="fa-brands fa-instagram"></i>
                 </a>
-                <a href="https://www.facebook.com/" className="social-icon">
+                <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                                   <i className="fa-brands fa-facebook"></i>
                 </a>
-                <a href="https://www.x.com/" className="social-icon">
+                <a href="https://x.com/AdEtcstudios" className="social-icon">
                                   <i className="fa-brands fa-x-twitter"></i>
                 </a>
-                <a href="https://www.youtube.com/" className="social-icon">
+
+                <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                  <i className="fa-brands fa-linkedin"></i>
+
+                </a>
+                <a href="https://www.youtube.com/@AdEtcStudios" className="social-icon">
                                   <i className="fa-brands fa-youtube"></i>
                 </a>
               </div>
@@ -144,9 +150,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <video className="project-video-bg" id="video-bg-1" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t"></video>
+                                  <div className="project-video-bg" id="video-bg-1" data-video-id="vplPZf2uxb8"></div>
                   <div>
-                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t">
+                    <button className="request-loader" data-video="https://youtu.be/vplPZf2uxb8">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -166,9 +172,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <video className="project-video-bg" id="video-bg-2" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1vxD4OOK1lF9Z7W2TwRwbLvl50pD7-DFc&export=download&confirm=t"></video>
+                                  <div className="project-video-bg" id="video-bg-2" data-video-id="tlapIbTVRnQ"></div>
                   <div>
-                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1vxD4OOK1lF9Z7W2TwRwbLvl50pD7-DFc&export=download&confirm=t">
+                    <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -187,9 +193,9 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <video className="project-video-bg" id="video-bg-3" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1K9oW3lk2aGU15R3gd0ChjnYDIwaCzWaT&export=download&confirm=t"></video>
+                                  <div className="project-video-bg" id="video-bg-3" data-video-id="TcYx1AGZFWc"></div>
                   <div className="w-100 d-flex justify-content-center">
-                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1K9oW3lk2aGU15R3gd0ChjnYDIwaCzWaT&export=download&confirm=t">
+                    <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -208,9 +214,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <video className="project-video-bg" id="video-bg-4" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1jYmjUzayXrOkaSEOEtLTROKYAMI4yZaK&export=download&confirm=t"></video>
+                                  <div className="project-video-bg" id="video-bg-4" data-video-id="hZpeOppxfR0"></div>
                   <div>
-                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1jYmjUzayXrOkaSEOEtLTROKYAMI4yZaK&export=download&confirm=t">
+                    <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -229,9 +235,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <video className="project-video-bg" id="video-bg-5" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=10-cnWTQirgj6LdhWR8EUJRA5K_UdOttn&export=download&confirm=t"></video>
+                                  <div className="project-video-bg" id="video-bg-5" data-video-id="z3G3d2CPWFM"></div>
                   <div>
-                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=10-cnWTQirgj6LdhWR8EUJRA5K_UdOttn&export=download&confirm=t">
+                    <button className="request-loader" data-video="https://youtu.be/z3G3d2CPWFM">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -750,14 +756,20 @@ export default function Page() {
                   <img src="/assets/images/chirag.jpeg" alt="Chirag Sharma" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
-                      <a href="https://www.instagram.com/" className="social-icon">
+                      <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a href="https://www.facebook.com/" className="social-icon">
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://www.x.com/" className="social-icon">
+                      <a href="https://x.com/AdEtcstudios" className="social-icon">
                         <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
                       </a>
                     </div>
                   </div>
@@ -774,14 +786,20 @@ export default function Page() {
                   <img src="/assets/images/krutika.jpeg" alt="Krutika Sharma" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
-                      <a href="https://www.instagram.com/" className="social-icon">
+                      <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a href="https://www.facebook.com/" className="social-icon">
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://www.x.com/" className="social-icon">
+                      <a href="https://x.com/AdEtcstudios" className="social-icon">
                         <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
                       </a>
                     </div>
                   </div>
@@ -798,14 +816,20 @@ export default function Page() {
                   <img src="/assets/images/chinmay.jpeg" alt="Chinmay Parmar" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
-                      <a href="https://www.instagram.com/" className="social-icon">
+                      <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a href="https://www.facebook.com/" className="social-icon">
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://www.x.com/" className="social-icon">
+                      <a href="https://x.com/AdEtcstudios" className="social-icon">
                         <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
                       </a>
                     </div>
                   </div>

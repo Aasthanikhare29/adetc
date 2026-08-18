@@ -300,14 +300,20 @@ export default function Page() {
               <div className="d-flex flex-row align-items-center gspace-1">
                               <h5>Share:</h5>
                 <div className="social-icon-container">
-                  <a href="#" className="social-icon-post">
+                  <a href="https://www.instagram.com/adetc_studios/" className="social-icon-post">
                                       <i className="fa-brands fa-instagram"></i>
                   </a>
-                  <a href="#" className="social-icon-post">
+                  <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon-post">
                                       <i className="fa-brands fa-facebook"></i>
                   </a>
-                  <a href="#" className="social-icon-post">
+                  <a href="https://x.com/AdEtcstudios" className="social-icon-post">
                                       <i className="fa-brands fa-x-twitter"></i>
+                  </a>
+
+                  <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon-post">
+
+                    <i className="fa-brands fa-linkedin"></i>
+
                   </a>
                 </div>
               </div>
