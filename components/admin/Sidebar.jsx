@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { LayoutDashboard, FileText, Settings, LogOut, PanelLeftClose, PanelLeft } from 'lucide-react';
@@ -23,7 +23,18 @@ const GROUPS = [
 
 export default function Sidebar({ email }) {
   const pathname = usePathname();
+  // Default collapsed; restore the saved choice after mount (avoids SSR mismatch).
   const [collapsed, setCollapsed] = useState(true);
+  useEffect(() => {
+    const saved = localStorage.getItem('admin:sidebar-collapsed');
+    if (saved !== null) setCollapsed(saved === '1');
+  }, []);
+  const toggle = () =>
+    setCollapsed((v) => {
+      const next = !v;
+      localStorage.setItem('admin:sidebar-collapsed', next ? '1' : '0');
+      return next;
+    });
 
   return (
     <aside
@@ -80,7 +91,7 @@ export default function Sidebar({ email }) {
       <div className="border-t border-sidebar-border p-2">
         <button
           type="button"
-          onClick={() => setCollapsed((v) => !v)}
+          onClick={toggle}
           title={collapsed ? 'Expand' : 'Collapse'}
           className={cn(
             'mb-1 flex h-9 w-full items-center gap-3 rounded-[4px] px-3 text-sm text-muted-foreground transition-colors duration-150 hover:bg-surface-hover',
