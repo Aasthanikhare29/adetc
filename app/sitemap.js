@@ -6,7 +6,6 @@ const ROUTES = [
   '/',
   '/about',
   '/services',
-  '/service-detail',
   '/project',
   '/project-detail',
   '/blog',
@@ -15,10 +14,11 @@ const ROUTES = [
   '/testimonial',
   '/pricing',
   '/contact',
-  '/ad-film-makers',
+  '/ad-film-makers-in-ahmedabad',
+  '/video-production-company-in-ahmedabad',
   '/brand-video',
   '/tvc-format',
-  '/video-production-company',
+  '/video-production-company-guide',
 ];
 
 export default async function sitemap() {

@@ -75,6 +75,7 @@
     .work-number{
         font-size: 90px;
     }
+    .banner-inner h1,
     .banner-inner h2{
         font-size: 52px;
         overflow-wrap: break-word;
@@ -329,6 +330,7 @@
         height: 70px;
         max-width: 100%;
     }
+    .banner-inner h1,
     .banner-inner h2{
         font-size: 34px;
         overflow-wrap: break-word;
