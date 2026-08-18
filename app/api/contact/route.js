@@ -30,6 +30,13 @@ export async function POST(request) {
       );
     }
 
+    if (!supabase) {
+      return NextResponse.json(
+        { error: 'The contact form is temporarily unavailable. Please try again later.' },
+        { status: 503 }
+      );
+    }
+
     const { data, error } = await supabase
       .from('contacts')
       .insert([
