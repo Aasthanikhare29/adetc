@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Project Detail - AdEtc Studios',
+  title: 'Project Detail - Ad Etc Studios',
 };
 
 export default function Page() {

@@ -17,7 +17,7 @@ export default function LoginPage() {
         <CardHeader className="space-y-2">
           <div className="flex items-center gap-2">
             <PenLine className="size-5" />
-            <span className="font-semibold tracking-tight">AdEtc Admin</span>
+            <span className="font-semibold tracking-tight">Ad Etc Admin</span>
           </div>
           <CardTitle>Sign in</CardTitle>
           <CardDescription>Enter your credentials to manage the blog.</CardDescription>

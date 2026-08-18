@@ -3,17 +3,17 @@ import JsonLd from '@/components/JsonLd';
 
 const IMAGE = '/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg';
 const DESCRIPTION =
-  'AdEtc Studios creates impactful ad films in Ahmedabad, from concept and scripting to filming, direction, editing, and post-production.';
+  'Ad Etc Studios creates impactful ad films in Ahmedabad, from concept and scripting to filming, direction, editing, and post-production.';
 
 const FAQ = [
-  { q: 'What types of ad films does AdEtc Studios produce?', a: 'We create television commercials, digital advertising films, brand films, promotional videos, product films, corporate films, documentary-style advertising, and campaign content.' },
+  { q: 'What types of ad films does Ad Etc Studios produce?', a: 'We create television commercials, digital advertising films, brand films, promotional videos, product films, corporate films, documentary-style advertising, and campaign content.' },
   { q: 'How does your ad film production process work?', a: 'Our process generally includes discovery, concept development, scriptwriting, pre-production, filming, editing, post-production, and final delivery.' },
   { q: 'Do you provide scriptwriting and creative direction?', a: 'Yes. Our team can support concept development, scriptwriting, visual treatment, direction, and complete creative execution.' },
   { q: 'Do you produce TV commercials?', a: 'Yes. We develop and produce TVCs from the initial concept through filming, post-production, and final delivery.' },
   { q: 'Can you create digital ads for social media?', a: 'Yes. We create platform-ready advertising content for YouTube, Instagram, OTT, websites, and other digital channels.' },
   { q: 'How much does an ad film cost?', a: 'The cost depends on the concept, production scale, cast, locations, crew, shoot duration, equipment, production design, and post-production requirements.' },
   { q: 'Do you work with advertising agencies?', a: 'Yes. We collaborate with advertising agencies, creative agencies, and brands to execute commercial and campaign productions.' },
-  { q: 'Do you only work with clients in Ahmedabad?', a: "AdEtc Studios is based in Ahmedabad and works with clients across Gujarat, India, and other markets depending on the project's production requirements." },
+  { q: 'Do you only work with clients in Ahmedabad?', a: "Ad Etc Studios is based in Ahmedabad and works with clients across Gujarat, India, and other markets depending on the project's production requirements." },
   { q: 'How do I start an ad film project?', a: 'Share your campaign objective, product or service, target audience, preferred platform, timeline, budget range, and any initial creative references. Our team can then recommend the right production approach.' },
 ];
 
@@ -70,7 +70,7 @@ export default function Page() {
                 <div className="d-flex flex-column gspace-3">
                   <div className="d-flex flex-column gspace-2">
                     <p>Your brand deserves an advertisement that does more than sell. It should capture attention, communicate your message, and leave a lasting impression.</p>
-                    <p>At AdEtc Studios, we create high-impact ad films that bring ideas, products, and brand stories to life. As experienced ad film makers in Ahmedabad, we combine creative thinking, strategic storytelling, cinematic visuals, and end-to-end production to develop films built around your campaign objectives.</p>
+                    <p>At Ad Etc Studios, we create high-impact ad films that bring ideas, products, and brand stories to life. As experienced ad film makers in Ahmedabad, we combine creative thinking, strategic storytelling, cinematic visuals, and end-to-end production to develop films built around your campaign objectives.</p>
                     <p>From concept development and scriptwriting to direction, filming, editing, and final delivery, our team manages every stage of the production journey.</p>
                     <p className="mb-0">Whether you're launching a product, introducing a new campaign, building brand awareness, or communicating a powerful message, we create advertising films designed to connect with your audience. Have an idea for your next campaign? Let's bring it to the screen.</p>
                     <div>
@@ -84,7 +84,7 @@ export default function Page() {
               </div>
               <div className="col">
                 <div className="image-container service-detail-image">
-                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Ad Film Production at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
+                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Ad Film Production at Ad Etc Studios" className="img-fluid" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -116,11 +116,11 @@ export default function Page() {
                   <div className="service-detail-pane">
                     <div className="service-title-wrapper service-title-wrapper-left">
                       <div className="service-title-heading">
-                        <h2>Why Choose AdEtc Studios as Your Ad Film Maker in Ahmedabad?</h2>
+                        <h2>Why Choose Ad Etc Studios as Your Ad Film Maker in Ahmedabad?</h2>
                       </div>
                       <div className="service-title-description">
                         <p>A memorable advertisement begins with a strong idea but turning that idea into an effective film requires the right creative and production expertise.</p>
-                        <p className="mb-0">At AdEtc Studios, we begin by understanding your brand, audience, campaign objective, and communication challenge. This allows us to develop a creative direction that is aligned with your business rather than simply creating visually impressive content.</p>
+                        <p className="mb-0">At Ad Etc Studios, we begin by understanding your brand, audience, campaign objective, and communication challenge. This allows us to develop a creative direction that is aligned with your business rather than simply creating visually impressive content.</p>
                       </div>
                     </div>
                     <div className="d-flex flex-column gspace-3">
@@ -200,8 +200,8 @@ export default function Page() {
                     </div>
                     <div className="d-flex flex-column gspace-3">
                       <div className="d-flex flex-column gspace-2">
-                        <h3>Why Brands Work With AdEtc Studios</h3>
-                        <p className="mb-0">Choosing the right ad film production house is about more than technical capability. It is about finding a team that understands your idea and can turn it into a finished film without losing the purpose behind it. At AdEtc Studios, we bring together creative thinking, production expertise, and a collaborative working style.</p>
+                        <h3>Why Brands Work With Ad Etc Studios</h3>
+                        <p className="mb-0">Choosing the right ad film production house is about more than technical capability. It is about finding a team that understands your idea and can turn it into a finished film without losing the purpose behind it. At Ad Etc Studios, we bring together creative thinking, production expertise, and a collaborative working style.</p>
                       </div>
                     </div>
                     <div className="d-flex flex-column gspace-3">
@@ -349,7 +349,7 @@ export default function Page() {
                     <div className="d-flex flex-column gspace-3">
                       <div className="d-flex flex-column gspace-2">
                         <h3>End-to-End Ad Film Production Services</h3>
-                        <p className="mb-0">From the first idea to the final master, AdEtc Studios manages the complete filmmaking journey.</p>
+                        <p className="mb-0">From the first idea to the final master, Ad Etc Studios manages the complete filmmaking journey.</p>
                       </div>
                       <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
                         <div className="col">
@@ -487,7 +487,7 @@ export default function Page() {
                     <div className="accordion" id="faqAccordion">
                       <div className="accordion-item">
                         <h2 className="accordion-header faq-accordion-header">
-                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What types of ad films does AdEtc Studios produce?</button>
+                          <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What types of ad films does Ad Etc Studios produce?</button>
                         </h2>
                         <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                           <div className="accordion-body">
@@ -561,7 +561,7 @@ export default function Page() {
                         </h2>
                         <div id="faq8" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                           <div className="accordion-body">
-                            <p>AdEtc Studios is based in Ahmedabad and works with clients across Gujarat, India, and other markets depending on the project's production requirements.</p>
+                            <p>Ad Etc Studios is based in Ahmedabad and works with clients across Gujarat, India, and other markets depending on the project's production requirements.</p>
                           </div>
                         </div>
                       </div>
@@ -587,7 +587,7 @@ export default function Page() {
               <div className="service-detail-sidebar">
                 <div className="service-sidebar-card">
                   <div className="image-container service-sidebar-image">
-                    <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="AdEtc Studios Team" className="img-fluid" loading="lazy" decoding="async" />
+                    <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Ad Etc Studios Team" className="img-fluid" loading="lazy" decoding="async" />
                   </div>
                   <ul className="service-facts">
                     <li>

@@ -1,7 +1,7 @@
 import VideoModal from '@/components/VideoModal';
 
 export const metadata = {
-  title: 'Portfolio - AdEtc Studios',
+  title: 'Portfolio - Ad Etc Studios',
 };
 
 export default function Page() {

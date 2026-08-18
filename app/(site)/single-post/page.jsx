@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Ad Film Makers: How Creative Advertising Films Bring Brands to Life - AdEtc Studios',
+  title: 'Ad Film Makers: How Creative Advertising Films Bring Brands to Life - Ad Etc Studios',
 };
 
 export default function Page() {
@@ -98,7 +98,7 @@ export default function Page() {
             <div className="d-flex flex-row flex-wrap align-items-center gspace-3 post-meta">
               <div className="d-flex flex-row gspace-1 align-items-center">
                 <i className="fa-solid fa-user accent-color"></i>
-                <span className="meta-data">AdEtc Studios</span>
+                <span className="meta-data">Ad Etc Studios</span>
               </div>
               <div className="d-flex flex-row gspace-1 align-items-center">
                 <i className="fa-solid fa-calendar accent-color"></i>
@@ -141,7 +141,7 @@ export default function Page() {
               <div className="d-flex flex-column gspace-2">
                               <span className="post-quote-text">The strongest campaigns don't interrupt people's attention. They earn it.</span>
                 <p className="post-quote-author">
-                                  <span>AdEtc Studios</span>
+                                  <span>Ad Etc Studios</span>
                 </p>
               </div>
             </div>

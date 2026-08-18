@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'This is what we do - AdEtc Studios',
+  title: 'This is what we do - Ad Etc Studios',
 };
 
 export default function Page() {
@@ -28,7 +28,7 @@ export default function Page() {
                       <h2>This is what we do</h2>
           </div>
           <div className="service-title-description">{/* <p>
-                                  AdEtc Studios, 2 years young with 15 years of filmmaking expertise behind every creation.
+                                  Ad Etc Studios, 2 years young with 15 years of filmmaking expertise behind every creation.
                               </p> */}</div>
         </div>
         <div className="accordion" id="serviceAccordion">
@@ -210,7 +210,7 @@ export default function Page() {
                       <h2>Our Experience</h2>
           </div>
           <div className="service-title-description">
-              <p>AdEtc Studios may be two years young, but the expertise behind every frame comes from 15 years of filmmaking experience. Over the years, our team has worked across creative direction, production, cinematography, and post-production, developing a deep understanding of what it takes to turn an idea into a compelling visual story.</p>
+              <p>Ad Etc Studios may be two years young, but the expertise behind every frame comes from 15 years of filmmaking experience. Over the years, our team has worked across creative direction, production, cinematography, and post-production, developing a deep understanding of what it takes to turn an idea into a compelling visual story.</p>
               <p>As a video production company in Ahmedabad, we bring together fresh creative thinking and years of hands-on production expertise to create films that are visually engaging and strategically purposeful. From corporate films and brand films to DVCs, TVCs, ad films, and promotional videos, we approach every project with the same attention to detail and commitment to quality.</p>
               <p>Our experience extends beyond simply creating beautiful visuals. We understand how to translate a brand's message into a story that connects with its audience, whether the goal is brand building, communication, marketing, or lead generation.</p>
               <p>From the first creative concept to the final edit, our team works collaboratively to ensure every production is thoughtfully planned, professionally executed, and true to the brand.</p>
@@ -233,7 +233,7 @@ export default function Page() {
                           <div class="col">
                               <div class="card">
                                   <div class="d-flex flex-column gspace-2">
-                                      <p>"AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth."</p>
+                                      <p>"Ad Etc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth."</p>
                                       <div class="d-flex flex-column gspace-1">
                                           <h5>Aniq Nurani</h5>
                                           <span>Kadam</span>
@@ -244,7 +244,7 @@ export default function Page() {
                           <div class="col">
                               <div class="card">
                                   <div class="d-flex flex-column gspace-2">
-                                      <p>"What I loved most about working with AdEtc was how invested they were."</p>
+                                      <p>"What I loved most about working with Ad Etc was how invested they were."</p>
                                       <div class="d-flex flex-column gspace-1">
                                           <h5>Siddiqa Nurani</h5>
                                           <span>Pollie</span>
@@ -255,7 +255,7 @@ export default function Page() {
                           <div class="col">
                               <div class="card">
                                   <div class="d-flex flex-column gspace-2">
-                                      <p>"From the very first mood-board, AdEtc Studios just got it."</p>
+                                      <p>"From the very first mood-board, Ad Etc Studios just got it."</p>
                                       <div class="d-flex flex-column gspace-1">
                                           <h5>Yash Shah</h5>
                                           <span>ZerobyZ</span>
@@ -266,7 +266,7 @@ export default function Page() {
                           <div class="col">
                               <div class="card">
                                   <div class="d-flex flex-column gspace-2">
-                                      <p>"AdEtc Studios brought a level of professionalism and calm..."</p>
+                                      <p>"Ad Etc Studios brought a level of professionalism and calm..."</p>
                                       <div class="d-flex flex-column gspace-1">
                                           <h5>Parimal Desai</h5>
                                           <span>Cure Sight Lasik Centre</span>
@@ -277,7 +277,7 @@ export default function Page() {
                           <div class="col">
                               <div class="card">
                                   <div class="d-flex flex-column gspace-2">
-                                      <p>"Working with AdEtc Studios felt effortless."</p>
+                                      <p>"Working with Ad Etc Studios felt effortless."</p>
                                       <div class="d-flex flex-column gspace-1">
                                           <h5>Sanjana Desai</h5>
                                           <span>Concept Diagnostics</span>

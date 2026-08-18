@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'TVC Format: A Guide to TV Commercials & Production - AdEtc Studios',
+  title: 'TVC Format: A Guide to TV Commercials & Production - Ad Etc Studios',
   description: 'Explore the TVC format, common durations, script structure, production process, and what makes an effective television commercial.',
 };
 
@@ -99,7 +99,7 @@ export default function Page() {
                 <div className="d-flex flex-row flex-wrap align-items-center gspace-3 post-meta">
                   <div className="d-flex flex-row gspace-1 align-items-center">
                     <i className="fa-solid fa-user accent-color"></i>
-                    <span className="meta-data">AdEtc Studios</span>
+                    <span className="meta-data">Ad Etc Studios</span>
                   </div>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                     <i className="fa-solid fa-calendar accent-color"></i>

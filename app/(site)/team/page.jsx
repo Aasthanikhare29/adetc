@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Our Team/Crew - AdEtc Studios',
+  title: 'Our Team/Crew - Ad Etc Studios',
 };
 
 export default function Page() {
@@ -26,7 +26,7 @@ export default function Page() {
         <div className="col col-lg-4">
           <div className="team-title-container">
                       <h2>Meet The Founders</h2>
-                      <p>The visionaries behind every frame at AdEtc Studios.</p>
+                      <p>The visionaries behind every frame at Ad Etc Studios.</p>
           </div>
         </div>
         <div className="col col-lg-8">
@@ -138,7 +138,7 @@ export default function Page() {
   {/* Why Trust Us Section */}
   <section className="section bg-accent-color-5">
     <div className="d-flex flex-column gspace-2 text-start text-lg-center align-items-start align-items-lg-center">
-          <h2>Why Brands Trust AdEtc Studios</h2>
+          <h2>Why Brands Trust Ad Etc Studios</h2>
           <p className="mb-0">From concept to screen, we craft powerful visual experiences. Let your story shine with industry-grade film production.</p>
       <div style={{ marginBottom: '50px' }}>
               <a href="/contact" className="btn btn-accent">Let's Create Together</a>

@@ -37,7 +37,7 @@ export default function Sidebar({ email }) {
         <div className="flex size-8 shrink-0 items-center justify-center rounded-[4px] bg-primary text-sm font-bold text-primary-foreground">
           A
         </div>
-        {!collapsed && <span className="truncate text-sm font-semibold tracking-tight">AdEtc Studios</span>}
+        {!collapsed && <span className="truncate text-sm font-semibold tracking-tight">Ad Etc Studios</span>}
       </div>
 
       {/* nav */}

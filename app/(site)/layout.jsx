@@ -5,11 +5,11 @@ import Script from 'next/script';
 
 export const metadata = {
   title: {
-    default: 'AdEtc Studios',
+    default: 'Ad Etc Studios',
     template: '%s',
   },
   description:
-    'AdEtc Studios is a full-service film production studio delivering bold visuals and powerful narratives.',
+    'Ad Etc Studios is a full-service film production studio delivering bold visuals and powerful narratives.',
 };
 
 export default function RootLayout({ children }) {

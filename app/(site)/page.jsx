@@ -1,7 +1,7 @@
 import VideoModal from '@/components/VideoModal';
 
 export const metadata = {
-  title: 'AdEtc Studios',
+  title: 'Ad Etc Studios',
 };
 
 export default function Page() {
@@ -27,7 +27,7 @@ export default function Page() {
               </div>
               <div className="home-avatar-container">
                               <div className="d-flex flex-row align-items-center"><img src="/assets/images/chinmay.jpeg" alt="Banner Avatar" className="banner-avatar" /> <img src="/assets/images/krutika.jpeg" alt="Banner Avatar" className="banner-avatar" /><img src="/assets/images/chirag.jpeg" alt="Banner Avatar" className="banner-avatar banner-avatar-top" /> <img src="/assets/images/Gp-1.png" alt="Banner Avatar" className="banner-avatar" /></div>
-                              <p>AdEtc Studios is a full-service film production studio delivering bold visuals and powerful narratives. From commercials to creative films we bring your vision to life.</p>
+                              <p>Ad Etc Studios is a full-service film production studio delivering bold visuals and powerful narratives. From commercials to creative films we bring your vision to life.</p>
               </div>
             </div>
                       <div className="home-divider"></div>
@@ -72,13 +72,13 @@ export default function Page() {
           <div className="core-service-logo-container">
             <div className="core-service__circle-logo">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="circleLogoTitle">
-                              <title id="circleLogoTitle">AdEtc Studios Film Studio Logo</title>
+                              <title id="circleLogoTitle">Ad Etc Studios Film Studio Logo</title>
                 <defs>
                                   <path id="textcircle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"></path>
                 </defs>
                               <circle cx="100" cy="100" r="95"></circle>
                 <text dy="5">
-                                  <textPath href="#textcircle" className="core-service__circle-logo-title" startOffset="0%">• AdEtc Studios FILM AND VIDEO PRODUCTION STUDIO • BRINGING IDEAS TO LIFE ON SCREEN</textPath>
+                                  <textPath href="#textcircle" className="core-service__circle-logo-title" startOffset="0%">• Ad Etc Studios FILM AND VIDEO PRODUCTION STUDIO • BRINGING IDEAS TO LIFE ON SCREEN</textPath>
                 </text>
                 <g transform="translate(100 100)">
                                   <image href="/assets/images/Gp-1.png" className="core-service__circle-logo-image" width="160" height="160" x="-80" y="-80" preserveAspectRatio="xMidYMid meet"></image>
@@ -90,7 +90,7 @@ export default function Page() {
         {/* Description + Cards */}
         <div className="d-flex flex-column gspace-5">
           <div className="core-service-description">
-                      <p>AdEtc Studios is a creative film and video production studio based on the belief that every story deserves to be told with power, passion, and precision. Whether it's a commercial, documentary, or branded content — we craft visuals that resonate.</p>
+                      <p>Ad Etc Studios is a creative film and video production studio based on the belief that every story deserves to be told with power, passion, and precision. Whether it's a commercial, documentary, or branded content — we craft visuals that resonate.</p>
           </div>
           <div className="core-service-card-container">
             {/* Card 1 */}
@@ -449,7 +449,7 @@ export default function Page() {
   {/* Why Trust Us Section */}
   <section className="section bg-accent-color-5">
     <div className="d-flex flex-column gspace-2 text-start text-lg-center align-items-start align-items-lg-center">
-          <h2>Why Brands Trust AdEtc Studios</h2>
+          <h2>Why Brands Trust Ad Etc Studios</h2>
           <p className="mb-0">From concept to screen, we craft powerful visual experiences. Let your story shine with industry-grade film production.</p>
       <div style={{ marginBottom: '50px' }}>
               <a href="/contact" className="btn btn-accent">Let's Create Together</a>
@@ -574,7 +574,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Aniq Nurani - Kadam</span>
               </div>
-                          <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
+                          <p>“Ad Etc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -588,7 +588,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Siddiqa Nurani - Pollie</span>
               </div>
-                          <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
+                          <p>“What I loved most about working with Ad Etc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -602,7 +602,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Yash Shah - ZerobyZ</span>
               </div>
-                          <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
+                          <p>“From the very first mood-board, Ad Etc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -616,7 +616,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Parimal Desai - Cure Sight Lasik Centre</span>
               </div>
-                          <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
+                          <p>“Ad Etc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -630,7 +630,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Sanjana Desai - Concept Diagnostics</span>
               </div>
-                          <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
+                          <p>“Working with Ad Etc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -644,7 +644,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Aniq Nurani - Kadam</span>
               </div>
-                          <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
+                          <p>“Ad Etc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -658,7 +658,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Siddiqa Nurani - Pollie</span>
               </div>
-                          <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
+                          <p>“What I loved most about working with Ad Etc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -672,7 +672,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Yash Shah - ZerobyZ</span>
               </div>
-                          <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
+                          <p>“From the very first mood-board, Ad Etc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -686,7 +686,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Parimal Desai - Cure Sight Lasik Centre</span>
               </div>
-                          <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
+                          <p>“Ad Etc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -700,7 +700,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Sanjana Desai - Concept Diagnostics</span>
               </div>
-                          <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
+                          <p>“Working with Ad Etc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">

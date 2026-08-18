@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Pricing/Packages - AdEtc Studios',
+  title: 'Pricing/Packages - Ad Etc Studios',
 };
 
 export default function Page() {

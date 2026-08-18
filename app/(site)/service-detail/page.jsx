@@ -3,7 +3,7 @@ import { pageMetadata } from '@/lib/seo';
 export const metadata = pageMetadata({
   title: 'Video Production Company in Ahmedabad',
   description:
-    'How AdEtc Studios delivers end-to-end video production in Ahmedabad — from concept, scripting and shooting to editing and final delivery for brands.',
+    'How Ad Etc Studios delivers end-to-end video production in Ahmedabad — from concept, scripting and shooting to editing and final delivery for brands.',
   path: '/service-detail',
 });
 
@@ -35,7 +35,7 @@ export default function Page() {
           <div className="col">
             <div className="d-flex flex-column gspace-3">
               <div className="d-flex flex-column gspace-2">
-                    <p>Your brand deserves more than just a video, it deserves a story that inspires action. At AdEtc Studios, we help businesses transform ideas into compelling visual experiences through strategic storytelling and cinematic production. As a trusted Video Production Company in Ahmedabad, we produce high-quality brand films, corporate videos, commercials, documentaries, product shoots, and promotional videos tailored to your business goals.</p>
+                    <p>Your brand deserves more than just a video, it deserves a story that inspires action. At Ad Etc Studios, we help businesses transform ideas into compelling visual experiences through strategic storytelling and cinematic production. As a trusted Video Production Company in Ahmedabad, we produce high-quality brand films, corporate videos, commercials, documentaries, product shoots, and promotional videos tailored to your business goals.</p>
                     <p>From concept development and scriptwriting to filming, video editing, motion graphics, and post-production, our team manages every stage of the creative journey. Whether you're launching a new product, strengthening your brand identity, or creating impactful marketing campaigns, we deliver videos that connect with audiences and drive measurable business outcomes.</p>
                     <p className="mb-0">Ready to bring your vision to life? Let's create a video that elevates your brand.</p>
                 <div>
@@ -49,7 +49,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="image-container service-detail-image">
-                          <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Behind the Scenes at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
+                          <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Behind the Scenes at Ad Etc Studios" className="img-fluid" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -81,10 +81,10 @@ export default function Page() {
               <div className="service-detail-pane">
                 <div className="service-title-wrapper service-title-wrapper-left">
                   <div className="service-title-heading">
-                            <h2>Why Choose AdEtc Studios as Your Video Production Company in Ahmedabad?</h2>
+                            <h2>Why Choose Ad Etc Studios as Your Video Production Company in Ahmedabad?</h2>
                   </div>
                   <div className="service-title-description">
-                            <p>Every business has a unique story, but only the right creative partner can tell it in a way that captures attention and builds trust. At AdEtc Studios, we combine creativity, strategy, and technical expertise to produce videos that not only look stunning but also support your marketing strategy.</p>
+                            <p>Every business has a unique story, but only the right creative partner can tell it in a way that captures attention and builds trust. At Ad Etc Studios, we combine creativity, strategy, and technical expertise to produce videos that not only look stunning but also support your marketing strategy.</p>
                             <p>Unlike a traditional production house, we begin by understanding your audience, your objectives, and the message you want to communicate. This collaborative approach allows us to create videos that align with your brand, engage viewers, and inspire action across digital platforms.</p>
                             <p>Our team handles everything from ideation and scripting to filming, video editing services, colour grading, sound design, visual effects, and post-production ensuring a seamless experience from start to finish.</p>
                             <p className="mb-0">Whether you're a startup, an established enterprise, or a growing organisation in Ahmedabad, we create videos designed to strengthen your brand presence and support long-term growth.</p>
@@ -120,9 +120,9 @@ export default function Page() {
                 </div>
                 <div className="d-flex flex-column gspace-3">
                   <div className="d-flex flex-column gspace-2">
-                            <h3>Why Brands Trust AdEtc Studios</h3>
+                            <h3>Why Brands Trust Ad Etc Studios</h3>
                             <p>Choosing the right video production agency is about more than technical expertise; it's about finding a creative partner who understands your vision.</p>
-                            <p>At AdEtc Studios, every project is built on collaboration, transparency, and storytelling. Our team works closely with clients to ensure every creative decision supports real business outcomes, not just visual appeal.</p>
+                            <p>At Ad Etc Studios, every project is built on collaboration, transparency, and storytelling. Our team works closely with clients to ensure every creative decision supports real business outcomes, not just visual appeal.</p>
                             <h4>What Sets Us Apart</h4>
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
                       <div className="col">
@@ -235,7 +235,7 @@ export default function Page() {
                 <div className="d-flex flex-column gspace-3">
                   <div className="d-flex flex-column gspace-2">
                             <h3>End-to-End Production Services</h3>
-                            <p className="mb-0">From creative ideation to the polished final delivery, AdEtc Studios manages the complete production process, including:</p>
+                            <p className="mb-0">From creative ideation to the polished final delivery, Ad Etc Studios manages the complete production process, including:</p>
                   </div>
                   <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
                       <div className="col">
@@ -271,7 +271,7 @@ export default function Page() {
                             <h2>Our Video Production Process</h2>
                   </div>
                   <div className="service-title-description">
-                            <p>Creating exceptional videos requires more than a camera—it requires a structured production process backed by creativity, planning, and technical expertise. As a professional video production company, AdEtc Studios follows industry best practices to ensure every project is delivered on time and aligned with your business goals.</p>
+                            <p>Creating exceptional videos requires more than a camera—it requires a structured production process backed by creativity, planning, and technical expertise. As a professional video production company, Ad Etc Studios follows industry best practices to ensure every project is delivered on time and aligned with your business goals.</p>
                   </div>
                 </div>
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
@@ -340,7 +340,7 @@ export default function Page() {
                 <div className="accordion" id="faqAccordion">
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What types of videos does AdEtc Studios create?</button>
+                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What types of videos does Ad Etc Studios create?</button>
                     </h2>
                     <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
@@ -384,13 +384,13 @@ export default function Page() {
                     </h2>
                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>Yes. While this page focuses on video production in Ahmedabad, AdEtc Studios works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.</p>
+                                <p>Yes. While this page focuses on video production in Ahmedabad, Ad Etc Studios works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Why should I choose AdEtc Studios?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Why should I choose Ad Etc Studios?</button>
                     </h2>
                     <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
@@ -410,7 +410,7 @@ export default function Page() {
           <div className="service-detail-sidebar">
             <div className="service-sidebar-card">
               <div className="image-container service-sidebar-image">
-                <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="AdEtc Studios Team" className="img-fluid" loading="lazy" decoding="async" />
+                <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Ad Etc Studios Team" className="img-fluid" loading="lazy" decoding="async" />
               </div>
               <ul className="service-facts">
                 <li>

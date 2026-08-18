@@ -152,7 +152,7 @@ export default function Page() {
               <div className="d-flex flex-column gspace-2">
                               <span className="post-quote-text">The strongest campaigns don't feel like advertisements. They feel authentic.</span>
                 <p className="post-quote-author">
-                                  <span>AdEtc Studios</span>
+                                  <span>Ad Etc Studios</span>
                 </p>
               </div>
             </div>

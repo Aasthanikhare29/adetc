@@ -17,7 +17,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { page } = await params;
   return {
-    title: `Blog/Journal - Page ${page} | AdEtc Studios`,
+    title: `Blog/Journal - Page ${page} | Ad Etc Studios`,
   };
 }
 

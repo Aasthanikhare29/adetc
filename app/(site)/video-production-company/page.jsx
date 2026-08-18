@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Video Production Company in Ahmedabad: What They Do - AdEtc Studios',
+  title: 'Video Production Company in Ahmedabad: What They Do - Ad Etc Studios',
   description: 'Learn what a video production company in Ahmedabad does, from concept and scripting to filming, editing, and delivering videos for brands.',
 };
 
@@ -99,7 +99,7 @@ export default function Page() {
                 <div className="d-flex flex-row flex-wrap align-items-center gspace-3 post-meta">
                   <div className="d-flex flex-row gspace-1 align-items-center">
                     <i className="fa-solid fa-user accent-color"></i>
-                    <span className="meta-data">AdEtc Studios</span>
+                    <span className="meta-data">Ad Etc Studios</span>
                   </div>
                   <div className="d-flex flex-row gspace-1 align-items-center">
                     <i className="fa-solid fa-calendar accent-color"></i>
