@@ -92,7 +92,103 @@ function Cta({ b }) {
   );
 }
 
-const MAP = { hero: Hero, richtext: RichText, image: ImageBlock, cards: Cards, faq: Faq, cta: Cta };
+function Stats({ b }) {
+  if (!(b.items || []).length) return null;
+  return (
+    <section className="section">
+      <div className="hero-container">
+        {b.heading && <h2 className="pb-section-heading">{b.heading}</h2>}
+        <div className="pb-stats">
+          {b.items.map((it, i) => (
+            <div key={i} className="pb-stat">
+              <div className="pb-stat-value">{it.value}{it.suffix}</div>
+              {it.label && <div className="pb-stat-label">{it.label}</div>}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Testimonials({ b }) {
+  if (!(b.items || []).length) return null;
+  return (
+    <section className="section">
+      <div className="hero-container">
+        {b.heading && <h2 className="pb-section-heading">{b.heading}</h2>}
+        <div className="pb-testimonials">
+          {b.items.map((it, i) => (
+            <figure key={i} className="pb-testimonial">
+              <blockquote>{it.quote}</blockquote>
+              <figcaption>
+                {it.avatar && <img src={it.avatar} alt={it.name || ''} loading="lazy" />}
+                <span>
+                  <strong>{it.name}</strong>
+                  {it.role && <em>{it.role}</em>}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Team({ b }) {
+  if (!(b.members || []).length) return null;
+  return (
+    <section className="section">
+      <div className="hero-container">
+        {b.heading && <h2 className="pb-section-heading">{b.heading}</h2>}
+        {b.subheading && <p className="pb-section-sub">{b.subheading}</p>}
+        <div className="pb-team">
+          {b.members.map((m, i) => {
+            const inner = (
+              <>
+                {m.image && <img src={m.image} alt={m.name || ''} loading="lazy" />}
+                <div className="pb-team-meta">
+                  <strong>{m.name}</strong>
+                  {m.designation && <span>{m.designation}</span>}
+                </div>
+              </>
+            );
+            return m.url
+              ? <a key={i} className="pb-team-member" href={m.url} target="_blank" rel="noreferrer">{inner}</a>
+              : <div key={i} className="pb-team-member">{inner}</div>;
+          })}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Logos({ b }) {
+  const logos = b.logos || [];
+  if (!logos.length) return null;
+  // duplicate the row for a seamless CSS marquee loop
+  const row = [...logos, ...logos];
+  return (
+    <section className="section">
+      <div className="hero-container">
+        {b.heading && <h2 className="pb-section-heading">{b.heading}</h2>}
+        <div className="pb-marquee">
+          <div className="pb-marquee-track">
+            {row.map((l, i) => (
+              <img key={i} src={l.image} alt={l.alt || ''} loading="lazy" />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+const MAP = {
+  hero: Hero, richtext: RichText, image: ImageBlock, cards: Cards, faq: Faq, cta: Cta,
+  stats: Stats, testimonials: Testimonials, team: Team, logos: Logos,
+};
 
 export default function BlockRenderer({ blocks }) {
   return (
