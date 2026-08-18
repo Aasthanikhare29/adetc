@@ -1,0 +1,88 @@
+-- Seed the 12 existing posts. Published = the 4 bespoke articles (href set,
+-- content lives at a hand-built page). The other 8 are drafts with no body.
+insert into public.posts (slug, title, excerpt, category, image, href, status, published_at)
+values
+  ('ad-film-makers-bring-brands-to-life',
+   'Ad Film Makers: How Creative Advertising Films Bring Brands to Life',
+   'Behind every memorable campaign is a group of creative experts turning ideas into powerful stories…',
+   'Creative Direction',
+   '/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg',
+   '/single-post', 'published', '2025-07-19T00:00:00Z'),
+
+  ('brand-video-visual-storytelling',
+   'Brand Video: How Powerful Visual Storytelling Builds Lasting Brands',
+   'Discover how a compelling branded video helps your business build trust and connect with audiences…',
+   'Creative Direction',
+   '/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg',
+   '/brand-video', 'published', '2025-07-19T00:00:00Z'),
+
+  ('tvc-format-guide',
+   'TVC Format: Understanding Commercial Duration, Script Structure and Production',
+   'Explore the TVC format, common durations, script structure, production process, and what makes an effective television commercial…',
+   'Production Insights',
+   '/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg',
+   '/tvc-format', 'published', '2025-07-19T00:00:00Z'),
+
+  ('video-production-company-ahmedabad',
+   'Video Production Company in Ahmedabad: What to Look for Before You Hire One',
+   'Learn what a video production company in Ahmedabad does, from concept and scripting to filming, editing, and delivering videos for brands…',
+   'Production Insights',
+   '/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg',
+   '/video-production-company', 'published', '2025-07-19T00:00:00Z'),
+
+  ('choosing-right-lenses-storytelling',
+   'Choosing the Right Lenses for Storytelling',
+   'Explore how lens choice shapes emotion, perspective, and the visual language of every single scene…',
+   'Production Insights',
+   '/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg',
+   null, 'draft', null),
+
+  ('beginners-guide-filmmaking-minimal-budget',
+   'Beginner''s Guide to Filmmaking with Minimal Budget',
+   'Practical tip for creating cinematic content without expensive gear, from planning your final edit…',
+   'Filmmaking Tips',
+   '/assets/images/photographers-setting-cameras-before-shooting-65ME2DS.jpg',
+   null, 'draft', null),
+
+  ('post-production-workflow',
+   'Post-Production Workflow: From Rough Cut to Final Render',
+   'A step-by-step look at editing, colour grading, sound design, and delivering a polished final film…',
+   'Production Insights',
+   '/assets/images/photographer-capture-the-essence-of-the-opening-ce-TU8TLN7.jpg',
+   null, 'draft', null),
+
+  ('lighting-techniques-set-mood',
+   'Lighting Techniques That Set the Mood',
+   'Discover how lighting shapes atmosphere and guides the audience''s emotional response to every shot…',
+   'Production Insights',
+   '/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg',
+   null, 'draft', null),
+
+  ('storyboarding-short-films',
+   'How to Master the Art of Storyboarding for Short Films',
+   'Learn how storyboards plan every frame, keep your crew aligned, and bring your vision onto the set…',
+   'Filmmaking Tips',
+   '/assets/images/male-video-editor-working-on-his-personal-computer-HQHD8ZL.jpg',
+   null, 'draft', null),
+
+  ('essential-gear-checklist',
+   'Essential Gear Checklist for Your Next Shoot',
+   'Everything you need to pack for a smooth production day, from cameras and lenses to battery backup…',
+   'Production Insights',
+   '/assets/images/film-industry-7ZLFY7L.jpg',
+   null, 'draft', null),
+
+  ('vision-to-screen-plan-every-shot',
+   'From Vision to Screen: How We Plan Every Shot',
+   'Inside our process of turning a concept into a shot list and executing it with great creative care…',
+   'Creative Direction',
+   '/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg',
+   null, 'draft', null),
+
+  ('five-cinematic-camera-angles',
+   '5 Cinematic Camera Angles Every Director Should Know',
+   'Master the camera angles that add depth, drama, and powerful storytelling to each frame you direct…',
+   'Filmmaking Tips',
+   '/assets/images/cameraman-filming-music-video-CD7JKUM.jpg',
+   null, 'draft', null)
+on conflict (slug) do nothing;

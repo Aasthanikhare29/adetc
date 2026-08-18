@@ -1,11 +1,14 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
-import { getPaginatedPosts, TOTAL_PAGES } from '@/lib/blog-posts';
+import { getPaginatedPosts, getTotalPages } from '@/lib/blog-posts';
 import { notFound } from 'next/navigation';
 
-export function generateStaticParams() {
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const total = await getTotalPages();
   const params = [];
-  for (let page = 2; page <= TOTAL_PAGES; page += 1) {
+  for (let page = 2; page <= total; page += 1) {
     params.push({ page: String(page) });
   }
   return params;
@@ -21,12 +24,13 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { page } = await params;
   const pageNum = Number(page);
+  const totalPages = await getTotalPages();
 
-  if (!Number.isInteger(pageNum) || pageNum < 2 || pageNum > TOTAL_PAGES) {
+  if (!Number.isInteger(pageNum) || pageNum < 2 || pageNum > totalPages) {
     notFound();
   }
 
-  const posts = getPaginatedPosts(pageNum);
+  const posts = await getPaginatedPosts(pageNum);
 
   return (
     <>
@@ -53,7 +57,7 @@ export default async function Page({ params }) {
                 <BlogCard key={index} post={post} />
               ))}
             </div>
-            <BlogPagination currentPage={pageNum} />
+            <BlogPagination currentPage={pageNum} totalPages={totalPages} />
           </div>
         </div>
       </section>

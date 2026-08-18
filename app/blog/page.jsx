@@ -1,13 +1,13 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
-import { getPaginatedPosts } from '@/lib/blog-posts';
+import { getPaginatedPosts, getTotalPages } from '@/lib/blog-posts';
 
 export const metadata = {
   title: 'Blog/Journal - AdEtc Studios',
 };
 
-export default function Page() {
-  const posts = getPaginatedPosts(1);
+export default async function Page() {
+  const [posts, totalPages] = await Promise.all([getPaginatedPosts(1), getTotalPages()]);
 
   return (
     <>
@@ -34,7 +34,7 @@ export default function Page() {
                 <BlogCard key={index} post={post} />
               ))}
             </div>
-            <BlogPagination currentPage={1} />
+            <BlogPagination currentPage={1} totalPages={totalPages} />
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import { SITE } from '@/lib/seo';
-import { TOTAL_PAGES, slugPosts } from '@/lib/blog-posts';
+import { getTotalPages, getSlugPosts } from '@/lib/blog-posts';
 
 // Static list of real routes. Add new routes here when you add pages.
 const ROUTES = [
@@ -21,7 +21,8 @@ const ROUTES = [
   '/video-production-company',
 ];
 
-export default function sitemap() {
+export default async function sitemap() {
+  const [totalPages, slugPosts] = await Promise.all([getTotalPages(), getSlugPosts()]);
   const now = new Date();
   const urls = ROUTES.map((path) => ({
     url: `${SITE.url}${path}`,
@@ -31,7 +32,7 @@ export default function sitemap() {
   }));
 
   // Paginated blog pages: /blog/page/2 ... /blog/page/N
-  for (let p = 2; p <= TOTAL_PAGES; p += 1) {
+  for (let p = 2; p <= totalPages; p += 1) {
     urls.push({
       url: `${SITE.url}/blog/page/${p}`,
       lastModified: now,

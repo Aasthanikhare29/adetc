@@ -52,17 +52,31 @@ Standard App Router — one folder per route under `app/`. Routes present: `/`, 
 
 Note the detail pages (`service-detail`, `project-detail`, `single-post`) are **single static pages, not dynamic `[slug]` routes.** Every "service" or "post" link currently points at the same detail page.
 
-## 5. Blog (the one real data layer)
+## 5. Blog (the one real data layer — now Supabase-backed)
 
-The only place with actual data + logic:
+Posts live in a **Supabase `posts` table**, authored through the `/admin` panel.
+The public site reads them via ISR; publishing revalidates the affected paths.
 
-- `lib/blog-posts.js` — an array of post objects. Each has a `slug`; a post is either **bespoke** (`href` → a hand-built page) or **data-driven** (`body` blocks → rendered by `/blog/[slug]`). `draft: true` hides a post from listing, pagination and sitemap. Helpers: `publishedPosts`, `postUrl(post)`, `getPaginatedPosts(page)`, `TOTAL_PAGES`, `slugPosts`, `getPostBySlug(slug)`.
-- `app/blog/page.jsx` renders page 1 of `publishedPosts`.
-- `app/blog/page/[page]/page.jsx` renders pages 2..N — `generateStaticParams` (SSG), `notFound()` out of range.
-- `app/blog/[slug]/page.jsx` — **data-driven article route**. Renders any post that has a `body` and no `href`, with per-post metadata + `Article`/`BreadcrumbList` JSON-LD. `generateStaticParams` comes from `slugPosts`.
-- `components/BlogCard.jsx` links via `postUrl(post)`; `components/BlogPagination.jsx` renders the pager.
+- `lib/blog-posts.js` — async DB helpers (anon key, RLS = published only):
+  `getPublishedPosts()`, `getPaginatedPosts(page)`, `getTotalPages()`,
+  `getSlugPosts()`, `getPostBySlug(slug)`, plus the pure `postUrl(post)`. Each
+  returns `null`/empty if Supabase env is unset (so the site still builds).
+- A post is **bespoke** (`href` → a hand-built legacy page) or **data-driven**
+  (`content_html` → rendered by `/blog/[slug]` via `dangerouslySetInnerHTML`,
+  sanitized on save). `status` (`draft`/`published`) gates listing, pagination,
+  sitemap. Schema + seed: `supabase/migrations/0001_posts.sql`, `supabase/seed.sql`.
+- `app/blog/*` pages are `async`; `[slug]` and `[page]` use `dynamicParams` so
+  newly published posts render on demand before the next build.
+- **Admin:** `app/admin/*` — Supabase email+password auth (`middleware.js` gates
+  it), post list, Tiptap editor (`components/admin/Editor.jsx`), server actions
+  in `app/admin/actions.js` (save/publish/delete + `revalidatePath`), image
+  upload route `app/admin/api/upload/route.js` → Storage bucket `blog-images`.
+- Supabase clients: `lib/supabase/public.js` (read) + `lib/supabase/server.js`
+  (cookie session). Sanitizer: `lib/sanitize.js`.
 
-**Current state:** 4 real articles are bespoke pages (`href` → `/single-post`, `/brand-video`, `/tvc-format`, `/video-production-company`). 8 posts are `draft: true` placeholders with no article body — hidden until written. The `[slug]` route is live but has zero pages until a post gets a `body`. This is intentional: duplicate `/single-post` links are gone, and new posts are added as data, not new bespoke pages.
+**Current state:** the 12 legacy posts are seeded (4 published bespoke `href`
+articles, 8 drafts). New posts are written in `/admin`, stored as `content_html`,
+and served by `/blog/[slug]`.
 
 ## 6. Styling & assets
 

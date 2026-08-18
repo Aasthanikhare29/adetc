@@ -1,13 +1,14 @@
 import { notFound } from 'next/navigation';
-import { getPostBySlug, slugPosts } from '@/lib/blog-posts';
+import { getPostBySlug, getSlugPosts } from '@/lib/blog-posts';
 import { pageMetadata, articleLd, breadcrumbLd } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 
-// Only posts that have a `body` and no bespoke `href` are rendered here.
-// Today that set is empty — this route is the mechanism for future posts:
-// add a post to lib/blog-posts.js with a `body` (blocks below) and no `draft`.
-export function generateStaticParams() {
-  return slugPosts.map((p) => ({ slug: p.slug }));
+// Renders published posts that have content_html and no bespoke href.
+export const dynamicParams = true;
+
+export async function generateStaticParams() {
+  const posts = await getSlugPosts();
+  return posts.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }) {
@@ -22,35 +23,9 @@ export async function generateMetadata({ params }) {
   });
 }
 
-// Body block types: { type: 'heading' | 'paragraph' | 'list' | 'quote', ... }
-function Block({ block }) {
-  switch (block.type) {
-    case 'heading':
-      return <h3>{block.text}</h3>;
-    case 'list':
-      return (
-        <ul>
-          {block.items.map((item, i) => (
-            <li key={i}><p>{item}</p></li>
-          ))}
-        </ul>
-      );
-    case 'quote':
-      return (
-        <blockquote className="post-quote">
-          <p>{block.text}</p>
-          {block.author && <p className="post-quote-author">{block.author}</p>}
-        </blockquote>
-      );
-    case 'paragraph':
-    default:
-      return <p>{block.text}</p>;
-  }
-}
-
 export default async function Page({ params }) {
   const { slug } = await params;
-  const post = getPostBySlug(slug);
+  const post = await getPostBySlug(slug);
   if (!post) notFound();
 
   return (
@@ -106,9 +81,10 @@ export default async function Page({ params }) {
             <div className="image-container blog-image mb-4">
               <img src={post.image} alt={post.title} className="img-fluid" decoding="async" />
             </div>
-            {(post.body || []).map((block, i) => (
-              <Block key={i} block={block} />
-            ))}
+            <div
+              className="post-body"
+              dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }}
+            />
           </article>
         </div>
       </section>
