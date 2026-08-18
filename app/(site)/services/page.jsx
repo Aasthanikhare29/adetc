@@ -56,7 +56,7 @@ export default function Page() {
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-end justify-content-center h-100">
-                                                  <a href="/ad-film-makers" className="btn btn-accent">View Details</a>
+                                                  <a href="/ad-film-makers-in-ahmedabad" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>
@@ -89,7 +89,7 @@ export default function Page() {
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
+                                                  <a href="/services" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@ export default function Page() {
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
+                                                  <a href="/services" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>
@@ -155,7 +155,7 @@ export default function Page() {
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
+                                                  <a href="/services" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>
@@ -188,7 +188,7 @@ export default function Page() {
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/service-detail" className="btn btn-accent">View Details</a>
+                                                  <a href="/services" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>

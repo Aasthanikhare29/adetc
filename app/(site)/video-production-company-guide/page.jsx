@@ -1,7 +1,10 @@
-export const metadata = {
-  title: 'Video Production Company in Ahmedabad: What They Do - Ad Etc Studios',
-  description: 'Learn what a video production company in Ahmedabad does, from concept and scripting to filming, editing, and delivering videos for brands.',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'How to Choose a Video Production Company in Ahmedabad',
+  description: 'A buyer’s guide to hiring a video production company in Ahmedabad: what they do, the production process, costs, and how to pick the right partner.',
+  path: '/video-production-company-guide',
+});
 
 export default function Page() {
   return (
@@ -15,7 +18,9 @@ export default function Page() {
             <nav className="breadcrumb">
               <a href="/" className="breadcrumb-item">Home</a>
               <span className="separator">/</span>
-              <span className="breadcrumb-item current">Single Post</span>
+              <a href="/blog" className="breadcrumb-item">Blog</a>
+              <span className="separator">/</span>
+              <span className="breadcrumb-item current">Choosing a Video Production Company</span>
             </nav>
           </div>
         </div>
@@ -50,7 +55,7 @@ export default function Page() {
                         <h5 className="recent-blog-heading">TVC Format: Understanding Commercial Duration, Script Structure and Production</h5>
                       </div>
                     </a>
-                    <a href="/video-production-company" className="recent-blog-item">
+                    <a href="/video-production-company-guide" className="recent-blog-item">
                       <img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Blog Image" />
                       <div className="recent-blog-content">
                         <span className="recent-blog-date">19 Jul 2025</span>

@@ -1524,6 +1524,11 @@ ul{
     z-index: 1;
 }
 
+/* Keyword landing pages use an <h1> banner title; match the theme's h2 display size. */
+.banner-inner-container h1{
+    font-size: 80px;
+}
+
 .cta-highlight-banner{
     position: relative;
     overflow: hidden;
@@ -4098,3 +4103,42 @@ main p {
     text-align: justify;
 }
 
+
+/* Blog post: TL;DR, FAQ, tags (added with the SEO editor) */
+.post-tldr {
+    border-left: 3px solid var(--accent, #fe5100);
+    background: rgba(0, 0, 0, 0.03);
+    padding: 14px 18px;
+    border-radius: 8px;
+}
+.post-tldr strong {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    opacity: 0.7;
+}
+.post-faq {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 24px;
+}
+.post-faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+}
+.post-faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
+    list-style: none;
+}
+.post-faq-item summary::-webkit-details-marker { display: none; }
+.post-faq-item summary::after { content: '+'; float: right; opacity: 0.5; }
+.post-faq-item[open] summary::after { content: '\2212'; }
+.post-faq-item p { margin-top: 8px; text-align: justify; }
+.post-tag {
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.06);
+}

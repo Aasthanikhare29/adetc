@@ -8,7 +8,7 @@ import { useRef } from 'react';
 import { toast } from 'sonner';
 import {
   Bold, Italic, Strikethrough, Heading1, Heading2, Heading3,
-  List, ListOrdered, Quote, Minus, Code, Link2, ImagePlus, Undo2, Redo2,
+  List, ListOrdered, Quote, Minus, Code, Link2, ImagePlus, Undo2, Redo2, Image as ImageIcon,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -57,10 +57,18 @@ export default function Editor({ value, onChange }) {
     if (!file) return;
     try {
       const url = await uploadFile(file);
-      editor.chain().focus().setImage({ src: url }).run();
+      const alt = window.prompt('Image alt text (describe it for SEO + accessibility):') || '';
+      editor.chain().focus().setImage({ src: url, alt }).run();
     } catch (err) {
       toast.error(err.message);
     }
+  };
+
+  const editAlt = () => {
+    if (!editor.isActive('image')) return toast.error('Select an image first');
+    const prev = editor.getAttributes('image').alt || '';
+    const alt = window.prompt('Image alt text:', prev);
+    if (alt !== null) editor.chain().focus().updateAttributes('image', { alt }).run();
   };
 
   const setLink = () => {
@@ -92,6 +100,7 @@ export default function Editor({ value, onChange }) {
         <span className="mx-1 h-5 w-px bg-border" />
         <Tb title="Link" active={editor.isActive('link')} onClick={setLink}><Link2 /></Tb>
         <Tb title="Image" onClick={() => fileRef.current?.click()}><ImagePlus /></Tb>
+        <Tb title="Edit image alt" active={editor.isActive('image')} onClick={editAlt}><ImageIcon /></Tb>
         <span className="mx-1 h-5 w-px bg-border" />
         <Tb title="Undo" disabled={!editor.can().undo()} onClick={() => c.undo().run()}><Undo2 /></Tb>
         <Tb title="Redo" disabled={!editor.can().redo()} onClick={() => c.redo().run()}><Redo2 /></Tb>

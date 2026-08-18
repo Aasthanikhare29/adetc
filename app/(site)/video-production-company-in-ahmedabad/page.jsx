@@ -1,25 +1,60 @@
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+
+const IMAGE = '/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg';
+const PATH = '/video-production-company-in-ahmedabad';
+const DESCRIPTION =
+  'How Ad Etc Studios delivers end-to-end video production in Ahmedabad — from concept, scripting and shooting to editing and final delivery for brands.';
+
+const FAQ = [
+  { q: 'What types of videos does Ad Etc Studios create?', a: "We produce TVC's, brand videos, commercial advertisements, promotional videos, documentaries, product videos, music videos, and customised video content for businesses across industries." },
+  { q: 'How long does a video production project take?', a: 'Project timelines depend on the complexity of the shoot, scripting, approvals, filming, and post-production. Most corporate and promotional videos are completed within a few weeks after finalising the creative brief.' },
+  { q: 'Do you provide scriptwriting and creative direction?', a: 'Yes. Our team manages concept development, script writing, storyboarding, filming, video editing, and post-production, providing complete video production services under one roof.' },
+  { q: 'Can you create videos for social media and digital marketing?', a: 'Absolutely. We create videos optimised for websites, YouTube, Instagram, LinkedIn, Facebook, and other digital platforms, helping businesses improve engagement and strengthen their online presence.' },
+  { q: 'Do you offer services outside Ahmedabad?', a: 'Yes. While this page focuses on video production in Ahmedabad, Ad Etc Studios works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.' },
+  { q: 'Why should I choose Ad Etc Studios?', a: "Our combination of creative storytelling, professional execution, and collaborative planning allows us to create videos that don't just look impressive—they support your marketing strategy, strengthen your brand, and contribute to long-term business growth." },
+];
 
 export const metadata = pageMetadata({
   title: 'Video Production Company in Ahmedabad',
-  description:
-    'How Ad Etc Studios delivers end-to-end video production in Ahmedabad — from concept, scripting and shooting to editing and final delivery for brands.',
-  path: '/service-detail',
+  description: DESCRIPTION,
+  path: PATH,
+  image: IMAGE,
 });
 
 export default function Page() {
   return (
     <>
+      <JsonLd
+        data={[
+          serviceLd({
+            name: 'Video Production Company in Ahmedabad',
+            serviceType: 'Video Production',
+            description: DESCRIPTION,
+            image: IMAGE,
+            path: PATH,
+          }),
+          localBusinessLd(),
+          breadcrumbLd([
+            { name: 'Home', path: '/' },
+            { name: 'Services', path: '/services' },
+            { name: 'Video Production Company in Ahmedabad', path: PATH },
+          ]),
+          faqLd(FAQ),
+        ]}
+      />
   {/* Banner Inner Section */}
   <section className="section banner-inner service-detail-banner">
       <div className="banner-overlay"></div>
     <div className="hero-container">
       <div className="banner-inner-container">
-              <h2>Video Production Company in Ahmedabad</h2>
+              <h1>Video Production Company in Ahmedabad</h1>
         <nav className="breadcrumb">
                   <a href="/" className="breadcrumb-item">Home</a>
                   <span className="separator">/</span>
-                  <span className="breadcrumb-item current">Service Detail</span>
+                  <a href="/services" className="breadcrumb-item">Services</a>
+                  <span className="separator">/</span>
+                  <span className="breadcrumb-item current">Video Production Company in Ahmedabad</span>
         </nav>
       </div>
     </div>
@@ -440,12 +475,12 @@ export default function Page() {
             <div className="service-sidebar-card">
               <h4>Related Services</h4>
               <ul className="related-service-list">
-                <li><a href="/service-detail">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/service-detail">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/service-detail">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/service-detail">Product Shoots <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/service-detail">Documentaries <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/service-detail">Music Videos <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/ad-film-makers-in-ahmedabad">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/services">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/services">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/services">Product Shoots <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/services">Documentaries <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/services">Music Videos <i className="fa-solid fa-arrow-right"></i></a></li>
               </ul>
             </div>
           </div>

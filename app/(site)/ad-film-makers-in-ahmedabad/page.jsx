@@ -1,4 +1,4 @@
-import { pageMetadata, articleLd, breadcrumbLd, faqLd } from '@/lib/seo';
+import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 
 const IMAGE = '/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg';
@@ -20,7 +20,7 @@ const FAQ = [
 export const metadata = pageMetadata({
   title: 'Ad Film Makers in Ahmedabad',
   description: DESCRIPTION,
-  path: '/ad-film-makers',
+  path: '/ad-film-makers-in-ahmedabad',
   image: IMAGE,
 });
 
@@ -29,17 +29,18 @@ export default function Page() {
     <>
       <JsonLd
         data={[
-          articleLd({
-            headline: 'Ad Film Makers in Ahmedabad',
+          serviceLd({
+            name: 'Ad Film Makers in Ahmedabad',
+            serviceType: 'Ad Film Production',
             description: DESCRIPTION,
             image: IMAGE,
-            datePublished: '2025-07-19',
-            path: '/ad-film-makers',
+            path: '/ad-film-makers-in-ahmedabad',
           }),
+          localBusinessLd(),
           breadcrumbLd([
             { name: 'Home', path: '/' },
-            { name: 'Blog', path: '/blog' },
-            { name: 'Ad Film Makers', path: '/ad-film-makers' },
+            { name: 'Services', path: '/services' },
+            { name: 'Ad Film Makers in Ahmedabad', path: '/ad-film-makers-in-ahmedabad' },
           ]),
           faqLd(FAQ),
         ]}
@@ -49,11 +50,13 @@ export default function Page() {
         <div className="banner-overlay"></div>
         <div className="hero-container">
           <div className="banner-inner-container">
-            <h2>Ad Film Makers in Ahmedabad</h2>
+            <h1>Ad Film Makers in Ahmedabad</h1>
             <nav className="breadcrumb">
               <a href="/" className="breadcrumb-item">Home</a>
               <span className="separator">/</span>
-              <span className="breadcrumb-item current">Service Detail</span>
+              <a href="/services" className="breadcrumb-item">Services</a>
+              <span className="separator">/</span>
+              <span className="breadcrumb-item current">Ad Film Makers in Ahmedabad</span>
             </nav>
           </div>
         </div>
@@ -617,12 +620,12 @@ export default function Page() {
                 <div className="service-sidebar-card">
                   <h4>Related Services</h4>
                   <ul className="related-service-list">
-                    <li><a href="/service-detail">Video Production <i className="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="/ad-film-makers">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="/video-production-company-in-ahmedabad">Video Production <i className="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="/ad-film-makers-in-ahmedabad">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
                     <li><a href="/brand-video">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="/service-detail">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="/service-detail">Product Shoots <i className="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="/service-detail">Documentaries <i className="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="/services">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="/services">Product Shoots <i className="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="/services">Documentaries <i className="fa-solid fa-arrow-right"></i></a></li>
                   </ul>
                 </div>
               </div>
