@@ -10,16 +10,12 @@ const ROUTES = [
   '/project',
   '/project-detail',
   '/blog',
-  '/single-post',
   '/team',
   '/testimonial',
   '/pricing',
   '/contact',
   '/ad-film-makers-in-ahmedabad',
   '/video-production-company-in-ahmedabad',
-  '/brand-video',
-  '/tvc-format',
-  '/video-production-company-guide',
 ];
 
 export default async function sitemap() {
