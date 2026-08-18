@@ -2,8 +2,10 @@ import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
+import { SITE } from '@/lib/seo';
 
 export const metadata = {
+  metadataBase: new URL(SITE.url),
   title: {
     default: 'Ad Etc Studios',
     template: '%s',
