@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { sendMail, esc } from '@/lib/mailer';
 
 export const runtime = 'nodejs';
 
@@ -65,6 +66,20 @@ export async function POST(request) {
         { status: 500 }
       );
     }
+
+    // notify the studio (never blocks the response)
+    await sendMail({
+      subject: `New enquiry: ${subject || projectType || 'Contact form'}`,
+      replyTo: email,
+      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nSubject: ${subject}\nProject type: ${projectType}\n\n${message}`,
+      html: `<h2>New contact enquiry</h2>
+        <p><strong>Name:</strong> ${esc(name)}<br>
+        <strong>Email:</strong> ${esc(email)}<br>
+        <strong>Phone:</strong> ${esc(phone) || '—'}<br>
+        <strong>Subject:</strong> ${esc(subject) || '—'}<br>
+        <strong>Project type:</strong> ${esc(projectType) || '—'}</p>
+        <p style="white-space:pre-wrap">${esc(message)}</p>`,
+    });
 
     return NextResponse.json(
       { success: true, message: 'Thank you! Your message has been sent successfully.', data: data ? data[0] : null },
