@@ -46,6 +46,12 @@ function analyze({ title, slug, contentHtml, metaTitle, metaDescription, focusKe
   return out;
 }
 
+export function seoScore(props) {
+  const checks = analyze(props);
+  const passed = checks.filter((c) => c.ok).length;
+  return Math.round((passed / checks.length) * 100);
+}
+
 export default function SeoAnalysis(props) {
   const checks = analyze(props);
   const passed = checks.filter((c) => c.ok).length;
