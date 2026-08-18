@@ -151,6 +151,82 @@ function BlockFields({ block, onChange }) {
           </div>
         </div>
       );
+    case 'stats':
+      return (
+        <div className="space-y-3">
+          <Field label="Heading"><Input value={block.heading} onChange={(e) => set({ heading: e.target.value })} /></Field>
+          <Items
+            items={block.items} onChange={(items) => set({ items })} addLabel="Add stat"
+            blank={{ value: '', suffix: '', label: '' }}
+            render={(it, upd) => (
+              <div className="space-y-2">
+                <div className="grid grid-cols-2 gap-2">
+                  <Input placeholder="Value (e.g. 150)" value={it.value} onChange={(e) => upd({ value: e.target.value })} />
+                  <Input placeholder="Suffix (e.g. +)" value={it.suffix} onChange={(e) => upd({ suffix: e.target.value })} />
+                </div>
+                <Input placeholder="Label" value={it.label} onChange={(e) => upd({ label: e.target.value })} />
+              </div>
+            )}
+          />
+        </div>
+      );
+    case 'testimonials':
+      return (
+        <div className="space-y-3">
+          <Field label="Heading"><Input value={block.heading} onChange={(e) => set({ heading: e.target.value })} /></Field>
+          <Items
+            items={block.items} onChange={(items) => set({ items })} addLabel="Add testimonial"
+            blank={{ quote: '', name: '', role: '', avatar: '' }}
+            render={(it, upd) => (
+              <div className="space-y-2">
+                <Textarea placeholder="Quote" value={it.quote} onChange={(e) => upd({ quote: e.target.value })} />
+                <div className="grid grid-cols-2 gap-2">
+                  <Input placeholder="Name" value={it.name} onChange={(e) => upd({ name: e.target.value })} />
+                  <Input placeholder="Role / company" value={it.role} onChange={(e) => upd({ role: e.target.value })} />
+                </div>
+                <ImageInput value={it.avatar} onChange={(v) => upd({ avatar: v })} label="avatar" />
+              </div>
+            )}
+          />
+        </div>
+      );
+    case 'team':
+      return (
+        <div className="space-y-3">
+          <Field label="Heading"><Input value={block.heading} onChange={(e) => set({ heading: e.target.value })} /></Field>
+          <Field label="Subheading"><Input value={block.subheading} onChange={(e) => set({ subheading: e.target.value })} /></Field>
+          <Items
+            items={block.members} onChange={(members) => set({ members })} addLabel="Add member"
+            blank={{ name: '', designation: '', image: '', url: '' }}
+            render={(it, upd) => (
+              <div className="space-y-2">
+                <div className="grid grid-cols-2 gap-2">
+                  <Input placeholder="Name" value={it.name} onChange={(e) => upd({ name: e.target.value })} />
+                  <Input placeholder="Designation" value={it.designation} onChange={(e) => upd({ designation: e.target.value })} />
+                </div>
+                <Input placeholder="Profile link (optional)" value={it.url} onChange={(e) => upd({ url: e.target.value })} />
+                <ImageInput value={it.image} onChange={(v) => upd({ image: v })} label="photo" />
+              </div>
+            )}
+          />
+        </div>
+      );
+    case 'logos':
+      return (
+        <div className="space-y-3">
+          <Field label="Heading"><Input value={block.heading} onChange={(e) => set({ heading: e.target.value })} /></Field>
+          <Items
+            items={block.logos} onChange={(logos) => set({ logos })} addLabel="Add logo"
+            blank={{ image: '', alt: '' }}
+            render={(it, upd) => (
+              <div className="space-y-2">
+                <ImageInput value={it.image} onChange={(v) => upd({ image: v })} label="logo" />
+                <Input placeholder="Alt text" value={it.alt} onChange={(e) => upd({ alt: e.target.value })} />
+              </div>
+            )}
+          />
+        </div>
+      );
     default:
       return null;
   }

@@ -4189,3 +4189,40 @@ main p {
 .pb-cta { text-align: center; padding: 40px; border-radius: 8px; background: rgba(0,0,0,0.03); }
 .pb-cta h2 { margin-bottom: 12px; }
 .pb-cta p { max-width: 600px; margin: 0 auto 20px; }
+
+/* Page builder — phase 1 blocks (stats, testimonials, team, logos) */
+.pb-section-sub { text-align: center; color: #6b6b73; margin: -18px 0 28px; }
+.pb-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 24px;
+    text-align: center;
+}
+.pb-stat-value { font-size: clamp(32px, 5vw, 52px); font-weight: 700; line-height: 1; }
+.pb-stat-label { margin-top: 8px; color: #6b6b73; font-size: 15px; }
+.pb-testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+.pb-testimonial { border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 22px; margin: 0; }
+.pb-testimonial blockquote { margin: 0 0 16px; font-size: 16px; line-height: 1.6; }
+.pb-testimonial figcaption { display: flex; align-items: center; gap: 12px; }
+.pb-testimonial figcaption img { width: 44px; height: 44px; border-radius: 999px; object-fit: cover; }
+.pb-testimonial figcaption strong { display: block; }
+.pb-testimonial figcaption em { color: #6b6b73; font-style: normal; font-size: 14px; }
+.pb-team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 24px;
+}
+.pb-team-member { display: block; border-radius: 8px; overflow: hidden; border: 1px solid rgba(0,0,0,0.1); }
+.pb-team-member img { width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+.pb-team-meta { padding: 14px; }
+.pb-team-meta strong { display: block; }
+.pb-team-meta span { color: #6b6b73; font-size: 14px; }
+.pb-marquee { overflow: hidden; width: 100%; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.pb-marquee-track { display: flex; align-items: center; gap: 48px; width: max-content; animation: pb-marquee 28s linear infinite; }
+.pb-marquee-track img { height: 40px; width: auto; object-fit: contain; opacity: 0.75; }
+@keyframes pb-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .pb-marquee-track { animation: none; } }
