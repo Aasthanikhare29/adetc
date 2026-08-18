@@ -1,12 +1,12 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
-import { getPaginatedPosts, getTotalPages } from '@/lib/blog-posts';
+import { getFilteredPosts, getFilteredTotalPages, blogQuery } from '@/lib/blog-posts';
 import { notFound } from 'next/navigation';
 
 export const dynamicParams = true;
 
 export async function generateStaticParams() {
-  const total = await getTotalPages();
+  const total = await getFilteredTotalPages();
   const params = [];
   for (let page = 2; page <= total; page += 1) {
     params.push({ page: String(page) });
@@ -21,16 +21,23 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default async function Page({ params }) {
+export default async function Page({ params, searchParams }) {
   const { page } = await params;
+  const sp = await searchParams;
+  const filters = {
+    category: typeof sp.category === 'string' ? sp.category : undefined,
+    tag: typeof sp.tag === 'string' ? sp.tag : undefined,
+    q: typeof sp.q === 'string' ? sp.q : undefined,
+  };
   const pageNum = Number(page);
-  const totalPages = await getTotalPages();
+  const totalPages = await getFilteredTotalPages(filters);
 
   if (!Number.isInteger(pageNum) || pageNum < 2 || pageNum > totalPages) {
     notFound();
   }
 
-  const posts = await getPaginatedPosts(pageNum);
+  const posts = await getFilteredPosts(filters, pageNum);
+  const query = blogQuery(filters);
 
   return (
     <>
@@ -57,7 +64,7 @@ export default async function Page({ params }) {
                 <BlogCard key={index} post={post} />
               ))}
             </div>
-            <BlogPagination currentPage={pageNum} totalPages={totalPages} />
+            <BlogPagination currentPage={pageNum} totalPages={totalPages} query={query} />
           </div>
         </div>
       </section>

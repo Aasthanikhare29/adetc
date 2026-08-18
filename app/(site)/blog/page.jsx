@@ -1,13 +1,23 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
-import { getPaginatedPosts, getTotalPages } from '@/lib/blog-posts';
+import { getFilteredPosts, getFilteredTotalPages, blogQuery } from '@/lib/blog-posts';
 
 export const metadata = {
   title: 'Blog/Journal - Ad Etc Studios',
 };
 
-export default async function Page() {
-  const [posts, totalPages] = await Promise.all([getPaginatedPosts(1), getTotalPages()]);
+export default async function Page({ searchParams }) {
+  const sp = await searchParams;
+  const filters = {
+    category: typeof sp.category === 'string' ? sp.category : undefined,
+    tag: typeof sp.tag === 'string' ? sp.tag : undefined,
+    q: typeof sp.q === 'string' ? sp.q : undefined,
+  };
+  const [posts, totalPages] = await Promise.all([
+    getFilteredPosts(filters, 1),
+    getFilteredTotalPages(filters),
+  ]);
+  const query = blogQuery(filters);
 
   return (
     <>
@@ -34,7 +44,7 @@ export default async function Page() {
                 <BlogCard key={index} post={post} />
               ))}
             </div>
-            <BlogPagination currentPage={1} totalPages={totalPages} />
+            <BlogPagination currentPage={1} totalPages={totalPages} query={query} />
           </div>
         </div>
       </section>

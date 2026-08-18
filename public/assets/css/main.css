@@ -2535,6 +2535,291 @@ ul{
     color: inherit;
     opacity: .85;
 }
+
+/* Blog detail left sticky sidebar + recent posts */
+.blog-detail-sidebar{
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+}
+.blog-recent-widget{
+    background: var(--accent-color-3);
+    padding: 24px;
+}
+.blog-recent-widget h4{
+    margin-bottom: 18px;
+    font-family: var(--font-family-1);
+    font-size: 18px;
+}
+.blog-recent-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.blog-recent-item{
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+.blog-recent-thumb{
+    width: 72px;
+    height: 72px;
+    flex: 0 0 72px;
+    overflow: hidden;
+    border-radius: 6px;
+}
+.blog-recent-thumb img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.blog-recent-meta a{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.35;
+    display: block;
+}
+.blog-recent-meta .blog-recent-date{
+    font-size: 12px;
+    color: var(--accent-color);
+    margin-top: 4px;
+    display: block;
+}
+
+/* Blog sidebar extra widgets: search, categories, tags, social, newsletter */
+.blog-search-form{
+    display: flex;
+    gap: 8px;
+}
+.blog-search-input{
+    flex: 1 1 auto;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--accent-color-6);
+    background: var(--primary);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+.blog-search-input:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
+.blog-search-btn{
+    flex: 0 0 auto;
+    padding: 0 14px;
+    border: none;
+    background: var(--accent-color);
+    color: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+}
+.blog-cat-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.blog-cat-list li a{
+    color: var(--text-color);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+.blog-cat-list li a::before{
+    content: "\f105";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 8px;
+    color: var(--accent-color);
+}
+.blog-cat-list li a:hover{
+    color: var(--accent-color);
+}
+.blog-tag-cloud{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.blog-tag{
+    display: inline-block;
+    padding: 6px 12px;
+    border: 1px solid var(--accent-color-6);
+    border-radius: 30px;
+    font-size: 13px;
+    color: var(--text-color);
+}
+.blog-tag:hover{
+    background: var(--accent-color);
+    color: var(--primary);
+    border-color: var(--accent-color);
+}
+.blog-sidebar-social{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 4px;
+}
+.blog-widget-spacer{
+    margin-top: 22px;
+}
+.blog-newsletter-form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+}
+.blog-newsletter-input{
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--accent-color-6);
+    background: var(--primary);
+    color: var(--text-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+.blog-newsletter-input:focus{
+    outline: none;
+    border-color: var(--accent-color);
+}
+.blog-newsletter-btn{
+    border: none;
+    background: var(--accent-color);
+    color: var(--primary);
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.blog-newsletter-btn:disabled{
+    opacity: .6;
+    cursor: default;
+}
+.blog-newsletter-msg{
+    margin: 4px 0 0;
+    font-size: 13px;
+}
+.blog-newsletter-msg.ok{
+    color: var(--accent-color);
+}
+.blog-newsletter-msg.err{
+    color: #d9534f;
+}
+
+/* Blog detail: author box + related posts + prose styling */
+.post-author-box{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--accent-color-3);
+    padding: 20px 24px;
+    border-radius: 10px;
+}
+.post-author-avatar{
+    flex: 0 0 56px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent-color);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: var(--font-family-1);
+}
+.post-author-label{
+    display: block;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--accent-color);
+    margin-bottom: 2px;
+}
+.post-author-info h4{
+    margin: 0 0 6px;
+    font-family: var(--font-family-1);
+}
+.post-author-info p{
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+.post-related h3{
+    margin-bottom: 22px;
+    font-family: var(--font-family-1);
+}
+.post-body{
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+.post-body p{
+    margin-bottom: 1.2em;
+}
+.post-body h2, .post-body h3, .post-body h4{
+    margin: 1.6em 0 .6em;
+    font-family: var(--font-family-1);
+    line-height: 1.3;
+}
+.post-body h2{ font-size: 26px; }
+.post-body h3{ font-size: 22px; }
+.post-body h4{ font-size: 18px; }
+.post-body img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.2em 0;
+}
+.post-body a{
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+.post-body ul, .post-body ol{
+    margin: 0 0 1.2em 1.2em;
+    padding: 0;
+}
+.post-body li{ margin-bottom: .5em; }
+.post-body blockquote{
+    margin: 1.4em 0;
+    padding: 1em 1.4em;
+    border-left: 4px solid var(--accent-color);
+    background: var(--accent-color-3);
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+.post-body pre, .post-body code{
+    background: var(--accent-color-3);
+    border-radius: 4px;
+}
+.post-body code{
+    padding: 2px 6px;
+    font-size: 14px;
+}
+.post-body pre{
+    padding: 16px;
+    overflow: auto;
+}
+.post-body pre code{
+    padding: 0;
+    background: none;
+}
+.post-body table{
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2em 0;
+}
+.post-body th, .post-body td{
+    border: 1px solid var(--accent-color-6);
+    padding: 8px 12px;
+}
 .related-service-list{
     list-style: none;
     padding: 0;

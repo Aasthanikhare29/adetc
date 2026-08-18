@@ -1,7 +1,9 @@
 import { notFound } from 'next/navigation';
-import { getPostBySlug, getSlugPosts, getSettings } from '@/lib/blog-posts';
+import { getPostBySlug, getSlugPosts, getSettings, getPublishedPosts, postUrl } from '@/lib/blog-posts';
 import { buildPostSchema, absUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
+import FaqAccordion from '@/components/FaqAccordion';
+import BlogCard from '@/components/BlogCard';
 
 // Renders published posts that have content_html and no bespoke href.
 export const dynamicParams = true;
@@ -59,6 +61,28 @@ export default async function Page({ params }) {
   const [post, settings] = await Promise.all([getPostBySlug(slug), getSettings()]);
   if (!post) notFound();
 
+  const allPosts = await getPublishedPosts();
+  const recent = allPosts.filter((p) => p.slug !== slug).slice(0, 5);
+  const categories = Array.from(new Set(allPosts.map((p) => p.category).filter(Boolean)));
+  const tagCounts = {};
+  allPosts.forEach((p) => (p.tags || []).forEach((t) => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
+  const popularTags = Object.entries(tagCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 12)
+    .map((e) => e[0]);
+
+  // Related posts: same category / shared tags rank higher, current post excluded.
+  const related = allPosts
+    .filter((p) => p.slug !== slug)
+    .map((p) => {
+      const sharedTags = (p.tags || []).filter((t) => (post.tags || []).includes(t)).length;
+      const score = (p.category === post.category ? 2 : 0) + sharedTags;
+      return { p, score };
+    })
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 3)
+    .map((x) => x.p);
+
   return (
     <>
       <JsonLd data={buildPostSchema({ post, author: settings, wordCount: wordCount(post.contentHtml) })} />
@@ -83,7 +107,9 @@ export default async function Page({ params }) {
       {/* Article Section */}
       <section className="section">
         <div className="hero-container">
-          <article className="single-post-content">
+          <div className="row">
+            <div className="col-lg-8 order-1 order-lg-2">
+              <article className="single-post-content">
             <div className="d-flex flex-row flex-wrap align-items-center gap-3 mb-3">
               <div className="d-flex flex-row gspace-1 align-items-center">
                 <i className="fa-solid fa-calendar accent-color"></i>
@@ -117,12 +143,7 @@ export default async function Page({ params }) {
             {post.faq?.length > 0 && (
               <section className="post-faq mt-5">
                 <h2>Frequently asked questions</h2>
-                {post.faq.map((item, i) => (
-                  <details key={i} className="post-faq-item">
-                    <summary>{item.q}</summary>
-                    <p>{item.a}</p>
-                  </details>
-                ))}
+                <FaqAccordion items={post.faq} />
               </section>
             )}
 
@@ -133,7 +154,80 @@ export default async function Page({ params }) {
                 ))}
               </div>
             )}
+
+            {settings?.author_name && (
+              <div className="post-author-box mt-5">
+                <div className="post-author-avatar">{settings.author_name.trim().charAt(0)}</div>
+                <div className="post-author-info">
+                  <span className="post-author-label">Written by</span>
+                  <h4>{settings.author_name}</h4>
+                  {settings.author_bio && <p>{settings.author_bio}</p>}
+                </div>
+              </div>
+            )}
           </article>
+            </div>
+            <aside className="col-lg-4 order-2 order-lg-1 blog-detail-sidebar">
+              {/* Recent Posts */}
+              {recent.length > 0 && (
+                <div className="blog-recent-widget">
+                  <h4>Recent Posts</h4>
+                  <ul className="blog-recent-list">
+                    {recent.map((p) => (
+                      <li key={p.slug} className="blog-recent-item">
+                        <a href={postUrl(p)} className="blog-recent-thumb">
+                          <img src={p.image} alt={p.imageAlt || p.title} />
+                        </a>
+                        <div className="blog-recent-meta">
+                          <a href={postUrl(p)}>{p.title}</a>
+                          <span className="blog-recent-date">{p.date}</span>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Categories */}
+              {categories.length > 0 && (
+                <div className="blog-recent-widget">
+                  <h4>Categories</h4>
+                  <ul className="blog-cat-list">
+                    {categories.map((c) => (
+                      <li key={c}>
+                        <a href={`/blog?category=${encodeURIComponent(c)}`}>{c}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
+              {/* Popular Tags */}
+              {popularTags.length > 0 && (
+                <div className="blog-recent-widget">
+                  <h4>Popular Tags</h4>
+                  <div className="blog-tag-cloud">
+                    {popularTags.map((t) => (
+                      <a key={t} href={`/blog?tag=${encodeURIComponent(t)}`} className="blog-tag">
+                        {t}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </aside>
+          </div>
+
+          {related.length > 0 && (
+            <section className="post-related mt-5">
+              <h3>Related Posts</h3>
+              <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
+                {related.map((p) => (
+                  <BlogCard key={p.slug} post={p} />
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       </section>
     </>

@@ -1,13 +1,13 @@
 import Link from 'next/link';
 
-export default function BlogPagination({ currentPage, totalPages }) {
+export default function BlogPagination({ currentPage, totalPages, query = '' }) {
   const TOTAL_PAGES = totalPages;
   const pages = Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1);
 
   return (
     <nav className="blog-pagination" aria-label="Blog pagination">
       <Link
-        href={currentPage > 1 ? (currentPage - 1 === 1 ? '/blog' : `/blog/page/${currentPage - 1}`) : '#'}
+        href={currentPage > 1 ? (currentPage - 1 === 1 ? `/blog${query}` : `/blog/page/${currentPage - 1}${query}`) : '#'}
         className={`page-btn ${currentPage === 1 ? 'disabled' : ''}`}
         aria-disabled={currentPage === 1}
       >
@@ -16,7 +16,7 @@ export default function BlogPagination({ currentPage, totalPages }) {
       {pages.map((page) => (
         <Link
           key={page}
-          href={page === 1 ? '/blog' : `/blog/page/${page}`}
+          href={page === 1 ? `/blog${query}` : `/blog/page/${page}${query}`}
           className={`page-btn ${page === currentPage ? 'active' : ''}`}
           aria-current={page === currentPage ? 'page' : undefined}
         >
@@ -24,7 +24,7 @@ export default function BlogPagination({ currentPage, totalPages }) {
         </Link>
       ))}
       <Link
-        href={currentPage < TOTAL_PAGES ? `/blog/page/${currentPage + 1}` : '#'}
+        href={currentPage < TOTAL_PAGES ? `/blog/page/${currentPage + 1}${query}` : '#'}
         className={`page-btn ${currentPage === TOTAL_PAGES ? 'disabled' : ''}`}
         aria-disabled={currentPage === TOTAL_PAGES}
       >
