@@ -9,7 +9,7 @@ export default function Page() {
     <>
   {/* Banner Home Section */}
   <div className="section-banner-home">
-      <video id="banner-video-background" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/1.mp4"></video>
+      <video id="banner-video-background" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t"></video>
     <div className="banner-home-video">
       <div className="hero-container position-relative z-2">
         <div className="banner-home-content">
@@ -33,7 +33,7 @@ export default function Page() {
                       <div className="home-divider"></div>
             <div className="d-flex flex-column flex-md-row gspace-2 w-100 align-items-center justify-content-center justify-content-md-between">
               <div>
-                <a href="#" className="btn btn-accent request-loader request-loader-btn" data-video="/assets/videos/1.mp4">
+                <a href="#" className="btn btn-accent request-loader request-loader-btn" data-video="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t">
   
                                           Watch Our Showreel
                                           
@@ -144,9 +144,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <video className="project-video-bg" id="video-bg-1" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/1.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-1" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/1.mp4">
+                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -166,9 +166,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <video className="project-video-bg" id="video-bg-2" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/2.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-2" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1vxD4OOK1lF9Z7W2TwRwbLvl50pD7-DFc&export=download&confirm=t"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/2.mp4">
+                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1vxD4OOK1lF9Z7W2TwRwbLvl50pD7-DFc&export=download&confirm=t">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -187,9 +187,9 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <video className="project-video-bg" id="video-bg-3" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/3.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-3" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1K9oW3lk2aGU15R3gd0ChjnYDIwaCzWaT&export=download&confirm=t"></video>
                   <div className="w-100 d-flex justify-content-center">
-                    <button className="request-loader" data-video="/assets/videos/3.mp4">
+                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1K9oW3lk2aGU15R3gd0ChjnYDIwaCzWaT&export=download&confirm=t">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -208,9 +208,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <video className="project-video-bg" id="video-bg-4" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/4.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-4" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1jYmjUzayXrOkaSEOEtLTROKYAMI4yZaK&export=download&confirm=t"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/4.mp4">
+                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=1jYmjUzayXrOkaSEOEtLTROKYAMI4yZaK&export=download&confirm=t">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -229,9 +229,9 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <video className="project-video-bg" id="video-bg-5" autoPlay muted loop playsInline preload="metadata" src="/assets/videos/5.mp4"></video>
+                                  <video className="project-video-bg" id="video-bg-5" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=10-cnWTQirgj6LdhWR8EUJRA5K_UdOttn&export=download&confirm=t"></video>
                   <div>
-                    <button className="request-loader" data-video="/assets/videos/5.mp4">
+                    <button className="request-loader" data-video="https://drive.usercontent.google.com/download?id=10-cnWTQirgj6LdhWR8EUJRA5K_UdOttn&export=download&confirm=t">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
