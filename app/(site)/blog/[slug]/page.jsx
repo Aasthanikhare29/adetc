@@ -3,7 +3,6 @@ import { getPostBySlug, getSlugPosts, getSettings, getPublishedPosts, postUrl } 
 import { buildPostSchema, absUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
-import BlogCard from '@/components/BlogCard';
 
 // Renders published posts that have content_html and no bespoke href.
 export const dynamicParams = true;
@@ -62,7 +61,6 @@ export default async function Page({ params }) {
   if (!post) notFound();
 
   const allPosts = await getPublishedPosts();
-  const recent = allPosts.filter((p) => p.slug !== slug).slice(0, 5);
   const categories = Array.from(new Set(allPosts.map((p) => p.category).filter(Boolean)));
   const tagCounts = {};
   allPosts.forEach((p) => (p.tags || []).forEach((t) => { tagCounts[t] = (tagCounts[t] || 0) + 1; }));
@@ -80,7 +78,7 @@ export default async function Page({ params }) {
       return { p, score };
     })
     .sort((a, b) => b.score - a.score)
-    .slice(0, 3)
+    .slice(0, 4)
     .map((x) => x.p);
 
   return (
@@ -168,12 +166,12 @@ export default async function Page({ params }) {
           </article>
             </div>
             <aside className="col-lg-4 order-2 order-lg-1 blog-detail-sidebar">
-              {/* Recent Posts */}
-              {recent.length > 0 && (
+              {/* Related Posts */}
+              {related.length > 0 && (
                 <div className="blog-recent-widget">
-                  <h4>Recent Posts</h4>
+                  <h4>Related Posts</h4>
                   <ul className="blog-recent-list">
-                    {recent.map((p) => (
+                    {related.map((p) => (
                       <li key={p.slug} className="blog-recent-item">
                         <a href={postUrl(p)} className="blog-recent-thumb">
                           <img src={p.image} alt={p.imageAlt || p.title} />
@@ -217,17 +215,6 @@ export default async function Page({ params }) {
               )}
             </aside>
           </div>
-
-          {related.length > 0 && (
-            <section className="post-related mt-5">
-              <h3>Related Posts</h3>
-              <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
-                {related.map((p) => (
-                  <BlogCard key={p.slug} post={p} />
-                ))}
-              </div>
-            </section>
-          )}
         </div>
       </section>
     </>
