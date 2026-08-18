@@ -3,7 +3,30 @@
 import { useState } from 'react';
 
 export default function Footer() {
-  const [notifyActive, setNotifyActive] = useState(false);
+  const [email, setEmail] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState(null); // { ok, text }
+
+  const subscribe = async (e) => {
+    e.preventDefault();
+    if (loading) return;
+    setLoading(true);
+    setMsg(null);
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+      const data = await res.json();
+      if (res.ok) { setMsg({ ok: true, text: data.message || 'Thank you for subscribing!' }); setEmail(''); }
+      else setMsg({ ok: false, text: data.error || 'Something went wrong.' });
+    } catch {
+      setMsg({ ok: false, text: 'Network error. Please try again.' });
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
     <footer>
@@ -48,32 +71,24 @@ export default function Footer() {
                 <div className="footer-newsletter-container">
                   <h5 className="container-title">Subscribe to our newsletter for the latest updates</h5>
 
-                  <p id="newsletter-success" className="newsletter-thank-you hidden">Thank you for subscribing!</p>
+                  {msg && (
+                    <p className={`newsletter-thank-you${msg.ok ? '' : ' newsletter-error'}`}>{msg.text}</p>
+                  )}
 
-                  <form
-                    id="newsletter-form"
-                    className={`form footer-newsletter-form${notifyActive ? ' active' : ''}`}
-                    action="/assets/php/submit-newsletter.php"
-                    method="post"
-                  >
+                  <form id="newsletter-form" className="form footer-newsletter-form active" onSubmit={subscribe}>
                     <input
                       type="email"
                       id="newsletter"
                       name="newsletter"
                       className="newsletter-input"
                       placeholder="user@gmail.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
                     />
-                    <button
-                      type="submit"
-                      className="btn btn-accent-primary"
-                      onClick={(event) => {
-                        if (!notifyActive) {
-                          event.preventDefault();
-                          setNotifyActive(true);
-                        }
-                      }}
-                    >
-                      {notifyActive ? 'Subscribe Now' : 'Subscribe to newsletter'}
+                    <input type="text" name="company" tabIndex={-1} autoComplete="off" style={{ position: 'absolute', left: '-9999px' }} aria-hidden="true" />
+                    <button type="submit" className="btn btn-accent-primary" disabled={loading}>
+                      {loading ? 'Subscribing…' : 'Subscribe to newsletter'}
                     </button>
                   </form>
 

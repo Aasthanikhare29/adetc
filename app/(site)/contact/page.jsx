@@ -1,3 +1,5 @@
+import ContactForm from '@/components/ContactForm';
+
 export const metadata = {
   title: 'Contact Us - Ad Etc Studios',
 };
@@ -84,44 +86,7 @@ export default function Page() {
           </div>
           <div className="col col-lg-8 col-md-6">
             <div className="d-flex flex-column gspace-2">
-              <div className="card card-contact-form">
-                              <h3>Send us a Message</h3>
-                <form id="contact-form" action="/assets/php/submit-contact.php" className="form">
-                  <div className="row row-cols-lg-2 row-cols-1 grid-spacer-2">
-                                      <div className="col"><input type="text" name="name" id="name" placeholder="Full Name" /></div>
-                                      <div className="col"><input type="email" name="email" id="email" placeholder="Email Address" /></div>
-                                      <div className="col"><input type="tel" name="phone" id="phone" placeholder="Phone Number" /></div>
-                                      <div className="col"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-                    <div className="col col-lg-12">
-                      <div className="dropdown-container">
-                        <div className="dropdown-select">
-                          <div className="d-flex flex-row align-items-center gap-3">
-                                                      <span className="selected-text">Project Type</span>
-                          </div>
-                                                  <i className="fa-solid fa-caret-down"></i>
-                        </div>
-                        <div className="dropdown-list">
-                                                  <div className="dropdown-option" data-value="commercial">Commercial</div>
-                                                  <div className="dropdown-option" data-value="short-film">Short Film</div>
-                                                  <div className="dropdown-option" data-value="music-video">Music Video</div>
-                                                  <div className="dropdown-option" data-value="event">Event</div>
-                                                  <div className="dropdown-option" data-value="other">Other</div>
-                        </div>
-                                              <input type="hidden" id="project-type" name="project-type" className="dropdown-value" />
-                      </div>
-                    </div>
-                    <div className="col col-lg-12">
-                                          <textarea name="message" rows="6" id="Message" placeholder="Message"></textarea>
-                    </div>
-                  </div>
-                  <div>
-                    <button type="submit" className="btn btn-accent">
-                                          <span>Send Message</span>
-                                          <i className="fa-solid fa-chevron-circle-right"></i>
-                    </button>
-                  </div>
-                </form>
-              </div>
+              <ContactForm />
             </div>
           </div>
         </div>

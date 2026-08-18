@@ -260,6 +260,29 @@ export async function deletePage(id) {
   revalidatePath('/admin/pages');
 }
 
+// ---- Inbox: contact messages + subscribers -------------------------------
+
+export async function setContactHandled(id, handled) {
+  const supabase = await serverClient();
+  const { error } = await supabase.from('contacts').update({ handled: !!handled }).eq('id', id);
+  if (error) return { error: error.message };
+  revalidatePath('/admin/messages');
+}
+
+export async function deleteContact(id) {
+  const supabase = await serverClient();
+  const { error } = await supabase.from('contacts').delete().eq('id', id);
+  if (error) return { error: error.message };
+  revalidatePath('/admin/messages');
+}
+
+export async function deleteSubscriber(id) {
+  const supabase = await serverClient();
+  const { error } = await supabase.from('subscribers').delete().eq('id', id);
+  if (error) return { error: error.message };
+  revalidatePath('/admin/subscribers');
+}
+
 export async function saveSettings(_prev, formData) {
   const supabase = await serverClient();
   const patch = {
