@@ -8,8 +8,7 @@ import { ArrowLeft, ImagePlus, ExternalLink } from 'lucide-react';
 import { savePost } from '@/app/(admin)/admin/actions';
 import Editor from './Editor';
 import FaqEditor from './FaqEditor';
-import SeoAnalysis from './SeoAnalysis';
-import CharCounter from './CharCounter';
+import SeoPanel from './SeoPanel';
 import RevisionList from './RevisionList';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -42,13 +41,6 @@ export default function PostForm({ post, revisions }) {
   const [content, setContent] = useState(post?.content_html || '');
   const [cover, setCover] = useState(post?.image || '');
   const [coverAlt, setCoverAlt] = useState(post?.image_alt || '');
-  const [ogImage, setOgImage] = useState(post?.og_image || '');
-  const [robots, setRobots] = useState(post?.robots || 'index,follow');
-  const [metaTitle, setMetaTitle] = useState(post?.meta_title || '');
-  const [metaDescription, setMetaDescription] = useState(post?.meta_description || '');
-  const [ogTitle, setOgTitle] = useState(post?.og_title || '');
-  const [ogDescription, setOgDescription] = useState(post?.og_description || '');
-  const [focusKeyword, setFocusKeyword] = useState(post?.focus_keyword || '');
   const [tags, setTags] = useState((post?.tags || []).join(', '));
   const coverRef = useRef(null);
 
@@ -78,10 +70,8 @@ export default function PostForm({ post, revisions }) {
       {post?.id && <input type="hidden" name="id" value={post.id} />}
       <input type="hidden" name="content_html" value={content} />
       <input type="hidden" name="image" value={cover} />
-      <input type="hidden" name="og_image" value={ogImage} />
       <input type="hidden" name="status" value={status} />
       <input type="hidden" name="slug" value={slug} />
-      <input type="hidden" name="robots" value={robots} />
 
       <div className="flex items-center justify-between gap-3">
         <div className="flex items-center gap-3">
@@ -98,7 +88,7 @@ export default function PostForm({ post, revisions }) {
         </div>
       </div>
 
-      <div className="grid gap-6 lg:grid-cols-[1fr_320px]">
+      <div className="grid gap-6 lg:grid-cols-[1fr_300px]">
         {/* main column */}
         <div className="space-y-4">
           <div className="space-y-2">
@@ -111,6 +101,8 @@ export default function PostForm({ post, revisions }) {
               <Editor value={post?.content_html || ''} onChange={setContent} />
             </div>
           </div>
+
+          <SeoPanel post={post} title={title} slug={slug} content={content} coverAlt={coverAlt} excerpt={post?.excerpt} />
 
           <Card>
             <CardHeader className="pb-2"><CardTitle>TL;DR / Key takeaway</CardTitle></CardHeader>
@@ -125,7 +117,7 @@ export default function PostForm({ post, revisions }) {
           </Card>
         </div>
 
-        {/* sidebar column */}
+        {/* sidebar column — short */}
         <div className="space-y-6">
           <Card>
             <CardHeader className="pb-3"><CardTitle>Publish</CardTitle></CardHeader>
@@ -143,7 +135,6 @@ export default function PostForm({ post, revisions }) {
               <div className="space-y-2">
                 <Label htmlFor="slug">Slug</Label>
                 <Input id="slug" value={slug} onChange={(e) => { setSlugTouched(true); setSlug(e.target.value); }} placeholder="post-url" />
-                <p className="text-xs text-muted-foreground">/blog/{slug || 'post-url'}</p>
               </div>
               <div className="space-y-2">
                 <Label htmlFor="published_at">Publish date</Label>
@@ -165,91 +156,6 @@ export default function PostForm({ post, revisions }) {
               </Button>
               <input ref={coverRef} type="file" accept="image/*" hidden onChange={uploadCover} />
               <Input name="image_alt" value={coverAlt} onChange={(e) => setCoverAlt(e.target.value)} placeholder="Featured image alt text" />
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-3"><CardTitle>SEO</CardTitle></CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-2">
-                <Label htmlFor="focus_keyword">Focus keyword</Label>
-                <Input id="focus_keyword" name="focus_keyword" value={focusKeyword} onChange={(e) => setFocusKeyword(e.target.value)} placeholder="main keyword" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="secondary_keywords">Supporting keywords</Label>
-                <Input id="secondary_keywords" name="secondary_keywords" defaultValue={(post?.secondary_keywords || []).join(', ')} placeholder="comma, separated" />
-              </div>
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="meta_title">Meta title</Label>
-                  <CharCounter value={metaTitle} min={30} max={60} />
-                </div>
-                <Input id="meta_title" name="meta_title" value={metaTitle} onChange={(e) => setMetaTitle(e.target.value)} placeholder={title || 'Search title'} />
-              </div>
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="meta_description">Meta description</Label>
-                  <CharCounter value={metaDescription} min={120} max={160} />
-                </div>
-                <Textarea id="meta_description" name="meta_description" value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} placeholder="Search snippet" />
-              </div>
-              <div className="space-y-2">
-                <Label htmlFor="canonical">Canonical URL</Label>
-                <Input id="canonical" name="canonical" defaultValue={post?.canonical || ''} placeholder="leave blank = self" />
-              </div>
-              <div className="space-y-2">
-                <Label>Robots</Label>
-                <Select value={robots} onValueChange={setRobots}>
-                  <SelectTrigger><SelectValue /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="index,follow">index, follow</SelectItem>
-                    <SelectItem value="noindex,follow">noindex, follow</SelectItem>
-                    <SelectItem value="index,nofollow">index, nofollow</SelectItem>
-                    <SelectItem value="noindex,nofollow">noindex, nofollow</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-              <div className="border-t border-border pt-4">
-                <SeoAnalysis
-                  title={title}
-                  slug={slug}
-                  contentHtml={content}
-                  metaTitle={metaTitle || title}
-                  metaDescription={metaDescription}
-                  focusKeyword={focusKeyword}
-                  featuredAlt={coverAlt}
-                />
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader className="pb-3"><CardTitle>Social (Open Graph)</CardTitle></CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="og_title">OG title</Label>
-                  <CharCounter value={ogTitle} min={0} max={60} />
-                </div>
-                <Input id="og_title" name="og_title" value={ogTitle} onChange={(e) => setOgTitle(e.target.value)} placeholder={metaTitle || title} />
-              </div>
-              <div className="space-y-1.5">
-                <div className="flex items-center justify-between">
-                  <Label htmlFor="og_description">OG description</Label>
-                  <CharCounter value={ogDescription} min={0} max={110} />
-                </div>
-                <Textarea id="og_description" name="og_description" value={ogDescription} onChange={(e) => setOgDescription(e.target.value)} placeholder={metaDescription} />
-              </div>
-              <div className="space-y-2">
-                <Label>OG image</Label>
-                {ogImage ? (
-                  <img src={ogImage} alt="" className="w-full rounded-lg border border-border object-cover" />
-                ) : (
-                  <div className="flex h-24 items-center justify-center rounded-lg border border-dashed border-border text-xs text-muted-foreground">Falls back to featured (1200×630 ideal)</div>
-                )}
-                <OgUploader onDone={setOgImage} has={Boolean(ogImage)} />
-                <Input name="og_image_alt" defaultValue={post?.og_image_alt || ''} placeholder="OG image alt text" />
-              </div>
             </CardContent>
           </Card>
 
@@ -285,24 +191,5 @@ export default function PostForm({ post, revisions }) {
         </div>
       </div>
     </form>
-  );
-}
-
-function OgUploader({ onDone, has }) {
-  const ref = useRef(null);
-  const pick = async (e) => {
-    const file = e.target.files?.[0];
-    e.target.value = '';
-    if (!file) return;
-    try { onDone(await upload(file)); toast.success('OG image uploaded'); }
-    catch (err) { toast.error(err.message); }
-  };
-  return (
-    <>
-      <Button type="button" variant="secondary" size="sm" className="w-full" onClick={() => ref.current?.click()}>
-        <ImagePlus /> {has ? 'Replace' : 'Upload OG image'}
-      </Button>
-      <input ref={ref} type="file" accept="image/*" hidden onChange={pick} />
-    </>
   );
 }
