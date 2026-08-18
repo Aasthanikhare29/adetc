@@ -10,6 +10,10 @@ export const metadata = {
 export default function AdminRootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Reuse the site's self-hosted Poppins (no new dep, no build fetch). */}
+        <link rel="stylesheet" href="/assets/webfonts/font-family-poppins.css" />
+      </head>
       <body>{children}</body>
     </html>
   );
