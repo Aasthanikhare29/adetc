@@ -1,5 +1,6 @@
 import { SITE } from '@/lib/seo';
 import { getTotalPages, getSlugPosts } from '@/lib/blog-posts';
+import { getPublishedPageSlugs } from '@/lib/pages';
 
 // Static list of real routes. Add new routes here when you add pages.
 const ROUTES = [
@@ -9,20 +10,18 @@ const ROUTES = [
   '/project',
   '/project-detail',
   '/blog',
-  '/single-post',
   '/team',
   '/testimonial',
   '/pricing',
   '/contact',
   '/ad-film-makers-in-ahmedabad',
   '/video-production-company-in-ahmedabad',
-  '/brand-video',
-  '/tvc-format',
-  '/video-production-company-guide',
 ];
 
 export default async function sitemap() {
-  const [totalPages, slugPosts] = await Promise.all([getTotalPages(), getSlugPosts()]);
+  const [totalPages, slugPosts, pageSlugs] = await Promise.all([
+    getTotalPages(), getSlugPosts(), getPublishedPageSlugs(),
+  ]);
   const now = new Date();
   const urls = ROUTES.map((path) => ({
     url: `${SITE.url}${path}`,
@@ -45,6 +44,16 @@ export default async function sitemap() {
   for (const post of slugPosts) {
     urls.push({
       url: `${SITE.url}/blog/${post.slug}`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.6,
+    });
+  }
+
+  // Builder pages (/[...slug]) — published.
+  for (const slug of pageSlugs) {
+    urls.push({
+      url: `${SITE.url}/${slug}`,
       lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6,
