@@ -23,7 +23,7 @@ const GROUPS = [
 
 export default function Sidebar({ email }) {
   const pathname = usePathname();
-  const [collapsed, setCollapsed] = useState(false);
+  const [collapsed, setCollapsed] = useState(true);
 
   return (
     <aside
