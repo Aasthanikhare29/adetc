@@ -1,5 +1,5 @@
 import { SITE } from '@/lib/seo';
-import { publishedPosts, postUrl } from '@/lib/blog-posts';
+import { getPublishedPosts, postUrl } from '@/lib/blog-posts';
 
 // Prerender at build (like sitemap/robots) rather than per-request.
 export const dynamic = 'force-static';
@@ -11,11 +11,12 @@ function esc(s) {
     .replace(/>/g, '&gt;');
 }
 
-export function GET() {
+export async function GET() {
+  const publishedPosts = await getPublishedPosts();
   const items = publishedPosts
     .map((post) => {
       const link = `${SITE.url}${postUrl(post)}`;
-      const pubDate = new Date(post.date).toUTCString();
+      const pubDate = new Date(post.dateISO || post.date).toUTCString();
       return `    <item>
       <title>${esc(post.title)}</title>
       <link>${link}</link>

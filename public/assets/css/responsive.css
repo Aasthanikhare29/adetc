@@ -614,6 +614,16 @@
     .blog-content-container .blog-image{
         height: 200px;
     }
+    .blog-content-container .card-blog{
+        height: auto;
+    }
+    .blog-content-container .card-blog-content{
+        height: auto;
+        overflow: visible;
+    }
+    .blog-content-container .blog-image{
+        height: 200px;
+    }
     .post-tag-container{
         width: 100%;
     }

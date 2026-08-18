@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { TOTAL_PAGES } from '@/lib/blog-posts';
 
-export default function BlogPagination({ currentPage }) {
+export default function BlogPagination({ currentPage, totalPages }) {
+  const TOTAL_PAGES = totalPages;
   const pages = Array.from({ length: TOTAL_PAGES }, (_, i) => i + 1);
 
   return (
