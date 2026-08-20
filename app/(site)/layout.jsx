@@ -7,11 +7,11 @@ import { SITE } from '@/lib/seo';
 export const metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: 'Ad Etc Studios',
+    default: 'AdEtc Studios',
     template: '%s',
   },
   description:
-    'Ad Etc Studios is a full-service film production studio delivering bold visuals and powerful narratives.',
+    'AdEtc Studios is a full-service film production studio delivering bold visuals and powerful narratives.',
 };
 
 export default function RootLayout({ children }) {

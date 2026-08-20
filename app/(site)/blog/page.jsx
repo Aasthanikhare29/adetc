@@ -3,7 +3,7 @@ import BlogPagination from '@/components/BlogPagination';
 import { getFilteredPosts, getFilteredTotalPages, blogQuery } from '@/lib/blog-posts';
 
 export const metadata = {
-  title: 'Blog/Journal - Ad Etc Studios',
+  title: 'Blog/Journal - AdEtc Studios',
 };
 
 export default async function Page({ searchParams }) {
