@@ -473,7 +473,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon3.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Cinematic Excellence</h4>
-                              <p>High-end production with film-grade visuals and compelling storytelling. lorem ipsum dolor sit amet.</p>
+                              <p>Film-grade visuals, thoughtful direction, and powerful storytelling crafted to make every frame count.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -490,7 +490,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon4.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Creative Teamwork</h4>
-                              <p>A passionate team of directors, editors & cinematographers lorem ipsum dolot sit amet consecteur.</p>
+                              <p>Directors, cinematographers, editors, and creatives working together to turn ideas into compelling visual stories.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -509,7 +509,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon5.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>End to End Services</h4>
-                              <p>From scripting to post production all in one place lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                              <p>From scripting and production to editing and post-production, we manage your entire project under one roof.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -526,7 +526,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon7.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Client Focused Approach</h4>
-                              <p>We listen, adapt, and deliver results that exceed expectations lorem ipsum dolor sit amet consectetur.</p>
+                              <p>We listen, collaborate, and adapt to create content that reflects your vision and delivers with purpose.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -543,7 +543,7 @@ export default function Page() {
                                   <span className="trust-us-suffix">+</span>
                 </span>
                               <h4>Projects Completed</h4>
-                              <p>Every project delivered on schedule without compromising on creative quality lorem ipsum dolor sit.</p>
+                              <p>From brand films to commercials, we've brought 150+ creative projects to life with precision and consistency.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
