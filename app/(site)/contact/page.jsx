@@ -1,7 +1,7 @@
 import ContactForm from '@/components/ContactForm';
 
 export const metadata = {
-  title: 'Contact Us - Ad Etc Studios',
+  title: 'Contact Us - AdEtc Studios',
 };
 
 export default function Page() {
@@ -95,7 +95,7 @@ export default function Page() {
   </section>
   {/* Maps Section */}
   <section className="section p-0">
-      <iframe loading="lazy" className="maps" src="https://maps.google.com/maps?q=Ad Etc+Studios%2C+314%2C+Shivalik+Shilp+2%2C+Judges+Bunglow+Rd%2C+Suryapooja+Block+B%2C+Vastrapur%2C+Ahmedabad%2C+Gujarat+380015&amp;ll=23.0288856%2C72.5295082&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="Ad Etc Studios, 314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015" aria-label="Ad Etc Studios, 314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015"></iframe>
+      <iframe loading="lazy" className="maps" src="https://maps.google.com/maps?q=AdEtc+Studios%2C+314%2C+Shivalik+Shilp+2%2C+Judges+Bunglow+Rd%2C+Suryapooja+Block+B%2C+Vastrapur%2C+Ahmedabad%2C+Gujarat+380015&amp;ll=23.0288856%2C72.5295082&amp;t=m&amp;z=16&amp;output=embed&amp;iwloc=near" title="AdEtc Studios, 314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015" aria-label="AdEtc Studios, 314, Shivalik Shilp 2, Judges Bunglow Rd, Suryapooja Block B, Vastrapur, Ahmedabad, Gujarat 380015"></iframe>
   </section>
   {/* Faq Section */}
   <div className="section">

@@ -1,7 +1,7 @@
 import VideoModal from '@/components/VideoModal';
 
 export const metadata = {
-  title: 'Ad Etc Studios',
+  title: 'AdEtc Studios',
 };
 
 export default function Page() {
@@ -9,7 +9,7 @@ export default function Page() {
     <>
   {/* Banner Home Section */}
   <div className="section-banner-home">
-      <video id="banner-video-background" autoPlay muted loop playsInline preload="metadata" src="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t"></video>
+      <div id="banner-video-background"></div>
     <div className="banner-home-video">
       <div className="hero-container position-relative z-2">
         <div className="banner-home-content">
@@ -27,13 +27,13 @@ export default function Page() {
               </div>
               <div className="home-avatar-container">
                               <div className="d-flex flex-row align-items-center"><img src="/assets/images/chinmay.jpeg" alt="Banner Avatar" className="banner-avatar" /> <img src="/assets/images/krutika.jpeg" alt="Banner Avatar" className="banner-avatar" /><img src="/assets/images/chirag.jpeg" alt="Banner Avatar" className="banner-avatar banner-avatar-top" /> <img src="/assets/images/Gp-1.png" alt="Banner Avatar" className="banner-avatar" /></div>
-                              <p>Ad Etc Studios is a full-service film production studio delivering bold visuals and powerful narratives. From commercials to creative films we bring your vision to life.</p>
+                              <p>AdEtc Studios is a full-service film production studio delivering bold visuals and powerful narratives. From commercials to creative films we bring your vision to life.</p>
               </div>
             </div>
                       <div className="home-divider"></div>
             <div className="d-flex flex-column flex-md-row gspace-2 w-100 align-items-center justify-content-center justify-content-md-between">
               <div>
-                <a href="#" className="btn btn-accent request-loader request-loader-btn" data-video="https://drive.usercontent.google.com/download?id=1OgdJi6oy3rW10lbTtwqTfwoPGig2KmW0&export=download&confirm=t">
+                <a href="#" className="btn btn-accent request-loader request-loader-btn" data-video="https://youtu.be/U-0bcgvEnN4">
   
                                           Watch Our Showreel
                                           
@@ -78,13 +78,13 @@ export default function Page() {
           <div className="core-service-logo-container">
             <div className="core-service__circle-logo">
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="circleLogoTitle">
-                              <title id="circleLogoTitle">Ad Etc Studios Film Studio Logo</title>
+                              <title id="circleLogoTitle">AdEtc Studios Film Studio Logo</title>
                 <defs>
                                   <path id="textcircle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"></path>
                 </defs>
                               <circle cx="100" cy="100" r="95"></circle>
                 <text dy="5">
-                                  <textPath href="#textcircle" className="core-service__circle-logo-title" startOffset="0%">• Ad Etc Studios FILM AND VIDEO PRODUCTION STUDIO • BRINGING IDEAS TO LIFE ON SCREEN</textPath>
+                                  <textPath href="#textcircle" className="core-service__circle-logo-title" startOffset="0%">• AdEtc Studios FILM AND VIDEO PRODUCTION STUDIO • BRINGING IDEAS TO LIFE ON SCREEN</textPath>
                 </text>
                 <g transform="translate(100 100)">
                                   <image href="/assets/images/Gp-1.png" className="core-service__circle-logo-image" width="160" height="160" x="-80" y="-80" preserveAspectRatio="xMidYMid meet"></image>
@@ -96,7 +96,7 @@ export default function Page() {
         {/* Description + Cards */}
         <div className="d-flex flex-column gspace-5">
           <div className="core-service-description">
-                      <p>Ad Etc Studios is a creative film and video production studio based on the belief that every story deserves to be told with power, passion, and precision. Whether it's a commercial, documentary, or branded content — we craft visuals that resonate.</p>
+                      <p>AdEtc Studios is a creative film and video production studio based on the belief that every story deserves to be told with power, passion, and precision. Whether it's a commercial, documentary, or branded content — we craft visuals that resonate.</p>
           </div>
           <div className="core-service-card-container">
             {/* Card 1 */}
@@ -161,41 +161,41 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">KD Hospital</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <span className="project-category">Music Category</span>
                                       <a href="#" className="project-category">Music Video</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-2" data-video-id="tlapIbTVRnQ"></div>
+                                  <div className="project-video-bg" id="video-bg-2" data-video-id="TcYx1AGZFWc"></div>
                   <div>
-                    <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
+                    <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Adhav Aishvaryam</a>
+                                      <a href="/project-detail/madhav-aishwaryam">Madhav Aishwaryam</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                   {/*<div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Commercial Add</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" id="video-bg-3" data-video-id="TcYx1AGZFWc"></div>
+                                  <div className="project-video-bg" id="video-bg-3" data-video-id="tlapIbTVRnQ"></div>
                   <div className="w-100 d-flex justify-content-center">
-                    <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
+                    <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -204,38 +204,17 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">Cure Site Laser Center</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Travel Documentary</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-4" data-video-id="hZpeOppxfR0"></div>
-                  <div>
-                    <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
-                                          <i className="fa-solid fa-play"></i>
-                    </button>
-                  </div>
-                </div>
-                <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
-                  <h3 className="project-title">
-                                      <a href="/project-detail">Pollie</a>
-                  </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <a href="#" className="project-category">Short Film</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="d-flex flex-column gspace-2">
-                <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" id="video-bg-5" data-video-id="z3G3d2CPWFM"></div>
+                                  <div className="project-video-bg" id="video-bg-4" data-video-id="z3G3d2CPWFM"></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/z3G3d2CPWFM">
                                           <i className="fa-solid fa-play"></i>
@@ -244,12 +223,33 @@ export default function Page() {
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
+                                      <a href="/project-detail">Pollie</a>
+                  </h3>
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
+                                      <i className="fa-solid fa-circle-dot accent-color"></i>
+                                      <a href="#" className="project-category">Short Film</a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="d-flex flex-column gspace-2">
+                <div className="project-video-container project-video-container--tall">
+                                  <div className="project-video-bg" id="video-bg-5" data-video-id="hZpeOppxfR0"></div>
+                  <div>
+                    <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
+                                          <i className="fa-solid fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
+                  <h3 className="project-title">
                                       <a href="/project-detail">Kadam Pakka Rang</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/*  <div className="d-flex flex-row gspace-1 align-items-center"> 
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Product Teaser</a>
-                  </div>
+                  </div>*/}
                 </div>
               </div>
             </div>
@@ -303,7 +303,41 @@ export default function Page() {
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-end justify-content-center h-100">
-                                                  <a href="/services" className="btn btn-accent">View Details</a>
+                                                  <a href="/ad-film-makers-in-ahmedabad" className="btn btn-accent">View Details</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="accordion-item service-acc-5">
+            <h2 className="accordion-header service-accordion-header">
+                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service5">End-To-End Production</button>
+            </h2>
+            <div id="service5" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
+              <div className="accordion-body">
+                <div className="service-content-container">
+                  {/* YouTube clip range: data-start / data-end use seconds. Example: start="5" end="12" → plays 00:05 to 00:12 in a loop. */}
+                                  <div className="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-5" data-start="80" data-end="100"></div>
+                  <div className="service-video-content">
+                    <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
+                      <div className="col col-md-9">
+                        <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
+                          <div className="service-description-content">
+                                                      <p className="mb-0">Our end-to-end production services take your project from concept to completion. We handle every stage of the production process, including pre-production, production, and post-production. Our streamlined approach ensures timely delivery and exceptional results.</p>
+                          </div>
+                          <div className="service-tag-container">
+                                                      <span className="service-tag">end-to-end production</span>
+                                                      <span className="service-tag">pre-production</span>
+                                                      <span className="service-tag">post-production</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col col-md-3">
+                        <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
+                                                  <a href="/end-to-end-production" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>
@@ -414,48 +448,14 @@ export default function Page() {
               </div>
             </div>
           </div>
-          <div className="accordion-item service-acc-5">
-            <h2 className="accordion-header service-accordion-header">
-                          <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#service5">End-To-End Production</button>
-            </h2>
-            <div id="service5" className="accordion-collapse collapse" data-bs-parent="#serviceAccordion">
-              <div className="accordion-body">
-                <div className="service-content-container">
-                  {/* YouTube clip range: data-start / data-end use seconds. Example: start="5" end="12" → plays 00:05 to 00:12 in a loop. */}
-                                  <div className="service-video-bg" data-video-id="pVA0G01aDfk" id="service-video-5" data-start="80" data-end="100"></div>
-                  <div className="service-video-content">
-                    <div className="row row-cols-md-2 row-cols-1 grid-spacer-2">
-                      <div className="col col-md-9">
-                        <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
-                          <div className="service-description-content">
-                                                      <p className="mb-0">Our end-to-end production services take your project from concept to completion. We handle every stage of the production process, including pre-production, production, and post-production. Our streamlined approach ensures timely delivery and exceptional results.</p>
-                          </div>
-                          <div className="service-tag-container">
-                                                      <span className="service-tag">end-to-end production</span>
-                                                      <span className="service-tag">pre-production</span>
-                                                      <span className="service-tag">post-production</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col col-md-3">
-                        <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/services" className="btn btn-accent">View Details</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
-        </div>
       </div>
     </div>
   </section>
   {/* Why Trust Us Section */}
   <section className="section bg-accent-color-5">
     <div className="d-flex flex-column gspace-2 text-start text-lg-center align-items-start align-items-lg-center">
-          <h2>Why Brands Trust Ad Etc Studios</h2>
+          <h2>Why Brands Trust AdEtc Studios</h2>
           <p className="mb-0">From concept to screen, we craft powerful visual experiences. Let your story shine with industry-grade film production.</p>
       <div style={{ marginBottom: '50px' }}>
               <a href="/contact" className="btn btn-accent">Let's Create Together</a>
@@ -580,7 +580,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Aniq Nurani - Kadam</span>
               </div>
-                          <p>“Ad Etc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
+                          <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -594,7 +594,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Siddiqa Nurani - Pollie</span>
               </div>
-                          <p>“What I loved most about working with Ad Etc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
+                          <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -608,7 +608,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Yash Shah - ZerobyZ</span>
               </div>
-                          <p>“From the very first mood-board, Ad Etc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
+                          <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -622,7 +622,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Parimal Desai - Cure Sight Lasik Centre</span>
               </div>
-                          <p>“Ad Etc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
+                          <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -636,7 +636,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Sanjana Desai - Concept Diagnostics</span>
               </div>
-                          <p>“Working with Ad Etc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
+                          <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -650,7 +650,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Aniq Nurani - Kadam</span>
               </div>
-                          <p>“Ad Etc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
+                          <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -664,7 +664,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Siddiqa Nurani - Pollie</span>
               </div>
-                          <p>“What I loved most about working with Ad Etc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
+                          <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -678,7 +678,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Yash Shah - ZerobyZ</span>
               </div>
-                          <p>“From the very first mood-board, Ad Etc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
+                          <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -692,7 +692,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Parimal Desai - Cure Sight Lasik Centre</span>
               </div>
-                          <p>“Ad Etc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
+                          <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">
@@ -706,7 +706,7 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Sanjana Desai - Concept Diagnostics</span>
               </div>
-                          <p>“Working with Ad Etc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
+                          <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
               <div className="d-flex flex-row gspace-2 align-items-center">
                               <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
                 <div className="d-flex flex-column">

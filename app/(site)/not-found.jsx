@@ -1,5 +1,5 @@
 export const metadata = {
-  title: 'Not Found - Ad Etc Studios',
+  title: 'Not Found - AdEtc Studios',
 };
 
 export default function Page() {

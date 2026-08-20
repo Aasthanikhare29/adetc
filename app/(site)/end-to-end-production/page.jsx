@@ -2,21 +2,21 @@ import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@
 import JsonLd from '@/components/JsonLd';
 
 const IMAGE = '/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg';
-const PATH = '/video-production-company-in-ahmedabad';
+const PATH = '/end-to-end-production';
 const DESCRIPTION =
-  'How AdEtc Studios delivers end-to-end video production in Ahmedabad — from concept, scripting and shooting to editing and final delivery for brands.';
+  'How AdEtc Studios delivers end-to-end video production — from concept, scripting and shooting to editing and final delivery for brands.';
 
 const FAQ = [
-  { q: 'What types of videos does AdEtc Studios create?', a: "We produce TVC's, brand videos, commercial advertisements, promotional videos, documentaries, product videos, music videos, and customised video content for businesses across industries." },
-  { q: 'How long does a video production project take?', a: 'Project timelines depend on the complexity of the shoot, scripting, approvals, filming, and post-production. Most corporate and promotional videos are completed within a few weeks after finalising the creative brief.' },
+  { q: 'What does end-to-end production include?', a: 'We manage the complete process from discovery, concept, script and storyboard through filming, video editing, motion graphics, colour grading, sound design and final post-production delivery.' },
+  { q: 'How long does an end-to-end production project take?', a: 'Project timelines depend on the complexity of the shoot, scripting, approvals, filming, and post-production. Most corporate and promotional videos are completed within a few weeks after finalising the creative brief.' },
   { q: 'Do you provide scriptwriting and creative direction?', a: 'Yes. Our team manages concept development, script writing, storyboarding, filming, video editing, and post-production, providing complete video production services under one roof.' },
   { q: 'Can you create videos for social media and digital marketing?', a: 'Absolutely. We create videos optimised for websites, YouTube, Instagram, LinkedIn, Facebook, and other digital platforms, helping businesses improve engagement and strengthen their online presence.' },
-  { q: 'Do you offer services outside Ahmedabad?', a: 'Yes. While this page focuses on video production in Ahmedabad, AdEtc Studios works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.' },
-  { q: 'Why should I choose AdEtc Studios?', a: "Our combination of creative storytelling, professional execution, and collaborative planning allows us to create videos that don't just look impressive—they support your marketing strategy, strengthen your brand, and contribute to long-term business growth." },
+  { q: 'Do you work with brands outside Ahmedabad and Gujarat?', a: 'Yes. AdEtc Studios is based in Ahmedabad and works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.' },
+  { q: 'Why should I choose AdEtc Studios?', a: 'Our combination of creative storytelling, professional execution, and collaborative planning allows us to create videos that don\'t just look impressive—they support your marketing strategy, strengthen your brand, and contribute to long-term business growth.' },
 ];
 
 export const metadata = pageMetadata({
-  title: 'Video Production Company in Ahmedabad',
+  title: 'End-to-End Video Production | AdEtc Studios',
   description: DESCRIPTION,
   path: PATH,
   image: IMAGE,
@@ -28,7 +28,7 @@ export default function Page() {
       <JsonLd
         data={[
           serviceLd({
-            name: 'Video Production Company in Ahmedabad',
+            name: 'End-to-End Video Production',
             serviceType: 'Video Production',
             description: DESCRIPTION,
             image: IMAGE,
@@ -38,7 +38,7 @@ export default function Page() {
           breadcrumbLd([
             { name: 'Home', path: '/' },
             { name: 'Services', path: '/services' },
-            { name: 'Video Production Company in Ahmedabad', path: PATH },
+            { name: 'End-To-End Production', path: PATH },
           ]),
           faqLd(FAQ),
         ]}
@@ -48,13 +48,13 @@ export default function Page() {
       <div className="banner-overlay"></div>
     <div className="hero-container">
       <div className="banner-inner-container">
-              <h1>Video Production Company in Ahmedabad</h1>
+              <h1>End-To-End Video Production</h1>
         <nav className="breadcrumb">
                   <a href="/" className="breadcrumb-item">Home</a>
                   <span className="separator">/</span>
                   <a href="/services" className="breadcrumb-item">Services</a>
                   <span className="separator">/</span>
-                  <span className="breadcrumb-item current">Video Production Company in Ahmedabad</span>
+                  <span className="breadcrumb-item current">End-To-End Production</span>
         </nav>
       </div>
     </div>
@@ -64,13 +64,13 @@ export default function Page() {
     <div className="hero-container">
       <div className="service-detail-content-container">
         <div className="heading-container">
-                    <h2>Video Production Company in Ahmedabad That Creates Stories People Remember</h2>
+                    <h2>Video Production That Creates Stories People Remember</h2>
               </div>
         <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="d-flex flex-column gspace-3">
               <div className="d-flex flex-column gspace-2">
-                    <p>Your brand deserves more than just a video, it deserves a story that inspires action. At AdEtc Studios, we help businesses transform ideas into compelling visual experiences through strategic storytelling and cinematic production. As a trusted Video Production Company in Ahmedabad, we produce high-quality brand films, corporate videos, commercials, documentaries, product shoots, and promotional videos tailored to your business goals.</p>
+                    <p>Your brand deserves more than just a video, it deserves a story that inspires action. At AdEtc Studios, we help businesses transform ideas into compelling visual experiences through strategic storytelling and cinematic production. As a full-service video production studio, we produce high-quality brand films, corporate videos, commercials, documentaries, product shoots, and promotional videos tailored to your business goals.</p>
                     <p>From concept development and scriptwriting to filming, video editing, motion graphics, and post-production, our team manages every stage of the creative journey. Whether you're launching a new product, strengthening your brand identity, or creating impactful marketing campaigns, we deliver videos that connect with audiences and drive measurable business outcomes.</p>
                     <p className="mb-0">Ready to bring your vision to life? Let's create a video that elevates your brand.</p>
                 <div>
@@ -116,19 +116,19 @@ export default function Page() {
               <div className="service-detail-pane">
                 <div className="service-title-wrapper service-title-wrapper-left">
                   <div className="service-title-heading">
-                            <h2>Why Choose AdEtc Studios as Your Video Production Company in Ahmedabad?</h2>
+                            <h2>Why Choose AdEtc Studios for End-to-End Production?</h2>
                   </div>
                   <div className="service-title-description">
                             <p>Every business has a unique story, but only the right creative partner can tell it in a way that captures attention and builds trust. At AdEtc Studios, we combine creativity, strategy, and technical expertise to produce videos that not only look stunning but also support your marketing strategy.</p>
                             <p>Unlike a traditional production house, we begin by understanding your audience, your objectives, and the message you want to communicate. This collaborative approach allows us to create videos that align with your brand, engage viewers, and inspire action across digital platforms.</p>
-                            <p>Our team handles everything from ideation and scripting to filming, video editing services, colour grading, sound design, visual effects, and post-production ensuring a seamless experience from start to finish.</p>
-                            <p className="mb-0">Whether you're a startup, an established enterprise, or a growing organisation in Ahmedabad, we create videos designed to strengthen your brand presence and support long-term growth.</p>
+                            <p>Our team handles everything from ideation and scripting to filming, video editing, colour grading, sound design, visual effects, and post-production ensuring a seamless experience from start to finish.</p>
+                            <p className="mb-0">Whether you're a startup, an established enterprise, or a growing organisation, we create videos designed to strengthen your brand presence and support long-term growth.</p>
                   </div>
                 </div>
                 <div className="d-flex flex-column gspace-3">
                   <div className="d-flex flex-column gspace-2">
                             <h3>Industries We Work With</h3>
-                            <p>As a trusted video production company in Ahmedabad, we work with businesses across diverse industries, creating videos that connect with their target audiences.</p>
+                            <p>As a full-service production studio, we work with businesses across diverse industries, creating videos that connect with their target audiences.</p>
                             <p>We regularly produce content for:</p>
                             <p className="mb-0">Whether you're introducing a new product or service, showcasing company culture, or launching a marketing campaign, we create videos tailored to your industry and audience.</p>
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
@@ -205,10 +205,10 @@ export default function Page() {
               <div className="service-detail-pane">
                 <div className="service-title-wrapper service-title-wrapper-left">
                   <div className="service-title-heading">
-                            <h2>Professional Video Production Services in Ahmedabad</h2>
+                            <h2>Professional Video Production Services</h2>
                   </div>
                   <div className="service-title-description">
-                            <p>As a full-service video production company in Ahmedabad, we offer creative production services for businesses across industries.</p>
+                            <p>As a full-service video production studio, we offer creative production services for businesses across industries.</p>
                   </div>
                 </div>
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
@@ -216,9 +216,9 @@ export default function Page() {
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>TVC's</h5>
+                                  <h5>Corporate Films</h5>
                       </div>
-                                <p>Build trust with professionally produced TVC's that communicate your company's vision, values, culture, and achievements. Whether you need an investor presentation, company profile, recruitment film, or internal communication video, our corporate video production team creates authentic stories that resonate with your audience.</p>
+                                <p>Build trust with professionally produced corporate films that communicate your company's vision, values, culture, and achievements. Whether you need an investor presentation, company profile, recruitment film, or internal communication video, our corporate video production team creates authentic stories that resonate with your audience.</p>
                     </div>
                   </div>
                   <div className="col">
@@ -252,7 +252,7 @@ export default function Page() {
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Documentary Film</h5>
+                                  <h5>Documentary Films</h5>
                       </div>
                                 <p>Some stories deserve authenticity above everything else. Our documentary production combines research, storytelling, and cinematic filmmaking to create meaningful narratives that inspire audiences and build credibility.</p>
                     </div>
@@ -306,7 +306,7 @@ export default function Page() {
                             <h2>Our Video Production Process</h2>
                   </div>
                   <div className="service-title-description">
-                            <p>Creating exceptional videos requires more than a camera—it requires a structured production process backed by creativity, planning, and technical expertise. As a professional video production company, AdEtc Studios follows industry best practices to ensure every project is delivered on time and aligned with your business goals.</p>
+                            <p>Creating exceptional videos requires more than a camera—it requires a structured production process backed by creativity, planning, and technical expertise. As a professional video production studio, AdEtc Studios follows industry best practices to ensure every project is delivered on time and aligned with your business goals.</p>
                   </div>
                 </div>
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
@@ -369,23 +369,23 @@ export default function Page() {
                             <h2>Frequently Asked Questions</h2>
                   </div>
                   <div className="service-title-description">
-                            <p>Got questions about our video production services? We've got answers to help you get started with your next film or video project.</p>
+                            <p>Got questions about our end-to-end video production services? We've got answers to help you get started with your next film or video project.</p>
                   </div>
                 </div>
                 <div className="accordion" id="faqAccordion">
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What types of videos does AdEtc Studios create?</button>
+                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What does end-to-end production include?</button>
                     </h2>
                     <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>We produce TVC's, brand videos, commercial advertisements, promotional videos, documentaries, product videos, music videos, and customised video content for businesses across industries.</p>
+                                <p>We manage the complete process from discovery, concept, script and storyboard through filming, video editing, colour grading, sound design and final post-production delivery.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How long does a video production project take?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">How long does an end-to-end production project take?</button>
                     </h2>
                     <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
@@ -415,11 +415,11 @@ export default function Page() {
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you offer services outside Ahmedabad?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you work with brands outside Ahmedabad and Gujarat?</button>
                     </h2>
                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>Yes. While this page focuses on video production in Ahmedabad, AdEtc Studios works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.</p>
+                                <p>Yes. AdEtc Studios is based in Ahmedabad and works with brands across Gujarat and throughout India. We also travel for production requirements based on project needs.</p>
                       </div>
                     </div>
                   </div>
@@ -450,7 +450,7 @@ export default function Page() {
               <ul className="service-facts">
                 <li>
                   <span>Service</span>
-                  <p>Video Production</p>
+                  <p>End-to-End Video Production</p>
                 </li>
                 <li>
                   <span>Location</span>
@@ -476,8 +476,7 @@ export default function Page() {
               <h4>Related Services</h4>
               <ul className="related-service-list">
                 <li><a href="/ad-film-makers-in-ahmedabad">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/services">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/services">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/video-production-company-in-ahmedabad">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
                 <li><a href="/services">Product Shoots <i className="fa-solid fa-arrow-right"></i></a></li>
                 <li><a href="/services">Documentaries <i className="fa-solid fa-arrow-right"></i></a></li>
                 <li><a href="/services">Music Videos <i className="fa-solid fa-arrow-right"></i></a></li>

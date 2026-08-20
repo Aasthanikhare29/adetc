@@ -1337,13 +1337,15 @@ ul{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.02);
     pointer-events: none;
     width: 150%;
     height: 150%;
     z-index: 0;
     object-fit: cover;
     border: 0;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
 }
 
 .service-content-banner{
@@ -4144,24 +4146,9 @@ ul{
     padding-left: 0;
 }
 
-.accordion-item.service-acc-1 .service-accordion-header {
-    padding-left: 350px;
-}
-
-.accordion-item.service-acc-2 .service-accordion-header {
-    padding-left: 170px;
-}
-
-.accordion-item.service-acc-3 .service-accordion-header {
-    padding-left: 450px;
-}
-
-.accordion-item.service-acc-4 .service-accordion-header {
-    padding-left: 250px;
-}
-
-.accordion-item.service-acc-5 .service-accordion-header {
-    padding-left: 70px;
+.accordion-item .service-accordion-header .accordion-button {
+    justify-content: center;
+    text-align: center;
 }
 
 .accordion-item .service-accordion-header .accordion-button{

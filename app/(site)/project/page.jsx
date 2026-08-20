@@ -1,7 +1,7 @@
 import VideoModal from '@/components/VideoModal';
 
 export const metadata = {
-  title: 'Portfolio - Ad Etc Studios',
+  title: 'Portfolio - AdEtc Studios',
 };
 
 export default function Page() {
@@ -44,40 +44,40 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">KD Hospital</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Music Video</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-2" data-video-id="tlapIbTVRnQ"></div>
+                                  <div className="project-video-bg" id="video-bg-2" data-video-id="TcYx1AGZFWc"></div>
                   <div>
-                    <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
+                    <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Adhav Aishvaryam</a>
+                                      <a href="/project-detail/madhav-aishwaryam">Madhav Aishwaryam</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Commercial Add</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" id="video-bg-3" data-video-id="TcYx1AGZFWc"></div>
+                                  <div className="project-video-bg" id="video-bg-3" data-video-id="tlapIbTVRnQ"></div>
                   <div className="w-100 d-flex justify-content-center">
-                    <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
+                    <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
                                           <i className="fa-solid fa-play"></i>
                     </button>
                   </div>
@@ -86,38 +86,17 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">Cure Site Laser Center</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Travel Documentary</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-4" data-video-id="hZpeOppxfR0"></div>
-                  <div>
-                    <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
-                                          <i className="fa-solid fa-play"></i>
-                    </button>
-                  </div>
-                </div>
-                <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
-                  <h3 className="project-title">
-                                      <a href="/project-detail">Pollie</a>
-                  </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <a href="#" className="project-category">Short Film</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="d-flex flex-column gspace-2">
-                <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" id="video-bg-5" data-video-id="z3G3d2CPWFM"></div>
+                                  <div className="project-video-bg" id="video-bg-4" data-video-id="z3G3d2CPWFM"></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/z3G3d2CPWFM">
                                           <i className="fa-solid fa-play"></i>
@@ -126,12 +105,33 @@ export default function Page() {
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
+                                      <a href="/project-detail">Pollie</a>
+                  </h3>
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
+                                      <i className="fa-solid fa-circle-dot accent-color"></i>
+                                      <a href="#" className="project-category">Short Film</a>
+                  </div> */}
+                </div>
+              </div>
+            </div>
+            <div className="col">
+              <div className="d-flex flex-column gspace-2">
+                <div className="project-video-container project-video-container--tall">
+                                  <div className="project-video-bg" id="video-bg-5" data-video-id="hZpeOppxfR0"></div>
+                  <div>
+                    <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
+                                          <i className="fa-solid fa-play"></i>
+                    </button>
+                  </div>
+                </div>
+                <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
+                  <h3 className="project-title">
                                       <a href="/project-detail">Kadam Pakka Rang</a>
                   </h3>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
+                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
                                       <i className="fa-solid fa-circle-dot accent-color"></i>
                                       <a href="#" className="project-category">Product Teaser</a>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

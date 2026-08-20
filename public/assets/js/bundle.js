@@ -171,13 +171,13 @@ function initBannerVideo() {
     if (!$el.length || isNativeVideo($el)) return;
 
     new YT.Player($el.attr("id"), {
-        videoId: "pVA0G01aDfk",
+        videoId: "0y3iUCEvu6Y",
         playerVars: {
             autoplay: 1,
             controls: 0,
             mute: 1,
             loop: 1,
-            playlist: "pVA0G01aDfk",
+            playlist: "0y3iUCEvu6Y",
             rel: 0,
             modestbranding: 1,
             iv_load_policy: 3,

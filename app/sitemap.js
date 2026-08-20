@@ -9,6 +9,7 @@ const ROUTES = [
   '/services',
   '/project',
   '/project-detail',
+  '/project-detail/madhav-aishwaryam',
   '/blog',
   '/team',
   '/testimonial',
@@ -16,6 +17,7 @@ const ROUTES = [
   '/contact',
   '/ad-film-makers-in-ahmedabad',
   '/video-production-company-in-ahmedabad',
+  '/end-to-end-production',
 ];
 
 export default async function sitemap() {
