@@ -110,7 +110,7 @@ export default function Footer() {
             </div>
 
             <div className="footer-title-container">
-              <span className="footer-title">AdEtc Studios</span>
+              <span className="footer-title">Ad Etc Studios</span>
             </div>
 
             <div className="footer-copyright-container">

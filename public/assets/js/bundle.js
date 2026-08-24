@@ -242,8 +242,6 @@ function initProjectVideoBackgrounds() {
                 autoplay: 1,
                 mute: 1,
                 controls: 0,
-                loop: 1,
-                playlist: videoId,
                 playsinline: 1,
                 modestbranding: 1,
                 rel: 0,
@@ -254,6 +252,9 @@ function initProjectVideoBackgrounds() {
                 onReady: (e) => {
                     e.target.mute();
                     e.target.playVideo();
+                },
+                onStateChange: (e) => {
+                    if (e.data === YT.PlayerState.ENDED) e.target.playVideo();
                 }
             }
         });
