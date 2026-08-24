@@ -368,23 +368,11 @@ export default function Page() {
     <div className="hero-container overflow-hidden">
       <div className="partners-container">
               <h5 className="partnership-title-content">Trusted by Industry Leaders & Creative Brands</h5>
-        <div className="overflow-hidden">
-          <div className="swiper swiperpartner partner-marquee">
-            <div className="swiper-wrapper">
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-            </div>
-                      <div className="swiper-pagination"></div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '42px', flexWrap: 'wrap' }}>
+            <img src="/assets/images/aryaman.jpeg" alt="Partner" className="partner-image" style={{ maxHeight: '50px' }} />
+            <img src="/assets/images/concept.png" alt="Partner" className="partner-image" style={{ maxHeight: '40px' }} />
+            <img src="/assets/images/zero.png" alt="Partner" className="partner-image" style={{ maxHeight: '72px' }} />
           </div>
         </div>
       </div>
