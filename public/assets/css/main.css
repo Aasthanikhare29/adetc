@@ -709,8 +709,9 @@ ul{
 
 .partner-image{
     max-width: 100%;
-    height: auto;
-    opacity: 0.5;
+    height: 100%;
+    object-fit: contain;
+    opacity: 1;
     transition: all 300ms;
 }
 
@@ -738,24 +739,13 @@ ul{
 }
 
 .swiperpartner .swiper-slide img.partner-image{
-    opacity: 0;
-    position: absolute;
-    pointer-events: none;
+    opacity: 1;
+    position: relative;
+    pointer-events: auto;
 }
 
 .swiperpartner .swiper-slide::before{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: var(--partner-color, var(--accent-color));
-    -webkit-mask-image: var(--partner-logo);
-    mask-image: var(--partner-logo);
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-    -webkit-mask-position: center;
-    mask-position: center;
+    content: none;
 }
 
 .swiperpartner.partner-marquee{

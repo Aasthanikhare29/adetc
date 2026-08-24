@@ -138,7 +138,7 @@ export default function Page() {
           <div className="core-service-image"><img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="Photographer working with camera" className="img-fluid" /></div>
     </div>
   </section>
-  {/* Project Section */}
+      {/* Project Section */}
   <section className="section section-project bg-accent-color-5">
     <div className="hero-container overflow-visible">
       <div className="project-section-content">
@@ -161,11 +161,6 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">KD Hospital</a>
                   </h3>
-                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <span className="project-category">Music Category</span>
-                                      <a href="#" className="project-category">Music Video</a>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -183,10 +178,6 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail/madhav-aishwaryam">Madhav Aishwaryam</a>
                   </h3>
-                   {/*<div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <a href="#" className="project-category">Commercial Add</a>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -202,12 +193,8 @@ export default function Page() {
                 </div>
                 <div className="d-flex flex-row gspace-2 justify-content-between align-items-center flex-wrap w-100">
                   <h3 className="project-title">
-                                      <a href="/project-detail">Cure Site Laser Center</a>
+                                      <a href="/project-detail/cure-sight-laser-center">Cure Site Laser Center</a>
                   </h3>
-                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <a href="#" className="project-category">Travel Documentary</a>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -225,10 +212,6 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">Pollie</a>
                   </h3>
-                  {/* <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <a href="#" className="project-category">Short Film</a>
-                  </div> */}
                 </div>
               </div>
             </div>
@@ -246,10 +229,6 @@ export default function Page() {
                   <h3 className="project-title">
                                       <a href="/project-detail">Kadam Pakka Rang</a>
                   </h3>
-                  {/*  <div className="d-flex flex-row gspace-1 align-items-center"> 
-                                      <i className="fa-solid fa-circle-dot accent-color"></i>
-                                      <a href="#" className="project-category">Product Teaser</a>
-                  </div>*/}
                 </div>
               </div>
             </div>
@@ -257,8 +236,7 @@ export default function Page() {
         </div>
       </div>
     </div>
-  </section>
-  {/* Modal Video Section */}
+  </section>{/* Modal Video Section */}
   <div className="section p-0">
     <VideoModal />
   </div>
@@ -849,23 +827,11 @@ export default function Page() {
     <div className="hero-container overflow-hidden">
       <div className="partners-container">
               <h5 className="partnership-title-content">Trusted by Industry Leaders & Creative Brands</h5>
-        <div className="overflow-hidden">
-          <div className="swiper swiperpartner partner-marquee">
-            <div className="swiper-wrapper">
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-            </div>
-                      <div className="swiper-pagination"></div>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '42px', flexWrap: 'wrap' }}>
+            <img src="/assets/images/aryaman.jpeg" alt="Partner" className="partner-image" style={{ maxHeight: '50px' }} />
+            <img src="/assets/images/concept.png" alt="Partner" className="partner-image" style={{ maxHeight: '40px' }} />
+            <img src="/assets/images/zero.png" alt="Partner" className="partner-image" style={{ maxHeight: '72px' }} />
           </div>
         </div>
       </div>
