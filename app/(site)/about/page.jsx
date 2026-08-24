@@ -370,9 +370,9 @@ export default function Page() {
               <h5 className="partnership-title-content">Trusted by Industry Leaders & Creative Brands</h5>
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '42px', flexWrap: 'wrap' }}>
-            <img src="/assets/images/aryaman.jpeg" alt="Partner" className="partner-image" style={{ maxHeight: '50px' }} />
-            <img src="/assets/images/concept.png" alt="Partner" className="partner-image" style={{ maxHeight: '40px' }} />
-            <img src="/assets/images/zero.png" alt="Partner" className="partner-image" style={{ maxHeight: '72px' }} />
+            <img src="/assets/images/aryaman.jpeg" alt="Partner" className="trusted-client-logo" style={{ maxHeight: '50px' }} />
+            <img src="/assets/images/concept.png" alt="Partner" className="trusted-client-logo" style={{ maxHeight: '40px' }} />
+            <img src="/assets/images/zero.png" alt="Partner" className="trusted-client-logo" style={{ maxHeight: '72px' }} />
           </div>
         </div>
       </div>
