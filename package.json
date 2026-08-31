@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "convert": "node scripts/convert.js",
-    "build:js": "node scripts/build-js.js"
+    "build:js": "node scripts/build-js.js",
+    "seo:indexnow": "node scripts/indexnow.mjs"
   },
   "dependencies": {
     "@radix-ui/react-dialog": "^1.1.23",
