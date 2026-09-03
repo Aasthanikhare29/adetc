@@ -558,13 +558,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Aniq Nurani - Kadam</span>
               </div>
-                          <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Aniq Nurani</h6>
-                                  <p className="testimonial-designation">Kadam</p>
-                </div>
+                          <p>"AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey."</p>
+              <div className="d-flex flex-column">
+                              <h6>Aniq Nurani</h6>
+                              <p className="testimonial-designation">Kadam</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -572,13 +569,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Siddiqa Nurani - Pollie</span>
               </div>
-                          <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Siddiqa Nurani</h6>
-                                  <p className="testimonial-designation">Pollie</p>
-                </div>
+                          <p>"What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team."</p>
+              <div className="d-flex flex-column">
+                              <h6>Siddiqa Nurani</h6>
+                              <p className="testimonial-designation">Pollie</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -586,13 +580,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Yash Shah - ZerobyZ</span>
               </div>
-                          <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Yash Shah</h6>
-                                  <p className="testimonial-designation">ZerobyZ</p>
-                </div>
+                          <p>"From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct."</p>
+              <div className="d-flex flex-column">
+                              <h6>Yash Shah</h6>
+                              <p className="testimonial-designation">ZerobyZ</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -600,13 +591,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Parimal Desai - Cure Sight Lasik Centre</span>
               </div>
-                          <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Parimal Desai</h6>
-                                  <p className="testimonial-designation">Cure Sight Lasik Centre</p>
-                </div>
+                          <p>"AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience."</p>
+              <div className="d-flex flex-column">
+                              <h6>Parimal Desai</h6>
+                              <p className="testimonial-designation">Cure Sight Lasik Centre</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -614,13 +602,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Sanjana Desai - Concept Diagnostics</span>
               </div>
-                          <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Sanjana Desai</h6>
-                                  <p className="testimonial-designation">Concept Diagnostics</p>
-                </div>
+                          <p>"Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way."</p>
+              <div className="d-flex flex-column">
+                              <h6>Sanjana Desai</h6>
+                              <p className="testimonial-designation">Concept Diagnostics</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -628,13 +613,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Aniq Nurani - Kadam</span>
               </div>
-                          <p>“AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/composite-collage-of-people-expressing-positive-em-JJYFLK3.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Aniq Nurani</h6>
-                                  <p className="testimonial-designation">Kadam</p>
-                </div>
+                          <p>"AdEtc Studios brought a lot of heart and style into our shoot. They understood the emotional value of what Kadam stands for and captured it with real warmth. Grateful to have had them on this journey."</p>
+              <div className="d-flex flex-column">
+                              <h6>Aniq Nurani</h6>
+                              <p className="testimonial-designation">Kadam</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -642,13 +624,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Siddiqa Nurani - Pollie</span>
               </div>
-                          <p>“What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-5.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Siddiqa Nurani</h6>
-                                  <p className="testimonial-designation">Pollie</p>
-                </div>
+                          <p>"What I loved most about working with AdEtc was how invested they were. They treated our cleaners like hero products and found ways to make the everyday look beautiful. Couldn't have asked for a better shoot team."</p>
+              <div className="d-flex flex-column">
+                              <h6>Siddiqa Nurani</h6>
+                              <p className="testimonial-designation">Pollie</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -656,13 +635,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Yash Shah - ZerobyZ</span>
               </div>
-                          <p>“From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-13.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Yash Shah</h6>
-                                  <p className="testimonial-designation">ZerobyZ</p>
-                </div>
+                          <p>"From the very first mood-board, AdEtc Studios just got it. They knew how to elevate the brand visually without losing our identity. Super sharp team with real creative instinct."</p>
+              <div className="d-flex flex-column">
+                              <h6>Yash Shah</h6>
+                              <p className="testimonial-designation">ZerobyZ</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -670,13 +646,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Parimal Desai - Cure Sight Lasik Centre</span>
               </div>
-                          <p>“AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-12.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Parimal Desai</h6>
-                                  <p className="testimonial-designation">Cure Sight Lasik Centre</p>
-                </div>
+                          <p>"AdEtc Studios brought a level of professionalism and calm that matched our own approach. The team knew exactly how to light and shoot our space in a way that felt honest and premium. It was a seamless experience."</p>
+              <div className="d-flex flex-column">
+                              <h6>Parimal Desai</h6>
+                              <p className="testimonial-designation">Cure Sight Lasik Centre</p>
               </div>
             </div>
             <div className="card card-testimonial">
@@ -684,13 +657,10 @@ export default function Page() {
                               <i className="fa-solid fa-quote-right testimonial-icon"></i>
                               <span className="testimonial-heading">Sanjana Desai - Concept Diagnostics</span>
               </div>
-                          <p>“Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way.”</p>
-              <div className="d-flex flex-row gspace-2 align-items-center">
-                              <div className="testimonial-image"><img src="/assets/images/Photo-6.jpg" alt="Testimonial" className="img-fluid" /></div>
-                <div className="d-flex flex-column">
-                                  <h6>Sanjana Desai</h6>
-                                  <p className="testimonial-designation">Concept Diagnostics</p>
-                </div>
+                          <p>"Working with AdEtc Studios felt effortless. They understood our need for clean, clear visuals and translated medical complexity into something visually engaging. We felt supported every step of the way."</p>
+              <div className="d-flex flex-column">
+                              <h6>Sanjana Desai</h6>
+                              <p className="testimonial-designation">Concept Diagnostics</p>
               </div>
             </div>
           </div>

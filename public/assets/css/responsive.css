@@ -303,8 +303,13 @@
         font-size: 14px;
     }
     .testimonial-scroll-row .card-testimonial{
-        min-width: min(340px, 85vw);
-        width: min(340px, 85vw);
+        min-width: min(380px, 85vw);
+        width: min(380px, 85vw);
+        height: auto;
+        min-height: 380px;
+    }
+    .testimonial-scroll-row .card-testimonial > p{
+        flex: 1 1 auto;
     }
     .team-image img{
         height: clamp(300px, 60vw, 430px);
