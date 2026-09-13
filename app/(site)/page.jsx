@@ -134,17 +134,12 @@ export default function Page() {
           </div>
         </div>
       </div>
-      {/* Right Floating Image */}
-          <div className="core-service-image"><img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="Photographer working with camera" className="img-fluid" /></div>
     </div>
   </section>
       {/* Project Section */}
   <section className="section section-project bg-accent-color-5">
     <div className="hero-container overflow-visible">
       <div className="project-section-content">
-        <div className="project-heading-container">
-                  <h2 className="project-section-heading">Featured Project</h2>
-        </div>
         <div className="project-content-container">
           <div className="row row-cols-lg-2 row-cols-1 grid-spacer-x-5 grid-spacer-y-120">
             <div className="col">

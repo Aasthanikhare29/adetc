@@ -2548,8 +2548,10 @@ ul{
 }
 .blog-recent-widget h4{
     margin-bottom: 18px;
-    font-family: var(--font-family-1);
+    font-family: var(--font-family-2);
     font-size: 18px;
+    font-weight: 600;
+    text-transform: none;
 }
 .blog-recent-list{
     list-style: none;
@@ -4051,6 +4053,21 @@ ul{
     color: var(--primary);
 }
 
+/* Left info column: rely on the flex gap, not h5 margin, so Office/address
+   and Contact/numbers spacing stays consistent. */
+.section-footer .gspace-1 h5{
+    margin-bottom: 0;
+}
+
+/* Bigger, tappable contact numbers so they're easy to find.
+   Scoped under .section-footer to beat the responsive .footer-info override. */
+.section-footer .footer-phone{
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--primary);
+}
+
 .section-footer h3{
     font-family: var(--font-family-1);
     font-size: 26px;
@@ -4397,6 +4414,13 @@ main p {
 .post-faq {
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-top: 24px;
+}
+/* FAQ heading: small and not bold (not the big Anton display style). */
+.post-faq h2 {
+    font-family: var(--font-family-2);
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: none;
 }
 .post-faq-item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

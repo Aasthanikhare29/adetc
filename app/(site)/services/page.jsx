@@ -23,14 +23,6 @@ export default function Page() {
   <section className="section service-content-banner">
     <div className="hero-container">
       <div className="d-flex flex-column gspace-5">
-        <div className="service-title-wrapper">
-          <div className="service-title-heading">
-                      <h2>This is what we do</h2>
-          </div>
-          <div className="service-title-description">{/* <p>
-                                  AdEtc Studios, 2 years young with 15 years of filmmaking expertise behind every creation.
-                              </p> */}</div>
-        </div>
         <div className="accordion" id="serviceAccordion">
           <div className="accordion-item service-acc-1">
             <h2 className="accordion-header service-accordion-header">
