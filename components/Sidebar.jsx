@@ -5,7 +5,7 @@ export default function Sidebar() {
     <div className="sidebar">
       <div className="sidebar-header">
               <div className="logo"><img src="/assets/images/adetc-logo.png" className="logo" alt="Logo" /></div>
-        <button className="close-btn">
+        <button className="close-btn" aria-label="Close menu">
                   <span>X</span>
         </button>
       </div>

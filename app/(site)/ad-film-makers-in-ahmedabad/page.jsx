@@ -622,7 +622,7 @@ export default function Page() {
                   <ul className="related-service-list">
                     <li><a href="/video-production-company-in-ahmedabad">Video Production <i className="fa-solid fa-arrow-right"></i></a></li>
                     <li><a href="/ad-film-makers-in-ahmedabad">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
-                    <li><a href="/brand-video">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
+                    <li><a href="/blog/brand-video-visual-storytelling">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
                     <li><a href="/services">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
                     <li><a href="/services">Product Shoots <i className="fa-solid fa-arrow-right"></i></a></li>
                     <li><a href="/services">Documentaries <i className="fa-solid fa-arrow-right"></i></a></li>

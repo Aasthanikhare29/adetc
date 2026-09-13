@@ -7,7 +7,7 @@ export default function Header() {
           <div className="navbar-nav-container">
             {/* Logo Container */}
             <div className="logo-container">
-                          <a className="navbar-brand fw-bold" href="#"><img src="/assets/images/adetc-logo.png" alt="Logo" className="img-fluid" /></a>
+                          <a className="navbar-brand fw-bold" href="/"><img src="/assets/images/adetc-logo.png" alt="AdEtc Studios" className="img-fluid" /></a>
             </div>
             {/* Nav Link Container */}
             <div className="nav-link-container">

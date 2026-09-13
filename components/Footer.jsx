@@ -80,6 +80,7 @@ export default function Footer() {
                       name="newsletter"
                       className="newsletter-input"
                       placeholder="user@gmail.com"
+                      aria-label="Email address"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -93,16 +94,16 @@ export default function Footer() {
                   <div className="d-flex flex-row gspace-1 align-items-center w-100 justify-content-between flex-wrap">
                     <h5>Social Media</h5>
                     <div className="social-footer-container">
-                      <a href="https://www.instagram.com/adetc_studios/" className="footer-icon"><i className="fa-brands fa-instagram"></i></a>
-                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="footer-icon"><i className="fa-brands fa-facebook"></i></a>
-                      <a href="https://x.com/AdEtcstudios" className="footer-icon"><i className="fa-brands fa-x-twitter"></i></a>
+                      <a href="https://www.instagram.com/adetc_studios/" className="footer-icon" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="footer-icon" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
+                      <a href="https://x.com/AdEtcstudios" className="footer-icon" aria-label="X (Twitter)"><i className="fa-brands fa-x-twitter"></i></a>
 
-                      <a href="https://www.linkedin.com/company/adetc-studios/" className="footer-icon">
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="footer-icon" aria-label="LinkedIn">
 
                         <i className="fa-brands fa-linkedin"></i>
 
                       </a>
-                      <a href="https://www.youtube.com/@AdEtcStudios" className="footer-icon"><i className="fa-brands fa-youtube"></i></a>
+                      <a href="https://www.youtube.com/@AdEtcStudios" className="footer-icon" aria-label="YouTube"><i className="fa-brands fa-youtube"></i></a>
                     </div>
                   </div>
                 </div>

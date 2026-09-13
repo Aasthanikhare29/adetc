@@ -58,10 +58,10 @@ export default function ContactForm() {
 
       <form id="contact-form" className="form" onSubmit={submit}>
         <div className="row row-cols-lg-2 row-cols-1 grid-spacer-2">
-          <div className="col"><input type="text" name="name" placeholder="Full Name" value={form.name} onChange={set('name')} required /></div>
-          <div className="col"><input type="email" name="email" placeholder="Email Address" value={form.email} onChange={set('email')} required /></div>
-          <div className="col"><input type="tel" name="phone" placeholder="Phone Number" value={form.phone} onChange={set('phone')} /></div>
-          <div className="col"><input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={set('subject')} /></div>
+          <div className="col"><input type="text" name="name" placeholder="Full Name" aria-label="Full Name" value={form.name} onChange={set('name')} required /></div>
+          <div className="col"><input type="email" name="email" placeholder="Email Address" aria-label="Email Address" value={form.email} onChange={set('email')} required /></div>
+          <div className="col"><input type="tel" name="phone" placeholder="Phone Number" aria-label="Phone Number" value={form.phone} onChange={set('phone')} /></div>
+          <div className="col"><input type="text" name="subject" placeholder="Subject" aria-label="Subject" value={form.subject} onChange={set('subject')} /></div>
 
           <div className="col col-lg-12">
             <div className="dropdown-container">
@@ -88,7 +88,7 @@ export default function ContactForm() {
           </div>
 
           <div className="col col-lg-12">
-            <textarea name="message" rows="6" placeholder="Message" value={form.message} onChange={set('message')} required></textarea>
+            <textarea name="message" rows="6" placeholder="Message" aria-label="Message" value={form.message} onChange={set('message')} required></textarea>
           </div>
         </div>
 

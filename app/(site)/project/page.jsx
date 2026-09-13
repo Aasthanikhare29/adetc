@@ -1,8 +1,12 @@
 import VideoModal from '@/components/VideoModal';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Portfolio - AdEtc Studios',
-};
+export const metadata = pageMetadata({
+  title: 'Portfolio',
+  description:
+    'Selected work from AdEtc Studios — ad films, brand films, TVCs, music videos and commercials produced for brands across Ahmedabad and India.',
+  path: '/project',
+});
 
 export default function Page() {
   return (

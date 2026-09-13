@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'Testimonial - AdEtc Studios',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Testimonials',
+  description:
+    'What clients say about working with AdEtc Studios — real feedback from brands on our ad films, brand films and video production in Ahmedabad.',
+  path: '/testimonial',
+});
 
 export default function Page() {
   return (
@@ -10,7 +15,7 @@ export default function Page() {
       <div className="banner-overlay"></div>
     <div className="hero-container">
       <div className="banner-inner-container">
-              <h2>What Client Says</h2>
+              <h2>What Clients Say</h2>
         <nav className="breadcrumb">
                   <a href="/" className="breadcrumb-item">Home</a>
                   <span className="separator">/</span>
@@ -180,7 +185,7 @@ export default function Page() {
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Ad film makers on a commercial shoot" className="img-fluid" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -192,14 +197,14 @@ export default function Page() {
                                       <span className="meta-data">Creative Direction</span>
                   </div>
                 </div>
-                              <a href="/single-post" className="blog-title">Ad Film Makers: How Creative Advertising Films Bring Brands to Life</a>
+                              <a href="/blog/ad-film-makers-bring-brands-to-life" className="blog-title">Ad Film Makers: How Creative Advertising Films Bring Brands to Life</a>
                               <p className="mb-0">Behind every memorable campaign is a team of creative professionals who turn ordinary ideas into powerful visual experiences that connect with people.…</p>
               </div>
             </div>
           </div>
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Brand video production behind the scenes" className="img-fluid" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -211,14 +216,14 @@ export default function Page() {
                                       <span className="meta-data">Creative Direction</span>
                   </div>
                 </div>
-                              <a href="/brand-video" className="blog-title">Brand Video: How Powerful Visual Storytelling Builds Lasting Brands</a>
+                              <a href="/blog/brand-video-visual-storytelling" className="blog-title">Brand Video: How Powerful Visual Storytelling Builds Lasting Brands</a>
                               <p className="mb-0">Discover how a compelling brand video helps businesses build trust, connect with audiences, and tell memorable stories that inspire action.…</p>
               </div>
             </div>
           </div>
           <div className="col">
             <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="Blog Image" className="img-fluid" /></div>
+                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="TV commercial production planning" className="img-fluid" /></div>
               <div className="card-blog-content">
                 <div className="d-flex flex-row align-items-center justify-content-between">
                   <div className="d-flex flex-row gspace-1 align-items-center">
@@ -230,8 +235,8 @@ export default function Page() {
                                       <span className="meta-data">Production Insights</span>
                   </div>
                 </div>
-                              <a href="/single-post" className="blog-title">Choosing the Right Lenses for Storytelling</a>
-                              <p className="mb-0">Explore how lens choice shapes emotion, perspective, and the visual language of every scene you direct.…</p>
+                              <a href="/blog/tvc-format-guide" className="blog-title">TVC Format: A Guide to TV Commercials & Production</a>
+                              <p className="mb-0">A television commercial has only seconds to capture attention. Here&apos;s how the TVC format is structured, from duration and script to production and delivery.…</p>
               </div>
             </div>
           </div>

@@ -2,13 +2,14 @@ import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Footer from '@/components/Footer';
 import Script from 'next/script';
-import { SITE } from '@/lib/seo';
+import JsonLd from '@/components/JsonLd';
+import { SITE, organizationLd, websiteLd, localBusinessLd } from '@/lib/seo';
 
 export const metadata = {
   metadataBase: new URL(SITE.url),
   title: {
     default: 'AdEtc Studios',
-    template: '%s',
+    template: '%s | AdEtc Studios',
   },
   description:
     'AdEtc Studios is a full-service film production studio delivering bold visuals and powerful narratives.',
@@ -33,6 +34,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/responsive.css" />
       </head>
       <body>
+        <JsonLd data={[organizationLd(), websiteLd(), localBusinessLd()]} />
         <Header />
         <Sidebar />
         <main>{children}</main>

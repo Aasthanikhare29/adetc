@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'This is what we do - AdEtc Studios',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Services',
+  description:
+    'Ad films, DVCs, TVCs, brand films and end-to-end video production in Ahmedabad. See how AdEtc Studios takes your project from concept to final delivery.',
+  path: '/services',
+});
 
 export default function Page() {
   return (
