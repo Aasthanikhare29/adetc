@@ -2,6 +2,10 @@ import { SITE } from '@/lib/seo';
 import { getTotalPages, getSlugPosts } from '@/lib/blog-posts';
 import { getPublishedPageSlugs } from '@/lib/pages';
 
+// Regenerate hourly so blog posts/pages added in the DB after deploy show up
+// in the sitemap without needing a rebuild. (Was statically frozen at build.)
+export const revalidate = 3600;
+
 // Static list of real routes. Add new routes here when you add pages.
 const ROUTES = [
   '/',

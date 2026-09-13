@@ -1,8 +1,9 @@
 import { SITE } from '@/lib/seo';
 import { getPublishedPosts, postUrl } from '@/lib/blog-posts';
 
-// Prerender at build (like sitemap/robots) rather than per-request.
-export const dynamic = 'force-static';
+// Prerender, but revalidate hourly so posts added in the DB after deploy
+// appear in the feed without a rebuild.
+export const revalidate = 3600;
 
 function esc(s) {
   return String(s)
