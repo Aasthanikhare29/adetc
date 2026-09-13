@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'Our Team/Crew - AdEtc Studios',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'Our Team',
+  description:
+    'Meet the founders and creative crew behind AdEtc Studios, a film and video production studio based in Ahmedabad.',
+  path: '/team',
+});
 
 export default function Page() {
   return (
@@ -67,14 +72,20 @@ export default function Page() {
                   <img src="/assets/images/krutika.jpeg" alt="Krutika Sharma" className="img-fluid" />
                   <div className="team-social-overlay">
                     <div className="d-flex flex-row align-items-center gspace-1">
-                      <a href="https://www.instagram.com/" className="social-icon">
+                      <a href="https://www.instagram.com/adetc_studios/" className="social-icon">
                         <i className="fa-brands fa-instagram"></i>
                       </a>
-                      <a href="https://www.facebook.com/" className="social-icon">
+                      <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://www.x.com/" className="social-icon">
+                      <a href="https://x.com/AdEtcstudios" className="social-icon">
                         <i className="fa-brands fa-x-twitter"></i>
+                      </a>
+
+                      <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
+
+                        <i className="fa-brands fa-linkedin"></i>
+
                       </a>
                     </div>
                   </div>
@@ -167,7 +178,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon3.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Cinematic Excellence</h4>
-                              <p>High-end production with film-grade visuals and compelling storytelling. lorem ipsum dolor sit amet.</p>
+                              <p>High-end production with film-grade visuals and compelling storytelling on every project.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -183,7 +194,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon4.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Creative Teamwork</h4>
-                              <p>A passionate team of directors, editors & cinematographers lorem ipsum dolot sit amet consecteur.</p>
+                              <p>A passionate team of directors, editors and cinematographers working as one.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -201,7 +212,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon5.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>End to End Services</h4>
-                              <p>From scripting to post production all in one place lorem ipsum dolor sit amet consectetur adipiscing.</p>
+                              <p>From scripting to post-production, everything handled in one place.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -217,7 +228,7 @@ export default function Page() {
                           <div className="trust-us-icon"><img src="/assets/images/icon7.png" alt="Trust Us Icon" className="img-fluid" /></div>
               <div className="d-flex flex-column gspace-2">
                               <h4>Client Focused Approach</h4>
-                              <p>We listen, adapt, and deliver results that exceed expectations lorem ipsum dolor sit amet consectetur.</p>
+                              <p>We listen, adapt, and deliver results that exceed expectations.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -233,7 +244,7 @@ export default function Page() {
                                   <span className="trust-us-suffix">+</span>
                 </span>
                               <h4>Projects Completed</h4>
-                              <p>Every project delivered on schedule without compromising on creative quality lorem ipsum dolor sit.</p>
+                              <p>Every project delivered on schedule without compromising on creative quality.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>

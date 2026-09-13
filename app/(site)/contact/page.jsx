@@ -1,8 +1,12 @@
 import ContactForm from '@/components/ContactForm';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Contact Us - AdEtc Studios',
-};
+export const metadata = pageMetadata({
+  title: 'Contact Us',
+  description:
+    'Get in touch with AdEtc Studios, a film and video production company in Ahmedabad. Request a quote or a free consultation for your next project.',
+  path: '/contact',
+});
 
 export default function Page() {
   return (

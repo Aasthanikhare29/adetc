@@ -1,10 +1,14 @@
 import BlogCard from '@/components/BlogCard';
 import BlogPagination from '@/components/BlogPagination';
 import { getFilteredPosts, getFilteredTotalPages, blogQuery } from '@/lib/blog-posts';
+import { pageMetadata } from '@/lib/seo';
 
-export const metadata = {
-  title: 'Blog/Journal - AdEtc Studios',
-};
+export const metadata = pageMetadata({
+  title: 'Blog',
+  description:
+    'Insights on film, video production, advertising and brand storytelling from AdEtc Studios, a video production company in Ahmedabad.',
+  path: '/blog',
+});
 
 export default async function Page({ searchParams }) {
   const sp = await searchParams;

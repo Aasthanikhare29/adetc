@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'About Us - AdEtc Studios',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'About Us',
+  description:
+    'Meet AdEtc Studios — a film and video production studio in Ahmedabad with 15 years of filmmaking expertise across ad films, brand films, TVCs and DVCs.',
+  path: '/about',
+});
 
 export default function Page() {
   return (
@@ -66,7 +71,7 @@ export default function Page() {
                       <span className="achievement-stat counter" data-target="120">00</span>
                       <span className="achievement-suffix">+</span>
           </div>
-                  <h5>Project Delivered</h5>
+                  <h5>Projects Delivered</h5>
         </div>
         <div className="achievement-content">
           <div className="achievement-stat-container">

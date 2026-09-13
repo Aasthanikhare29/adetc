@@ -1,6 +1,11 @@
-export const metadata = {
-  title: 'KD Cancer Centre – Trust Campaign Film - AdEtc Studios',
-};
+import { pageMetadata } from '@/lib/seo';
+
+export const metadata = pageMetadata({
+  title: 'KD Cancer Centre – Trust Campaign Film',
+  description:
+    'A closer look at the KD Cancer Centre trust campaign film by AdEtc Studios — concept, production and delivery by a video production company in Ahmedabad.',
+  path: '/project-detail',
+});
 
 export default function Page() {
   return (
