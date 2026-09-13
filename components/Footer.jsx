@@ -44,8 +44,8 @@ export default function Footer() {
                     </div>
                     <div className="footer-info-container">
                       <h5>Contact Us</h5>
-                      <span className="footer-info"> +91 9727000197</span>
-                      <span className="footer-info"> +91 9909901116</span>
+                      <a href="tel:+919727000197" className="footer-info footer-phone">+91 97270 00197</a>
+                      <a href="tel:+919909901116" className="footer-info footer-phone">+91 99099 01116</a>
                     </div>
                   </div>
                 </div>
