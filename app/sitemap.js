@@ -31,6 +31,7 @@ const ROUTES = [
   '/ad-film-makers-in-ahmedabad',
   '/video-production-company-in-ahmedabad',
   '/end-to-end-production',
+  '/digital-video-commercials',
 ];
 
 export default async function sitemap() {
