@@ -669,18 +669,18 @@ export default function Page() {
                       <div className="col col-md-9">
                         <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
                           <div className="service-description-content">
-                                                      <p className="mb-0">Every powerful video starts with a compelling script. Our writers and visual artists craft clear narratives and detailed storyboards to guide your production.</p>
+                                                      <p className="mb-0">Our TVC's showcase your brand's story. From concept and TVC scriptwriting to casting, filming, editing, sound design, and final delivery, we manage the complete production process under one roof.</p>
                           </div>
                           <div className="service-tag-container">
-                                                      <span className="service-tag">script writing</span>
-                                                      <span className="service-tag">storyboard</span>
-                                                      <span className="service-tag">creative direction</span>
+                                                      <span className="service-tag">TVC's</span>
+                                                      <span className="service-tag">brand films</span>
+                                                      <span className="service-tag">explainer videos</span>
                           </div>
                         </div>
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/services" className="btn btn-accent">View Details</a>
+                                                  <a href="/television-commercials" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>

@@ -32,6 +32,7 @@ const ROUTES = [
   '/video-production-company-in-ahmedabad',
   '/end-to-end-production',
   '/digital-video-commercials',
+  '/television-commercials',
 ];
 
 export default async function sitemap() {
