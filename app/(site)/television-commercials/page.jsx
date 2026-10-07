@@ -1,23 +1,24 @@
 import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 
-const IMAGE = '/assets/images/male-video-editor-working-on-his-personal-computer-HQHD8ZL.jpg';
-const PATH = '/digital-video-commercials';
+const IMAGE = '/assets/images/film-industry-7ZLFY7L.jpg';
+const PATH = '/television-commercials';
 const DESCRIPTION =
-  'Create digital video commercials that capture attention through strategic storytelling, professional production, and platform-ready content.';
+  'Television commercials that turn brand stories into memorable ads — concept, TVC scriptwriting, casting, filming, editing, sound design and final delivery under one roof.';
 
 const FAQ = [
-  { q: 'What are digital video commercials?', a: 'Digital video commercials are advertising films created for online and digital platforms such as YouTube, social media, websites, OTT platforms, and digital advertising campaigns.' },
-  { q: 'What does a digital video commercial include?', a: 'A commercial can include concept development, scriptwriting, storyboarding, casting, production, cinematography, editing, sound design, colour grading, motion graphics, and final delivery.' },
-  { q: 'How long should a digital video commercial be?', a: 'There is no fixed duration. The ideal length depends on the platform, audience, campaign objective, and creative concept.' },
-  { q: 'Can you create commercials for Instagram and YouTube?', a: 'Yes. We create commercial content in formats suitable for Instagram, YouTube, Facebook, websites, and other digital channels.' },
-  { q: 'Can one shoot produce multiple commercial formats?', a: 'Yes. A production can be planned to create multiple versions, including horizontal, vertical, square, short-form, teaser, and cut-down edits.' },
-  { q: 'Do you provide scriptwriting and creative direction?', a: 'Yes. Our team can manage concept development, creative direction, scriptwriting, and storyboarding before production begins.' },
-  { q: 'How much does a digital video commercial cost?', a: 'The cost depends on factors such as concept complexity, cast, locations, production days, crew, equipment, visual effects, and post-production requirements. We provide project-specific estimates based on your brief.' },
+  { q: 'What is a television commercial?', a: 'A television commercial, or TVC, is a short advertising film created to promote a brand, product, service, or campaign through television.' },
+  { q: 'What does TVC stand for?', a: 'TVC stands for Television Commercial.' },
+  { q: 'What types of television commercials does AdEtc Studios produce?', a: 'We create brand commercials, product advertisements, FMCG commercials, promotional TVCs, regional and multilingual commercials, and campaign films for television and digital platforms.' },
+  { q: 'How long is a television commercial?', a: 'Common commercial durations include 10, 20, 30, and 60 seconds. The ideal duration depends on the creative concept, campaign objective, and media requirements.' },
+  { q: 'Do you provide TVC scriptwriting and creative direction?', a: 'Yes. Our team manages concept development, creative direction, scriptwriting, storyboarding, and the complete production process.' },
+  { q: 'Can a television commercial be used on digital platforms?', a: 'Yes. A television commercial can be adapted into different versions for YouTube, OTT, Instagram, Facebook, websites, and digital advertising campaigns.' },
+  { q: 'How much does television commercial production cost?', a: 'Production costs depend on the concept, cast, locations, production scale, shoot duration, crew, equipment, VFX, and post-production requirements. We provide project-specific estimates based on your brief.' },
+  { q: 'How long does TVC production take?', a: 'The timeline depends on the complexity of the concept, approvals, casting, pre-production, filming, and post-production. A production schedule is established before the shoot.' },
 ];
 
 export const metadata = pageMetadata({
-  title: 'Digital Video Commercials',
+  title: 'Television Commercials',
   description: DESCRIPTION,
   path: PATH,
   image: IMAGE,
@@ -29,8 +30,8 @@ export default function Page() {
       <JsonLd
         data={[
           serviceLd({
-            name: 'Digital Video Commercials',
-            serviceType: 'Digital Video Commercials',
+            name: 'Television Commercials',
+            serviceType: 'Television Commercial Production',
             description: DESCRIPTION,
             image: IMAGE,
             path: PATH,
@@ -39,7 +40,7 @@ export default function Page() {
           breadcrumbLd([
             { name: 'Home', path: '/' },
             { name: 'Services', path: '/services' },
-            { name: 'Digital Video Commercials', path: PATH },
+            { name: 'Television Commercials', path: PATH },
           ]),
           faqLd(FAQ),
         ]}
@@ -49,13 +50,13 @@ export default function Page() {
       <div className="banner-overlay"></div>
     <div className="hero-container">
       <div className="banner-inner-container">
-              <h1>Digital Video Commercials</h1>
+              <h1>Television Commercials</h1>
         <nav className="breadcrumb">
                   <a href="/" className="breadcrumb-item">Home</a>
                   <span className="separator">/</span>
                   <a href="/services" className="breadcrumb-item">Services</a>
                   <span className="separator">/</span>
-                  <span className="breadcrumb-item current">Digital Video Commercials</span>
+                  <span className="breadcrumb-item current">Television Commercials</span>
         </nav>
       </div>
     </div>
@@ -65,16 +66,16 @@ export default function Page() {
     <div className="hero-container">
       <div className="service-detail-content-container">
         <div className="heading-container">
-                    <h2>Digital Video Commercials That Capture Attention and Drive Action</h2>
+                    <h2>Television Commercials That Turn Brand Stories Into Memorable Ads</h2>
               </div>
         <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="d-flex flex-column gspace-3">
               <div className="d-flex flex-column gspace-2">
-                    <p>Your brand has seconds to make an impression online.</p>
-                    <p>At AdEtc Studios, we create digital video commercials that combine creative storytelling, cinematic production, and platform-focused execution to help brands communicate their message and connect with audiences. From concept development and scripting to filming, editing, sound design, and final delivery, we manage the complete production process under one roof.</p>
-                    <p>Whether you're launching a product, promoting a service, building brand awareness, or running a digital campaign, we create commercials designed for the way audiences watch, scroll, and engage today.</p>
-                    <p className="mb-0">Ready to turn your idea into a commercial people remember?</p>
+                    <p>A great television commercial does more than promote a product. It captures attention, communicates a clear message, and creates a memorable connection with the audience.</p>
+                    <p>At AdEtc Studios, we create television commercials that combine strategic storytelling, creative direction, and cinematic production to help brands communicate with impact. From concept development and TVC scriptwriting to casting, filming, editing, sound design, and final delivery, we manage the complete production process under one roof.</p>
+                    <p>Whether you're launching a product, introducing a new campaign, building brand awareness, or promoting a service, we create commercials tailored to your brand, audience, and communication goals.</p>
+                    <p className="mb-0">Ready to bring your advertising idea to life?</p>
                 <div>
                     <a href="/contact" className="btn btn-accent">
                                       <i className="fa-solid fa-calendar-check"></i>
@@ -86,7 +87,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="image-container service-detail-image">
-                          <img src={IMAGE} alt="Editor working on a digital video commercial at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
+                          <img src={IMAGE} alt="Television commercial shoot in progress at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
             </div>
           </div>
         </div>
@@ -118,68 +119,37 @@ export default function Page() {
               <div className="service-detail-pane">
                 <div className="service-title-wrapper service-title-wrapper-left">
                   <div className="service-title-heading">
-                            <h2>Why Choose AdEtc Studios for Digital Video Commercials?</h2>
+                            <h2>Why Choose AdEtc Studios for Television Commercials?</h2>
                   </div>
                   <div className="service-title-description">
-                            <p>A digital commercial needs more than attractive visuals. It needs a strong idea, a clear message, and creative execution that works for the platform where your audience sees it.</p>
-                            <p>At AdEtc Studios, we combine creative direction, production expertise, and marketing understanding to create commercials that support your campaign objectives.</p>
-                            <p>From the first creative discussion to the final export, our team manages the complete workflow from concept development and scripting to filming, editing, colour grading, sound design, and post-production.</p>
-                            <p className="mb-0">We also consider where the commercial will be used, whether it's YouTube, Instagram, Facebook, websites, OTT platforms, or digital advertising campaigns.</p>
+                            <p>A successful television commercial needs more than high-quality visuals. It needs a strong creative idea, compelling storytelling, clear messaging, and professional execution.</p>
+                            <p>At AdEtc Studios, we combine creative direction, production expertise, and technical capabilities to create commercials that represent your brand and communicate your message effectively.</p>
+                            <p>From the initial concept to the final commercial, our team manages the complete production journey, including scripting, casting, pre-production, filming, editing, colour grading, sound design, and post-production.</p>
+                            <p className="mb-0">We also plan commercials with their broader campaign requirements in mind, allowing the final film to be adapted for digital platforms, social media, YouTube, OTT, and other marketing channels where required.</p>
                   </div>
                 </div>
                 <div className="d-flex flex-column gspace-3">
                   <div className="d-flex flex-column gspace-2">
-                            <h3>Platform-Specific Commercial Production</h3>
-                            <p>A commercial created for television doesn't always work the same way on a social media feed.</p>
-                            <p>Digital platforms require brands to consider attention, aspect ratio, pacing, sound, captions, duration, and viewing behaviour from the beginning.</p>
-                            <p>That's why we consider the intended platform during the creative and production stages rather than simply resizing the finished video afterward.</p>
-                            <p className="mb-0">Depending on your campaign, we can create:</p>
-                    <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
-                      <div className="col">
-                        <ul className="service-detail-list">
-                                  <li>16:9 YouTube commercials</li>
-                                  <li>9:16 vertical ads</li>
-                                  <li>1:1 social media videos</li>
-                                  <li>Short cut-downs</li>
-                        </ul>
-                      </div>
-                      <div className="col">
-                        <ul className="service-detail-list">
-                                  <li>Teaser edits</li>
-                                  <li>Product-focused versions</li>
-                                  <li>Multiple campaign variations</li>
-                        </ul>
-                      </div>
-                    </div>
-                    <p className="mb-0">This allows one production to generate a wider range of commercial assets for different digital touchpoints.</p>
-                  </div>
-                </div>
-                <div className="d-flex flex-column gspace-3">
-                  <div className="d-flex flex-column gspace-2">
-                            <h3>Industries We Create Digital Commercials For</h3>
+                            <h3>Industries We Create Television Commercials For</h3>
                             <p>Our production approach can be adapted to different industries, audiences, and campaign objectives.</p>
-                            <p className="mb-0">We create commercial content for:</p>
+                            <p className="mb-0">We create commercials for:</p>
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
                       <div className="col">
                         <ul className="dot-list">
-                                  <li><p>FMCG &amp; Consumer Brands</p></li>
-                                  <li><p>Food &amp; Beverage</p></li>
-                                  <li><p>Fashion &amp; Lifestyle</p></li>
-                                  <li><p>Jewellery &amp; Luxury</p></li>
                                   <li><p>Real Estate</p></li>
+                                  <li><p>Healthcare</p></li>
+                                  <li><p>Automotive</p></li>
                         </ul>
                       </div>
                       <div className="col">
                         <ul className="dot-list">
-                                  <li><p>Healthcare</p></li>
+                                  <li><p>Manufacturing</p></li>
                                   <li><p>Technology &amp; Startups</p></li>
                                   <li><p>Retail &amp; E-commerce</p></li>
-                                  <li><p>Hospitality</p></li>
-                                  <li><p>Corporate Enterprises</p></li>
                         </ul>
                       </div>
                     </div>
-                            <p className="mb-0">Whether you're launching a product, promoting a service, introducing a new brand, or running a seasonal campaign, we develop the visual approach around your audience and objective.</p>
+                            <p className="mb-0">Whether you're launching a product, entering a new market, promoting a service, or building long-term brand awareness, we develop the commercial around your audience and communication goals.</p>
                   </div>
                 </div>
                 <div className="d-flex flex-column gspace-3">
@@ -193,7 +163,7 @@ export default function Page() {
                                     <i className="fa-solid fa-circle accent-color"></i>
                                     <h5>Creative-First Storytelling</h5>
                         </div>
-                                  <p>We start with the idea, not the equipment. Every production decision is designed to support the story and campaign objective.</p>
+                                  <p>We begin with the idea and the message. Every creative decision is designed to support your campaign objective and make the commercial memorable.</p>
                       </div>
                     </div>
                     <div className="col">
@@ -202,7 +172,7 @@ export default function Page() {
                                     <i className="fa-solid fa-circle accent-color"></i>
                                     <h5>End-to-End Production</h5>
                         </div>
-                                  <p>From concept and script to filming, editing, sound, and delivery, everything is managed through one experienced production team.</p>
+                                  <p>From concept and scriptwriting to filming, editing, sound, and final delivery, our team manages the complete production journey.</p>
                       </div>
                     </div>
                     <div className="col">
@@ -211,16 +181,7 @@ export default function Page() {
                                     <i className="fa-solid fa-circle accent-color"></i>
                                     <h5>Cinematic Visuals</h5>
                         </div>
-                                  <p>Our team focuses on cinematography, lighting, composition, movement, and visual details that make every commercial polished and professional.</p>
-                      </div>
-                    </div>
-                    <div className="col">
-                      <div className="card card-service-detail-include">
-                        <div className="d-flex flex-row align-items-center gspace-1">
-                                    <i className="fa-solid fa-circle accent-color"></i>
-                                    <h5>Platform-Aware Execution</h5>
-                        </div>
-                                  <p>We consider how and where the commercial will be consumed, helping us create content suited to different digital viewing environments.</p>
+                                  <p>We focus on cinematography, lighting, composition, production design, and visual details to create polished advertising films.</p>
                       </div>
                     </div>
                     <div className="col">
@@ -229,7 +190,16 @@ export default function Page() {
                                     <i className="fa-solid fa-circle accent-color"></i>
                                     <h5>Experienced Creative &amp; Technical Team</h5>
                         </div>
-                                  <p>Our creative and production teams work together to manage both the storytelling and technical aspects of the project.</p>
+                                  <p>Our creative and technical teams work together to manage both the storytelling and production requirements of every project.</p>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="card card-service-detail-include">
+                        <div className="d-flex flex-row align-items-center gspace-1">
+                                    <i className="fa-solid fa-circle accent-color"></i>
+                                    <h5>TV &amp; Digital Adaptability</h5>
+                        </div>
+                                  <p>We create commercials that can be adapted into suitable versions for television, OTT, YouTube, social media, and other digital platforms.</p>
                       </div>
                     </div>
                     <div className="col">
@@ -238,7 +208,7 @@ export default function Page() {
                                     <i className="fa-solid fa-circle accent-color"></i>
                                     <h5>Focus on Brand &amp; Business Objectives</h5>
                         </div>
-                                  <p>We don't create visuals for the sake of visuals. Every creative decision is aligned with your brand message, audience, and campaign goals.</p>
+                                  <p>Every commercial is created with your brand, audience, communication goals, and campaign objectives in mind—not just visual appeal.</p>
                       </div>
                     </div>
                   </div>
@@ -250,10 +220,10 @@ export default function Page() {
               <div className="service-detail-pane">
                 <div className="service-title-wrapper service-title-wrapper-left">
                   <div className="service-title-heading">
-                            <h2>Professional Digital Video Commercials in Ahmedabad</h2>
+                            <h2>Professional Television Commercial Production Services</h2>
                   </div>
                   <div className="service-title-description">
-                            <p className="mb-0">As a full-service production studio, we create commercial videos for brands that need compelling visual communication across digital platforms.</p>
+                            <p className="mb-0">We create television commercials for different brands, products, industries, and campaign objectives.</p>
                   </div>
                 </div>
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
@@ -261,80 +231,107 @@ export default function Page() {
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Brand Commercials</h5>
+                                  <h5>Brand Television Commercials</h5>
                       </div>
-                                <p>Tell your brand story through a commercial that communicates your identity, positioning, values, and message. We combine cinematic visuals with strategic storytelling to create memorable brand communication.</p>
+                                <p>Communicate your brand identity, positioning, values, and story through a memorable commercial. We combine visual storytelling with creative direction to create advertising films that strengthen brand recognition.</p>
                     </div>
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Product Commercials</h5>
+                                  <h5>Product Television Commercials</h5>
                       </div>
-                                <p>Showcase your product through engaging visuals, product demonstrations, lifestyle storytelling, and creative concepts designed to capture attention and communicate value.</p>
+                                <p>Showcase your product through compelling visuals, product demonstrations, lifestyle situations, and creative storytelling that communicates its value to the audience.</p>
                     </div>
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Social Media Commercials</h5>
+                                  <h5>FMCG Commercials</h5>
                       </div>
-                                <p>Create short-form commercial content designed for fast-moving social feeds. We focus on strong hooks, concise messaging, engaging visuals, and platform-friendly pacing.</p>
+                                <p>Create engaging advertising films for consumer brands with relatable storytelling, strong product integration, and memorable creative concepts designed for mass audiences.</p>
                     </div>
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>YouTube Video Ads</h5>
+                                  <h5>Promotional Television Commercials</h5>
                       </div>
-                                <p>Create commercials for YouTube campaigns with storytelling, editing, and formats suited to online viewing. We can develop different versions and durations based on campaign requirements.</p>
+                                <p>Promote a new product, service, offer, event, or campaign with a commercial that delivers your key message clearly while maintaining your brand identity.</p>
                     </div>
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Promotional Commercials</h5>
+                                  <h5>Regional &amp; Multilingual Commercials</h5>
                       </div>
-                                <p>Whether you're launching an offer, service, event, or new product, we create promotional videos that combine clear messaging with compelling visuals.</p>
+                                <p>Reach different audiences with commercials adapted for regional markets and languages while maintaining the core creative idea and visual identity of the campaign.</p>
                     </div>
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
                       <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Digital Campaign Films</h5>
+                                  <h5>TV &amp; Digital Campaign Films</h5>
                       </div>
-                                <p>For larger campaigns, we develop commercial films that can serve as the creative foundation for multiple digital assets, including cut-downs, teasers, social versions, and campaign edits.</p>
+                                <p>Create a master commercial that can be adapted into multiple campaign assets, including television versions, digital cut-downs, social media edits, teasers, and promotional content.</p>
                     </div>
                   </div>
                 </div>
                 <div className="d-flex flex-column gspace-3">
                   <div className="d-flex flex-column gspace-2">
-                            <h3>End-to-End Digital Commercial Production Services</h3>
-                            <p className="mb-0">From the first idea to the final commercial, AdEtc Studios manages the complete production journey under one roof.</p>
+                            <h3>End-to-End TVC Production Services</h3>
+                            <p className="mb-0">From the first creative idea to the final commercial, AdEtc Studios manages the complete production journey.</p>
                   </div>
                   <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
                       <div className="col">
                         <ul className="service-detail-list">
-                                  <li>Creative Concept &amp; Strategy</li>
-                                  <li>Scriptwriting &amp; Storyboarding</li>
-                                  <li>Pre-Production &amp; Planning</li>
-                                  <li>Professional Filming &amp; Cinematography</li>
+                                  <li>Creative Concept &amp; TVC Strategy</li>
+                                  <li>TVC Scriptwriting &amp; Storyboarding</li>
+                                  <li>Casting, Locations &amp; Pre-Production</li>
+                                  <li>Professional Filming &amp; Direction</li>
                         </ul>
                       </div>
                       <div className="col">
                         <ul className="service-detail-list">
-                                  <li>Video Editing &amp; Motion Graphics</li>
+                                  <li>Editing, VFX &amp; Motion Graphics</li>
                                   <li>Colour Grading &amp; Sound Design</li>
-                                  <li>Post-Production &amp; Final Delivery</li>
+                                  <li>Final Delivery &amp; Digital Adaptation</li>
                         </ul>
                       </div>
                   </div>
-                  <p className="mb-0">With one experienced team managing the complete process, you don't have to coordinate with multiple vendors for creative development, filming, editing, and post-production.</p>
+                  <p className="mb-0">With one experienced team managing every stage, you get a consistent creative and production experience from concept to final delivery.</p>
+                </div>
+                <div className="d-flex flex-column gspace-3">
+                  <div className="d-flex flex-column gspace-2">
+                            <h3>Television Commercial Production for TV &amp; Digital</h3>
+                            <p>A television commercial can become more than a single broadcast asset.</p>
+                            <p>With the right production approach, the master commercial can be adapted into multiple formats for different campaign touchpoints, including:</p>
+                  </div>
+                  <div className="row row-cols-lg-2 row-cols-1 grid-spacer-1">
+                      <div className="col">
+                        <ul className="service-detail-list">
+                                  <li>Television</li>
+                                  <li>YouTube</li>
+                                  <li>OTT platforms</li>
+                                  <li>Instagram</li>
+                        </ul>
+                      </div>
+                      <div className="col">
+                        <ul className="service-detail-list">
+                                  <li>Facebook</li>
+                                  <li>Websites</li>
+                                  <li>Digital advertising</li>
+                                  <li>Short-form social content</li>
+                        </ul>
+                      </div>
+                  </div>
+                  <p>We consider these requirements during production so that the commercial can be adapted without losing its core creative message.</p>
+                  <p className="mb-0">Depending on the platform, we can develop different durations, aspect ratios, cut-downs, teasers, and campaign versions.</p>
                 </div>
               </div>
             </div>
@@ -343,10 +340,10 @@ export default function Page() {
               <div className="service-detail-pane">
                 <div className="service-title-wrapper service-title-wrapper-left">
                   <div className="service-title-heading">
-                            <h2>Our Digital Video Commercial Production Process</h2>
+                            <h2>Our Television Commercial Production Process</h2>
                   </div>
                   <div className="service-title-description">
-                            <p className="mb-0">Creating an effective commercial starts long before the camera starts rolling. Our structured process keeps the creative direction, production requirements, and business objectives aligned.</p>
+                            <p className="mb-0">Creating a memorable television commercial requires a structured process that keeps the creative idea, production, and campaign objectives aligned.</p>
                   </div>
                 </div>
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
@@ -358,7 +355,7 @@ export default function Page() {
                                   <i className="fa-solid fa-circle accent-color"></i>
                                   <h5>Discovery &amp; Strategy</h5>
                         </div>
-                                <p className="mb-0">We begin by understanding your brand, target audience, campaign objective, key message, and distribution platforms. This helps us establish the right creative direction for the commercial.</p>
+                                <p className="mb-0">We begin by understanding your brand, audience, campaign objective, key message, and communication requirements. This helps establish the creative direction for the commercial.</p>
                       </div>
                     </div>
                   </div>
@@ -370,7 +367,7 @@ export default function Page() {
                                   <i className="fa-solid fa-circle accent-color"></i>
                                   <h5>Concept Development</h5>
                         </div>
-                                <p className="mb-0">Our creative team develops concepts around your campaign objective. We explore the story, visual direction, tone, product integration, and overall creative approach.</p>
+                                <p className="mb-0">Our creative team develops concepts based on your campaign goals. We explore the story, visual style, tone, characters, product integration, and overall creative approach.</p>
                       </div>
                     </div>
                   </div>
@@ -380,9 +377,9 @@ export default function Page() {
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Scriptwriting &amp; Storyboarding</h5>
+                                  <h5>TVC Scriptwriting &amp; Storyboarding</h5>
                         </div>
-                                <p className="mb-0">Once the concept is approved, we develop the script and storyboard. This gives the production team a clear understanding of the scenes, dialogue, visuals, product moments, and key messaging.</p>
+                                <p className="mb-0">Once the concept is approved, we develop the TVC script and storyboard. This defines the narrative, dialogue, voice-over, visual sequences, product moments, and key messaging.</p>
                       </div>
                     </div>
                   </div>
@@ -392,9 +389,9 @@ export default function Page() {
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Pre-Production</h5>
+                                  <h5>Casting &amp; Pre-Production</h5>
                         </div>
-                                <p className="mb-0">We manage the practical details required to execute the concept, including casting, locations, props, wardrobe, crew planning, equipment, scheduling, and shot planning.</p>
+                                <p className="mb-0">We manage the planning required to bring the concept to life, including casting, location scouting, props, wardrobe, set requirements, crew planning, equipment, scheduling, and shot planning.</p>
                       </div>
                     </div>
                   </div>
@@ -404,9 +401,9 @@ export default function Page() {
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
                                   <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Production</h5>
+                                  <h5>Production &amp; Direction</h5>
                         </div>
-                                <p className="mb-0">Our production team brings the concept to life through professional cinematography, lighting, direction, sound, and performance. Every shot is planned around the creative direction and final platform requirements.</p>
+                                <p className="mb-0">Our production team brings the approved concept to life through professional direction, cinematography, lighting, sound, performances, and production design.</p>
                       </div>
                     </div>
                   </div>
@@ -418,7 +415,7 @@ export default function Page() {
                                   <i className="fa-solid fa-circle accent-color"></i>
                                   <h5>Editing &amp; Post-Production</h5>
                         </div>
-                                <p className="mb-0">The footage is shaped into the final commercial through editing, colour grading, sound design, motion graphics, and visual effects where required.</p>
+                                <p className="mb-0">The footage is shaped into the final commercial through editing, colour grading, sound design, music, motion graphics, VFX, and other finishing requirements.</p>
                       </div>
                     </div>
                   </div>
@@ -430,7 +427,7 @@ export default function Page() {
                                   <i className="fa-solid fa-circle accent-color"></i>
                                   <h5>Final Delivery</h5>
                         </div>
-                                <p className="mb-0">We prepare the completed commercial according to the specifications of your campaign, including the required aspect ratios, durations, and platform-ready versions.</p>
+                                <p className="mb-0">Once approved, we prepare the final commercial according to the required delivery specifications. Where needed, we can also create shorter versions and adaptations for digital platforms.</p>
                       </div>
                     </div>
                   </div>
@@ -445,77 +442,87 @@ export default function Page() {
                             <h2>Frequently Asked Questions</h2>
                   </div>
                   <div className="service-title-description">
-                            <p className="mb-0">Got questions about our digital video commercials? These answers cover formats, timelines, deliverables, and costs so you can plan your next campaign with confidence.</p>
+                            <p className="mb-0">Got questions about television commercial production? These answers cover formats, timelines, deliverables, and costs so you can plan your campaign with confidence.</p>
                   </div>
                 </div>
                 <div className="accordion" id="faqAccordion">
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What are digital video commercials?</button>
+                              <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">What is a television commercial?</button>
                     </h2>
                     <div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>Digital video commercials are advertising films created for online and digital platforms such as YouTube, social media, websites, OTT platforms, and digital advertising campaigns.</p>
+                                <p>A television commercial, or TVC, is a short advertising film created to promote a brand, product, service, or campaign through television.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What does a digital video commercial include?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">What does TVC stand for?</button>
                     </h2>
                     <div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>A commercial can include concept development, scriptwriting, storyboarding, casting, production, cinematography, editing, sound design, colour grading, motion graphics, and final delivery.</p>
+                                <p>TVC stands for Television Commercial.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">How long should a digital video commercial be?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What types of television commercials does AdEtc Studios produce?</button>
                     </h2>
                     <div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>There is no fixed duration. The ideal length depends on the platform, audience, campaign objective, and creative concept.</p>
+                                <p>We create brand commercials, product advertisements, FMCG commercials, promotional TVCs, regional and multilingual commercials, and campaign films for television and digital platforms.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Can you create commercials for Instagram and YouTube?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">How long is a television commercial?</button>
                     </h2>
                     <div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>Yes. We create commercial content in formats suitable for Instagram, YouTube, Facebook, websites, and other digital channels.</p>
+                                <p>Common commercial durations include 10, 20, 30, and 60 seconds. The ideal duration depends on the creative concept, campaign objective, and media requirements.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Can one shoot produce multiple commercial formats?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">Do you provide TVC scriptwriting and creative direction?</button>
                     </h2>
                     <div id="faq5" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>Yes. A production can be planned to create multiple versions, including horizontal, vertical, square, short-form, teaser, and cut-down edits.</p>
+                                <p>Yes. Our team manages concept development, creative direction, scriptwriting, storyboarding, and the complete production process.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Do you provide scriptwriting and creative direction?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">Can a television commercial be used on digital platforms?</button>
                     </h2>
                     <div id="faq6" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>Yes. Our team can manage concept development, creative direction, scriptwriting, and storyboarding before production begins.</p>
+                                <p>Yes. A television commercial can be adapted into different versions for YouTube, OTT, Instagram, Facebook, websites, and digital advertising campaigns.</p>
                       </div>
                     </div>
                   </div>
                   <div className="accordion-item">
                     <h2 className="accordion-header faq-accordion-header">
-                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">How much does a digital video commercial cost?</button>
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">How much does television commercial production cost?</button>
                     </h2>
                     <div id="faq7" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                       <div className="accordion-body">
-                                <p>The cost depends on factors such as concept complexity, cast, locations, production days, crew, equipment, visual effects, and post-production requirements. We provide project-specific estimates based on your brief.</p>
+                                <p>Production costs depend on the concept, cast, locations, production scale, shoot duration, crew, equipment, VFX, and post-production requirements. We provide project-specific estimates based on your brief.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="accordion-item">
+                    <h2 className="accordion-header faq-accordion-header">
+                              <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">How long does TVC production take?</button>
+                    </h2>
+                    <div id="faq8" className="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                      <div className="accordion-body">
+                                <p>The timeline depends on the complexity of the concept, approvals, casting, pre-production, filming, and post-production. A production schedule is established before the shoot.</p>
                       </div>
                     </div>
                   </div>
@@ -531,12 +538,12 @@ export default function Page() {
           <div className="service-detail-sidebar">
             <div className="service-sidebar-card">
               <div className="image-container service-sidebar-image">
-                <img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Filming a digital video commercial at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
+                <img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Crew preparing a camera for a television commercial shoot" className="img-fluid" loading="lazy" decoding="async" />
               </div>
               <ul className="service-facts">
                 <li>
                   <span>Service</span>
-                  <p>Digital Video Commercials</p>
+                  <p>Television Commercials</p>
                 </li>
                 <li>
                   <span>Location</span>
@@ -544,17 +551,17 @@ export default function Page() {
                 </li>
                 <li>
                   <span>Typical Duration</span>
-                  <p>1 - 3 Weeks</p>
+                  <p>2 - 4 Weeks</p>
                 </li>
                 <li>
                   <span>Deliverables</span>
-                  <p>Platform-Ready Cutdowns &amp; Masters</p>
+                  <p>TV Masters &amp; Digital Adaptations</p>
                 </li>
               </ul>
             </div>
             <div className="service-sidebar-card service-sidebar-cta">
               <h4>Get Your Free Quote</h4>
-              <p className="mb-0">Tell us about your campaign and we'll craft a commercial that stops the scroll.</p>
+              <p className="mb-0">Tell us about your campaign and we'll craft a commercial your audience remembers.</p>
               <a href="/contact" className="btn btn-accent">Get a Quote</a>
               <a href="tel:+919727000197" className="btn btn-accent-primary">Call Now</a>
             </div>
@@ -562,9 +569,9 @@ export default function Page() {
               <h4>Related Services</h4>
               <ul className="related-service-list">
                 <li><a href="/ad-film-makers-in-ahmedabad">Ad Films <i className="fa-solid fa-arrow-right"></i></a></li>
+                <li><a href="/digital-video-commercials">Digital Video Commercials <i className="fa-solid fa-arrow-right"></i></a></li>
                 <li><a href="/end-to-end-production">End-to-End Production <i className="fa-solid fa-arrow-right"></i></a></li>
                 <li><a href="/video-production-company-in-ahmedabad">Corporate Videos <i className="fa-solid fa-arrow-right"></i></a></li>
-                <li><a href="/television-commercials">TVC's <i className="fa-solid fa-arrow-right"></i></a></li>
                 <li><a href="/services">Brand Films <i className="fa-solid fa-arrow-right"></i></a></li>
               </ul>
             </div>
@@ -578,11 +585,11 @@ export default function Page() {
     <div className="hero-container">
       <div className="contact-cta-banner">
         <div className="contact-cta-title-container">
-                  <h2 className="contact-cta-title heading-fill">Let's Create a Commercial Your Audience Remembers</h2>
-                  <h2 className="contact-cta-title heading-stroke">Let's Create a Commercial Your Audience Remembers</h2>
+                  <h2 className="contact-cta-title heading-fill">Let's Create a Television Commercial Your Audience Remembers</h2>
+                  <h2 className="contact-cta-title heading-stroke">Let's Create a Television Commercial Your Audience Remembers</h2>
         </div>
         <div className="contact-cta-text-container">
-                  <p>Your audience is scrolling, watching, comparing, and making decisions every day. Make those few seconds count. At AdEtc Studios, we combine strategic thinking, creative storytelling, and professional production to create digital commercials that help brands communicate with impact. Whether you have a fully developed campaign or just an initial idea, our team can take it from concept to final commercial.</p>
+                  <p>A memorable television commercial doesn't just sell a product. It builds recognition, creates emotion, and gives audiences a reason to remember your brand. At AdEtc Studios, we combine strategic thinking, creative storytelling, and professional filmmaking to turn advertising ideas into compelling television commercials. Whether you have a complete campaign brief or an idea that needs to be developed, our team can take it from concept to final commercial.</p>
           <div>
                       <a href="/contact" className="btn btn-accent-primary">Book a Discovery Call</a>
           </div>
