@@ -801,11 +801,27 @@ export default function Page() {
     <div className="hero-container overflow-hidden">
       <div className="partners-container">
               <h5 className="partnership-title-content">Trusted by Industry Leaders & Creative Brands</h5>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '42px', flexWrap: 'wrap' }}>
-            <img src="/assets/images/aryaman.jpeg" alt="Partner" className="trusted-client-logo" style={{ maxHeight: '50px' }} />
-            <img src="/assets/images/concept.png" alt="Partner" className="trusted-client-logo" style={{ maxHeight: '40px' }} />
-            <img src="/assets/images/zero.png" alt="Partner" className="trusted-client-logo" style={{ maxHeight: '72px' }} />
+        <div className="overflow-hidden">
+          <div className="swiper swiperpartner partner-marquee">
+            <div className="swiper-wrapper">
+              <div className="swiper-slide"><img src="/assets/images/aryaman.jpeg" alt="Aryaman" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/concept.png" alt="Concept" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/zero.png" alt="Zero" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/pollie.png" alt="Pollie" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kadam.png" alt="Kadam" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/cslc.png" alt="CSLC" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/excellent.png" alt="Excellent" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kd.png" alt="KD" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/aryaman.jpeg" alt="Aryaman" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/concept.png" alt="Concept" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/zero.png" alt="Zero" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/pollie.png" alt="Pollie" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kadam.png" alt="Kadam" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/cslc.png" alt="CSLC" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/excellent.png" alt="Excellent" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kd.png" alt="KD" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+            </div>
+            <div className="swiper-pagination"></div>
           </div>
         </div>
       </div>

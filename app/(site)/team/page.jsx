@@ -139,18 +139,22 @@ export default function Page() {
         <div className="overflow-hidden">
           <div className="swiper swiperpartner partner-marquee">
             <div className="swiper-wrapper">
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-7.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-5.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-1.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-2.png" alt="Partner" className="partner-image" /></div>
-                          <div className="swiper-slide"><img src="/assets/images/Client-6.png" alt="Partner" className="partner-image" /></div>
+              <div className="swiper-slide"><img src="/assets/images/aryaman.jpeg" alt="Aryaman" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/concept.png" alt="Concept" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/zero.png" alt="Zero" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/pollie.png" alt="Pollie" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kadam.png" alt="Kadam" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/cslc.png" alt="CSLC" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/excellent.png" alt="Excellent" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kd.png" alt="KD" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/aryaman.jpeg" alt="Aryaman" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/concept.png" alt="Concept" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/zero.png" alt="Zero" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/pollie.png" alt="Pollie" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kadam.png" alt="Kadam" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/cslc.png" alt="CSLC" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/excellent.png" alt="Excellent" className="partner-image" style={{ maxHeight: '46px' }} /></div>
+              <div className="swiper-slide"><img src="/assets/images/kd.png" alt="KD" className="partner-image" style={{ maxHeight: '46px' }} /></div>
             </div>
                       <div className="swiper-pagination"></div>
           </div>
