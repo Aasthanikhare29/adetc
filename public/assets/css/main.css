@@ -689,13 +689,6 @@ ul{
     object-position: center center;
 }
 
-.core-service-image{
-    width: 40%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-}
-
 .testimonial-image{
     display: block;
     width: 60px;
@@ -2207,7 +2200,9 @@ ul{
     flex-wrap: wrap;
     gap: 23px 0px;
     align-items: flex-end;
-    align-self: flex-end;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 23. Service Style */
@@ -2659,6 +2654,17 @@ ul{
     background: var(--accent-color);
     color: var(--primary);
     border-color: var(--accent-color);
+}
+.blog-detail-sidebar a,
+.blog-detail-sidebar h4,
+.blog-detail-sidebar h5,
+.blog-detail-sidebar h6{
+    text-transform: none;
+    font-weight: 400;
+    letter-spacing: normal;
+}
+.blog-detail-sidebar a{
+    font-family: var(--font-family-2);
 }
 .blog-sidebar-social{
     display: flex;

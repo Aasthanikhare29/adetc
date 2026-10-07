@@ -33,7 +33,7 @@
         display: none;
     }
     .section-core-service{
-        padding: 120px 20px 515px 20px;
+        padding: 120px 20px 120px 20px;
     }
     .section-cta-contact{
         padding: 0px 20px 0px 20px;
@@ -122,14 +122,10 @@
     }
     .core-service-description{
         width: 72%;
-        align-self: flex-end;
+        align-self: center;
     }
     .core-service-card-container{
         width: 100%;
-    }
-    .core-service-image{
-        left: 51px;
-        width: 60%;
     }
     .service-title-wrapper .service-title-heading{
         width: 100%;
@@ -430,7 +426,7 @@
         margin-right: 33px;
     }
     .section-core-service{
-        padding: 120px 20px 263px 20px;
+        padding: 120px 20px 120px 20px;
     }
     .card-core-service{
         width: 100%;
@@ -450,13 +446,6 @@
     }
     .core-service-card-container{
         flex-direction: column;
-    }
-    .core-service-image{
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        max-width: 420px;
-        bottom: 20px;
     }
     .service-title-wrapper .service-title-heading,
     .service-title-wrapper .service-title-description,
