@@ -359,7 +359,6 @@ ul{
 }
 
 .card-core-service:nth-child(even){
-    margin-bottom: -46px;
     background-color: var(--accent-color);
 }
 
@@ -2199,10 +2198,14 @@ ul{
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 23px 0px;
-    align-items: flex-end;
+    align-items: stretch;
     align-self: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+.core-service-card-container .card-core-service{
+    margin-bottom: 0px;
 }
 
 /* 23. Service Style */
