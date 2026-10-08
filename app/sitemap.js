@@ -39,10 +39,10 @@ export default async function sitemap() {
   const [totalPages, slugPosts, pageSlugs] = await Promise.all([
     getTotalPages(), getSlugPosts(), getPublishedPageSlugs(),
   ]);
-  const now = new Date();
+  // ponytail: no lastModified on code routes/pages; a fake "now" every hour
+  // teaches Google to ignore lastmod. Posts use their real DB timestamp.
   const urls = ROUTES.map((path) => ({
     url: `${SITE.url}${path}`,
-    lastModified: now,
     changeFrequency: 'monthly',
     priority: path === '/' ? 1 : 0.7,
   }));
@@ -51,7 +51,6 @@ export default async function sitemap() {
   for (let p = 2; p <= totalPages; p += 1) {
     urls.push({
       url: `${SITE.url}/blog/page/${p}`,
-      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.5,
     });
@@ -61,7 +60,7 @@ export default async function sitemap() {
   for (const post of slugPosts) {
     urls.push({
       url: `${SITE.url}/blog/${post.slug}`,
-      lastModified: now,
+      lastModified: post.updatedAt || post.dateISO,
       changeFrequency: 'monthly',
       priority: 0.6,
     });
@@ -71,7 +70,6 @@ export default async function sitemap() {
   for (const slug of pageSlugs) {
     urls.push({
       url: `${SITE.url}/${slug}`,
-      lastModified: now,
       changeFrequency: 'monthly',
       priority: 0.6,
     });
