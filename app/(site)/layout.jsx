@@ -43,6 +43,16 @@ export default function RootLayout({ children }) {
           src="/assets/js/bundle.js"
           strategy="afterInteractive"
         />
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-4BD5EC8R4Z"
+          strategy="afterInteractive"
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-4BD5EC8R4Z');`}
+        </Script>
       </body>
     </html>
   );
