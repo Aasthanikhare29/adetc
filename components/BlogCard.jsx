@@ -4,9 +4,11 @@ export default function BlogCard({ post }) {
   return (
     <div className="col">
       <div className="card card-blog">
-        <div className="image-container blog-image">
-          <img src={post.image} alt={post.title} className="img-fluid" loading="lazy" decoding="async" />
-        </div>
+        {post.image && (
+          <div className="image-container blog-image">
+            <img src={post.image} alt={post.imageAlt || post.title} className="img-fluid" loading="lazy" decoding="async" />
+          </div>
+        )}
         <div className="card-blog-content">
           <div className="d-flex flex-row flex-wrap align-items-center justify-content-between gap-2">
             <div className="d-flex flex-row gspace-1 align-items-center">

@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useEffect, useRef, useState } from 'react';
+import { startTransition, useActionState, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -10,6 +10,7 @@ import Editor from './Editor';
 import FaqEditor from './FaqEditor';
 import SeoPanel from './SeoPanel';
 import RevisionList from './RevisionList';
+import PublishDateInput from './PublishDateInput';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -28,11 +29,18 @@ async function upload(file) {
   if (!res.ok) throw new Error(json.error || 'Upload failed');
   return json.url;
 }
-const toLocal = (iso) => (iso ? new Date(iso).toISOString().slice(0, 16) : '');
 
 export default function PostForm({ post, revisions }) {
   const router = useRouter();
   const [state, action, pending] = useActionState(savePost, {});
+  // Submit manually: React 19 auto-resets a <form action> after it runs, which snapped the
+  // Radix status <Select> back to its initial value (so the next save silently unpublished)
+  // and wiped unsaved uncontrolled fields when a save failed.
+  const submit = (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    startTransition(() => action(fd));
+  };
 
   const [title, setTitle] = useState(post?.title || '');
   const [slug, setSlug] = useState(post?.slug || '');
@@ -66,7 +74,7 @@ export default function PostForm({ post, revisions }) {
   const tagChips = tags.split(',').map((t) => t.trim()).filter(Boolean);
 
   return (
-    <form action={action} className="space-y-6">
+    <form onSubmit={submit} className="space-y-6">
       {post?.id && <input type="hidden" name="id" value={post.id} />}
       <input type="hidden" name="content_html" value={content} />
       <input type="hidden" name="image" value={cover} />
@@ -138,7 +146,7 @@ export default function PostForm({ post, revisions }) {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="published_at">Publish date</Label>
-                <Input id="published_at" name="published_at" type="datetime-local" defaultValue={toLocal(post?.published_at)} />
+                <PublishDateInput value={post?.published_at} />
               </div>
             </CardContent>
           </Card>

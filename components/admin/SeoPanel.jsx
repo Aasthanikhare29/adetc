@@ -104,123 +104,118 @@ export default function SeoPanel({ post, title, slug, content, coverAlt, excerpt
           </p>
         </div>
 
-        {tab === 'seo' && (
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="focus_keyword">Focus keyphrase</Label>
-              <Input id="focus_keyword" value={focusKeyword} onChange={(e) => setFocusKeyword(e.target.value)} placeholder="main keyword you want to rank for" />
+        {/* all tabs stay mounted (hidden, not unmounted) so their uncontrolled inputs always submit */}
+        <div className="space-y-4" hidden={tab !== 'seo'}>
+          <div className="space-y-2">
+            <Label htmlFor="focus_keyword">Focus keyphrase</Label>
+            <Input id="focus_keyword" value={focusKeyword} onChange={(e) => setFocusKeyword(e.target.value)} placeholder="main keyword you want to rank for" />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="secondary_keywords">Supporting keyphrases</Label>
+            <Input id="secondary_keywords" name="secondary_keywords" defaultValue={(post?.secondary_keywords || []).join(', ')} placeholder="comma, separated" />
+          </div>
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between">
+              <Label htmlFor="meta_title">SEO title</Label>
+              <CharCounter value={metaTitle} min={30} max={60} />
             </div>
-            <div className="space-y-2">
-              <Label htmlFor="secondary_keywords">Supporting keyphrases</Label>
-              <Input id="secondary_keywords" name="secondary_keywords" defaultValue={(post?.secondary_keywords || []).join(', ')} placeholder="comma, separated" />
+            <Input id="meta_title" value={metaTitle} onChange={(e) => setMetaTitle(e.target.value)} placeholder={title || 'Search title'} />
+          </div>
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between">
+              <Label htmlFor="meta_description">Meta description</Label>
+              <CharCounter value={metaDescription} min={120} max={160} />
             </div>
-            <div className="space-y-1.5">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="meta_title">SEO title</Label>
-                <CharCounter value={metaTitle} min={30} max={60} />
-              </div>
-              <Input id="meta_title" value={metaTitle} onChange={(e) => setMetaTitle(e.target.value)} placeholder={title || 'Search title'} />
-            </div>
-            <div className="space-y-1.5">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="meta_description">Meta description</Label>
-                <CharCounter value={metaDescription} min={120} max={160} />
-              </div>
-              <Textarea id="meta_description" value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} placeholder="Search snippet" />
-            </div>
+            <Textarea id="meta_description" value={metaDescription} onChange={(e) => setMetaDescription(e.target.value)} placeholder="Search snippet" />
+          </div>
 
-            <div className="rounded-lg border border-border">
-              <button
-                type="button"
-                onClick={() => setShowAnalysis((v) => !v)}
-                className="flex w-full items-center justify-between px-3 py-2 text-sm font-medium transition-colors duration-150 hover:bg-surface-hover"
-              >
-                <span className="flex items-center gap-2">{scoreDot(score)} Analysis ({score}/100)</span>
-                <ChevronDown className={cn('size-4 transition-transform duration-150', showAnalysis && 'rotate-180')} />
-              </button>
-              {showAnalysis && (
-                <div className="border-t border-border p-3">
-                  <SeoAnalysis
-                    title={title}
-                    slug={slug}
-                    contentHtml={content}
-                    metaTitle={metaTitle || title}
-                    metaDescription={metaDescription}
-                    focusKeyword={focusKeyword}
-                    featuredAlt={coverAlt}
-                  />
+          <div className="rounded-lg border border-border">
+            <button
+              type="button"
+              onClick={() => setShowAnalysis((v) => !v)}
+              className="flex w-full items-center justify-between px-3 py-2 text-sm font-medium transition-colors duration-150 hover:bg-surface-hover"
+            >
+              <span className="flex items-center gap-2">{scoreDot(score)} Analysis ({score}/100)</span>
+              <ChevronDown className={cn('size-4 transition-transform duration-150', showAnalysis && 'rotate-180')} />
+            </button>
+            {showAnalysis && (
+              <div className="border-t border-border p-3">
+                <SeoAnalysis
+                  title={title}
+                  slug={slug}
+                  contentHtml={content}
+                  metaTitle={metaTitle || title}
+                  metaDescription={metaDescription}
+                  focusKeyword={focusKeyword}
+                  featuredAlt={coverAlt}
+                />
+              </div>
+            )}
+          </div>
+        </div>
+
+        <div className="space-y-4" hidden={tab !== 'social'}>
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between">
+              <Label htmlFor="og_title">Social title</Label>
+              <CharCounter value={ogTitle} min={0} max={60} />
+            </div>
+            <Input id="og_title" value={ogTitle} onChange={(e) => setOgTitle(e.target.value)} placeholder={metaTitle || title} />
+          </div>
+          <div className="space-y-1.5">
+            <div className="flex items-center justify-between">
+              <Label htmlFor="og_description">Social description</Label>
+              <CharCounter value={ogDescription} min={0} max={110} />
+            </div>
+            <Textarea id="og_description" value={ogDescription} onChange={(e) => setOgDescription(e.target.value)} placeholder={metaDescription} />
+          </div>
+          <div className="space-y-2">
+            <Label>Social image</Label>
+            {/* preview card */}
+            <div className="overflow-hidden rounded-lg border border-border">
+              {ogImage ? (
+                <img src={ogImage} alt="" className="aspect-[1200/630] w-full object-cover" />
+              ) : (
+                <div className="flex aspect-[1200/630] items-center justify-center bg-surface-hover text-xs text-muted-foreground">
+                  1200×630 — falls back to featured image
                 </div>
               )}
+              <div className="p-2">
+                <p className="truncate text-xs uppercase text-muted-foreground">{DOMAIN}</p>
+                <p className="truncate text-sm font-medium">{ogTitle || metaTitle || title || 'Untitled'}</p>
+                <p className="line-clamp-1 text-xs text-muted-foreground">{ogDescription || metaDescription || excerpt}</p>
+              </div>
             </div>
+            <div className="flex gap-2">
+              <Button type="button" variant="secondary" size="sm" onClick={() => ogRef.current?.click()}>
+                <ImagePlus /> {ogImage ? 'Replace' : 'Upload'}
+              </Button>
+              {ogImage && <Button type="button" variant="ghost" size="sm" onClick={() => setOgImage('')}>Remove</Button>}
+            </div>
+            <input ref={ogRef} type="file" accept="image/*" hidden onChange={pickOg} />
+            <Input name="og_image_alt" defaultValue={post?.og_image_alt || ''} placeholder="Social image alt text" />
           </div>
-        )}
+        </div>
 
-        {tab === 'social' && (
-          <div className="space-y-4">
-            <div className="space-y-1.5">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="og_title">Social title</Label>
-                <CharCounter value={ogTitle} min={0} max={60} />
-              </div>
-              <Input id="og_title" value={ogTitle} onChange={(e) => setOgTitle(e.target.value)} placeholder={metaTitle || title} />
-            </div>
-            <div className="space-y-1.5">
-              <div className="flex items-center justify-between">
-                <Label htmlFor="og_description">Social description</Label>
-                <CharCounter value={ogDescription} min={0} max={110} />
-              </div>
-              <Textarea id="og_description" value={ogDescription} onChange={(e) => setOgDescription(e.target.value)} placeholder={metaDescription} />
-            </div>
-            <div className="space-y-2">
-              <Label>Social image</Label>
-              {/* preview card */}
-              <div className="overflow-hidden rounded-lg border border-border">
-                {ogImage ? (
-                  <img src={ogImage} alt="" className="aspect-[1200/630] w-full object-cover" />
-                ) : (
-                  <div className="flex aspect-[1200/630] items-center justify-center bg-surface-hover text-xs text-muted-foreground">
-                    1200×630 — falls back to featured image
-                  </div>
-                )}
-                <div className="p-2">
-                  <p className="truncate text-xs uppercase text-muted-foreground">{DOMAIN}</p>
-                  <p className="truncate text-sm font-medium">{ogTitle || metaTitle || title || 'Untitled'}</p>
-                  <p className="line-clamp-1 text-xs text-muted-foreground">{ogDescription || metaDescription || excerpt}</p>
-                </div>
-              </div>
-              <div className="flex gap-2">
-                <Button type="button" variant="secondary" size="sm" onClick={() => ogRef.current?.click()}>
-                  <ImagePlus /> {ogImage ? 'Replace' : 'Upload'}
-                </Button>
-                {ogImage && <Button type="button" variant="ghost" size="sm" onClick={() => setOgImage('')}>Remove</Button>}
-              </div>
-              <input ref={ogRef} type="file" accept="image/*" hidden onChange={pickOg} />
-              <Input name="og_image_alt" defaultValue={post?.og_image_alt || ''} placeholder="Social image alt text" />
-            </div>
+        <div className="space-y-4" hidden={tab !== 'advanced'}>
+          <div className="space-y-2">
+            <Label htmlFor="canonical">Canonical URL</Label>
+            <Input id="canonical" name="canonical" defaultValue={post?.canonical || ''} placeholder="leave blank = self" />
+            <p className="text-xs text-muted-foreground">Point elsewhere only when this content is republished from another URL.</p>
           </div>
-        )}
-
-        {tab === 'advanced' && (
-          <div className="space-y-4">
-            <div className="space-y-2">
-              <Label htmlFor="canonical">Canonical URL</Label>
-              <Input id="canonical" name="canonical" defaultValue={post?.canonical || ''} placeholder="leave blank = self" />
-              <p className="text-xs text-muted-foreground">Point elsewhere only when this content is republished from another URL.</p>
-            </div>
-            <div className="space-y-2">
-              <Label>Search engine visibility</Label>
-              <Select value={robots} onValueChange={setRobots}>
-                <SelectTrigger><SelectValue /></SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="index,follow">index, follow (default)</SelectItem>
-                  <SelectItem value="noindex,follow">noindex, follow</SelectItem>
-                  <SelectItem value="index,nofollow">index, nofollow</SelectItem>
-                  <SelectItem value="noindex,nofollow">noindex, nofollow</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
+          <div className="space-y-2">
+            <Label>Search engine visibility</Label>
+            <Select value={robots} onValueChange={setRobots}>
+              <SelectTrigger><SelectValue /></SelectTrigger>
+              <SelectContent>
+                <SelectItem value="index,follow">index, follow (default)</SelectItem>
+                <SelectItem value="noindex,follow">noindex, follow</SelectItem>
+                <SelectItem value="index,nofollow">index, nofollow</SelectItem>
+                <SelectItem value="noindex,nofollow">noindex, nofollow</SelectItem>
+              </SelectContent>
+            </Select>
           </div>
-        )}
+        </div>
       </CardContent>
     </Card>
   );

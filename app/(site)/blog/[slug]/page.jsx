@@ -1,5 +1,6 @@
-import { notFound } from 'next/navigation';
-import { getPostBySlug, getSlugPosts, getSettings, getPublishedPosts, postUrl } from '@/lib/blog-posts';
+import { notFound, permanentRedirect } from 'next/navigation';
+import { getPostBySlug, getSlugPosts, getSettings, getPublishedPosts, getRenamedSlug, postUrl } from '@/lib/blog-posts';
+import { cleanHtml } from '@/lib/sanitize';
 import { buildPostSchema, absUrl } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 import FaqAccordion from '@/components/FaqAccordion';
@@ -58,7 +59,11 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
   const { slug } = await params;
   const [post, settings] = await Promise.all([getPostBySlug(slug), getSettings()]);
-  if (!post) notFound();
+  if (!post) {
+    const renamed = await getRenamedSlug(slug);
+    if (renamed) permanentRedirect(`/blog/${renamed}`);
+    notFound();
+  }
 
   const allPosts = await getPublishedPosts();
   const categories = Array.from(new Set(allPosts.map((p) => p.category).filter(Boolean)));
@@ -125,9 +130,11 @@ export default async function Page({ params }) {
               )}
             </div>
 
-            <div className="image-container blog-image mb-4">
-              <img src={post.image} alt={post.imageAlt || post.title} className="img-fluid" decoding="async" />
-            </div>
+            {post.image && (
+              <div className="image-container blog-image mb-4">
+                <img src={post.image} alt={post.imageAlt || post.title} className="img-fluid" decoding="async" />
+              </div>
+            )}
 
             {post.tldr && (
               <div className="post-tldr mb-4">
@@ -136,7 +143,7 @@ export default async function Page({ params }) {
               </div>
             )}
 
-            <div className="post-body" dangerouslySetInnerHTML={{ __html: post.contentHtml || '' }} />
+            <div className="post-body" dangerouslySetInnerHTML={{ __html: cleanHtml(post.contentHtml) }} />
 
             {post.faq?.length > 0 && (
               <section className="post-faq mt-5">
@@ -173,9 +180,11 @@ export default async function Page({ params }) {
                   <ul className="blog-recent-list">
                     {related.map((p) => (
                       <li key={p.slug} className="blog-recent-item">
-                        <a href={postUrl(p)} className="blog-recent-thumb">
-                          <img src={p.image} alt={p.imageAlt || p.title} />
-                        </a>
+                        {p.image && (
+                          <a href={postUrl(p)} className="blog-recent-thumb">
+                            <img src={p.image} alt={p.imageAlt || p.title} />
+                          </a>
+                        )}
                         <div className="blog-recent-meta">
                           <a href={postUrl(p)}>{p.title}</a>
                           <span className="blog-recent-date">{p.date}</span>

@@ -103,9 +103,11 @@ export async function savePost(_prev, formData) {
   }
 
   let saved;
+  let oldSlug = null;
   if (id) {
     // snapshot the prior state (for rollback) if it was/goes published
     const { data: existing } = await supabase.from('posts').select('*').eq('id', id).maybeSingle();
+    oldSlug = existing?.slug;
     if (existing && (existing.status === 'published' || status === 'published')) {
       await supabase.from('post_revisions').insert({ post_id: id, snapshot: existing });
     }
@@ -131,6 +133,8 @@ export async function savePost(_prev, formData) {
   }
 
   revalidateBlog(saved?.slug);
+  // renamed: drop the cached old URL so it re-renders as a redirect (see getRenamedSlug)
+  if (oldSlug && oldSlug !== saved?.slug) revalidatePath(`/blog/${oldSlug}`);
   revalidatePath('/admin', 'layout');
   return { ok: true, id: saved?.id, slug: saved?.slug, status };
 }

@@ -2,7 +2,6 @@
 
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import Link from '@tiptap/extension-link';
 import Image from '@tiptap/extension-image';
 import { useRef } from 'react';
 import { toast } from 'sonner';
@@ -43,7 +42,8 @@ export default function Editor({ value, onChange }) {
 
   const editor = useEditor({
     immediatelyRender: false,
-    extensions: [StarterKit, Link.configure({ openOnClick: false }), Image],
+    // StarterKit v3 already bundles Link. No forced target/rel: lib/sanitize decides per link (internal = same tab).
+    extensions: [StarterKit.configure({ link: { openOnClick: false, HTMLAttributes: { target: null, rel: null } } }), Image],
     content: value || '',
     editorProps: { attributes: { class: 'px-4 py-3', 'data-placeholder': 'Write your post…' } },
     onUpdate: ({ editor }) => onChange(editor.getHTML()),
@@ -79,31 +79,33 @@ export default function Editor({ value, onChange }) {
     editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
   };
 
-  const c = editor.chain().focus();
+  // must stay lazy: focus() runs as soon as it's chained, so building it during render
+  // stole focus + scrolled to the editor on every form re-render (tags, slug, title…)
+  const c = () => editor.chain().focus();
 
   return (
     <div>
       <div className="flex flex-wrap items-center gap-0.5 border-b border-border p-1.5">
-        <Tb title="Bold" active={editor.isActive('bold')} onClick={() => c.toggleBold().run()}><Bold /></Tb>
-        <Tb title="Italic" active={editor.isActive('italic')} onClick={() => c.toggleItalic().run()}><Italic /></Tb>
-        <Tb title="Strikethrough" active={editor.isActive('strike')} onClick={() => c.toggleStrike().run()}><Strikethrough /></Tb>
+        <Tb title="Bold" active={editor.isActive('bold')} onClick={() => c().toggleBold().run()}><Bold /></Tb>
+        <Tb title="Italic" active={editor.isActive('italic')} onClick={() => c().toggleItalic().run()}><Italic /></Tb>
+        <Tb title="Strikethrough" active={editor.isActive('strike')} onClick={() => c().toggleStrike().run()}><Strikethrough /></Tb>
         <span className="mx-1 h-5 w-px bg-border" />
-        <Tb title="Heading 1" active={editor.isActive('heading', { level: 1 })} onClick={() => c.toggleHeading({ level: 1 }).run()}><Heading1 /></Tb>
-        <Tb title="Heading 2" active={editor.isActive('heading', { level: 2 })} onClick={() => c.toggleHeading({ level: 2 }).run()}><Heading2 /></Tb>
-        <Tb title="Heading 3" active={editor.isActive('heading', { level: 3 })} onClick={() => c.toggleHeading({ level: 3 }).run()}><Heading3 /></Tb>
+        <Tb title="Heading 1" active={editor.isActive('heading', { level: 1 })} onClick={() => c().toggleHeading({ level: 1 }).run()}><Heading1 /></Tb>
+        <Tb title="Heading 2" active={editor.isActive('heading', { level: 2 })} onClick={() => c().toggleHeading({ level: 2 }).run()}><Heading2 /></Tb>
+        <Tb title="Heading 3" active={editor.isActive('heading', { level: 3 })} onClick={() => c().toggleHeading({ level: 3 }).run()}><Heading3 /></Tb>
         <span className="mx-1 h-5 w-px bg-border" />
-        <Tb title="Bullet list" active={editor.isActive('bulletList')} onClick={() => c.toggleBulletList().run()}><List /></Tb>
-        <Tb title="Numbered list" active={editor.isActive('orderedList')} onClick={() => c.toggleOrderedList().run()}><ListOrdered /></Tb>
-        <Tb title="Quote" active={editor.isActive('blockquote')} onClick={() => c.toggleBlockquote().run()}><Quote /></Tb>
-        <Tb title="Code block" active={editor.isActive('codeBlock')} onClick={() => c.toggleCodeBlock().run()}><Code /></Tb>
-        <Tb title="Divider" onClick={() => c.setHorizontalRule().run()}><Minus /></Tb>
+        <Tb title="Bullet list" active={editor.isActive('bulletList')} onClick={() => c().toggleBulletList().run()}><List /></Tb>
+        <Tb title="Numbered list" active={editor.isActive('orderedList')} onClick={() => c().toggleOrderedList().run()}><ListOrdered /></Tb>
+        <Tb title="Quote" active={editor.isActive('blockquote')} onClick={() => c().toggleBlockquote().run()}><Quote /></Tb>
+        <Tb title="Code block" active={editor.isActive('codeBlock')} onClick={() => c().toggleCodeBlock().run()}><Code /></Tb>
+        <Tb title="Divider" onClick={() => c().setHorizontalRule().run()}><Minus /></Tb>
         <span className="mx-1 h-5 w-px bg-border" />
         <Tb title="Link" active={editor.isActive('link')} onClick={setLink}><Link2 /></Tb>
         <Tb title="Image" onClick={() => fileRef.current?.click()}><ImagePlus /></Tb>
         <Tb title="Edit image alt" active={editor.isActive('image')} onClick={editAlt}><ImageIcon /></Tb>
         <span className="mx-1 h-5 w-px bg-border" />
-        <Tb title="Undo" disabled={!editor.can().undo()} onClick={() => c.undo().run()}><Undo2 /></Tb>
-        <Tb title="Redo" disabled={!editor.can().redo()} onClick={() => c.redo().run()}><Redo2 /></Tb>
+        <Tb title="Undo" disabled={!editor.can().undo()} onClick={() => c().undo().run()}><Undo2 /></Tb>
+        <Tb title="Redo" disabled={!editor.can().redo()} onClick={() => c().redo().run()}><Redo2 /></Tb>
       </div>
       <EditorContent editor={editor} />
       <input ref={fileRef} type="file" accept="image/*" hidden onChange={insertImage} />
