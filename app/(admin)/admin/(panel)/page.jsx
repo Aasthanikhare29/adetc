@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import PageHeader from '@/components/admin/PageHeader';
+import { fmtDate } from '@/lib/utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -72,7 +73,7 @@ export default async function Dashboard() {
                       <div className="truncate font-medium">{m.name} {!m.handled && <Badge variant="info">new</Badge>}</div>
                       <div className="truncate text-xs text-muted-foreground">{m.subject || m.email}</div>
                     </div>
-                    <span className="shrink-0 text-xs text-muted-foreground">{new Date(m.created_at).toLocaleDateString()}</span>
+                    <span className="shrink-0 text-xs text-muted-foreground">{fmtDate(m.created_at)}</span>
                   </li>
                 ))}
               </ul>
@@ -93,7 +94,7 @@ export default async function Dashboard() {
                 {subscribers.slice(0, 5).map((s) => (
                   <li key={s.id} className="flex items-center gap-3 px-4 py-2.5">
                     <span className="flex-1 truncate">{s.email}</span>
-                    <span className="shrink-0 text-xs text-muted-foreground">{new Date(s.created_at).toLocaleDateString()}</span>
+                    <span className="shrink-0 text-xs text-muted-foreground">{fmtDate(s.created_at)}</span>
                   </li>
                 ))}
               </ul>
@@ -116,7 +117,7 @@ export default async function Dashboard() {
                 <li key={p.id} className="flex items-center gap-3 px-4 py-2.5 transition-colors duration-150 hover:bg-surface-hover">
                   <Link href={`/admin/posts/${p.id}`} className="flex-1 truncate font-medium hover:underline">{p.title}</Link>
                   <Badge variant={p.status === 'published' ? 'success' : 'neutral'}>{p.status}</Badge>
-                  <span className="text-xs text-muted-foreground">{new Date(p.updated_at).toLocaleDateString()}</span>
+                  <span className="text-xs text-muted-foreground">{fmtDate(p.updated_at)}</span>
                 </li>
               ))}
             </ul>
