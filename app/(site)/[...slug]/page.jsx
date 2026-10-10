@@ -8,6 +8,7 @@ import JsonLd from '@/components/JsonLd';
 // Serves DB-driven builder pages for any path NOT owned by an explicit route
 // (explicit routes like /about, /blog always take precedence).
 export const dynamicParams = true;
+export const revalidate = 600; // lets scheduled (future-dated) content go live without a redeploy
 
 export async function generateStaticParams() {
   const slugs = await getPublishedPageSlugs();

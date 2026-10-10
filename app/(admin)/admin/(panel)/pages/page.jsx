@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { Plus, Layers, Pencil } from 'lucide-react';
 import { serverClient } from '@/lib/supabase/server';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import StatusBadge from '@/components/admin/StatusBadge';
 import { Card } from '@/components/ui/card';
 import PageHeader from '@/components/admin/PageHeader';
 import PageActions from '@/components/admin/PageActions';
@@ -13,7 +13,7 @@ export default async function Pageslist() {
   const supabase = await serverClient();
   const { data: pages } = await supabase
     .from('pages')
-    .select('id,slug,title,status,updated_at,blocks')
+    .select('id,slug,title,status,published_at,updated_at,blocks')
     .order('updated_at', { ascending: false });
   const list = pages || [];
 
@@ -49,7 +49,7 @@ export default async function Pageslist() {
                       <p className="truncate text-xs text-muted-foreground">/{p.slug}</p>
                     </td>
                     <td className="px-3 py-2.5 text-center text-muted-foreground">{(p.blocks || []).length}</td>
-                    <td className="px-3 py-2.5"><Badge variant={p.status === 'published' ? 'success' : 'neutral'}>{p.status}</Badge></td>
+                    <td className="px-3 py-2.5"><StatusBadge status={p.status} publishedAt={p.published_at} /></td>
                     <td className="px-4 py-2.5">
                       <div className="flex items-center justify-end gap-1">
                         <Button asChild variant="ghost" size="icon" title="Edit">
