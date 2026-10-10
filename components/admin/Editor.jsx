@@ -3,11 +3,13 @@
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Image from '@tiptap/extension-image';
+import { TableKit } from '@tiptap/extension-table';
 import { useRef } from 'react';
 import { toast } from 'sonner';
 import {
   Bold, Italic, Strikethrough, Heading1, Heading2, Heading3,
   List, ListOrdered, Quote, Minus, Code, Link2, ImagePlus, Undo2, Redo2, Image as ImageIcon,
+  Table, BetweenHorizontalEnd, BetweenVerticalEnd, TableRowsSplit, Grid2x2X,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -42,8 +44,9 @@ export default function Editor({ value, onChange }) {
 
   const editor = useEditor({
     immediatelyRender: false,
+    shouldRerenderOnTransaction: true, // v3 default is false: toolbar active states + table buttons need selection updates
     // StarterKit v3 already bundles Link. No forced target/rel: lib/sanitize decides per link (internal = same tab).
-    extensions: [StarterKit.configure({ link: { openOnClick: false, HTMLAttributes: { target: null, rel: null } } }), Image],
+    extensions: [StarterKit.configure({ link: { openOnClick: false, HTMLAttributes: { target: null, rel: null } } }), Image, TableKit],
     content: value || '',
     editorProps: { attributes: { class: 'px-4 py-3', 'data-placeholder': 'Write your post…' } },
     onUpdate: ({ editor }) => onChange(editor.getHTML()),
@@ -99,6 +102,15 @@ export default function Editor({ value, onChange }) {
         <Tb title="Quote" active={editor.isActive('blockquote')} onClick={() => c().toggleBlockquote().run()}><Quote /></Tb>
         <Tb title="Code block" active={editor.isActive('codeBlock')} onClick={() => c().toggleCodeBlock().run()}><Code /></Tb>
         <Tb title="Divider" onClick={() => c().setHorizontalRule().run()}><Minus /></Tb>
+        <Tb title="Insert table" active={editor.isActive('table')} onClick={() => c().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}><Table /></Tb>
+        {editor.isActive('table') && (
+          <>
+            <Tb title="Add row below" onClick={() => c().addRowAfter().run()}><BetweenHorizontalEnd /></Tb>
+            <Tb title="Add column right" onClick={() => c().addColumnAfter().run()}><BetweenVerticalEnd /></Tb>
+            <Tb title="Delete row" onClick={() => c().deleteRow().run()}><TableRowsSplit /></Tb>
+            <Tb title="Delete table" onClick={() => c().deleteTable().run()}><Grid2x2X /></Tb>
+          </>
+        )}
         <span className="mx-1 h-5 w-px bg-border" />
         <Tb title="Link" active={editor.isActive('link')} onClick={setLink}><Link2 /></Tb>
         <Tb title="Image" onClick={() => fileRef.current?.click()}><ImagePlus /></Tb>

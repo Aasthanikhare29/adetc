@@ -9,6 +9,7 @@ import { Card } from '@/components/ui/card';
 import {
   Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter, DialogClose,
 } from '@/components/ui/dialog';
+import { fmtDate } from '@/lib/utils';
 
 export default function SubscribersPanel({ subscribers }) {
   const [pending, start] = useTransition();
@@ -47,7 +48,7 @@ export default function SubscribersPanel({ subscribers }) {
           {subscribers.map((s) => (
             <li key={s.id} className="flex items-center gap-3 px-4 py-2.5">
               <a href={`mailto:${s.email}`} className="flex-1 truncate hover:underline">{s.email}</a>
-              <span className="text-xs text-muted-foreground">{new Date(s.created_at).toLocaleDateString()}</span>
+              <span className="text-xs text-muted-foreground">{fmtDate(s.created_at)}</span>
               <Button variant="ghost" size="icon" onClick={() => setTarget(s)} title="Remove" aria-label="Remove">
                 <Trash2 className="text-destructive" />
               </Button>

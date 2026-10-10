@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import PageHeader from '@/components/admin/PageHeader';
 import MessageActions from '@/components/admin/MessageActions';
 import { Inbox } from 'lucide-react';
+import { fmtDateTime } from '@/lib/utils';
 
 export const dynamic = 'force-dynamic';
 
@@ -41,7 +42,7 @@ export default async function MessagesPage() {
                     </div>
                     {m.subject && <p className="mt-0.5 text-sm font-medium">{m.subject}</p>}
                     <p className="mt-1 whitespace-pre-wrap text-sm text-muted-foreground">{m.message}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{new Date(m.created_at).toLocaleString()}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{fmtDateTime(m.created_at)}</p>
                   </div>
                   <MessageActions id={m.id} handled={m.handled} />
                 </div>

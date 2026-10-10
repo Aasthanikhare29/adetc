@@ -141,6 +141,11 @@
   .admin-root .ProseMirror code { background: var(--muted); padding: 0.15em 0.35em; border-radius: 4px; font-size: 0.9em; }
   .admin-root .ProseMirror img { border-radius: var(--radius); margin: 0.5em 0; }
   .admin-root .ProseMirror a { color: var(--brand); text-decoration: underline; }
+  .admin-root .ProseMirror table { width: 100%; border-collapse: collapse; table-layout: fixed; }
+  .admin-root .ProseMirror th, .admin-root .ProseMirror td { border: 1px solid var(--border); padding: 0.4em 0.6em; vertical-align: top; }
+  .admin-root .ProseMirror th { background: var(--muted); font-weight: 600; text-align: left; }
+  .admin-root .ProseMirror td > p, .admin-root .ProseMirror th > p { margin: 0; }
+  .admin-root .ProseMirror .selectedCell { background: color-mix(in oklab, var(--brand) 12%, transparent); }
   .admin-root .ProseMirror p.is-editor-empty:first-child::before {
     content: attr(data-placeholder); color: var(--muted-foreground);
     float: left; height: 0; pointer-events: none;
