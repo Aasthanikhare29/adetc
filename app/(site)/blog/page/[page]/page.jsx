@@ -4,6 +4,7 @@ import { getFilteredPosts, getFilteredTotalPages, blogQuery } from '@/lib/blog-p
 import { notFound } from 'next/navigation';
 
 export const dynamicParams = true;
+export const revalidate = 600; // lets scheduled (future-dated) content go live without a redeploy
 
 export async function generateStaticParams() {
   const total = await getFilteredTotalPages();

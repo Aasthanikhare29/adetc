@@ -1,6 +1,6 @@
 'use client';
 
-import { startTransition, useActionState, useEffect, useState } from 'react';
+import { startTransition, useActionState, useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -9,6 +9,8 @@ import { savePage } from '@/app/(admin)/admin/actions';
 import BlockEditor from './BlockEditor';
 import SeoPanel from './SeoPanel';
 import PublishDateInput from './PublishDateInput';
+import { useUnsavedGuard } from './useUnsavedGuard';
+import { fmtDateTime } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -25,6 +27,8 @@ const richText = (blocks) => (blocks || []).filter((b) => b.type === 'richtext')
 export default function PageForm({ page }) {
   const router = useRouter();
   const [state, action, pending] = useActionState(savePage, {});
+  const formRef = useRef(null);
+  const markSaved = useUnsavedGuard(formRef);
   // Submit manually: React 19 auto-resets a <form action> after it runs, which snapped the
   // Radix status <Select> back to its initial value (so the next save silently unpublished)
   // and wiped unsaved uncontrolled fields when a save failed.
@@ -42,16 +46,19 @@ export default function PageForm({ page }) {
 
   useEffect(() => {
     if (state?.ok) {
-      toast.success(state.status === 'published' ? 'Published' : 'Saved');
+      const scheduled = state.status === 'published' && state.publishedAt && new Date(state.publishedAt) > new Date();
+      toast.success(scheduled ? `Scheduled for ${fmtDateTime(state.publishedAt)}` : state.status === 'published' ? 'Published' : 'Saved');
+      markSaved();
       if (!page && state.id) router.replace(`/admin/pages/${state.id}`);
       else router.refresh();
     } else if (state?.error) toast.error(state.error);
   }, [state]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const canView = page && status === 'published';
+  const isScheduled = page?.published_at && new Date(page.published_at) > new Date();
+  const canView = page && status === 'published' && !isScheduled;
 
   return (
-    <form onSubmit={submit} className="space-y-6">
+    <form ref={formRef} onSubmit={submit} className="space-y-6">
       {page?.id && <input type="hidden" name="id" value={page.id} />}
       <input type="hidden" name="status" value={status} />
       <input type="hidden" name="slug" value={slug} />

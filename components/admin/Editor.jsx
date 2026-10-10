@@ -12,15 +12,7 @@ import {
   Table, BetweenHorizontalEnd, BetweenVerticalEnd, TableRowsSplit, Grid2x2X,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
-async function uploadFile(file) {
-  const fd = new FormData();
-  fd.append('file', file);
-  const res = await fetch('/admin/api/upload', { method: 'POST', body: fd });
-  const json = await res.json();
-  if (!res.ok) throw new Error(json.error || 'Upload failed');
-  return json.url;
-}
+import { uploadImage } from './uploadImage';
 
 function Tb({ onClick, active, disabled, title, children }) {
   return (
@@ -59,7 +51,7 @@ export default function Editor({ value, onChange }) {
     e.target.value = '';
     if (!file) return;
     try {
-      const url = await uploadFile(file);
+      const url = await uploadImage(file);
       const alt = window.prompt('Image alt text (describe it for SEO + accessibility):') || '';
       editor.chain().focus().setImage({ src: url, alt }).run();
     } catch (err) {

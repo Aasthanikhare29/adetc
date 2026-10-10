@@ -3,7 +3,7 @@ import { Plus, FileText, Pencil } from 'lucide-react';
 import { serverClient } from '@/lib/supabase/server';
 import { segScores } from '@/lib/seo-score';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
+import StatusBadge from '@/components/admin/StatusBadge';
 import { Card } from '@/components/ui/card';
 import PostsFilterBar from '@/components/admin/PostsFilterBar';
 import PostActions from '@/components/admin/PostActions';
@@ -19,7 +19,7 @@ export default async function PostsPage({ searchParams }) {
   let query = supabase
     .from('posts')
     .select(
-      'id,slug,title,status,updated_at,image,href,meta_title,meta_description,focus_keyword,' +
+      'id,slug,title,status,published_at,updated_at,image,href,meta_title,meta_description,focus_keyword,' +
         'image_alt,secondary_keywords,tags,faq,tldr,content_html'
     )
     .order('updated_at', { ascending: false });
@@ -88,7 +88,7 @@ export default async function PostsPage({ searchParams }) {
                     <td className="px-1.5 py-2.5 text-center"><SegChip which="g" scores={p.scores} /></td>
                     <td className="px-1.5 py-2.5 text-center"><SegChip which="e" scores={p.scores} /></td>
                     <td className="px-3 py-2.5">
-                      <Badge variant={p.status === 'published' ? 'success' : 'neutral'}>{p.status}</Badge>
+                      <StatusBadge status={p.status} publishedAt={p.published_at} />
                     </td>
                     <td className="px-4 py-2.5">
                       <div className="flex items-center justify-end gap-1">

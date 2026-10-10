@@ -95,11 +95,14 @@ export async function savePost(_prev, formData) {
     tldr: stripTags(formData.get('tldr')),
   };
 
-  // optional manual publish date
+  // optional manual publish date (future + published = scheduled). Cleared on a draft = no date;
+  // a published post always keeps one (falls back to the existing date / now below).
   const pubInput = String(formData.get('published_at') || '').trim();
   if (pubInput) {
     const d = new Date(pubInput);
     if (!Number.isNaN(d.getTime())) row.published_at = d.toISOString();
+  } else if (status === 'draft') {
+    row.published_at = null;
   }
 
   let saved;
@@ -115,7 +118,7 @@ export async function savePost(_prev, formData) {
       row.published_at = new Date().toISOString();
     }
     const { data, error } = await supabase
-      .from('posts').update(row).eq('id', id).select('id,slug').maybeSingle();
+      .from('posts').update(row).eq('id', id).select('id,slug,published_at').maybeSingle();
     if (error) {
       if (error.code === '23505') return { error: 'That slug is already taken.' };
       return { error: error.message };
@@ -124,7 +127,7 @@ export async function savePost(_prev, formData) {
   } else {
     if (status === 'published' && !row.published_at) row.published_at = new Date().toISOString();
     const { data, error } = await supabase
-      .from('posts').insert(row).select('id,slug').maybeSingle();
+      .from('posts').insert(row).select('id,slug,published_at').maybeSingle();
     if (error) {
       if (error.code === '23505') return { error: 'That slug is already taken.' };
       return { error: error.message };
@@ -136,7 +139,7 @@ export async function savePost(_prev, formData) {
   // renamed: drop the cached old URL so it re-renders as a redirect (see getRenamedSlug)
   if (oldSlug && oldSlug !== saved?.slug) revalidatePath(`/blog/${oldSlug}`);
   revalidatePath('/admin', 'layout');
-  return { ok: true, id: saved?.id, slug: saved?.slug, status };
+  return { ok: true, id: saved?.id, slug: saved?.slug, status, publishedAt: saved?.published_at };
 }
 
 // Restore a prior revision's content onto its post (does not auto-publish).
@@ -217,6 +220,7 @@ export async function savePage(_prev, formData) {
   };
   const pubInput = String(formData.get('published_at') || '').trim();
   if (pubInput) { const d = new Date(pubInput); if (!Number.isNaN(d.getTime())) row.published_at = d.toISOString(); }
+  else if (status === 'draft') row.published_at = null; // same rules as savePost
 
   let saved;
   if (id) {
@@ -224,12 +228,12 @@ export async function savePage(_prev, formData) {
       const { data: ex } = await supabase.from('pages').select('published_at').eq('id', id).maybeSingle();
       if (!ex?.published_at) row.published_at = new Date().toISOString();
     }
-    const { data, error } = await supabase.from('pages').update(row).eq('id', id).select('id,slug').maybeSingle();
+    const { data, error } = await supabase.from('pages').update(row).eq('id', id).select('id,slug,published_at').maybeSingle();
     if (error) return { error: error.code === '23505' ? 'That slug is already taken.' : error.message };
     saved = data;
   } else {
     if (status === 'published' && !row.published_at) row.published_at = new Date().toISOString();
-    const { data, error } = await supabase.from('pages').insert(row).select('id,slug').maybeSingle();
+    const { data, error } = await supabase.from('pages').insert(row).select('id,slug,published_at').maybeSingle();
     if (error) return { error: error.code === '23505' ? 'That slug is already taken.' : error.message };
     saved = data;
   }
@@ -237,7 +241,7 @@ export async function savePage(_prev, formData) {
   revalidatePath(`/${saved.slug}`);
   revalidatePath('/sitemap.xml');
   revalidatePath('/admin/pages');
-  return { ok: true, id: saved?.id, slug: saved?.slug, status };
+  return { ok: true, id: saved?.id, slug: saved?.slug, status, publishedAt: saved?.published_at };
 }
 
 export async function setPageStatus(id, status) {

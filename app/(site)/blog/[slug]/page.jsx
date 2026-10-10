@@ -7,6 +7,7 @@ import FaqAccordion from '@/components/FaqAccordion';
 
 // Renders published posts that have content_html and no bespoke href.
 export const dynamicParams = true;
+export const revalidate = 600; // lets scheduled (future-dated) content go live without a redeploy
 
 export async function generateStaticParams() {
   const posts = await getSlugPosts();

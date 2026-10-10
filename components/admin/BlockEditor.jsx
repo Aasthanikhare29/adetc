@@ -11,22 +11,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import Editor from './Editor';
-
-async function upload(file) {
-  const fd = new FormData();
-  fd.append('file', file);
-  const res = await fetch('/admin/api/upload', { method: 'POST', body: fd });
-  const json = await res.json();
-  if (!res.ok) throw new Error(json.error || 'Upload failed');
-  return json.url;
-}
+import { uploadImage } from './uploadImage';
 
 function ImageInput({ value, onChange, label = 'image' }) {
   const pick = async (e) => {
     const file = e.target.files?.[0];
     e.target.value = '';
     if (!file) return;
-    try { onChange(await upload(file)); } catch (err) { toast.error(err.message); }
+    try { onChange(await uploadImage(file)); } catch (err) { toast.error(err.message); }
   };
   return (
     <div className="flex items-center gap-2">

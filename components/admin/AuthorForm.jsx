@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useEffect } from 'react';
+import { startTransition, useActionState, useEffect } from 'react';
 import { toast } from 'sonner';
 import { saveSettings } from '@/app/(admin)/admin/actions';
 import { Button } from '@/components/ui/button';
@@ -10,6 +10,8 @@ import { Label } from '@/components/ui/label';
 
 export default function AuthorForm({ settings }) {
   const [state, action, pending] = useActionState(saveSettings, {});
+  // manual submit: React 19's auto form reset would wipe edits when a save fails (see PostForm)
+  const submit = (e) => { e.preventDefault(); const fd = new FormData(e.currentTarget); startTransition(() => action(fd)); };
 
   useEffect(() => {
     if (state?.ok) toast.success('Author saved');
@@ -17,7 +19,7 @@ export default function AuthorForm({ settings }) {
   }, [state]);
 
   return (
-    <form action={action} className="space-y-4">
+    <form onSubmit={submit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="author_name">Name</Label>

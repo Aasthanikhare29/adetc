@@ -12,17 +12,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import CharCounter from './CharCounter';
 import SeoAnalysis, { seoScore } from './SeoAnalysis';
+import { uploadImage } from './uploadImage';
 
 const DOMAIN = 'adetcstudios.com';
-
-async function upload(file) {
-  const fd = new FormData();
-  fd.append('file', file);
-  const res = await fetch('/admin/api/upload', { method: 'POST', body: fd });
-  const json = await res.json();
-  if (!res.ok) throw new Error(json.error || 'Upload failed');
-  return json.url;
-}
 
 function scoreDot(score) {
   const tone = score >= 80 ? 'bg-[var(--tone-success)]' : score >= 50 ? 'bg-[var(--tone-warning)]' : 'bg-[var(--tone-danger)]';
@@ -56,7 +48,7 @@ export default function SeoPanel({ post, title, slug, content, coverAlt, excerpt
     const file = e.target.files?.[0];
     e.target.value = '';
     if (!file) return;
-    try { setOgImage(await upload(file)); toast.success('OG image uploaded'); }
+    try { setOgImage(await uploadImage(file)); toast.success('OG image uploaded'); }
     catch (err) { toast.error(err.message); }
   };
 

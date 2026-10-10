@@ -17,22 +17,18 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { uploadImage } from './uploadImage';
+import { useUnsavedGuard } from './useUnsavedGuard';
+import { fmtDateTime } from '@/lib/utils';
 
 function slugify(s) {
   return String(s).toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
 }
-async function upload(file) {
-  const fd = new FormData();
-  fd.append('file', file);
-  const res = await fetch('/admin/api/upload', { method: 'POST', body: fd });
-  const json = await res.json();
-  if (!res.ok) throw new Error(json.error || 'Upload failed');
-  return json.url;
-}
-
 export default function PostForm({ post, revisions }) {
   const router = useRouter();
   const [state, action, pending] = useActionState(savePost, {});
+  const formRef = useRef(null);
+  const markSaved = useUnsavedGuard(formRef);
   // Submit manually: React 19 auto-resets a <form action> after it runs, which snapped the
   // Radix status <Select> back to its initial value (so the next save silently unpublished)
   // and wiped unsaved uncontrolled fields when a save failed.
@@ -56,7 +52,9 @@ export default function PostForm({ post, revisions }) {
 
   useEffect(() => {
     if (state?.ok) {
-      toast.success(state.status === 'published' ? 'Published' : 'Saved');
+      const scheduled = state.status === 'published' && state.publishedAt && new Date(state.publishedAt) > new Date();
+      toast.success(scheduled ? `Scheduled for ${fmtDateTime(state.publishedAt)}` : state.status === 'published' ? 'Published' : 'Saved');
+      markSaved();
       if (!post && state.id) router.replace(`/admin/posts/${state.id}`);
       else router.refresh();
     } else if (state?.error) toast.error(state.error);
@@ -66,15 +64,16 @@ export default function PostForm({ post, revisions }) {
     const file = e.target.files?.[0];
     e.target.value = '';
     if (!file) return;
-    try { setCover(await upload(file)); toast.success('Cover uploaded'); }
+    try { setCover(await uploadImage(file)); toast.success('Cover uploaded'); }
     catch (err) { toast.error(err.message); }
   };
 
-  const canPreview = post && status === 'published' && !post.href && content;
+  const isScheduled = post?.published_at && new Date(post.published_at) > new Date();
+  const canPreview = post && status === 'published' && !isScheduled && !post.href && content;
   const tagChips = tags.split(',').map((t) => t.trim()).filter(Boolean);
 
   return (
-    <form onSubmit={submit} className="space-y-6">
+    <form ref={formRef} onSubmit={submit} className="space-y-6">
       {post?.id && <input type="hidden" name="id" value={post.id} />}
       <input type="hidden" name="content_html" value={content} />
       <input type="hidden" name="image" value={cover} />
