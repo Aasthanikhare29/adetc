@@ -1,6 +1,6 @@
 'use client';
 
-import { useActionState, useEffect, useState } from 'react';
+import { startTransition, useActionState, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { toast } from 'sonner';
@@ -8,6 +8,7 @@ import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { savePage } from '@/app/(admin)/admin/actions';
 import BlockEditor from './BlockEditor';
 import SeoPanel from './SeoPanel';
+import PublishDateInput from './PublishDateInput';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -19,12 +20,19 @@ function slugifyPath(s) {
     seg.toLowerCase().trim().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '')
   ).filter(Boolean).join('/');
 }
-const toLocal = (iso) => (iso ? new Date(iso).toISOString().slice(0, 16) : '');
 const richText = (blocks) => (blocks || []).filter((b) => b.type === 'richtext').map((b) => b.html).join(' ');
 
 export default function PageForm({ page }) {
   const router = useRouter();
   const [state, action, pending] = useActionState(savePage, {});
+  // Submit manually: React 19 auto-resets a <form action> after it runs, which snapped the
+  // Radix status <Select> back to its initial value (so the next save silently unpublished)
+  // and wiped unsaved uncontrolled fields when a save failed.
+  const submit = (e) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    startTransition(() => action(fd));
+  };
   const [title, setTitle] = useState(page?.title || '');
   const [slug, setSlug] = useState(page?.slug || '');
   const [slugTouched, setSlugTouched] = useState(Boolean(page?.slug));
@@ -43,7 +51,7 @@ export default function PageForm({ page }) {
   const canView = page && status === 'published';
 
   return (
-    <form action={action} className="space-y-6">
+    <form onSubmit={submit} className="space-y-6">
       {page?.id && <input type="hidden" name="id" value={page.id} />}
       <input type="hidden" name="status" value={status} />
       <input type="hidden" name="slug" value={slug} />
@@ -99,7 +107,7 @@ export default function PageForm({ page }) {
               </div>
               <div className="space-y-2">
                 <Label htmlFor="published_at">Publish date</Label>
-                <Input id="published_at" name="published_at" type="datetime-local" defaultValue={toLocal(page?.published_at)} />
+                <PublishDateInput value={page?.published_at} />
               </div>
             </CardContent>
           </Card>
