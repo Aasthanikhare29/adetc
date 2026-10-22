@@ -171,13 +171,13 @@ function initBannerVideo() {
     if (!$el.length || isNativeVideo($el)) return;
 
     new YT.Player($el.attr("id"), {
-        videoId: "0y3iUCEvu6Y",
+        videoId: "GlmlDJA_o4Y",
         playerVars: {
             autoplay: 1,
             controls: 0,
             mute: 1,
             loop: 1,
-            playlist: "0y3iUCEvu6Y",
+            playlist: "GlmlDJA_o4Y",
             rel: 0,
             modestbranding: 1,
             iv_load_policy: 3,
@@ -201,13 +201,13 @@ function initTestimonialBannerVideo() {
     if (!$el.length || isNativeVideo($el)) return;
 
     new YT.Player($el.attr("id"), {
-        videoId: "6J1XlyCxtPw",
+        videoId: "_6F6412DK4s",
         playerVars: {
             autoplay: 1,
             controls: 0,
             mute: 1,
             loop: 1,
-            playlist: "6J1XlyCxtPw",
+            playlist: "_6F6412DK4s",
             rel: 0,
             modestbranding: 1,
             iv_load_policy: 3,
@@ -879,7 +879,7 @@ $(function() {
       if (youtubeId) {
           $videoFrame.hide();
           $youtubeFrame.show();
-          $youtubeFrame.attr('src', 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0');
+          $youtubeFrame.attr('src', 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&mute=1&playsinline=1&controls=1&rel=0&modestbranding=1&fs=1');
       } else {
           $youtubeFrame.hide();
           $videoFrame.show();

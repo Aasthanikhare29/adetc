@@ -36,11 +36,11 @@ export default function Page() {
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="circleLogoTitle">
                                   <title id="circleLogoTitle">AdEtc Studios Film Studio Logo</title>
                   <defs>
-                                      <path id="textcircle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"></path>
+                                      <path id="textcircle" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"></path>
                   </defs>
                                   <circle cx="100" cy="100" r="95"></circle>
                   <text dy="5">
-                                      <textPath href="#textcircle" className="about__circle-logo-title" startOffset="0%">• AdEtc Studios FILM AND VIDEO PRODUCTION STUDIO • BRINGING IDEAS TO LIFE ON SCREEN</textPath>
+                                      <textPath href="#textcircle" className="about__circle-logo-title" startOffset="0%">AdEtc Studios FILM AND VIDEO PRODUCTION STUDIO</textPath>
                   </text>
                   <g transform="translate(100 100)">
                                       <image href="/assets/images/Gp-1.png" className="about__circle-logo-image" width="160" height="160" x="-80" y="-80" preserveAspectRatio="xMidYMid meet"></image>
@@ -68,7 +68,7 @@ export default function Page() {
       <div className="achievement-container">
         <div className="achievement-content">
           <div className="achievement-stat-container">
-                      <span className="achievement-stat counter" data-target="120">00</span>
+                      <span className="achievement-stat counter" data-target="80">00</span>
                       <span className="achievement-suffix">+</span>
           </div>
                   <h5>Projects Delivered</h5>
@@ -175,7 +175,7 @@ export default function Page() {
         <div className="row row-cols-md-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/cinematic excellence.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">01</div>
               </div>
@@ -192,7 +192,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/teamwork.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">02</div>
               </div>
@@ -211,7 +211,7 @@ export default function Page() {
         <div className="row row-cols-md-3 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/end to end.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">03</div>
               </div>
@@ -228,7 +228,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/client focus.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">04</div>
               </div>
@@ -245,14 +245,14 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/project completed.jpeg" alt="" className="trust-us-hover-image" />
               <div className="d-flex flex-column gspace-2">
                 <span className="trust-us-stat-container">
-                                  <span className="trust-us-stat counter" data-target="150">0</span>
+                                  <span className="trust-us-stat counter" data-target="80">0</span>
                                   <span className="trust-us-suffix">+</span>
                 </span>
                               <h4>Projects Completed</h4>
-                              <p>From brand films to commercials, we've brought 150+ creative projects to life with precision and consistency.</p>
+                              <p>From brand films to commercials, we've brought 80+ creative projects to life with precision and consistency.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -287,9 +287,6 @@ export default function Page() {
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://x.com/AdEtcstudios" className="social-icon">
-                        <i className="fa-brands fa-x-twitter"></i>
-                      </a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
 
@@ -317,9 +314,6 @@ export default function Page() {
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://x.com/AdEtcstudios" className="social-icon">
-                        <i className="fa-brands fa-x-twitter"></i>
-                      </a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
 
@@ -346,9 +340,6 @@ export default function Page() {
                       </a>
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
-                      </a>
-                      <a href="https://x.com/AdEtcstudios" className="social-icon">
-                        <i className="fa-brands fa-x-twitter"></i>
                       </a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">

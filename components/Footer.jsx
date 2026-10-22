@@ -96,7 +96,6 @@ export default function Footer() {
                     <div className="social-footer-container">
                       <a href="https://www.instagram.com/adetc_studios/" className="footer-icon" aria-label="Instagram"><i className="fa-brands fa-instagram"></i></a>
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="footer-icon" aria-label="Facebook"><i className="fa-brands fa-facebook"></i></a>
-                      <a href="https://x.com/AdEtcstudios" className="footer-icon" aria-label="X (Twitter)"><i className="fa-brands fa-x-twitter"></i></a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="footer-icon" aria-label="LinkedIn">
 

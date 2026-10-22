@@ -48,7 +48,7 @@ export default function ContactForm() {
 
   return (
     <div className="card card-contact-form">
-      <h3>Send us a Message</h3>
+      <h3 style={{ fontWeight: 400 }}>Send us a Message</h3>
 
       {msg && (
         <p className={`newsletter-thank-you${msg.ok ? '' : ' newsletter-error'}`} style={{ marginBottom: 12 }}>

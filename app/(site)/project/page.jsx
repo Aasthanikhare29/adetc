@@ -34,7 +34,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" id="video-bg-1" data-video-id="vplPZf2uxb8"></div>
+                                  <div className="project-video-bg" id="video-bg-1" data-video-id="vplPZf2uxb8" style={{ backgroundImage: "url('https://i.ytimg.com/vi/vplPZf2uxb8/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/vplPZf2uxb8">
                                           <i className="fa-solid fa-play"></i>
@@ -51,7 +51,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-2" data-video-id="TcYx1AGZFWc"></div>
+                                  <div className="project-video-bg" id="video-bg-2" data-video-id="TcYx1AGZFWc" style={{ backgroundImage: "url('https://i.ytimg.com/vi/TcYx1AGZFWc/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
                                           <i className="fa-solid fa-play"></i>
@@ -68,7 +68,7 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" id="video-bg-3" data-video-id="Ym0n7iTqDis"></div>
+                                  <div className="project-video-bg" id="video-bg-3" data-video-id="Ym0n7iTqDis" style={{ backgroundImage: "url('https://i.ytimg.com/vi/Ym0n7iTqDis/maxresdefault.jpg')" }}></div>
                   <div className="w-100 d-flex justify-content-center">
                     <button className="request-loader" data-video="https://youtu.be/Ym0n7iTqDis">
                                           <i className="fa-solid fa-play"></i>
@@ -85,7 +85,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-4" data-video-id="-vl1RXXV9AU"></div>
+                                  <div className="project-video-bg" id="video-bg-4" data-video-id="-vl1RXXV9AU" style={{ backgroundImage: "url('https://i.ytimg.com/vi/-vl1RXXV9AU/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/-vl1RXXV9AU">
                                           <i className="fa-solid fa-play"></i>
@@ -102,7 +102,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-5" data-video-id="khDQF5S1jhQ"></div>
+                                  <div className="project-video-bg" id="video-bg-5" data-video-id="khDQF5S1jhQ" style={{ backgroundImage: "url('https://i.ytimg.com/vi/khDQF5S1jhQ/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/khDQF5S1jhQ">
                                           <i className="fa-solid fa-play"></i>
@@ -119,7 +119,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-6" data-video-id="wyoMwNQcC2w"></div>
+                                  <div className="project-video-bg" id="video-bg-6" data-video-id="wyoMwNQcC2w" style={{ backgroundImage: "url('https://i.ytimg.com/vi/wyoMwNQcC2w/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/wyoMwNQcC2w">
                                           <i className="fa-solid fa-play"></i>
@@ -136,7 +136,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-7" data-video-id="z3G3d2CPWFM"></div>
+                                  <div className="project-video-bg" id="video-bg-7" data-video-id="z3G3d2CPWFM" style={{ backgroundImage: "url('https://i.ytimg.com/vi/z3G3d2CPWFM/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/z3G3d2CPWFM">
                                           <i className="fa-solid fa-play"></i>
@@ -153,7 +153,7 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" id="video-bg-8" data-video-id="hZpeOppxfR0"></div>
+                                  <div className="project-video-bg" id="video-bg-8" data-video-id="hZpeOppxfR0" style={{ backgroundImage: "url('https://i.ytimg.com/vi/hZpeOppxfR0/maxresdefault.jpg')" }}></div>
                   <div className="w-100 d-flex justify-content-center">
                     <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
                                           <i className="fa-solid fa-play"></i>
@@ -170,7 +170,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-9" data-video-id="tlapIbTVRnQ"></div>
+                                  <div className="project-video-bg" id="video-bg-9" data-video-id="tlapIbTVRnQ" style={{ backgroundImage: "url('https://i.ytimg.com/vi/tlapIbTVRnQ/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
                                           <i className="fa-solid fa-play"></i>
@@ -187,7 +187,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-10" data-video-id="9R6rRLU-Agc"></div>
+                                  <div className="project-video-bg" id="video-bg-10" data-video-id="9R6rRLU-Agc" style={{ backgroundImage: "url('https://i.ytimg.com/vi/9R6rRLU-Agc/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/9R6rRLU-Agc">
                                           <i className="fa-solid fa-play"></i>
@@ -204,7 +204,7 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" id="video-bg-11" data-video-id="ZWAD2GoK7II"></div>
+                                  <div className="project-video-bg" id="video-bg-11" data-video-id="ZWAD2GoK7II" style={{ backgroundImage: "url('https://i.ytimg.com/vi/ZWAD2GoK7II/maxresdefault.jpg')" }}></div>
                   <div className="w-100 d-flex justify-content-center">
                     <button className="request-loader" data-video="https://youtu.be/ZWAD2GoK7II">
                                           <i className="fa-solid fa-play"></i>
