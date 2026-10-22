@@ -182,7 +182,7 @@ export default function Page() {
                 </div>
                 <div className="service-detail-stats">
                   <div className="service-detail-stat">
-                    <div className="stat-value"><span className="counter" data-target="150">0</span>+</div>
+                    <div className="stat-value"><span className="counter" data-target="80">0</span>+</div>
                     <div className="stat-label">Projects Completed</div>
                   </div>
                   <div className="service-detail-stat">

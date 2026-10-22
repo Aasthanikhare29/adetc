@@ -27,7 +27,6 @@ export default function Page() {
   {/* Testimonial Section */}
   <section className="section p-0">
     <div className="testimonial-banner-container">
-          <div id="testimonial-video-background"></div>
       <div className="hero-container">
         <div className="testimonial-banner-content">
                   <h2>Trusted by creative agencies, brands & storytellers.</h2>
