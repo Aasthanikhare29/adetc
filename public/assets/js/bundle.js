@@ -113,7 +113,7 @@ function loadYouTubeAPI() {
 // API always loads even if the observer never fires.
 function initLazyYouTube() {
     var els = document.querySelectorAll(
-        "#banner-video-background, #testimonial-video-background, .project-video-bg, .service-video-bg, .cta-highlight-video"
+        "#banner-video-background, .project-video-bg, .service-video-bg, .cta-highlight-video"
     );
     if (!els.length) return;
 
@@ -152,7 +152,6 @@ function initLazyYouTube() {
 
 window.onYouTubeIframeAPIReady = function() {
     initBannerVideo();
-    initTestimonialBannerVideo();
     initProjectVideoBackgrounds();
     initServiceVideoBackground();
     initCtaHighlightVideo();
@@ -193,37 +192,7 @@ function initBannerVideo() {
 }
 
 // ===============================================
-// 🔹 4. Testimonial Banner Video
-// ===============================================
-
-function initTestimonialBannerVideo() {
-    const $el = $("#testimonial-video-background");
-    if (!$el.length || isNativeVideo($el)) return;
-
-    new YT.Player($el.attr("id"), {
-        videoId: "_6F6412DK4s",
-        playerVars: {
-            autoplay: 1,
-            controls: 0,
-            mute: 1,
-            loop: 1,
-            playlist: "_6F6412DK4s",
-            rel: 0,
-            modestbranding: 1,
-            iv_load_policy: 3,
-            origin: window.location.origin
-        },
-        events: {
-            onReady: (e) => e.target.playVideo(),
-            onStateChange: (e) => {
-                if (e.data === YT.PlayerState.ENDED) e.target.playVideo();
-            }
-        }
-    });
-}
-
-// ===============================================
-// 🔹 5. Project Video Backgrounds (multiple)
+// 🔹 4. Project Video Backgrounds (multiple)
 // ===============================================
 
 function initProjectVideoBackgrounds() {
@@ -262,7 +231,7 @@ function initProjectVideoBackgrounds() {
 }
 
 // ===============================================
-// 🔹 6. Service Video Backgrounds (multiple)
+// 🔹 5. Service Video Backgrounds (multiple)
 // ===============================================
 
 function initServiceVideoBackground() {
@@ -346,7 +315,7 @@ $(document).on("hidden.bs.collapse", function(e) {
 });
 
 // ===============================================
-// 🔹 7. Utility — Resize video container
+// 🔹 6. Utility — Resize video container
 // ===============================================
 
 function resizeVideo(containerSelector, playerInstance) {
@@ -372,7 +341,7 @@ iframe.height = newHeight;
 }
 
 // ===============================================
-// 🔹 8. CTA Highlight Video (multiple)
+// 🔹 7. CTA Highlight Video (multiple)
 // ===============================================
 
 function initCtaHighlightVideo() {
@@ -425,7 +394,7 @@ function initCtaHighlightVideo() {
 }
 
 // ===============================================
-// 🔹 9. Heading Project Animations
+// 🔹 8. Heading Project Animations
 // ===============================================
 
 
@@ -450,7 +419,7 @@ function initProjectHeading() {
 
 
 // ===============================================
-// 🔹 10. Sidebar
+// 🔹 9. Sidebar
 // ===============================================
 
 function initSidebar() {
@@ -490,7 +459,7 @@ function initSidebarDropdown() {
 }
 
 // ===============================================
-// 🔹 11. Counter Animation
+// 🔹 10. Counter Animation
 // ===============================================
 
 function initCounter() {
@@ -545,7 +514,7 @@ function initCounter() {
 }
 
 // ===============================================
-// 🔹 12. Nav Link
+// 🔹 11. Nav Link
 // ===============================================
 
 function initNavLink() {

@@ -3160,49 +3160,22 @@ ul{
 .testimonial-banner-container{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    min-height: 600px;
-    align-items: flex-end;
-    padding-bottom: 80px;
+    justify-content: center;
+    align-items: center;
+    padding: 110px 20px 90px 20px;
     position: relative;
     overflow: hidden;
     z-index: 1;
-}
-
-#testimonial-video-background {
-    position: absolute;
-    background-color: transparent;
-    top: 50%;
-    left: 50%;
-    width: 100vw;
-    height: 100vw;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    pointer-events: none;
-    z-index: 0;
-}
-
-.testimonial-banner-container::before{
-    content: "";
-    position: absolute;
-    background-color: transparent;
-    background-image: linear-gradient(180deg, var(--accent-color-4) 30%, var(--secondary) 94%);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1;
+    background-color: var(--secondary);
 }
 
 .testimonial-banner-content{
     position: relative;
     z-index: 2;
     text-align: center;
-    align-self: flex-end;
-    width: 82%;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    height: auto;
+    margin: 0px auto;
 }
 
 .testimonial-card-container{

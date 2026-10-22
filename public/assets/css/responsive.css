@@ -259,6 +259,9 @@
         font-size: 150px;
         margin-bottom: -36px;
     }
+    .testimonial-banner-container{
+        padding: 90px 20px 75px 20px;
+    }
 }
 
 /* 02. Mobile Responsive */
@@ -398,10 +401,10 @@
         font-size: 39px;
     }
     .core-service-heading-container{
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
-        gap: 32px;
+        gap: 20px;
     }
     .card-trust-us{
         gap: 50px 50px;
@@ -418,11 +421,11 @@
         font-size: 60px;
     }
     .core-heading-container{
-        flex: 0 0 100%;
-        max-width: 100%;
-        width: 100%;
+        flex: 0 1 auto;
+        max-width: calc(100% - 120px);
+        width: auto;
         flex-wrap: wrap;
-        text-align: center;
+        text-align: start;
     }
     .core-service-heading{
         font-size: 32px;
@@ -432,10 +435,10 @@
         display: none;
     }
     .core-service-logo-container {
-        flex: 0 0 auto;
-        width: min(250px, 100%);
-        max-width: 250px;
-        margin: 0 auto;
+        flex: 0 0 110px;
+        width: 110px;
+        max-width: 110px;
+        margin: 0;
         order: unset;
     }
     .core-service__circle-logo{
@@ -811,6 +814,9 @@
         color: #ffffff;
         font-size: 26px;
         line-height: 1;
+    }
+    .testimonial-banner-container{
+        padding: 60px 16px 50px 16px;
     }
 }
 
