@@ -36,7 +36,7 @@ $(function() {
       if (youtubeId) {
           $videoFrame.hide();
           $youtubeFrame.show();
-          $youtubeFrame.attr('src', 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&rel=0');
+          $youtubeFrame.attr('src', 'https://www.youtube.com/embed/' + youtubeId + '?autoplay=1&mute=1&playsinline=1&controls=1&rel=0&modestbranding=1&fs=1');
       } else {
           $youtubeFrame.hide();
           $videoFrame.show();

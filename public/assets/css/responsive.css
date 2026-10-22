@@ -143,7 +143,7 @@
         width: 100%;
     }
     .service-detail-list li{
-        font-size: 19px;
+        font-size: 16px;
     }
     .accordion-item .service-accordion-header .accordion-button{
         font-size: 56px;
@@ -242,7 +242,7 @@
         font-size: 150px;
     }
     .contact-content-heading{
-        font-size: 80px;
+        font-size: 64px;
     }
     .contact-info-heading{
         font-size: 16px;
@@ -306,6 +306,9 @@
     }
     .testimonial-scroll-row .card-testimonial > p{
         flex: 1 1 auto;
+    }
+    .testimonial-scroll-btn{
+        display: none;
     }
     .team-image img{
         height: clamp(300px, 60vw, 430px);
@@ -395,8 +398,10 @@
         font-size: 39px;
     }
     .core-service-heading-container{
-        flex-wrap: wrap;
-        justify-content: flex-end;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 32px;
     }
     .card-trust-us{
         gap: 50px 50px;
@@ -415,15 +420,39 @@
     .core-heading-container{
         flex: 0 0 100%;
         max-width: 100%;
+        width: 100%;
         flex-wrap: wrap;
+        text-align: center;
+    }
+    .core-service-heading{
+        font-size: 32px;
+        font-weight: 700;
+    }
+    .core-service-heading.heading-stroke{
+        display: none;
     }
     .core-service-logo-container {
-        flex: 0 0 22%;
-        max-width: 22%;
-        margin-top: -168px;
-        margin-bottom: 0px;
-        margin-left: 0px;
-        margin-right: 33px;
+        flex: 0 0 auto;
+        width: min(250px, 100%);
+        max-width: 250px;
+        margin: 0 auto;
+        order: unset;
+    }
+    .core-service__circle-logo{
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        height: auto;
+    }
+    .core-service__circle-logo svg{
+        width: 100%;
+        height: auto;
+    }
+    .core-service__circle-logo text{
+        font-size: 19px;
+    }
+    .core-service__circle-logo textPath{
+        letter-spacing: 2px;
     }
     .section-core-service{
         padding: 120px 20px 120px 20px;
@@ -444,8 +473,23 @@
         width: 100%;
         text-align: center;
     }
+    .core-service-description p{
+        text-align: center;
+    }
     .core-service-card-container{
         flex-direction: column;
+    }
+    .core-service-card-container .card-core-service{
+        background-color: var(--accent-color) !important;
+        color: var(--primary);
+    }
+    .core-service-card-container .card-core-service h4,
+    .core-service-card-container .card-core-service p{
+        color: var(--primary) !important;
+    }
+    .core-service-card-container .card-core-service:nth-child(1) .core-service-icon,
+    .core-service-card-container .card-core-service:nth-child(4) .core-service-icon{
+        filter: brightness(0) invert(1);
     }
     .service-title-wrapper .service-title-heading,
     .service-title-wrapper .service-title-description,
@@ -456,7 +500,7 @@
         align-items: center;
     }
     .service-detail-list li{
-        font-size: 18px;
+        font-size: 15px;
     }
     .project-heading-container{
         margin-bottom: -30px;
@@ -549,6 +593,9 @@
     .contact-cta-title{
         font-size: 38px;
         text-align: center;
+        font-family: var(--font-family-2);
+        font-weight: 400;
+        line-height: 1.25em;
     }
     .contact-cta-text-container{
         width: 100%;
@@ -565,7 +612,7 @@
         max-width: 420px;
     }
     .contact-content-heading{
-        font-size: 42px;
+        font-size: 36px;
     }
     .contact-description-container{
         align-items: flex-start;
@@ -684,7 +731,7 @@
         text-align: center;
     }
     .section{
-        padding: 80px 16px 80px 16px;
+        padding: 35px 16px 35px 16px;
     }
     .section p,
     .section li p,
@@ -730,6 +777,40 @@
     }
     .project-heading-container{
         top: 10vh;
+    }
+    /* Video modal: full-screen YouTube player on mobile */
+    .modal-overlay{
+        background-color: #000000;
+        padding: 0px;
+    }
+    .my-modal{
+        width: 100%;
+        max-width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        max-height: 100%;
+        margin: 0px;
+        padding: 0px;
+        border-radius: 0px;
+        background-color: #000000;
+        display: block;
+        overflow: hidden;
+    }
+    .my-modal iframe,
+    .my-modal video{
+        width: 100%;
+        height: 100%;
+        aspect-ratio: auto;
+        object-fit: contain;
+        margin: 0px;
+    }
+    .my-close{
+        top: 14px;
+        right: 14px;
+        z-index: 2;
+        color: #ffffff;
+        font-size: 26px;
+        line-height: 1;
     }
 }
 

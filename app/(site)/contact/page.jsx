@@ -72,9 +72,6 @@ export default function Page() {
                   <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                                       <i className="fa-brands fa-facebook"></i>
                   </a>
-                  <a href="https://x.com/AdEtcstudios" className="social-icon">
-                                      <i className="fa-brands fa-x-twitter"></i>
-                  </a>
 
                   <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
 

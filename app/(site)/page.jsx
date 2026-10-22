@@ -1,5 +1,11 @@
 import VideoModal from '@/components/VideoModal';
+import BlogCard from '@/components/BlogCard';
+import { getLatestPosts } from '@/lib/blog-posts';
 import { pageMetadata } from '@/lib/seo';
+
+// Prerender, but revalidate hourly so a post published in the DB after deploy
+// shows up in the home page strip without a rebuild (matches feed.xml/sitemap).
+export const revalidate = 3600;
 
 export const metadata = {
   ...pageMetadata({
@@ -13,7 +19,8 @@ export const metadata = {
   title: { absolute: 'Film & Video Production Company in Ahmedabad | AdEtc Studios' },
 };
 
-export default function Page() {
+export default async function Page() {
+  const latestPosts = await getLatestPosts(3);
   return (
     <>
   {/* Banner Home Section */}
@@ -42,7 +49,7 @@ export default function Page() {
                       <div className="home-divider"></div>
             <div className="d-flex flex-column flex-md-row gspace-2 w-100 align-items-center justify-content-center justify-content-md-between">
               <div>
-                <a href="#" className="btn btn-accent request-loader request-loader-btn" data-video="https://youtu.be/U-0bcgvEnN4">
+                <a href="#" className="btn btn-accent request-loader request-loader-btn" data-video="https://youtu.be/GlmlDJA_o4Y">
   
                                           Watch Our Showreel
                                           
@@ -55,9 +62,6 @@ export default function Page() {
                 </a>
                 <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                                   <i className="fa-brands fa-facebook"></i>
-                </a>
-                <a href="https://x.com/AdEtcstudios" className="social-icon">
-                                  <i className="fa-brands fa-x-twitter"></i>
                 </a>
 
                 <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
@@ -89,11 +93,11 @@ export default function Page() {
               <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="circleLogoTitle">
                               <title id="circleLogoTitle">AdEtc Studios Film Studio Logo</title>
                 <defs>
-                                  <path id="textcircle" d="M100,100 m-80,0 a80,80 0 1,1 160,0 a80,80 0 1,1 -160,0"></path>
+                                  <path id="textcircle" d="M100,100 m-76,0 a76,76 0 1,1 152,0 a76,76 0 1,1 -152,0"></path>
                 </defs>
                               <circle cx="100" cy="100" r="95"></circle>
                 <text dy="5">
-                                  <textPath href="#textcircle" className="core-service__circle-logo-title" startOffset="0%">• AdEtc Studios FILM AND VIDEO PRODUCTION STUDIO • BRINGING IDEAS TO LIFE ON SCREEN</textPath>
+                                  <textPath href="#textcircle" className="core-service__circle-logo-title" startOffset="0%">AdEtc Studios FILM AND VIDEO PRODUCTION STUDIO</textPath>
                 </text>
                 <g transform="translate(100 100)">
                                   <image href="/assets/images/Gp-1.png" className="core-service__circle-logo-image" width="160" height="160" x="-80" y="-80" preserveAspectRatio="xMidYMid meet"></image>
@@ -154,7 +158,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" id="video-bg-1" data-video-id="vplPZf2uxb8"></div>
+                                  <div className="project-video-bg" id="video-bg-1" data-video-id="vplPZf2uxb8" style={{ backgroundImage: "url('https://i.ytimg.com/vi/vplPZf2uxb8/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/vplPZf2uxb8">
                                           <i className="fa-solid fa-play"></i>
@@ -171,7 +175,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-2" data-video-id="TcYx1AGZFWc"></div>
+                                  <div className="project-video-bg" id="video-bg-2" data-video-id="TcYx1AGZFWc" style={{ backgroundImage: "url('https://i.ytimg.com/vi/TcYx1AGZFWc/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/TcYx1AGZFWc">
                                           <i className="fa-solid fa-play"></i>
@@ -188,7 +192,7 @@ export default function Page() {
             <div className="col-12 w-100">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100 w-100">
                 <div className="project-video-container project-video-container--wide">
-                                  <div className="project-video-bg" id="video-bg-3" data-video-id="tlapIbTVRnQ"></div>
+                                  <div className="project-video-bg" id="video-bg-3" data-video-id="tlapIbTVRnQ" style={{ backgroundImage: "url('https://i.ytimg.com/vi/tlapIbTVRnQ/maxresdefault.jpg')" }}></div>
                   <div className="w-100 d-flex justify-content-center">
                     <button className="request-loader" data-video="https://youtu.be/tlapIbTVRnQ">
                                           <i className="fa-solid fa-play"></i>
@@ -205,7 +209,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2 justify-content-center align-items-center h-100">
                 <div className="project-video-container">
-                                  <div className="project-video-bg" id="video-bg-4" data-video-id="z3G3d2CPWFM"></div>
+                                  <div className="project-video-bg" id="video-bg-4" data-video-id="z3G3d2CPWFM" style={{ backgroundImage: "url('https://i.ytimg.com/vi/z3G3d2CPWFM/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/z3G3d2CPWFM">
                                           <i className="fa-solid fa-play"></i>
@@ -222,7 +226,7 @@ export default function Page() {
             <div className="col">
               <div className="d-flex flex-column gspace-2">
                 <div className="project-video-container project-video-container--tall">
-                                  <div className="project-video-bg" id="video-bg-5" data-video-id="hZpeOppxfR0"></div>
+                                  <div className="project-video-bg" id="video-bg-5" data-video-id="hZpeOppxfR0" style={{ backgroundImage: "url('https://i.ytimg.com/vi/hZpeOppxfR0/maxresdefault.jpg')" }}></div>
                   <div>
                     <button className="request-loader" data-video="https://youtu.be/hZpeOppxfR0">
                                           <i className="fa-solid fa-play"></i>
@@ -448,7 +452,7 @@ export default function Page() {
         <div className="row row-cols-md-2 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/cinematic excellence.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">01</div>
               </div>
@@ -465,7 +469,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/teamwork.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">02</div>
               </div>
@@ -484,7 +488,7 @@ export default function Page() {
         <div className="row row-cols-md-3 row-cols-1 grid-spacer-3">
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/end to end.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">03</div>
               </div>
@@ -501,7 +505,7 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/young-guy-enjoying-taking-photos-3UJ8HB8.png" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/client focus.jpeg" alt="" className="trust-us-hover-image" />
               <div className="card-number-wrapper">
                               <div className="card-number">04</div>
               </div>
@@ -518,14 +522,14 @@ export default function Page() {
           </div>
           <div className="col">
             <div className="card card-trust-us trust-us-hover">
-                          <img src="/assets/images/cameraman-operating-equipment-in-studio-T3LZ2B2.jpg" alt="" className="trust-us-hover-image" />
+                          <img src="/trust-brands/project completed.jpeg" alt="" className="trust-us-hover-image" />
               <div className="d-flex flex-column gspace-2">
                 <span className="trust-us-stat-container">
-                                  <span className="trust-us-stat counter" data-target="150">0</span>
+                                  <span className="trust-us-stat counter" data-target="80">0</span>
                                   <span className="trust-us-suffix">+</span>
                 </span>
                               <h4>Projects Completed</h4>
-                              <p>From brand films to commercials, we've brought 150+ creative projects to life with precision and consistency.</p>
+                              <p>From brand films to commercials, we've brought 80+ creative projects to life with precision and consistency.</p>
                 <div className="trust-us-cta">
                                   <a href="/about">Learn More</a>
                                   <i className="fa-solid fa-chevron-circle-right"></i>
@@ -697,7 +701,7 @@ export default function Page() {
   <section className="section">
     <div className="d-flex flex-column gspace-2 text-start text-lg-center align-items-start align-items-lg-center">
           <h2>Meet The Founders</h2>
-      <div style={{ marginBottom: '50px' }}>
+      <div style={{ marginBottom: '20px' }}>
       </div>
     </div>
     <div className="hero-container">
@@ -713,9 +717,6 @@ export default function Page() {
                       </a>
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
-                      </a>
-                      <a href="https://x.com/AdEtcstudios" className="social-icon">
-                        <i className="fa-brands fa-x-twitter"></i>
                       </a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
@@ -744,9 +745,6 @@ export default function Page() {
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://x.com/AdEtcstudios" className="social-icon">
-                        <i className="fa-brands fa-x-twitter"></i>
-                      </a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
 
@@ -774,9 +772,6 @@ export default function Page() {
                       <a href="https://www.facebook.com/profile.php?id=61578905199852" className="social-icon">
                         <i className="fa-brands fa-facebook"></i>
                       </a>
-                      <a href="https://x.com/AdEtcstudios" className="social-icon">
-                        <i className="fa-brands fa-x-twitter"></i>
-                      </a>
 
                       <a href="https://www.linkedin.com/company/adetc-studios/" className="social-icon">
 
@@ -797,10 +792,10 @@ export default function Page() {
     </div>
   </section>
   {/* Partner Section */}
-  <section className="section-small">
-    <div className="hero-container overflow-hidden">
+  <section className="section">
+    <div className="hero-container">
       <div className="partners-container">
-              <h5 className="partnership-title-content">Trusted by Industry Leaders & Creative Brands</h5>
+              <h5 className="partnership-title-content" style={{ marginBottom: '20px' }}>Trusted by Industry Leaders & Creative Brands</h5>
         <div className="overflow-hidden">
           <div className="swiper swiperpartner partner-marquee">
             <div className="swiper-wrapper">
@@ -831,65 +826,11 @@ export default function Page() {
   <section className="section">
     <div className="hero-container">
       <div className="blog-content-container">
-              <h2 className="section-title">Latest Insights in Film, Video & Creativity</h2>
+              <h2 className="section-title" style={{ marginBottom: '20px' }}>Latest Insights in Film, Video & Creativity</h2>
         <div className="row row-cols-lg-3 row-cols-md-2 row-cols-1 grid-spacer-3">
-          <div className="col">
-            <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg" alt="Ad film makers on a commercial shoot" className="img-fluid" /></div>
-              <div className="card-blog-content">
-                <div className="d-flex flex-row align-items-center justify-content-between">
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-calendar accent-color"></i>
-                                      <span className="meta-data">June 15, 2026</span>
-                  </div>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-folder accent-color"></i>
-                                      <span className="meta-data">Video Production</span>
-                  </div>
-                </div>
-                              <a href="/blog/ad-film-makers-bring-brands-to-life" className="blog-title">Ad Film Makers: How Creative Advertising Films Bring Brands to Life</a>
-                              <p className="mb-0">Behind every memorable campaign is a team of creative professionals who turn ordinary ideas into powerful visual experiences that connect with people.…</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Brand video production behind the scenes" className="img-fluid" /></div>
-              <div className="card-blog-content">
-                <div className="d-flex flex-row align-items-center justify-content-between">
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-calendar accent-color"></i>
-                                      <span className="meta-data">June 15, 2026</span>
-                  </div>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-folder accent-color"></i>
-                                      <span className="meta-data">Brand Strategy</span>
-                  </div>
-                </div>
-                              <a href="/blog/brand-video-visual-storytelling" className="blog-title">Brand Video: How Powerful Visual Storytelling Builds Lasting Brands</a>
-                              <p className="mb-0">Discover how a compelling brand video helps businesses build trust, connect with audiences, and tell memorable stories that inspire action.…</p>
-              </div>
-            </div>
-          </div>
-          <div className="col">
-            <div className="card card-blog">
-                          <div className="image-container blog-image"><img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="TV commercial production planning" className="img-fluid" /></div>
-              <div className="card-blog-content">
-                <div className="d-flex flex-row align-items-center justify-content-between">
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-calendar accent-color"></i>
-                                      <span className="meta-data">June 15, 2026</span>
-                  </div>
-                  <div className="d-flex flex-row gspace-1 align-items-center">
-                                      <i className="fa-solid fa-folder accent-color"></i>
-                                      <span className="meta-data">Production Insights</span>
-                  </div>
-                </div>
-                              <a href="/blog/tvc-format-guide" className="blog-title">TVC Format: A Guide to TV Commercials & Production</a>
-                              <p className="mb-0">A television commercial has only seconds to capture attention. Here&apos;s how the TVC format is structured, from duration and script to production and delivery.…</p>
-              </div>
-            </div>
-          </div>
+          {latestPosts.map((post) => (
+            <BlogCard key={post.slug} post={post} />
+          ))}
         </div>
       </div>
     </div>
