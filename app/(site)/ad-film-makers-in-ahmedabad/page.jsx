@@ -1,7 +1,7 @@
 import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 
-const IMAGE = '/assets/images/woman-operating-video-camera-in-neon-lights-NNLG5VA.jpg';
+const IMAGE = '/assets/images/service/ad%20films.jpeg';
 const DESCRIPTION =
   'AdEtc Studios creates impactful ad films in Ahmedabad, from concept and scripting to filming, direction, editing, and post-production.';
 
@@ -87,7 +87,7 @@ export default function Page() {
               </div>
               <div className="col">
                 <div className="image-container service-detail-image">
-                  <img src="/assets/images/cameraman-filming-music-video-CD7JKUM.jpg" alt="Ad Film Production at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
+                  <img src="/assets/images/service/ad%20films.jpeg" alt="Ad film production at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
                 </div>
               </div>
             </div>
@@ -400,10 +400,9 @@ export default function Page() {
                     <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
                       <div className="col">
                         <div className="card card-service-detail-include">
-                          <div className="service-step-number">01</div>
                           <div className="d-flex flex-column gspace-2">
                             <div className="d-flex flex-row align-items-center gspace-1">
-                              <i className="fa-solid fa-circle accent-color"></i>
+                              <div className="service-step-number">01</div>
                               <h5>Discovery &amp; Strategy</h5>
                             </div>
                             <p className="mb-0">We start by understanding your brand, target audience, campaign objective, product or service, communication challenge, timeline, and media requirements. This gives the creative team a clear foundation for developing the project.</p>
@@ -412,10 +411,9 @@ export default function Page() {
                       </div>
                       <div className="col">
                         <div className="card card-service-detail-include">
-                          <div className="service-step-number">02</div>
                           <div className="d-flex flex-column gspace-2">
                             <div className="d-flex flex-row align-items-center gspace-1">
-                              <i className="fa-solid fa-circle accent-color"></i>
+                              <div className="service-step-number">02</div>
                               <h5>Concept Development</h5>
                             </div>
                             <p className="mb-0">Our creative team develops ideas around the brief and identifies the strongest storytelling direction. We may work on creative treatments, references, moodboards, story concepts, and initial visual approaches before moving into scripting.</p>
@@ -424,10 +422,9 @@ export default function Page() {
                       </div>
                       <div className="col">
                         <div className="card card-service-detail-include">
-                          <div className="service-step-number">03</div>
                           <div className="d-flex flex-column gspace-2">
                             <div className="d-flex flex-row align-items-center gspace-1">
-                              <i className="fa-solid fa-circle accent-color"></i>
+                              <div className="service-step-number">03</div>
                               <h5>Scriptwriting &amp; Pre-Production</h5>
                             </div>
                             <p className="mb-0">Once the concept is approved, we develop the script and plan the production in detail. This can include script development, storyboarding, casting, location scouting, production design, scheduling, crew planning, and equipment planning.</p>
@@ -436,10 +433,9 @@ export default function Page() {
                       </div>
                       <div className="col">
                         <div className="card card-service-detail-include">
-                          <div className="service-step-number">04</div>
                           <div className="d-flex flex-column gspace-2">
                             <div className="d-flex flex-row align-items-center gspace-1">
-                              <i className="fa-solid fa-circle accent-color"></i>
+                              <div className="service-step-number">04</div>
                               <h5>Production &amp; Direction</h5>
                             </div>
                             <p className="mb-0">The approved concept comes to life on set. Our ad film director, cinematographer, crew, and production team work together to capture performances, visuals, atmosphere, and product details while maintaining the creative direction of the campaign.</p>
@@ -448,10 +444,9 @@ export default function Page() {
                       </div>
                       <div className="col">
                         <div className="card card-service-detail-include">
-                          <div className="service-step-number">05</div>
                           <div className="d-flex flex-column gspace-2">
                             <div className="d-flex flex-row align-items-center gspace-1">
-                              <i className="fa-solid fa-circle accent-color"></i>
+                              <div className="service-step-number">05</div>
                               <h5>Editing &amp; Post-Production</h5>
                             </div>
                             <p className="mb-0">The raw footage is transformed into the final story through professional editing and post-production. Our capabilities include video editing, colour grading, sound design, motion graphics, voiceover integration, and final mastering.</p>
@@ -460,19 +455,15 @@ export default function Page() {
                       </div>
                       <div className="col">
                         <div className="card card-service-detail-include">
-                          <div className="service-step-number">06</div>
                           <div className="d-flex flex-column gspace-2">
                             <div className="d-flex flex-row align-items-center gspace-1">
-                              <i className="fa-solid fa-circle accent-color"></i>
+                              <div className="service-step-number">06</div>
                               <h5>Final Delivery</h5>
                             </div>
                             <p className="mb-0">Once the film is approved, we prepare the required versions for the intended channels. These may include television masters, digital commercials, social media cutdowns, vertical edits, OTT versions, and other campaign assets.</p>
                           </div>
                         </div>
                       </div>
-                    </div>
-                    <div className="image-container post-inner-image">
-                      <img src="/assets/images/video-production-backstage-behind-the-scenes-of-cr-L3RXVKA.jpg" alt="Ad film shoot behind the scenes" className="img-fluid" loading="lazy" decoding="async" />
                     </div>
                   </div>
                 </div>

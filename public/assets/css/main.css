@@ -2466,7 +2466,12 @@ ul{
     background: var(--accent-color-3);
     width: 54px;
     height: 54px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
+    flex-shrink: 0;
+}
+
+.card-service-detail-include .d-flex.flex-row.align-items-center h5{
+    margin-bottom: 0;
 }
 
 /* Sidebar */

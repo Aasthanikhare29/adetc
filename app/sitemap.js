@@ -33,6 +33,7 @@ const ROUTES = [
   '/end-to-end-production',
   '/digital-video-commercials',
   '/television-commercials',
+  '/corporate-video-production-company',
 ];
 
 export default async function sitemap() {

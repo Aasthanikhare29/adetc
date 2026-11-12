@@ -1,7 +1,7 @@
 import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 
-const IMAGE = '/assets/images/male-video-editor-working-on-his-personal-computer-HQHD8ZL.jpg';
+const IMAGE = '/assets/images/service/dvc.jpeg';
 const PATH = '/digital-video-commercials';
 const DESCRIPTION =
   'Create digital video commercials that capture attention through strategic storytelling, professional production, and platform-ready content.';
@@ -352,11 +352,10 @@ export default function Page() {
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">01</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Discovery &amp; Strategy</h5>
+                          <div className="service-step-number">01</div>
+                          <h5>Discovery &amp; Strategy</h5>
                         </div>
                                 <p className="mb-0">We begin by understanding your brand, target audience, campaign objective, key message, and distribution platforms. This helps us establish the right creative direction for the commercial.</p>
                       </div>
@@ -364,11 +363,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">02</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Concept Development</h5>
+                          <div className="service-step-number">02</div>
+                          <h5>Concept Development</h5>
                         </div>
                                 <p className="mb-0">Our creative team develops concepts around your campaign objective. We explore the story, visual direction, tone, product integration, and overall creative approach.</p>
                       </div>
@@ -376,11 +374,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">03</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Scriptwriting &amp; Storyboarding</h5>
+                          <div className="service-step-number">03</div>
+                          <h5>Scriptwriting &amp; Storyboarding</h5>
                         </div>
                                 <p className="mb-0">Once the concept is approved, we develop the script and storyboard. This gives the production team a clear understanding of the scenes, dialogue, visuals, product moments, and key messaging.</p>
                       </div>
@@ -388,11 +385,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">04</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Pre-Production</h5>
+                          <div className="service-step-number">04</div>
+                          <h5>Pre-Production</h5>
                         </div>
                                 <p className="mb-0">We manage the practical details required to execute the concept, including casting, locations, props, wardrobe, crew planning, equipment, scheduling, and shot planning.</p>
                       </div>
@@ -400,11 +396,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">05</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Production</h5>
+                          <div className="service-step-number">05</div>
+                          <h5>Production</h5>
                         </div>
                                 <p className="mb-0">Our production team brings the concept to life through professional cinematography, lighting, direction, sound, and performance. Every shot is planned around the creative direction and final platform requirements.</p>
                       </div>
@@ -412,11 +407,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">06</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Editing &amp; Post-Production</h5>
+                          <div className="service-step-number">06</div>
+                          <h5>Editing &amp; Post-Production</h5>
                         </div>
                                 <p className="mb-0">The footage is shaped into the final commercial through editing, colour grading, sound design, motion graphics, and visual effects where required.</p>
                       </div>
@@ -424,11 +418,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">07</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Final Delivery</h5>
+                          <div className="service-step-number">07</div>
+                          <h5>Final Delivery</h5>
                         </div>
                                 <p className="mb-0">We prepare the completed commercial according to the specifications of your campaign, including the required aspect ratios, durations, and platform-ready versions.</p>
                       </div>
@@ -578,13 +571,13 @@ export default function Page() {
     <div className="hero-container">
       <div className="contact-cta-banner">
         <div className="contact-cta-title-container">
-                  <h2 className="contact-cta-title heading-fill">Let's Create a Commercial Your Audience Remembers</h2>
-                  <h2 className="contact-cta-title heading-stroke">Let's Create a Commercial Your Audience Remembers</h2>
+          <h2 className="contact-cta-title heading-fill">Let's Turn Your Vision Into Cinematic Reality</h2>
+          <h2 className="contact-cta-title heading-stroke">Let's Turn Your Vision Into Cinematic Reality</h2>
         </div>
         <div className="contact-cta-text-container">
-                  <p>Your audience is scrolling, watching, comparing, and making decisions every day. Make those few seconds count. At AdEtc Studios, we combine strategic thinking, creative storytelling, and professional production to create digital commercials that help brands communicate with impact. Whether you have a fully developed campaign or just an initial idea, our team can take it from concept to final commercial.</p>
+          <p>From concept development to post-production, we craft cinematic experiences that captivate and inspire. Let's create something extraordinary together.</p>
           <div>
-                      <a href="/contact" className="btn btn-accent-primary">Book a Discovery Call</a>
+            <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
               <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
