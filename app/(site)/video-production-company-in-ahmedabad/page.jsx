@@ -312,11 +312,10 @@ export default function Page() {
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">01</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Discovery &amp; Strategy</h5>
+                          <div className="service-step-number">01</div>
+                          <h5>Discovery &amp; Strategy</h5>
                         </div>
                                 <p className="mb-0">Every successful project begins with understanding your brand, audience, objectives, and project scope. We collaborate with your team to identify the right creative direction and define how the video will support your marketing strategy.</p>
                       </div>
@@ -324,11 +323,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">02</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Concept Development &amp; Script</h5>
+                          <div className="service-step-number">02</div>
+                          <h5>Concept Development &amp; Script</h5>
                         </div>
                                 <p className="mb-0">Once the strategy is clear, our creative team develops concepts, prepares the script, and builds storyboards that bring your vision to life. Every idea is designed to communicate your message with clarity while reflecting your brand identity.</p>
                       </div>
@@ -336,11 +334,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">03</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Production</h5>
+                          <div className="service-step-number">03</div>
+                          <h5>Production</h5>
                         </div>
                                 <p className="mb-0">Our experienced crew manages every aspect of the shoot—from lighting and cinematography to directing talent and capturing high-quality visuals. Whether it's corporate video production, a commercial video, or promotional content, we ensure every frame supports your business objectives.</p>
                       </div>
@@ -348,11 +345,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">04</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Editing &amp; Post-Production</h5>
+                          <div className="service-step-number">04</div>
+                          <h5>Editing &amp; Post-Production</h5>
                         </div>
                                 <p className="mb-0">This is where the story truly comes alive. Our video editing services include colour grading, sound design, motion graphics, 3D animation, and visual effects where required. Through expert editing and post-production, we deliver polished videos ready for websites, social media, presentations, and digital campaigns.</p>
                       </div>

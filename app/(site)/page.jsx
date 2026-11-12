@@ -414,18 +414,18 @@ export default async function Page() {
                       <div className="col col-md-9">
                         <div className="d-flex flex-column-reverse flex-lg-row gspace-2 justify-content-between w-100">
                           <div className="service-description-content">
-                                                      <p className="mb-0">Our music videos bring your music to life. We create visually stunning and creatively groundbreaking music videos that enhance your artist's brand and engage your audience. From concept to completion, we deliver high-quality music videos that leave a lasting impression.</p>
+                                                      <p className="mb-0">We create corporate films, company profile videos, brand films, and business communication films that showcase your identity, capabilities, people, and vision under one roof.</p>
                           </div>
                           <div className="service-tag-container">
-                                                      <span className="service-tag">music videos</span>
-                                                      <span className="service-tag">artist branding</span>
-                                                      <span className="service-tag">visual storytelling</span>
+                                                      <span className="service-tag">corporate videos</span>
+                                                      <span className="service-tag">brand films</span>
+                                                      <span className="service-tag">company profile films</span>
                           </div>
                         </div>
                       </div>
                       <div className="col col-md-3">
                         <div className="d-flex flex-column align-items-start align-items-md-end justify-content-center h-100">
-                                                  <a href="/services" className="btn btn-accent">View Details</a>
+                                                  <a href="/corporate-video-production-company" className="btn btn-accent">View Details</a>
                         </div>
                       </div>
                     </div>

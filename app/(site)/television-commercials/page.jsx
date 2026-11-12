@@ -1,7 +1,7 @@
 import { pageMetadata, serviceLd, localBusinessLd, breadcrumbLd, faqLd } from '@/lib/seo';
 import JsonLd from '@/components/JsonLd';
 
-const IMAGE = '/assets/images/film-industry-7ZLFY7L.jpg';
+const IMAGE = '/assets/images/service/tvcs.jpeg';
 const PATH = '/television-commercials';
 const DESCRIPTION =
   'Television commercials that turn brand stories into memorable ads — concept, TVC scriptwriting, casting, filming, editing, sound design and final delivery under one roof.';
@@ -349,11 +349,10 @@ export default function Page() {
                 <div className="row row-cols-lg-2 row-cols-1 grid-spacer-3">
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">01</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Discovery &amp; Strategy</h5>
+                          <div className="service-step-number">01</div>
+                          <h5>Discovery &amp; Strategy</h5>
                         </div>
                                 <p className="mb-0">We begin by understanding your brand, audience, campaign objective, key message, and communication requirements. This helps establish the creative direction for the commercial.</p>
                       </div>
@@ -361,11 +360,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">02</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Concept Development</h5>
+                          <div className="service-step-number">02</div>
+                          <h5>Concept Development</h5>
                         </div>
                                 <p className="mb-0">Our creative team develops concepts based on your campaign goals. We explore the story, visual style, tone, characters, product integration, and overall creative approach.</p>
                       </div>
@@ -373,11 +371,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">03</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>TVC Scriptwriting &amp; Storyboarding</h5>
+                          <div className="service-step-number">03</div>
+                          <h5>TVC Scriptwriting &amp; Storyboarding</h5>
                         </div>
                                 <p className="mb-0">Once the concept is approved, we develop the TVC script and storyboard. This defines the narrative, dialogue, voice-over, visual sequences, product moments, and key messaging.</p>
                       </div>
@@ -385,11 +382,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">04</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Casting &amp; Pre-Production</h5>
+                          <div className="service-step-number">04</div>
+                          <h5>Casting &amp; Pre-Production</h5>
                         </div>
                                 <p className="mb-0">We manage the planning required to bring the concept to life, including casting, location scouting, props, wardrobe, set requirements, crew planning, equipment, scheduling, and shot planning.</p>
                       </div>
@@ -397,11 +393,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">05</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Production &amp; Direction</h5>
+                          <div className="service-step-number">05</div>
+                          <h5>Production &amp; Direction</h5>
                         </div>
                                 <p className="mb-0">Our production team brings the approved concept to life through professional direction, cinematography, lighting, sound, performances, and production design.</p>
                       </div>
@@ -409,11 +404,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">06</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Editing &amp; Post-Production</h5>
+                          <div className="service-step-number">06</div>
+                          <h5>Editing &amp; Post-Production</h5>
                         </div>
                                 <p className="mb-0">The footage is shaped into the final commercial through editing, colour grading, sound design, music, motion graphics, VFX, and other finishing requirements.</p>
                       </div>
@@ -421,11 +415,10 @@ export default function Page() {
                   </div>
                   <div className="col">
                     <div className="card card-service-detail-include">
-                      <div className="service-step-number">07</div>
                       <div className="d-flex flex-column gspace-2">
                         <div className="d-flex flex-row align-items-center gspace-1">
-                                  <i className="fa-solid fa-circle accent-color"></i>
-                                  <h5>Final Delivery</h5>
+                          <div className="service-step-number">07</div>
+                          <h5>Final Delivery</h5>
                         </div>
                                 <p className="mb-0">Once approved, we prepare the final commercial according to the required delivery specifications. Where needed, we can also create shorter versions and adaptations for digital platforms.</p>
                       </div>
@@ -585,13 +578,13 @@ export default function Page() {
     <div className="hero-container">
       <div className="contact-cta-banner">
         <div className="contact-cta-title-container">
-                  <h2 className="contact-cta-title heading-fill">Let's Create a Television Commercial Your Audience Remembers</h2>
-                  <h2 className="contact-cta-title heading-stroke">Let's Create a Television Commercial Your Audience Remembers</h2>
+          <h2 className="contact-cta-title heading-fill">Let's Turn Your Vision Into Cinematic Reality</h2>
+          <h2 className="contact-cta-title heading-stroke">Let's Turn Your Vision Into Cinematic Reality</h2>
         </div>
         <div className="contact-cta-text-container">
-                  <p>A memorable television commercial doesn't just sell a product. It builds recognition, creates emotion, and gives audiences a reason to remember your brand. At AdEtc Studios, we combine strategic thinking, creative storytelling, and professional filmmaking to turn advertising ideas into compelling television commercials. Whether you have a complete campaign brief or an idea that needs to be developed, our team can take it from concept to final commercial.</p>
+          <p>From concept development to post-production, we craft cinematic experiences that captivate and inspire. Let's create something extraordinary together.</p>
           <div>
-                      <a href="/contact" className="btn btn-accent-primary">Book a Discovery Call</a>
+            <a href="/contact" className="btn btn-accent-primary">Free Consultation</a>
           </div>
         </div>
               <div className="contact-cta-image"><img src="/assets/images/envato-labs-image-edit-1-e1752829112223.png" alt="Contact CTA" className="img-fluid" loading="lazy" decoding="async" /></div>
