@@ -516,7 +516,7 @@ export default function Page() {
           <div className="service-detail-sidebar">
             <div className="service-sidebar-card">
               <div className="image-container service-sidebar-image">
-                <img src="/assets/images/operator-setting-his-camera-before-shooting-PURRF9Y.jpg" alt="Crew preparing a camera for a corporate video shoot" className="img-fluid" loading="lazy" decoding="async" />
+                <img src="/assets/images/service/corporate%20video1.jpeg" alt="Corporate video production at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
               </div>
               <ul className="service-facts">
                 <li>
