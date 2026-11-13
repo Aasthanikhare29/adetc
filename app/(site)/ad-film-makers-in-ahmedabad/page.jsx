@@ -581,7 +581,7 @@ export default function Page() {
               <div className="service-detail-sidebar">
                 <div className="service-sidebar-card">
                   <div className="image-container service-sidebar-image">
-                    <img src="/assets/images/two-confident-coworkers-indian-bearded-businessman-QHK94WX.jpg" alt="AdEtc Studios Team" className="img-fluid" loading="lazy" decoding="async" />
+                    <img src="/assets/images/service/ad%20films1.jpeg" alt="Ad film production at AdEtc Studios" className="img-fluid" loading="lazy" decoding="async" />
                   </div>
                   <ul className="service-facts">
                     <li>
